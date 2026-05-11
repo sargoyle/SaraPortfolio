@@ -1,0 +1,67 @@
+export const aiPocs = [
+  {
+    id: 1,
+    title: 'Pet Medication Tracker',
+    links: [],
+    image: '/images/AIPOC/pet-medication-tracker.jpg',
+    description: 'An AI-powered tracking system for managing pet medications, schedules, and health records. Smart reminders and dosage tracking help ensure pets receive consistent, timely care.',
+  },
+  {
+    id: 2,
+    title: 'Program Report Generation',
+    links: [],
+    image: '/images/AIPOC/program-report-generation.jpg',
+    description: 'Automated report generation using AI to synthesize program data, metrics, and insights into comprehensive documentation. Streamlines reporting workflows and maintains consistency across deliverables.',
+  },
+  {
+    id: 3,
+    title: 'Backlog Hygiene',
+    links: [],
+    image: '/images/AIPOC/BacklogGrooming.png',
+    summary: 'AI-assisted backlog analysis that reviews active work items, highlights quality issues, and surfaces sprint-readiness risks.',
+    description: "Transform Your Backlog Management with AI-Powered Insights\n\nThe AI Backlog Grooming Dashboard is your team's intelligent quality control system for DevOps work items. Simply upload your CSV export from Azure DevOps or any project management tool, and instantly receive a comprehensive health analysis of your active backlog. Our smart algorithm automatically excludes completed work and evaluates every active item against industry best practices, identifying critical issues like approved stories without estimates, missing acceptance criteria, and items blocking sprint planning. With visual health scoring, detailed item-by-item analysis, and actionable recommendations, you'll quickly spot process violations, improve story quality, and maintain a healthy, sprint-ready backlog, saving hours of manual review time and ensuring your team works on properly groomed, well-defined stories every sprint.",
+  },
+  {
+    id: 4,
+    title: 'Project Overview with AI',
+    links: [],
+    image: '/images/AIPOC/ProjectOverview1.png',
+    summary: 'A project reporting dashboard that combines delivery, budget, sprint, resource, and AI risk indicators in one view.',
+    description: 'This project overview dashboard integrates key project management metrics into a unified reporting interface. The system tracks budget performance, completion forecasts, sprint execution, and resource allocation while incorporating AI-based success probability modeling and risk assessment. The dashboard consolidates financial variance, schedule adherence, team performance, and delivery metrics to provide project stakeholders with visibility into current status and projected outcomes. By centralizing completion forecasts, budget tracking, sprint-level data, risk indicators, and resource management in a single view, the platform enables project managers to identify issues, assess priorities, and maintain control over project execution from initiation through delivery.',
+  },
+  {
+    id: 5,
+    title: 'Meal Planner',
+    links: [],
+    images: [
+      '/images/AIPOC/MealPlanner1.png',
+      '/images/AIPOC/MealPlanner2.png',
+      '/images/AIPOC/MealPlanner3.png',
+    ],
+    image: '/images/AIPOC/MealPlanner1.png',
+    description: 'Smart meal planning assistant that suggests recipes based on dietary preferences, available ingredients, and nutritional goals. Generates shopping lists and adapts to user feedback.',
+  },
+  {
+    id: 6,
+    title: 'Always Probably Maybe',
+    links: [
+      { label: 'Trailer', url: 'https://claude.ai/public/artifacts/fe586b7e-78f1-4cca-b645-3347f746833b' },
+      { label: 'Key Scenes', url: 'https://claude.ai/public/artifacts/768e9cec-8021-4392-b1da-9f5da8f2b517' },
+      { label: 'Full Treatment', url: 'https://claude.ai/public/artifacts/961f8bc3-611d-4b2b-ac58-d56d79dafb7c' },
+      { label: 'Full Treatment v2', url: 'https://claude.ai/public/artifacts/bbca3a1e-a056-4b2e-9a64-25ec760048c3' },
+    ],
+    image: '/images/AIPOC/APMTrailer.png',
+    summary: 'A romantic comedy film package developed through AI collaboration, spanning trailer concepts, story treatment, screenplay material, and production notes.',
+    description: "A complete romantic comedy film package developed through AI collaboration, showcasing the full potential of human-AI creative partnership. This ambitious project produced 9 comprehensive production deliverables spanning marketing, development, and pre-production phases: theatrical trailer script, interactive HTML movie poster, 21-scene animated trailer presentation, key scenes screenplay, full story treatment, complete first draft screenplay, professional revision notes, final production-ready screenplay, and a director's visual guide.\n\nThe project demonstrates iterative creative refinement, evolving from an initial 3.5-star concept to a 5-star production-ready script through critical analysis and revision. Each deliverable was crafted to professional industry standards, including proper screenplay formatting, comprehensive character development with psychological depth, visual storytelling language, and complete thematic frameworks. This proof-of-concept illustrates how AI can serve as a powerful collaborative tool in complex creative storytelling, assisting in every phase from initial concept through final pre-production materials.",
+  },
+  {
+    id: 7,
+    title: 'The Somerton Man - Mystery Site',
+    links: [
+      { label: 'Visit Site', url: 'https://claude.ai/public/artifacts/8b4cebab-1597-481b-bdca-bc7aa0f77e1b' },
+    ],
+    image: '/images/AIPOC/SomertonMan.png',
+    summary: 'An AI-assisted mystery site exploring the Somerton Man case, its evidence, theories, and an alternative interpretation of the famous cipher.',
+    description: 'Discover Australia\'s most enduring mystery: the Somerton Man, found dead on an Adelaide beach in December 1948 with no identification, all clothing labels removed, and a cryptic scrap of paper reading "Tamám Shud" hidden in his fob pocket. This comprehensive site explores the 75-year investigation that uncovered a mysterious cipher, an unlisted phone number leading to a young married mother who dramatically reacted to his death mask yet denied knowing him, and a rare book possibly thrown into a stranger\'s car. While 2022 DNA research claims to identify him as electrical engineer Carl Webb, a man struggling with mental health issues who disappeared after a suicide attempt, official verification remains pending. The site presents traditional espionage and romance theories alongside Sara\'s revolutionary interpretation: what if the famous "cipher" was never a secret code at all, but simply practical navigation notes from an ordinary man trying to find his way through an unfamiliar city? Dive deep into the evidence, explore the theories, and decide for yourself whether this is a tale of international intrigue or quiet human tragedy.',
+  },
+];
