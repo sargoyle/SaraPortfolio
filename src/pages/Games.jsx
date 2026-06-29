@@ -4,8 +4,8 @@ import { games } from '../data/games.js';
 export default function Games() {
   return (
     <main className="page games-page">
-      <h1 className="section-title">Games</h1>
-      <p className="description">Board game concepts exploring myth, creativity, and human connection.</p>
+      <h1 className="section-title">Sara's Lab</h1>
+      <p className="description">Games, creative tools, type experiments, and prototypes in progress.</p>
       {games.map((game) => (
         <article key={game.id} className="game-content">
           <h2 className="game-title">{game.title}</h2>

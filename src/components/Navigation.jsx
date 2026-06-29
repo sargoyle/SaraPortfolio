@@ -2,7 +2,7 @@ const navItems = [
   { id: 'home', label: 'Home', shortLabel: 'Home' },
   { id: 'crafter', label: 'Crafter Dark' },
   { id: 'photo', label: 'Photography' },
-  { id: 'games', label: 'Games' },
+  { id: 'games', label: "Sara's Lab" },
   { id: 'ai', label: 'AI POCs' },
 ];
 

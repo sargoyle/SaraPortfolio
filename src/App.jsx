@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Footer from './components/Footer.jsx';
 import Navigation from './components/Navigation.jsx';
 import ParticleBackground from './components/ParticleBackground.jsx';
 import AiPocs from './pages/AiPocs.jsx';
@@ -29,7 +30,7 @@ export default function App() {
       home: "Sara's Portfolio",
       crafter: "Crafter Dark | Sara's Portfolio",
       photo: "Photography | Sara's Portfolio",
-      games: "Games | Sara's Portfolio",
+      games: "Sara's Lab | Sara's Portfolio",
       ai: "AI POCs | Sara's Portfolio",
     };
     document.title = titles[currentPage] || "Sara's Portfolio";
@@ -40,6 +41,7 @@ export default function App() {
       <ParticleBackground />
       <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
       <CurrentPage />
+      <Footer />
     </div>
   );
 }

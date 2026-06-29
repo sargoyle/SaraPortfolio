@@ -100,6 +100,7 @@ Goal: Populate the expected image library and remove unintended missing-asset er
 Goal: Make sure the portfolio reads cleanly, consistently, and accurately before launch.
 
 - `[x]` Review Home page positioning copy.
+- `[x]` Reposition Home page around cross-stitch, pattern-making, photography, games, and creative tools, with a two-column desktop layout.
 - `[?]` Confirm LinkedIn URL is correct. Automated verification was blocked by LinkedIn with HTTP 999; needs Sara confirmation.
 - `[x]` Review About Sara copy for tone and accuracy.
 - `[x]` Review all Crafter Dark titles, categories, sizes, and descriptions.
@@ -141,6 +142,7 @@ Goal: Ensure the implemented experience satisfies the design and app-flow PRDs.
 - `[ ]` Test page remains usable when images fail to load.
 - `[x]` Fix Photography fullscreen modal spacing so opened photos do not sit underneath the fixed navigation.
 - `[x]` Simplify Photography cards and fullscreen viewer to show only the photo name.
+- `[x]` Hide visible Photography grid titles while preserving accessible photo labels.
 - `[x]` Test menu navigation while Photography modal is focused and close modals on every nav click.
 - `[x]` Center fullscreen previous and next chevron icons.
 - `[x]` Prevent scrolled page content from showing through the fixed top navigation.
@@ -150,6 +152,8 @@ Goal: Ensure the implemented experience satisfies the design and app-flow PRDs.
 Goal: Prepare the project for handoff, version control, and deployment.
 
 - `[x]` Add repository structure audit cleanup activities to the implementation task list.
+- `[x]` Add subtle global footer with copyright notice.
+- `[x]` Rename Games navigation and page heading to Sara's Lab while keeping existing game content.
 - `[ ]` Add `.gitignore`.
 - `[ ]` Add `README.md` with:
   - project overview

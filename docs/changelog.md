@@ -6,12 +6,15 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Initial project setup
+- 2026-06-30: Added a subtle global footer with copyright text. Files affected: `src/components/Footer.jsx`, `src/App.jsx`, `src/styles/global.css`, `docs/tasks.md`.
 - 2026-05-10: Added repository structure audit cleanup activities to the production readiness task list. Files affected: `docs/tasks.md`.
 - 2026-05-10: Added concise AI POC card summaries while preserving full modal descriptions. Files affected: `src/components/ProjectCard.jsx`, `src/data/aiPocs.js`, `docs/rules.md`, `docs/tasks.md`.
 - 2026-05-05: Added photography metadata sync workflow and optional photo metadata display. Files affected: `scripts/sync-photography.mjs`, `package.json`, `src/components/PhotoCard.jsx`, `src/components/FullscreenImageModal.jsx`, `src/styles/global.css`, `docs/rules.md`.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-06-30: Reworked the Home page copy and layout to centre Sara's cross-stitch, pattern-making, photography, games, and creative tools. Files affected: `src/pages/Home.jsx`, `src/styles/global.css`, `docs/rules.md`, `docs/tasks.md`.
+- 2026-06-30: Renamed the Games navigation/page heading to Sara's Lab and hid visible Photography grid titles while preserving accessible labels. Files affected: `src/components/Navigation.jsx`, `src/pages/Games.jsx`, `src/components/PhotoCard.jsx`, `src/App.jsx`, `docs/tasks.md`.
 - 2026-05-10: Reviewed and tightened Home and AI POC copy for portfolio accuracy, punctuation, and card readability. Files affected: `src/pages/Home.jsx`, `src/data/aiPocs.js`, `docs/tasks.md`.
 - 2026-05-06: Updated Crafter Dark metadata with requested pattern sizes, added finished-image in-progress placeholders for Moth Man and Gecko, and renamed Bella, Drac, and Frankie with the Groovie Goolies prefix. Files affected: `src/data/crafterProjects.js`, `public/images/crafter-dark/Own/finished-in-progress.svg`, `docs/asset-inventory.md`, `docs/tasks.md`.
 - 2026-05-06: Picked up latest Crafter Dark images, connected remaining Own assets, and added Twin Peaks Socket, X-Files Aliens, and X-Files Hand with sizes extracted from uploaded PDFs. Files affected: `src/data/crafterProjects.js`, `docs/asset-inventory.md`, `docs/tasks.md`.
