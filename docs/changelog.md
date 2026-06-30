@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-06-30: Stabilised Crafter Dark listing thumbnail DOM and CSS so `SquareImageFrame` renders one predictable `div > img` structure and the pseudo-element owns the only visible thumbnail border. Files affected: `src/components/SquareImageFrame.jsx`, `src/components/CrafterDarkCard.jsx`, `src/styles/global.css`, `functions/crafter-dark-list-view.md`, `docs/tasks.md`.
 - 2026-06-30: Expanded `.gitignore` for Vite build output, coverage, caches, environment overrides, editor folders, and OS files. Files affected: `.gitignore`, `docs/tasks.md`.
 - 2026-06-30: Completed Phase 4 UX and accessibility QA covering keyboard-accessible controls, modal close/navigation behaviour, active states, responsive breakpoints, text overflow, and missing-image fallbacks. Files affected: `docs/tasks.md`.
 - 2026-06-30: Aligned Crafter Dark function documentation with the implemented `CrafterDarkCard` and `SquareImageFrame` refactor, and added Crafter-specific card/frame selectors to prevent shared ProjectCard image rules affecting the listing. Files affected: `functions/crafter-dark-page.md`, `functions/crafter-dark-list-view.md`, `src/styles/global.css`, `docs/tasks.md`.

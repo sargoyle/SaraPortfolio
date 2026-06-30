@@ -9,8 +9,6 @@ export default function CrafterDarkCard({ project, onOpen }) {
         <SquareImageFrame
           src={imageSrc}
           alt={`${project.title} preview`}
-          fallbackLabel={`${project.title} image unavailable`}
-          fallbackIcon="✶"
         />
       ) : null}
       <span className="crafter-dark-card-content">

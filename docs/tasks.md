@@ -192,6 +192,8 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Extract Crafter Dark thumbnail handling into reusable `SquareImageFrame` and `CrafterDarkCard` components and update `functions/crafter-dark-list-view.md`.
 - `[x]` Refactor Crafter Dark listing cards to use `CrafterDarkCard` and `SquareImageFrame`.
 - `[x]` Review and align Crafter Dark function documentation with the implemented list card and square image frame behaviour.
+- `[x]` Stabilise Crafter Dark list thumbnail DOM and CSS so all cards use identical square image frames.
+- `[ ]` Reintroduce `SquareImageFrame` fallback handling without changing DOM structure or thumbnail layout.
 - `[ ]` Consider extracting a dedicated `GalleryImageCard` component if card variants grow.
 - `[ ]` Add a reusable `PageHeader` pattern if page headings/descriptions become duplicated or more complex.
 - `[ ]` Add an automated or documented visual regression check for Crafter Dark thumbnail consistency.

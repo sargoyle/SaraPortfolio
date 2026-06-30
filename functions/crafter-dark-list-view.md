@@ -27,7 +27,7 @@ Visitors see one card per project with a square thumbnail, title, category/size 
 - Current implementation uses `CrafterDarkCard`.
 - Crafter thumbnails use `SquareImageFrame`.
 - Thumbnail CSS uses `.square-image-frame` and `.square-image-frame-image`.
-- Missing image handling comes from `ImageWithFallback` inside `SquareImageFrame`.
+- `SquareImageFrame` renders a stable `div.square-image-frame > img.square-image-frame-image` DOM structure.
 
 ## Implementation Audit
 
@@ -38,6 +38,7 @@ Current implementation:
 - `ProjectCard` is shared with other pages and is not used by Crafter Dark.
 - `CrafterDarkCard` passes `project.image1 || project.image` to `SquareImageFrame`.
 - `.project-card-image-container` and `.project-card-image` still exist for shared `ProjectCard`, but they do not control Crafter Dark thumbnails.
+- `ImageWithFallback` is intentionally not used inside `SquareImageFrame` because fallback wrappers can change thumbnail DOM structure.
 
 Target implementation:
 
@@ -45,6 +46,7 @@ Target implementation:
 - Every Crafter Dark thumbnail uses `SquareImageFrame`.
 - The frame, not the image, controls the square shape and visible border.
 - The image remains fully visible inside the square frame.
+- `.square-image-frame::after` is the single visible thumbnail border overlay.
 
 Gap:
 
@@ -87,16 +89,18 @@ The card is a button rather than an article so click and keyboard activation sha
 ## Image Rules
 
 - Thumbnail frame must be one square `.square-image-frame` container.
-- The thumbnail border belongs only to `.square-image-frame`.
-- `.square-image-frame::after` may be used as a non-interactive overlay so the border stays visible over light artwork.
+- The thumbnail border belongs only to `.square-image-frame::after`.
+- `.square-image-frame::after` must be used as the single visible border overlay for all Crafter Dark thumbnails.
 - Images use `.square-image-frame-image`.
 - Images must be contained, not cropped.
 - Images must not be stretched.
 - Do not apply borders to the image.
+- Do not apply borders directly to `.square-image-frame`; the pseudo-element owns the visible border.
 - Do not use extra nested thumbnail wrappers.
 - Do not use `object-fit: cover` for Crafter Dark thumbnails.
 - Do not set Crafter Dark thumbnail images to `width: 100%; height: 100%`.
 - Tall, wide, square, black-background, white-background, transparent, and pixel-art images must use the same frame treatment.
+- `SquareImageFrame` must render a stable DOM structure. It must not allow `ImageWithFallback` or any fallback wrapper to change the layout, border, image sizing, or frame dimensions.
 
 ## Explicit Anti-Rules
 
@@ -135,3 +139,4 @@ The card is a button rather than an article so click and keyboard activation sha
 - Confirm each has exactly one `.square-image-frame`.
 - Confirm image fits inside the square and has no image border.
 - Confirm text below cards remains aligned.
+- For multiple cards, inspect the rendered DOM and confirm the thumbnail structure and computed image/frame styles are identical.
