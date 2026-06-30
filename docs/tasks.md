@@ -102,6 +102,7 @@ Goal: Make sure the portfolio reads cleanly, consistently, and accurately before
 - `[x]` Review Home page positioning copy.
 - `[x]` Reposition Home page around cross-stitch, pattern-making, photography, games, and creative tools, with a two-column desktop layout.
 - `[x]` Balance Home layout by placing profile photo, LinkedIn button, and intro in the left desktop column with mobile order preserved.
+- `[x]` Update Home short intro wording to Sara's revised cross-stitch and image-led copy.
 - `[?]` Confirm LinkedIn URL is correct. Automated verification was blocked by LinkedIn with HTTP 999; needs Sara confirmation.
 - `[x]` Review About Sara copy for tone and accuracy.
 - `[x]` Review all Crafter Dark titles, categories, sizes, and descriptions.
@@ -135,6 +136,7 @@ Goal: Ensure the implemented experience satisfies the design and app-flow PRDs.
 - `[ ]` Test screen-reader-facing labels for icon-only controls.
 - `[ ]` Test active nav state is not color-only.
 - `[ ]` Test active filter state is not color-only.
+- `[x]` Enforce square Crafter Dark image containers on listing cards and detail modal panels.
 - `[ ]` Test responsive layout at:
   - 390px mobile
   - 768px tablet

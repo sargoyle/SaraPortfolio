@@ -362,11 +362,16 @@ a:focus-visible,
   background: rgba(255, 255, 255, 0.04);
 }
 
+.crafter-page .project-card-image-container {
+  aspect-ratio: 1 / 1;
+}
+
 .project-card-image {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.3s ease;
 }
 
@@ -516,11 +521,27 @@ a:focus-visible,
   background: rgba(255, 255, 255, 0.04);
 }
 
+.crafter-page .project-image-container {
+  aspect-ratio: 1 / 1;
+}
+
 .project-image,
 .poc-image {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.crafter-page .project-image,
+.crafter-page .poc-image {
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.crafter-page .project-image-container .project-image-placeholder {
+  height: 100%;
+  min-height: 0;
 }
 
 .poc-image-container {

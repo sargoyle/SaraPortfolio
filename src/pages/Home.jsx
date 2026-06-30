@@ -32,8 +32,8 @@ export default function Home() {
             Connect on LinkedIn
           </a>
           <div className="home-intro">
-            <p>I create gothic cross-stitch patterns, photography-led visual work, games, and small creative tools.</p>
-            <p>Most of my work starts with an image, an idea, or a strange little system, then turns into something tactile, visual, or playable.</p>
+            <p>I create cross-stitch patterns, photography-led visual work, games, and small creative tools.</p>
+            <p>Most of my work starts with an idea and an image, then turns into something tactile, visual, or playable.</p>
           </div>
         </div>
         <section className="about-section" aria-labelledby="about-sara">
