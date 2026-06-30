@@ -141,6 +141,7 @@ Goal: Ensure the implemented experience satisfies the design and app-flow PRDs.
 - `[x]` Add complete subtle border around Crafter Dark listing card image frames.
 - `[x]` Make Crafter Dark listing image borders wrapper-owned and consistently visible across varied image backgrounds.
 - `[x]` Strengthen Crafter Dark listing image frame contrast so borders remain visible against white and dark artwork.
+- `[x]` Replace Crafter Dark listing image display with a dedicated outer frame, inner inset, and contained image structure.
 - `[ ]` Test responsive layout at:
   - 390px mobile
   - 768px tablet

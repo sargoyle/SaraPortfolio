@@ -36,7 +36,13 @@ export default function CrafterDark() {
       <FilterBar filters={filters} selectedFilter={selectedFilter} onChange={setSelectedFilter} itemCounts={itemCounts} />
       <div className="simple-grid">
         {filteredProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} onOpen={setActiveProject} fallbackIcon="✶" />
+          <ProjectCard
+            key={project.id}
+            project={project}
+            onOpen={setActiveProject}
+            fallbackIcon="✶"
+            cardImageVariant="crafter"
+          />
         ))}
       </div>
       <ProjectDetailModal
