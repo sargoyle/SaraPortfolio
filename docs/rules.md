@@ -30,6 +30,7 @@ Keep entries concise. One line per decision when possible.
 - Photography assets live under `public/images/photography` and are referenced as `/images/photography/<filename>`.
 
 ## Design Patterns
+- Read the relevant root `functions/*.md` file before changing a page, list/detail view, shared card, image pattern, modal, navigation, footer, or visual system; keep known gaps synced with `docs/tasks.md`.
 - Optional photo metadata fields are `year`, `medium`, `description`, and `alt`; cards show compact metadata and fullscreen modals show fuller metadata.
 - Photography cards and fullscreen image viewer display only the photo name, even when metadata exists in `src/data/photos.js`.
 - AI POC cards may use concise `summary` text for previews while detail modals keep the full `description`.

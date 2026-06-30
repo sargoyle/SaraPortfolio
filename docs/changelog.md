@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Initial project setup
+- 2026-06-30: Added reusable `SquareImageFrame` and `CrafterDarkCard` components for Crafter Dark listing thumbnails and cards. Files affected: `src/components/SquareImageFrame.jsx`, `src/components/CrafterDarkCard.jsx`, `src/pages/CrafterDark.jsx`, `src/components/ProjectCard.jsx`, `src/styles/global.css`, `functions/crafter-dark-list-view.md`, `functions/shared-card-components.md`, `functions/shared-image-components.md`, `docs/tasks.md`.
+- 2026-06-30: Created root `functions/` documentation library covering pages, list/detail views, shared components, image rules, modal behaviour, responsive layout, and visual design guidance. Files affected: `functions/*.md`, `docs/tasks.md`, `docs/rules.md`.
 - 2026-06-30: Added a subtle global footer with copyright text. Files affected: `src/components/Footer.jsx`, `src/App.jsx`, `src/styles/global.css`, `docs/tasks.md`.
 - 2026-05-10: Added repository structure audit cleanup activities to the production readiness task list. Files affected: `docs/tasks.md`.
 - 2026-05-10: Added concise AI POC card summaries while preserving full modal descriptions. Files affected: `src/components/ProjectCard.jsx`, `src/data/aiPocs.js`, `docs/rules.md`, `docs/tasks.md`.

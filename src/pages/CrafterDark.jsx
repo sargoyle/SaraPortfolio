@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
+import CrafterDarkCard from '../components/CrafterDarkCard.jsx';
 import FilterBar from '../components/FilterBar.jsx';
-import ProjectCard from '../components/ProjectCard.jsx';
 import ProjectDetailModal from '../components/ProjectDetailModal.jsx';
 import { crafterProjects } from '../data/crafterProjects.js';
 
@@ -36,13 +36,7 @@ export default function CrafterDark() {
       <FilterBar filters={filters} selectedFilter={selectedFilter} onChange={setSelectedFilter} itemCounts={itemCounts} />
       <div className="simple-grid">
         {filteredProjects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            onOpen={setActiveProject}
-            fallbackIcon="✶"
-            cardImageVariant="crafter"
-          />
+          <CrafterDarkCard key={project.id} project={project} onOpen={setActiveProject} />
         ))}
       </div>
       <ProjectDetailModal

@@ -375,7 +375,7 @@ a:focus-visible,
   transform: scale(1.04);
 }
 
-.crafter-thumbnail {
+.square-image-frame {
   display: grid;
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -387,7 +387,7 @@ a:focus-visible,
   background: rgba(255, 255, 255, 0.04);
 }
 
-.crafter-thumbnail-image {
+.square-image-frame-image {
   display: block;
   width: auto;
   max-width: 100cqw;
@@ -402,7 +402,7 @@ a:focus-visible,
   object-position: center;
 }
 
-.crafter-thumbnail-placeholder {
+.square-image-frame-placeholder {
   display: flex;
   width: 100%;
   height: 100%;

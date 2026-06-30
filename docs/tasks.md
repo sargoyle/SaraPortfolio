@@ -142,7 +142,7 @@ Goal: Ensure the implemented experience satisfies the design and app-flow PRDs.
 - `[x]` Make Crafter Dark listing image borders wrapper-owned and consistently visible across varied image backgrounds.
 - `[x]` Strengthen Crafter Dark listing image frame contrast so borders remain visible against white and dark artwork.
 - `[x]` Replace Crafter Dark listing image display with a dedicated outer frame, inner inset, and contained image structure.
-- `[x]` Simplify Crafter Dark listing thumbnails to one square `.crafter-thumbnail` container with the only thumbnail border.
+- `[x]` Simplify Crafter Dark listing thumbnails to one square image frame container with the only thumbnail border.
 - `[x]` Constrain Crafter Dark thumbnail images to the square container size so tall images cannot overflow the frame.
 - `[ ]` Test responsive layout at:
   - 390px mobile
@@ -163,6 +163,7 @@ Goal: Ensure the implemented experience satisfies the design and app-flow PRDs.
 Goal: Prepare the project for handoff, version control, and deployment.
 
 - `[x]` Add repository structure audit cleanup activities to the implementation task list.
+- `[x]` Create root `functions/` documentation library for pages, list views, detail views, shared components, and reusable patterns.
 - `[x]` Add subtle global footer with copyright notice.
 - `[x]` Rename Games navigation and page heading to Sara's Lab while keeping existing game content.
 - `[ ]` Add `.gitignore`.
@@ -188,6 +189,10 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[ ]` Resolve remaining `Pattern size varies` Crafter Dark records where pattern documents or dimensions are available.
 - `[ ]` Re-run referenced asset path audit after missing assets and naming decisions are resolved.
 - `[ ]` Add a lightweight smoke test script or documented manual QA checklist.
+- `[x]` Extract Crafter Dark thumbnail handling into reusable `SquareImageFrame` and `CrafterDarkCard` components and update `functions/crafter-dark-list-view.md`.
+- `[ ]` Consider extracting a dedicated `GalleryImageCard` component if card variants grow.
+- `[ ]` Add a reusable `PageHeader` pattern if page headings/descriptions become duplicated or more complex.
+- `[ ]` Add an automated or documented visual regression check for Crafter Dark thumbnail consistency.
 - `[ ]` Run `npm run build`.
 - `[ ]` Verify generated `dist` output.
 - `[?]` Choose deployment target:
@@ -218,6 +223,8 @@ Goal: Track useful improvements without letting them block the first polished la
 - `[ ]` Add tags beyond current category filters if needed.
 - `[ ]` Add process notes or captions for individual images if desired.
 - `[ ]` Add downloadable Crafter Dark pattern links if desired.
+- `[ ]` Add Sara's Lab card/detail view pattern for games, Batcave Font, creative tools, and prototypes.
+- `[ ]` Add Batcave Font project card when content and assets are ready.
 - `[ ]` Add a contact section if LinkedIn is not enough.
 
 ## Current Open Questions
