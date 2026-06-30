@@ -4,7 +4,7 @@ export default function CrafterDarkCard({ project, onOpen }) {
   const imageSrc = project.image1 || project.image;
 
   return (
-    <button type="button" className="project-item card-button" onClick={() => onOpen(project)}>
+    <button type="button" className="crafter-dark-card card-button" onClick={() => onOpen(project)}>
       {imageSrc ? (
         <SquareImageFrame
           src={imageSrc}
@@ -13,14 +13,14 @@ export default function CrafterDarkCard({ project, onOpen }) {
           fallbackIcon="✶"
         />
       ) : null}
-      <span className="project-card-copy">
-        <span className="project-card-title">{project.title}</span>
+      <span className="crafter-dark-card-content">
+        <span className="crafter-dark-card-title">{project.title}</span>
         {project.category || project.size ? (
-          <span className="project-meta">
+          <span className="crafter-dark-card-meta">
             {[project.category, project.size].filter(Boolean).join(' • ')}
           </span>
         ) : null}
-        <span className="project-description-preview">{project.summary || project.description}</span>
+        <span className="crafter-dark-card-description">{project.summary || project.description}</span>
       </span>
     </button>
   );

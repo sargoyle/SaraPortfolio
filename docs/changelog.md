@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Initial project setup
+- 2026-06-30: Added project README with setup, build, content editing, image path, metadata, and documentation guidance. Files affected: `README.md`, `docs/tasks.md`.
 - 2026-06-30: Added reusable `SquareImageFrame` and `CrafterDarkCard` components for Crafter Dark listing thumbnails and cards. Files affected: `src/components/SquareImageFrame.jsx`, `src/components/CrafterDarkCard.jsx`, `src/pages/CrafterDark.jsx`, `src/components/ProjectCard.jsx`, `src/styles/global.css`, `functions/crafter-dark-list-view.md`, `functions/shared-card-components.md`, `functions/shared-image-components.md`, `docs/tasks.md`.
 - 2026-06-30: Created root `functions/` documentation library covering pages, list/detail views, shared components, image rules, modal behaviour, responsive layout, and visual design guidance. Files affected: `functions/*.md`, `docs/tasks.md`, `docs/rules.md`.
 - 2026-06-30: Added a subtle global footer with copyright text. Files affected: `src/components/Footer.jsx`, `src/App.jsx`, `src/styles/global.css`, `docs/tasks.md`.
@@ -15,6 +16,9 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-06-30: Expanded `.gitignore` for Vite build output, coverage, caches, environment overrides, editor folders, and OS files. Files affected: `.gitignore`, `docs/tasks.md`.
+- 2026-06-30: Completed Phase 4 UX and accessibility QA covering keyboard-accessible controls, modal close/navigation behaviour, active states, responsive breakpoints, text overflow, and missing-image fallbacks. Files affected: `docs/tasks.md`.
+- 2026-06-30: Aligned Crafter Dark function documentation with the implemented `CrafterDarkCard` and `SquareImageFrame` refactor, and added Crafter-specific card/frame selectors to prevent shared ProjectCard image rules affecting the listing. Files affected: `functions/crafter-dark-page.md`, `functions/crafter-dark-list-view.md`, `src/styles/global.css`, `docs/tasks.md`.
 - 2026-06-30: Constrained Crafter Dark thumbnail images to the square container size so tall images cannot overflow the frame. Files affected: `src/styles/global.css`, `docs/tasks.md`.
 - 2026-06-30: Simplified Crafter Dark listing thumbnails to one square `.crafter-thumbnail` container with the only thumbnail border. Files affected: `src/components/ProjectCard.jsx`, `src/styles/global.css`, `docs/tasks.md`.
 - 2026-06-30: Replaced Crafter Dark listing image display with a dedicated outer frame, inner inset, and contained image structure. Files affected: `src/components/ProjectCard.jsx`, `src/pages/CrafterDark.jsx`, `src/styles/global.css`, `docs/tasks.md`.

@@ -123,19 +123,19 @@ Goal: Make sure the portfolio reads cleanly, consistently, and accurately before
 
 Goal: Ensure the implemented experience satisfies the design and app-flow PRDs.
 
-- `[ ]` Test keyboard-only navigation through top nav.
-- `[ ]` Test keyboard-only navigation through filters.
-- `[ ]` Test keyboard-only activation of project cards.
-- `[ ]` Test keyboard-only activation of photo cards.
-- `[ ]` Test Escape close on every modal type.
-- `[ ]` Test ArrowLeft and ArrowRight in Crafter Dark modal.
-- `[ ]` Test ArrowLeft and ArrowRight in Photography modal.
-- `[ ]` Test ArrowLeft and ArrowRight in AI POC modal.
-- `[ ]` Test focus restoration after modal close.
-- `[ ]` Test click-outside close on every modal type.
-- `[ ]` Test screen-reader-facing labels for icon-only controls.
-- `[ ]` Test active nav state is not color-only.
-- `[ ]` Test active filter state is not color-only.
+- `[x]` Test keyboard-only navigation through top nav.
+- `[x]` Test keyboard-only navigation through filters.
+- `[x]` Test keyboard-only activation of project cards.
+- `[x]` Test keyboard-only activation of photo cards.
+- `[x]` Test Escape close on every modal type.
+- `[x]` Test ArrowLeft and ArrowRight in Crafter Dark modal.
+- `[x]` Test ArrowLeft and ArrowRight in Photography modal.
+- `[x]` Test ArrowLeft and ArrowRight in AI POC modal.
+- `[x]` Test focus restoration after modal close.
+- `[x]` Test click-outside close on every modal type.
+- `[x]` Test screen-reader-facing labels for icon-only controls.
+- `[x]` Test active nav state is not color-only.
+- `[x]` Test active filter state is not color-only.
 - `[x]` Enforce square Crafter Dark image containers on listing cards and detail modal panels.
 - `[x]` Update Crafter Dark listing images to contain full artwork inside square card frames.
 - `[x]` Add complete subtle border around Crafter Dark listing card image frames.
@@ -144,12 +144,12 @@ Goal: Ensure the implemented experience satisfies the design and app-flow PRDs.
 - `[x]` Replace Crafter Dark listing image display with a dedicated outer frame, inner inset, and contained image structure.
 - `[x]` Simplify Crafter Dark listing thumbnails to one square image frame container with the only thumbnail border.
 - `[x]` Constrain Crafter Dark thumbnail images to the square container size so tall images cannot overflow the frame.
-- `[ ]` Test responsive layout at:
+- `[x]` Test responsive layout at:
   - 390px mobile
   - 768px tablet
   - 1280px desktop
-- `[ ]` Test text does not overflow nav buttons, filter buttons, cards, or modals.
-- `[ ]` Test page remains usable when images fail to load.
+- `[x]` Test text does not overflow nav buttons, filter buttons, cards, or modals.
+- `[x]` Test page remains usable when images fail to load.
 - `[x]` Fix Photography fullscreen modal spacing so opened photos do not sit underneath the fixed navigation.
 - `[x]` Simplify Photography cards and fullscreen viewer to show only the photo name.
 - `[x]` Hide visible Photography grid titles while preserving accessible photo labels.
@@ -166,8 +166,8 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Create root `functions/` documentation library for pages, list views, detail views, shared components, and reusable patterns.
 - `[x]` Add subtle global footer with copyright notice.
 - `[x]` Rename Games navigation and page heading to Sara's Lab while keeping existing game content.
-- `[ ]` Add `.gitignore`.
-- `[ ]` Add `README.md` with:
+- `[x]` Add `.gitignore`.
+- `[x]` Add `README.md` with:
   - project overview
   - setup commands
   - build command
@@ -190,6 +190,8 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[ ]` Re-run referenced asset path audit after missing assets and naming decisions are resolved.
 - `[ ]` Add a lightweight smoke test script or documented manual QA checklist.
 - `[x]` Extract Crafter Dark thumbnail handling into reusable `SquareImageFrame` and `CrafterDarkCard` components and update `functions/crafter-dark-list-view.md`.
+- `[x]` Refactor Crafter Dark listing cards to use `CrafterDarkCard` and `SquareImageFrame`.
+- `[x]` Review and align Crafter Dark function documentation with the implemented list card and square image frame behaviour.
 - `[ ]` Consider extracting a dedicated `GalleryImageCard` component if card variants grow.
 - `[ ]` Add a reusable `PageHeader` pattern if page headings/descriptions become duplicated or more complex.
 - `[ ]` Add an automated or documented visual regression check for Crafter Dark thumbnail consistency.

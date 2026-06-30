@@ -9,7 +9,8 @@ Main page for Sara's cross-stitch pattern work.
 - `src/pages/CrafterDark.jsx`
 - `src/data/crafterProjects.js`
 - `src/components/FilterBar.jsx`
-- `src/components/ProjectCard.jsx`
+- `src/components/CrafterDarkCard.jsx`
+- `src/components/SquareImageFrame.jsx`
 - `src/components/ProjectDetailModal.jsx`
 - `src/styles/global.css`
 
@@ -27,7 +28,33 @@ Visitors can browse cross-stitch pattern cards, filter by category, and open a f
 
 - Must use `FilterBar`.
 - Must use `CrafterDarkCard` for listing cards.
+- `CrafterDarkCard` must use `SquareImageFrame` for every list thumbnail.
 - Must use `ProjectDetailModal` for item detail.
+- `ProjectCard` is shared elsewhere and must not be used for Crafter Dark listing cards unless it can guarantee the Crafter Dark thumbnail contract.
+
+## Implementation Audit
+
+Current implementation:
+
+- `src/pages/CrafterDark.jsx` renders listing cards through `CrafterDarkCard`.
+- `CrafterDarkCard` exists and renders each project as a keyboard-focusable button.
+- `CrafterDarkCard` uses `SquareImageFrame` for the thumbnail image.
+- `ProjectCard` is still a shared component for other project-style pages, including AI POCs, but is not used by Crafter Dark.
+- Crafter Dark list thumbnail layout is controlled by `.square-image-frame`, `.square-image-frame::after`, and `.square-image-frame-image`.
+- Shared detail modal image layout remains controlled by `.project-image-container`, `.project-image`, and Crafter detail overrides under `.crafter-page`.
+
+Target implementation:
+
+- Crafter Dark list cards must render through `CrafterDarkCard`.
+- Every Crafter Dark thumbnail must render through `SquareImageFrame`.
+- No Crafter Dark item should have one-off card or image markup.
+- The square frame owns the border, aspect ratio, background, and overflow.
+- The image must be contained inside the frame without cropping or stretching.
+
+Gap:
+
+- Closed for the listing-card refactor: source and function documentation now agree on `CrafterDarkCard` plus `SquareImageFrame`.
+- Remaining gap: no automated visual regression check exists for Crafter Dark thumbnail consistency.
 
 ## Data Rules
 
@@ -57,6 +84,7 @@ Visitors can browse cross-stitch pattern cards, filter by category, and open a f
 
 - Missing Fallout Timeline assets remain blocked.
 - Some pattern sizes still need source confirmation.
+- No automated visual regression check exists for listing thumbnail consistency.
 
 ## Change Rules
 

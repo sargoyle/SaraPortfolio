@@ -338,7 +338,8 @@ a:focus-visible,
   text-align: left;
 }
 
-.project-item {
+.project-item,
+.crafter-dark-card {
   min-height: 100%;
   overflow: hidden;
   border: 1px solid var(--glass-border);
@@ -349,7 +350,8 @@ a:focus-visible,
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.project-item:hover {
+.project-item:hover,
+.crafter-dark-card:hover {
   border-color: var(--accent);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
   transform: translateY(-4px);
@@ -377,6 +379,7 @@ a:focus-visible,
 
 .square-image-frame {
   display: grid;
+  position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
   place-items: center;
@@ -387,11 +390,25 @@ a:focus-visible,
   background: rgba(255, 255, 255, 0.04);
 }
 
+.square-image-frame::after {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  content: "";
+  pointer-events: none;
+}
+
 .square-image-frame-image {
   display: block;
+  position: relative;
+  z-index: 1;
   width: auto;
+  max-width: 100%;
   max-width: 100cqw;
   height: auto;
+  max-height: 100%;
   max-height: 100cqw;
   min-width: 0;
   min-height: 0;
@@ -403,6 +420,8 @@ a:focus-visible,
 }
 
 .square-image-frame-placeholder {
+  position: relative;
+  z-index: 1;
   display: flex;
   width: 100%;
   height: 100%;
@@ -415,25 +434,29 @@ a:focus-visible,
   color: var(--accent-light);
 }
 
-.project-card-copy {
+.project-card-copy,
+.crafter-dark-card-content {
   display: grid;
   padding: 1.5rem;
   gap: 0.75rem;
 }
 
-.project-card-title {
+.project-card-title,
+.crafter-dark-card-title {
   color: #ffffff;
   font-size: 1.25rem;
   font-weight: 700;
 }
 
-.project-meta {
+.project-meta,
+.crafter-dark-card-meta {
   display: block;
   color: var(--accent-light);
   font-size: 0.9rem;
 }
 
-.project-description-preview {
+.project-description-preview,
+.crafter-dark-card-description {
   display: -webkit-box;
   overflow: hidden;
   color: var(--text-soft);

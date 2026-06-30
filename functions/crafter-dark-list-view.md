@@ -27,6 +27,55 @@ Visitors see one card per project with a square thumbnail, title, category/size 
 - Current implementation uses `CrafterDarkCard`.
 - Crafter thumbnails use `SquareImageFrame`.
 - Thumbnail CSS uses `.square-image-frame` and `.square-image-frame-image`.
+- Missing image handling comes from `ImageWithFallback` inside `SquareImageFrame`.
+
+## Implementation Audit
+
+Current implementation:
+
+- `src/pages/CrafterDark.jsx` maps every filtered project to `CrafterDarkCard`.
+- `CrafterDarkCard` exists and is dedicated to Crafter Dark list items.
+- `ProjectCard` is shared with other pages and is not used by Crafter Dark.
+- `CrafterDarkCard` passes `project.image1 || project.image` to `SquareImageFrame`.
+- `.project-card-image-container` and `.project-card-image` still exist for shared `ProjectCard`, but they do not control Crafter Dark thumbnails.
+
+Target implementation:
+
+- Every Crafter Dark listing card uses `CrafterDarkCard`.
+- Every Crafter Dark thumbnail uses `SquareImageFrame`.
+- The frame, not the image, controls the square shape and visible border.
+- The image remains fully visible inside the square frame.
+
+Gap:
+
+- Closed for component usage: Crafter Dark no longer relies on `ProjectCard`.
+- Remaining gap: visual consistency is manually checked; no automated visual regression check exists yet.
+
+## Required Component Contract
+
+Crafter Dark listing view must use:
+
+- `CrafterDarkCard`
+- `SquareImageFrame`
+
+Page usage:
+
+```jsx
+<CrafterDarkCard project={project} onOpen={setActiveProject} />
+```
+
+Inside `CrafterDarkCard`:
+
+```jsx
+<button type="button" className="crafter-dark-card card-button">
+  <SquareImageFrame src={thumbnailSrc} alt={`${project.title} preview`} />
+  <span className="crafter-dark-card-content">
+    ...
+  </span>
+</button>
+```
+
+The card is a button rather than an article so click and keyboard activation share the same accessible control.
 
 ## Data Rules
 
@@ -39,12 +88,24 @@ Visitors see one card per project with a square thumbnail, title, category/size 
 
 - Thumbnail frame must be one square `.square-image-frame` container.
 - The thumbnail border belongs only to `.square-image-frame`.
+- `.square-image-frame::after` may be used as a non-interactive overlay so the border stays visible over light artwork.
 - Images use `.square-image-frame-image`.
 - Images must be contained, not cropped.
 - Images must not be stretched.
 - Do not apply borders to the image.
 - Do not use extra nested thumbnail wrappers.
 - Do not use `object-fit: cover` for Crafter Dark thumbnails.
+- Do not set Crafter Dark thumbnail images to `width: 100%; height: 100%`.
+- Tall, wide, square, black-background, white-background, transparent, and pixel-art images must use the same frame treatment.
+
+## Explicit Anti-Rules
+
+- Do not use shared `ProjectCard` for Crafter Dark if it cannot guarantee this thumbnail behaviour.
+- Do not apply borders directly to `<img>`.
+- Do not use `object-fit: cover`.
+- Do not use different thumbnail markup for different projects.
+- Do not rely on image background colour or dimensions to make the border visible.
+- Do not create one-off fixes for individual cards.
 
 ## Styling Rules
 
