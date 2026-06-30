@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-06-30: Changed Crafter Dark listing card images to show full artwork inside square frames instead of cropping. Files affected: `src/styles/global.css`, `docs/tasks.md`.
 - 2026-06-30: Enforced square Crafter Dark card images and detail image panels without editing source assets. Files affected: `src/styles/global.css`, `docs/tasks.md`.
 - 2026-06-30: Updated the Home short intro wording. Files affected: `src/pages/Home.jsx`, `docs/tasks.md`.
 - 2026-06-30: Balanced the Home page two-column layout by moving the LinkedIn button and intro under the profile image, and removed visible Photography detail modal titles. Files affected: `src/pages/Home.jsx`, `src/components/FullscreenImageModal.jsx`, `src/styles/global.css`, `docs/tasks.md`.

@@ -137,6 +137,7 @@ Goal: Ensure the implemented experience satisfies the design and app-flow PRDs.
 - `[ ]` Test active nav state is not color-only.
 - `[ ]` Test active filter state is not color-only.
 - `[x]` Enforce square Crafter Dark image containers on listing cards and detail modal panels.
+- `[x]` Update Crafter Dark listing images to contain full artwork inside square card frames.
 - `[ ]` Test responsive layout at:
   - 390px mobile
   - 768px tablet

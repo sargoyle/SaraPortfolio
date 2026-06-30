@@ -363,6 +363,9 @@ a:focus-visible,
 }
 
 .crafter-page .project-card-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   aspect-ratio: 1 / 1;
 }
 
@@ -377,6 +380,15 @@ a:focus-visible,
 
 .project-item:hover .project-card-image {
   transform: scale(1.04);
+}
+
+.crafter-page .project-card-image {
+  object-fit: contain;
+  object-position: center;
+}
+
+.crafter-page .project-item:hover .project-card-image {
+  transform: none;
 }
 
 .project-card-copy {
