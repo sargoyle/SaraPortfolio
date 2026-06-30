@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-06-30: Balanced the Home page two-column layout by moving the LinkedIn button and intro under the profile image, and removed visible Photography detail modal titles. Files affected: `src/pages/Home.jsx`, `src/components/FullscreenImageModal.jsx`, `src/styles/global.css`, `docs/tasks.md`.
 - 2026-06-30: Reworked the Home page copy and layout to centre Sara's cross-stitch, pattern-making, photography, games, and creative tools. Files affected: `src/pages/Home.jsx`, `src/styles/global.css`, `docs/rules.md`, `docs/tasks.md`.
 - 2026-06-30: Renamed the Games navigation/page heading to Sara's Lab and hid visible Photography grid titles while preserving accessible labels. Files affected: `src/components/Navigation.jsx`, `src/pages/Games.jsx`, `src/components/PhotoCard.jsx`, `src/App.jsx`, `docs/tasks.md`.
 - 2026-05-10: Reviewed and tightened Home and AI POC copy for portfolio accuracy, punctuation, and card readability. Files affected: `src/pages/Home.jsx`, `src/data/aiPocs.js`, `docs/tasks.md`.

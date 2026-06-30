@@ -19,9 +19,6 @@ export default function FullscreenImageModal({ photo, onClose, onPrevious, onNex
         fallbackClassName="fullscreen-image-placeholder"
         fallbackLabel={`${photo.title} image unavailable`}
       />
-      <div className="fullscreen-info">
-        <h2>{photo.title}</h2>
-      </div>
     </ModalShell>
   );
 }

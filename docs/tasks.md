@@ -101,6 +101,7 @@ Goal: Make sure the portfolio reads cleanly, consistently, and accurately before
 
 - `[x]` Review Home page positioning copy.
 - `[x]` Reposition Home page around cross-stitch, pattern-making, photography, games, and creative tools, with a two-column desktop layout.
+- `[x]` Balance Home layout by placing profile photo, LinkedIn button, and intro in the left desktop column with mobile order preserved.
 - `[?]` Confirm LinkedIn URL is correct. Automated verification was blocked by LinkedIn with HTTP 999; needs Sara confirmation.
 - `[x]` Review About Sara copy for tone and accuracy.
 - `[x]` Review all Crafter Dark titles, categories, sizes, and descriptions.
@@ -143,6 +144,7 @@ Goal: Ensure the implemented experience satisfies the design and app-flow PRDs.
 - `[x]` Fix Photography fullscreen modal spacing so opened photos do not sit underneath the fixed navigation.
 - `[x]` Simplify Photography cards and fullscreen viewer to show only the photo name.
 - `[x]` Hide visible Photography grid titles while preserving accessible photo labels.
+- `[x]` Hide visible Photography detail modal titles while preserving accessible image labels.
 - `[x]` Test menu navigation while Photography modal is focused and close modals on every nav click.
 - `[x]` Center fullscreen previous and next chevron icons.
 - `[x]` Prevent scrolled page content from showing through the fixed top navigation.
