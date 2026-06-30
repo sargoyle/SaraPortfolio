@@ -8,18 +8,16 @@ export default function ProjectCard({ project, onOpen, fallbackIcon = '✦', car
   return (
     <button type="button" className="project-item card-button" onClick={() => onOpen(project)}>
       {imageSrc && isCrafterCard ? (
-        <div className="crafter-card-image-frame">
-          <div className="crafter-card-image-inner">
-            <ImageWithFallback
-              src={imageSrc}
-              alt={imageAlt}
-              className="crafter-card-image"
-              fallbackClassName="crafter-card-image-placeholder"
-              fallbackLabel={`${project.title} image unavailable`}
-            >
-              <span className="project-image-placeholder-icon" aria-hidden="true">{fallbackIcon}</span>
-            </ImageWithFallback>
-          </div>
+        <div className="crafter-thumbnail">
+          <ImageWithFallback
+            src={imageSrc}
+            alt={imageAlt}
+            className="crafter-thumbnail-image"
+            fallbackClassName="crafter-thumbnail-placeholder"
+            fallbackLabel={`${project.title} image unavailable`}
+          >
+            <span className="project-image-placeholder-icon" aria-hidden="true">{fallbackIcon}</span>
+          </ImageWithFallback>
         </div>
       ) : imageSrc ? (
         <div className="project-card-image-container">

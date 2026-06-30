@@ -142,6 +142,8 @@ Goal: Ensure the implemented experience satisfies the design and app-flow PRDs.
 - `[x]` Make Crafter Dark listing image borders wrapper-owned and consistently visible across varied image backgrounds.
 - `[x]` Strengthen Crafter Dark listing image frame contrast so borders remain visible against white and dark artwork.
 - `[x]` Replace Crafter Dark listing image display with a dedicated outer frame, inner inset, and contained image structure.
+- `[x]` Simplify Crafter Dark listing thumbnails to one square `.crafter-thumbnail` container with the only thumbnail border.
+- `[x]` Constrain Crafter Dark thumbnail images to the square container size so tall images cannot overflow the frame.
 - `[ ]` Test responsive layout at:
   - 390px mobile
   - 768px tablet

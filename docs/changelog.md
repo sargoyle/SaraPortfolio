@@ -13,6 +13,8 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-06-30: Constrained Crafter Dark thumbnail images to the square container size so tall images cannot overflow the frame. Files affected: `src/styles/global.css`, `docs/tasks.md`.
+- 2026-06-30: Simplified Crafter Dark listing thumbnails to one square `.crafter-thumbnail` container with the only thumbnail border. Files affected: `src/components/ProjectCard.jsx`, `src/styles/global.css`, `docs/tasks.md`.
 - 2026-06-30: Replaced Crafter Dark listing image display with a dedicated outer frame, inner inset, and contained image structure. Files affected: `src/components/ProjectCard.jsx`, `src/pages/CrafterDark.jsx`, `src/styles/global.css`, `docs/tasks.md`.
 - 2026-06-30: Improved Crafter Dark listing image frame contrast so borders stay visible against white and dark artwork. Files affected: `src/styles/global.css`, `docs/tasks.md`.
 - 2026-06-30: Strengthened Crafter Dark listing image frame borders so every card uses the same wrapper-owned border treatment. Files affected: `src/styles/global.css`, `docs/tasks.md`.

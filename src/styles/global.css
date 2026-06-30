@@ -375,51 +375,34 @@ a:focus-visible,
   transform: scale(1.04);
 }
 
-.crafter-card-image-frame {
-  position: relative;
-  display: flex;
+.crafter-thumbnail {
+  display: grid;
   width: 100%;
   aspect-ratio: 1 / 1;
-  align-items: center;
-  justify-content: center;
+  place-items: center;
   box-sizing: border-box;
+  container-type: inline-size;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   background: rgba(255, 255, 255, 0.04);
 }
 
-.crafter-card-image-frame::after {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  box-sizing: border-box;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  content: "";
-  pointer-events: none;
-}
-
-.crafter-card-image-inner {
-  display: flex;
-  width: calc(100% - 8px);
-  height: calc(100% - 8px);
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.crafter-card-image {
+.crafter-thumbnail-image {
   display: block;
   width: auto;
-  max-width: 100%;
+  max-width: 100cqw;
   height: auto;
-  max-height: 100%;
+  max-height: 100cqw;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
   object-fit: contain;
   object-position: center;
 }
 
-.crafter-card-image-placeholder {
+.crafter-thumbnail-placeholder {
   display: flex;
   width: 100%;
   height: 100%;
