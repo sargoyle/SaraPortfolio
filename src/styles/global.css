@@ -363,11 +363,22 @@ a:focus-visible,
 }
 
 .crafter-page .project-card-image-container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   aspect-ratio: 1 / 1;
-  border: 1px solid var(--glass-border);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.crafter-page .project-card-image-container::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  content: "";
+  pointer-events: none;
 }
 
 .project-card-image {

@@ -139,6 +139,7 @@ Goal: Ensure the implemented experience satisfies the design and app-flow PRDs.
 - `[x]` Enforce square Crafter Dark image containers on listing cards and detail modal panels.
 - `[x]` Update Crafter Dark listing images to contain full artwork inside square card frames.
 - `[x]` Add complete subtle border around Crafter Dark listing card image frames.
+- `[x]` Make Crafter Dark listing image borders wrapper-owned and consistently visible across varied image backgrounds.
 - `[ ]` Test responsive layout at:
   - 390px mobile
   - 768px tablet

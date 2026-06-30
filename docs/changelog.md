@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-06-30: Strengthened Crafter Dark listing image frame borders so every card uses the same wrapper-owned border treatment. Files affected: `src/styles/global.css`, `docs/tasks.md`.
 - 2026-06-30: Added a complete subtle border around Crafter Dark listing card image frames. Files affected: `src/styles/global.css`, `docs/tasks.md`.
 - 2026-06-30: Changed Crafter Dark listing card images to show full artwork inside square frames instead of cropping. Files affected: `src/styles/global.css`, `docs/tasks.md`.
 - 2026-06-30: Enforced square Crafter Dark card images and detail image panels without editing source assets. Files affected: `src/styles/global.css`, `docs/tasks.md`.
