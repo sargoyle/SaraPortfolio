@@ -12,7 +12,7 @@ export default function LabProjectDetailModal({ project, onClose, onPrevious, on
       onNext={onNext}
       variant="lab"
     >
-      <LabProjectDetail project={project} onPrevious={onPrevious} onNext={onNext} />
+      <LabProjectDetail project={project} />
     </ModalShell>
   );
 }

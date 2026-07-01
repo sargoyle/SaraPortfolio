@@ -22,6 +22,7 @@ Modals open over the current page, can be closed, and support previous/next navi
 - Content uses `.fullscreen-content`.
 - Photography uses `variant="photo"`.
 - Close button belongs visually to the modal panel and should not sit at the far viewport edge.
+- Sara's Lab positions the close button just outside the modal panel so it does not sit over the project card content.
 - Modal controls should not be hidden behind or visually detached from the panel.
 
 ## Reusable Components
@@ -48,6 +49,7 @@ Modals open over the current page, can be closed, and support previous/next navi
 
 - Use `role="dialog"` and `aria-modal="true"`.
 - Close button needs accessible label.
+- Close button icon must be visually centred inside the circular button.
 - Close button placement should be consistent across detail views.
 - Escape closes.
 - ArrowLeft/ArrowRight navigate when handlers exist.

@@ -8,7 +8,7 @@ function LabDetailPlaceholder({ title }) {
   );
 }
 
-export default function LabProjectDetail({ project, onPrevious, onNext }) {
+export default function LabProjectDetail({ project }) {
   const mediaStyle = {
     '--lab-detail-media-fit': project.detailMediaFit || project.mediaFit || 'contain',
     '--lab-detail-media-position': project.detailMediaPosition || project.mediaPosition || 'center',
@@ -26,19 +26,13 @@ export default function LabProjectDetail({ project, onPrevious, onNext }) {
 
         <div className="lab-project-detail-body">
           <p>{project.blurb}</p>
-          <div className="lab-project-detail-actions">
-            {project.link ? (
+          {project.link ? (
+            <div className="lab-project-detail-actions">
               <a href={project.link} target="_blank" rel="noreferrer" className="lab-project-link">
                 Open project
               </a>
-            ) : null}
-            <button type="button" className="lab-project-nav-action" onClick={onPrevious}>
-              Previous
-            </button>
-            <button type="button" className="lab-project-nav-action" onClick={onNext}>
-              Next
-            </button>
-          </div>
+            </div>
+          ) : null}
         </div>
       </div>
 

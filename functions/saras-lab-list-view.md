@@ -36,6 +36,7 @@ Visitors see four image-led project cards. Activating a card opens the project d
 
 - Use the project image when available.
 - Apply `mediaFit` and `mediaPosition` to prevent awkward cropping.
+- Default Lab card images should use `contain` so app screenshots, logo banners, and box art display consistently without being cut off.
 - Use a styled title placeholder when image is empty or unavailable.
 - Missing images must render a polished placeholder, not a blank block.
 

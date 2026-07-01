@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-07-01: Removed inline Previous/Next buttons from Sara's Lab detail views and standardised Lab card previews to contained media. Files affected: `src/components/LabProjectDetail.jsx`, `src/components/LabProjectDetailModal.jsx`, `src/data/labProjects.js`, `src/styles/global.css`, `functions/saras-lab-detail-view.md`, `functions/saras-lab-list-view.md`, `functions/lab-project-card.md`, `docs/tasks.md`.
 - 2026-07-01: Enabled shared fullscreen previous/next arrow controls on Sara's Lab detail modals. Files affected: `src/components/LabProjectDetailModal.jsx`, `functions/saras-lab-detail-view.md`, `docs/tasks.md`.
 - 2026-07-01: Polished Sara's Lab card media, intro layout, and project detail view with controlled media fit, inline previous/next navigation, and no visible Focus section. Files affected: `src/pages/Games.jsx`, `src/data/labProjects.js`, `src/components/LabProjectCard.jsx`, `src/components/LabProjectDetail.jsx`, `src/components/LabProjectDetailModal.jsx`, `src/styles/global.css`, `functions/saras-lab-page.md`, `functions/saras-lab-list-view.md`, `functions/saras-lab-detail-view.md`, `functions/lab-project-card.md`, `functions/lab-project-detail.md`, `docs/tasks.md`.
 - 2026-07-01: Updated Crafter Dark page tagline to include original designs, pop-culture pieces, science-inspired patterns, and stitched experiments. Files affected: `src/pages/CrafterDark.jsx`.
@@ -57,6 +58,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Matched uploaded Xeno Photography image to the existing Xeno placeholder record. Files affected: `src/data/photos.js`, `docs/asset-inventory.md`, `docs/tasks.md`.
 
 ### Fixed
+- 2026-07-01: Centered the shared fullscreen close icon and moved the Sara's Lab close button outside the modal project card. Files affected: `src/components/ModalShell.jsx`, `src/styles/global.css`, `functions/modal-system.md`, `docs/tasks.md`.
 - 2026-07-01: Aligned the shared fullscreen close button to the modal panel so detail views do not place close controls at the far viewport edge. Files affected: `src/styles/global.css`, `functions/modal-system.md`.
 - 2026-07-01: Raised the fullscreen modal stacking layer so close and navigation controls remain clickable above the fixed site navigation. Files affected: `src/styles/global.css`.
 - 2026-05-05: Fixed nav clicks while a Photography modal is focused so current-section nav clicks close the modal, and replaced fullscreen previous/next text chevrons with centered SVG icons. Files affected: `src/App.jsx`, `src/components/ModalShell.jsx`, `src/styles/global.css`, `docs/tasks.md`.

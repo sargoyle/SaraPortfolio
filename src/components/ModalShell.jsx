@@ -45,7 +45,9 @@ export default function ModalShell({
         onMouseDown={(event) => event.stopPropagation()}
       >
         <button type="button" className="fullscreen-close" onClick={onClose} aria-label="Close fullscreen view">
-          ×
+          <svg className="fullscreen-close-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
         </button>
         {showNavigation && onPrevious && (
           <button type="button" className="fullscreen-nav prev" onClick={onPrevious} aria-label="Previous item">

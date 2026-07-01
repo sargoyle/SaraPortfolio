@@ -14,7 +14,7 @@ Displays a selected Sara's Lab project in a focused modal.
 
 ## User-Facing Behaviour
 
-Visitors open a project card and see the project title, type, status, subtitle, image or placeholder, blurb, inline previous/next controls, shared fullscreen previous/next arrow controls, and external link when available.
+Visitors open a project card and see the project title, type, status, subtitle, image or placeholder, blurb, shared fullscreen previous/next arrow controls, and external link when available.
 
 ## Layout Rules
 
@@ -54,7 +54,7 @@ Visitors open a project card and see the project title, type, status, subtitle, 
 - Modal has accessible dialog behaviour through `ModalShell`.
 - Close button must be labelled.
 - Close button must align to the modal panel, not the far edge of the viewport.
-- Previous/next buttons and shared fullscreen arrow controls must move through manual project order.
+- Shared fullscreen arrow controls must move through manual project order.
 - ArrowLeft and ArrowRight should navigate when handlers are available.
 - External links open in a new tab with `rel="noreferrer"`.
 
@@ -74,5 +74,5 @@ Visitors open a project card and see the project title, type, status, subtitle, 
 - No visible Focus header or focus tag list appears.
 - Alphabet Stitch shows the external link.
 - Batcave Font, Xanadu: The 9 Muses, and The Door List do not show empty external links.
-- Previous and next inline controls and fullscreen arrow controls work.
+- Previous and next fullscreen arrow controls work.
 - Escape and outside click close the modal.

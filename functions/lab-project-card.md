@@ -32,6 +32,7 @@ Shows project image or placeholder, type, title, status, short card description,
 
 - Render `project.image` if present.
 - Use `mediaFit` and `mediaPosition` to control previews.
+- Prefer `contain` for Lab card media unless a specific future asset is intentionally designed to crop.
 - Render styled placeholder if image is empty or unavailable.
 
 ## Styling Rules
