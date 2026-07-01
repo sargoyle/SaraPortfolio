@@ -2,61 +2,80 @@
 
 ## Purpose
 
-Sara's Lab is for games, the future Batcave Font, creative tools, prototypes, and selected experimental work.
+Sara's Lab is the portfolio home for creative systems, tools, type experiments, games, and prototypes that sit behind the finished work.
 
 ## Source Files
 
 - `src/pages/Games.jsx`
-- `src/data/games.js`
-- `src/components/ImageWithFallback.jsx`
+- `src/data/labProjects.js`
+- `src/components/LabProjectCard.jsx`
+- `src/components/LabProjectDetailModal.jsx`
+- `src/components/LabProjectDetail.jsx`
+- `src/components/ModalShell.jsx`
 - `src/styles/global.css`
 
 ## User-Facing Behaviour
 
-Currently shows game/project content for `9 Sisters - Xanadu` with images and description.
+Visitors see a four-project gallery and can open each project in a detail modal. Alphabet Stitch includes an external project link inside its detail view.
 
 ## Layout Rules
 
 - Page heading is `Sara's Lab`.
-- Current content uses `.game-content` and `.project-images`.
-- Future major items should eventually have cards and/or detail views.
+- Page intro explains that the section holds systems, creative tools, type experiments, games, and prototypes.
+- Projects display in manual `order`, not alphabetical order.
+- Current order is:
+  1. Alphabet Stitch
+  2. Batcave Font
+  3. Xanadu: The 9 Muses
+  4. The Door List
 
 ## Reusable Components
 
-- Uses `ImageWithFallback`.
-- Preferred future components: `ProjectCard`, `DetailImagePair`, or a dedicated Lab card/detail component.
+- List items use `LabProjectCard`.
+- Detail views use `LabProjectDetailModal` and `LabProjectDetail`.
+- Modal behaviour comes from `ModalShell`.
 
 ## Data Rules
 
-- Data source is `games`.
-- Current fields include `id`, `title`, `subtitle`, `image1`, `image2`, and `description`.
+- Data source is `labProjects`.
+- Required fields are `id`, `title`, `type`, `status`, `link`, `subtitle`, `cardDescription`, `blurb`, `focus`, `image`, and `order`.
+- Do not add weak or unrelated AI POCs to Sara's Lab; this section is for selected creative systems, tools, type experiments, games, and prototypes.
 
 ## Image Rules
 
-- Current images use shared project image containers.
-- Missing game assets may show fallbacks.
+- Cards and details use `project.image` when present.
+- If no image exists, render a styled placeholder with the project title.
+- Do not show broken image icons or empty media blocks.
 
 ## Styling Rules
 
-- Do not let Sara's Lab become a dumping ground for weak AI POCs.
-- Game projects should be presented as case studies where possible.
+- Preserve the dark gothic portfolio styling with purple accents and glass cards.
+- The section should feel creative and project-led, not corporate.
 
 ## Accessibility Rules
 
-- Images need useful alt text.
-- Future cards/details must remain keyboard accessible.
+- Project cards must be keyboard-accessible buttons.
+- Detail modal must close by Escape, outside click, close button, and site navigation.
+- External links must use `target="_blank"` and `rel="noreferrer"`.
 
 ## Known Gaps / Defects
 
-- Missing Games images are still blocked.
-- Sara's Lab does not yet have a card grid or detail modal pattern.
-- Batcave Font project card has not been added.
+- Xanadu currently uses a styled placeholder until final image assets are available.
+- Final screenshots may still be needed for all Lab projects.
 
 ## Change Rules
 
-- Keep the nav/page label aligned with current decision: `Sara's Lab`.
-- Add new Lab items through data and reusable components.
+- Add or reorder Lab projects through `src/data/labProjects.js`.
+- Update list/detail function docs when changing Lab card or modal behaviour.
 
 ## Test Expectations
 
-- Verify page heading, image fallbacks, and description layout on desktop/mobile.
+- Sara's Lab renders exactly four project cards.
+- The old single Xanadu content is not rendered.
+- Projects render in required manual order.
+- Alphabet Stitch displays its external link in the detail view.
+- Projects without links do not show broken external-link buttons.
+- Clicking each project opens the detail view.
+- Detail view displays title, type, status, subtitle, blurb, and focus list.
+- Keyboard access works for opening and closing detail views.
+- Mobile layout stacks cleanly.

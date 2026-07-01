@@ -183,6 +183,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[ ]` Add missing Games asset folder and images:
   - `public/images/games/9sisters-1.jpg`
   - `public/images/games/9sisters-2.jpg`
+- `[x]` Add initial Sara's Lab image assets for Alphabet Stitch, Batcave Font, and The Door List.
 - `[ ]` Add missing AI POC asset folder and screenshots referenced by `src/data/aiPocs.js`.
 - `[?]` Decide whether to keep uppercase `/images/AIPOC` paths or standardize to lowercase `/images/ai-pocs`.
 - `[?]` Decide whether to standardize uploaded image filenames to slug-style lowercase names.
@@ -203,6 +204,12 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[ ]` Consider extracting a dedicated `GalleryImageCard` component if card variants grow.
 - `[ ]` Add a reusable `PageHeader` pattern if page headings/descriptions become duplicated or more complex.
 - `[ ]` Add an automated or documented visual regression check for Crafter Dark thumbnail consistency.
+- `[x]` Replace Sara's Lab single project content with four structured project cards.
+- `[x]` Add Sara's Lab project detail view format.
+- `[x]` Add Alphabet Stitch, Batcave Font, Xanadu: The 9 Muses, and The Door List to Sara's Lab data.
+- `[x]` Update Sara's Lab function docs and test expectations.
+- `[ ]` Add final image assets for Sara's Lab project cards.
+- `[ ]` Add screenshots for Alphabet Stitch, Xanadu: The 9 Muses, The Door List, and Batcave Font.
 - `[ ]` Run `npm run build`.
 - `[ ]` Verify generated `dist` output.
 - `[?]` Choose deployment target:
@@ -233,8 +240,8 @@ Goal: Track useful improvements without letting them block the first polished la
 - `[ ]` Add tags beyond current category filters if needed.
 - `[ ]` Add process notes or captions for individual images if desired.
 - `[ ]` Add downloadable Crafter Dark pattern links if desired.
-- `[ ]` Add Sara's Lab card/detail view pattern for games, Batcave Font, creative tools, and prototypes.
-- `[ ]` Add Batcave Font project card when content and assets are ready.
+- `[x]` Add Sara's Lab card/detail view pattern for games, Batcave Font, creative tools, and prototypes.
+- `[x]` Add Batcave Font project card when content and assets are ready.
 - `[ ]` Add a contact section if LinkedIn is not enough.
 
 ## Current Open Questions
