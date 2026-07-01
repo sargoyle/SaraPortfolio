@@ -6,6 +6,15 @@ function getProjectImages(project) {
   return [project.image1, project.image2, project.image].filter(Boolean);
 }
 
+function getStructuredMetadata(project) {
+  return [
+    project.category ? ['Category', project.category] : null,
+    project.sizeFor18Count ? ['Size for 18 count', project.sizeFor18Count] : null,
+    project.chartSize ? ['Chart size', project.chartSize] : null,
+    project.numberOfColours ? ['Colours', project.numberOfColours] : null,
+  ].filter(Boolean);
+}
+
 export default function ProjectDetailModal({
   project,
   onClose,
@@ -16,12 +25,22 @@ export default function ProjectDetailModal({
   if (!project) return null;
 
   const images = getProjectImages(project);
+  const structuredMetadata = getStructuredMetadata(project);
 
   return (
     <ModalShell title={project.title} onClose={onClose} onPrevious={onPrevious} onNext={onNext}>
       <article className="fullscreen-project">
         <h2>{project.title}</h2>
-        {(project.category || project.size || project.subtitle) && (
+        {structuredMetadata.length > 0 ? (
+          <dl className="project-metadata">
+            {structuredMetadata.map(([label, value]) => (
+              <div key={label} className="project-metadata-row">
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
+          </dl>
+        ) : (project.category || project.size || project.subtitle) && (
           <p className="project-size">
             {[project.category, project.size || project.subtitle].filter(Boolean).join(' • ')}
           </p>

@@ -82,6 +82,7 @@ Goal: Populate the expected image library and remove unintended missing-asset er
 - `[x]` Extract uploaded Crafter Dark pattern sizes from PDF/DOCX documents and update matching project records.
 - `[x]` Pick up latest Crafter Dark images and documents, add X-Files and Twin Peaks Socket projects, and update extracted pattern sizes.
 - `[x]` Update Crafter Dark requested sizes, add finished-image placeholders for Moth Man and Gecko, and rename Groovie Goolies projects.
+- `[x]` Add uploaded Blue Digital Bloom, Purple Digital Bloom, Raven Film Strip, Solar Swirl, Vortex, and Chaos Butterfly assets.
 - `[-]` Add Games images. Blocked: source assets not found locally.
   - `/images/games/9sisters-1.jpg`
   - `/images/games/9sisters-2.jpg`
@@ -193,6 +194,11 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Refactor Crafter Dark listing cards to use `CrafterDarkCard` and `SquareImageFrame`.
 - `[x]` Review and align Crafter Dark function documentation with the implemented list card and square image frame behaviour.
 - `[x]` Stabilise Crafter Dark list thumbnail DOM and CSS so all cards use identical square image frames.
+- `[x]` Add consistent inner inset to Crafter Dark list thumbnails so images cannot touch frame borders.
+- `[x]` Update Crafter Dark project data with size, chart size, colour count, category, and short description fields.
+- `[x]` Display Crafter Dark structured metadata in list cards.
+- `[x]` Display Crafter Dark structured metadata in detail view.
+- `[x]` Add Science category to Crafter Dark filters.
 - `[ ]` Reintroduce `SquareImageFrame` fallback handling without changing DOM structure or thumbnail layout.
 - `[ ]` Consider extracting a dedicated `GalleryImageCard` component if card variants grow.
 - `[ ]` Add a reusable `PageHeader` pattern if page headings/descriptions become duplicated or more complex.

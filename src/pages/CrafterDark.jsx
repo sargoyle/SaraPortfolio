@@ -4,7 +4,7 @@ import FilterBar from '../components/FilterBar.jsx';
 import ProjectDetailModal from '../components/ProjectDetailModal.jsx';
 import { crafterProjects } from '../data/crafterProjects.js';
 
-const filters = ['All', 'When Stitches Kaleid', 'Pop Culture Inspired'];
+const filters = ['All', 'Pop Culture Inspired', 'Science', 'When Stitches Kaleid'];
 
 export default function CrafterDark() {
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -15,11 +15,15 @@ export default function CrafterDark() {
     [selectedFilter]
   );
 
-  const itemCounts = useMemo(() => ({
-    All: crafterProjects.length,
-    'When Stitches Kaleid': crafterProjects.filter((project) => project.category === 'When Stitches Kaleid').length,
-    'Pop Culture Inspired': crafterProjects.filter((project) => project.category === 'Pop Culture Inspired').length,
-  }), []);
+  const itemCounts = useMemo(
+    () => filters.reduce((counts, filter) => ({
+      ...counts,
+      [filter]: filter === 'All'
+        ? crafterProjects.length
+        : crafterProjects.filter((project) => project.category === filter).length,
+    }), {}),
+    []
+  );
 
   const navigateProject = (direction) => {
     if (!activeProject || filteredProjects.length === 0) return;

@@ -14,7 +14,7 @@ Displays selected cross-stitch projects in a fullscreen detail modal.
 
 ## User-Facing Behaviour
 
-Visitors see the project title, category/size, one or more images, and full description. Previous/next controls move through the filtered project set.
+Visitors see the project title, structured metadata, one or more images, and description. Previous/next controls move through the filtered project set.
 
 ## Layout Rules
 
@@ -31,8 +31,10 @@ Visitors see the project title, category/size, one or more images, and full desc
 ## Data Rules
 
 - Images come from `images` when present, otherwise `image1`, `image2`, and `image`.
-- Category and size are displayed in the modal meta line.
-- Description displays in full.
+- Detail metadata must be generated from the same source data fields as the list card to prevent mismatched values.
+- Category, size for 18 count, chart size, and number of colours are displayed as structured metadata.
+- `sizeFor18Count`, `chartSize`, and `numberOfColours` are preferred over the legacy `size` string.
+- Description displays from the project `description` field.
 
 ## Image Rules
 
@@ -63,5 +65,8 @@ Visitors see the project title, category/size, one or more images, and full desc
 ## Test Expectations
 
 - Open several Crafter Dark projects.
+- Confirm detail view shows category, size for 18 count, chart size, colour count, and updated short description.
+- Confirm detail view does not show stale `Pattern size varies` when structured metadata exists.
 - Test Escape, outside click, previous/next buttons, ArrowLeft, and ArrowRight.
 - Confirm images remain contained and square on desktop/mobile.
+- Manual metadata checks should include Adam Ant Logo, Alien 3 Sulaco Egg, Blue Digital Bloom, Caligari Hallway, Fallout Pip-boy 3000, Hardware, Mr Handy Fudge, Purple Digital Bloom, Raven Film Strip, Solar Swirl, and Vortex.

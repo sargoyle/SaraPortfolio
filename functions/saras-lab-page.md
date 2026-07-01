@@ -49,7 +49,7 @@ Currently shows game/project content for `9 Sisters - Xanadu` with images and de
 ## Known Gaps / Defects
 
 - Missing Games images are still blocked.
-- Ceres/Sara's Lab does not yet have a card grid or detail modal pattern.
+- Sara's Lab does not yet have a card grid or detail modal pattern.
 - Batcave Font project card has not been added.
 
 ## Change Rules

@@ -59,10 +59,11 @@ Gap:
 ## Data Rules
 
 - Data source is `crafterProjects`.
-- Required fields: `id`, `title`, `category`, `description`.
+- `crafterProjects` is the single source of truth for title, category, size for 18 count, chart size, number of colours, description, and images.
+- Required fields: `id`, `title`, `category`, `sizeFor18Count`, `chartSize`, `numberOfColours`, `description`.
 - Image fields are `image1`, `image2`, or `images`.
-- Size should be shown when available.
-- Current filters: `All`, `When Stitches Kaleid`, `Pop Culture Inspired`.
+- `size` may remain as compatibility data, but UI should prefer `sizeFor18Count`.
+- Current filters: `All`, `Pop Culture Inspired`, `Science`, `When Stitches Kaleid`.
 
 ## Image Rules
 
@@ -94,5 +95,6 @@ Gap:
 ## Test Expectations
 
 - Test all filters.
+- Confirm the `Science` filter appears and returns Science-category projects.
 - Open several projects.
 - Test Escape, previous/next buttons, arrow keys, and click outside.

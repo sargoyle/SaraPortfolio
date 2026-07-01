@@ -14,7 +14,7 @@ Displays cross-stitch pattern cards in the grouped/listing grid.
 
 ## User-Facing Behaviour
 
-Visitors see one card per project with a square thumbnail, title, category/size meta, and truncated description. Clicking a card opens its detail modal.
+Visitors see one card per project with a square thumbnail, title, structured metadata, and truncated description. Clicking a card opens its detail modal.
 
 ## Layout Rules
 
@@ -83,7 +83,8 @@ The card is a button rather than an article so click and keyboard activation sha
 
 - Card image source is `project.image1 || project.image`.
 - Titles display visually.
-- Category and size display in the card meta.
+- Category, size for 18 count, chart size, and number of colours display in the card meta.
+- Crafter Dark list cards must use structured metadata fields rather than embedding all metadata into one combined text string.
 - Descriptions are line-clamped by shared card styles.
 
 ## Image Rules
@@ -91,8 +92,9 @@ The card is a button rather than an article so click and keyboard activation sha
 - Thumbnail frame must be one square `.square-image-frame` container.
 - The thumbnail border belongs only to `.square-image-frame::after`.
 - `.square-image-frame::after` must be used as the single visible border overlay for all Crafter Dark thumbnails.
+- `.square-image-frame` must include a consistent inner inset/padding so images cannot visually touch or hide the frame border.
 - Images use `.square-image-frame-image`.
-- Images must be contained, not cropped.
+- Images must be contained inside an inset content area, leaving a consistent visible frame/border gap on all four sides.
 - Images must not be stretched.
 - Do not apply borders to the image.
 - Do not apply borders directly to `.square-image-frame`; the pseudo-element owns the visible border.
@@ -138,5 +140,9 @@ The card is a button rather than an article so click and keyboard activation sha
 - Verify Cooper Eyes, Grey, Xeno, Moth Man, Gecko, Adam Ant Logo, Limbo Graveyard, Predator 2, Twin Peaks Owl, Fallout Pip-Boy Grid, Twin Peaks Socket, X-Files Aliens, HAL 9000, and Mr Handy Fudge.
 - Confirm each has exactly one `.square-image-frame`.
 - Confirm image fits inside the square and has no image border.
+- Confirm there is a visible inset between the image and frame border on the top, right, bottom, and left.
+- Confirm list cards show category, 18 count size, chart size, colour count, and short description when present.
+- Confirm no list card shows stale `Pattern size varies` when structured metadata exists.
 - Confirm text below cards remains aligned.
 - For multiple cards, inspect the rendered DOM and confirm the thumbnail structure and computed image/frame styles are identical.
+- Manual metadata checks should include Adam Ant Logo, Alien 3 Sulaco Egg, Blue Digital Bloom, Caligari Hallway, Fallout Pip-boy 3000, Hardware, Mr Handy Fudge, Purple Digital Bloom, Raven Film Strip, Solar Swirl, and Vortex.
