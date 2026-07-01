@@ -18,6 +18,7 @@ Shows project image or placeholder, type, title, status, short card description,
 
 - Render as one keyboard-accessible button inside an article.
 - Keep media above text.
+- Keep action text aligned consistently at the bottom of the card content when card heights differ.
 
 ## Reusable Components
 
@@ -25,17 +26,19 @@ Shows project image or placeholder, type, title, status, short card description,
 
 ## Data Rules
 
-- Reads `title`, `type`, `status`, `cardDescription`, `image`, and `link`.
+- Reads `title`, `type`, `status`, `cardDescription`, `image`, `link`, `mediaFit`, and `mediaPosition`.
 
 ## Image Rules
 
 - Render `project.image` if present.
+- Use `mediaFit` and `mediaPosition` to control previews.
 - Render styled placeholder if image is empty or unavailable.
 
 ## Styling Rules
 
 - Match portfolio glass card styling.
 - Use purple accents sparingly.
+- Cards should feel like a creative product/tool showcase, not a generic project grid.
 
 ## Accessibility Rules
 

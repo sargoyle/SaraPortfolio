@@ -9,6 +9,11 @@ function LabPlaceholder({ title }) {
 }
 
 export default function LabProjectCard({ project, onOpen }) {
+  const mediaStyle = {
+    '--lab-media-fit': project.mediaFit || 'cover',
+    '--lab-media-position': project.mediaPosition || 'center',
+  };
+
   return (
     <article className="lab-project-card">
       <button
@@ -17,7 +22,7 @@ export default function LabProjectCard({ project, onOpen }) {
         onClick={() => onOpen(project)}
         aria-label={`View details for ${project.title}`}
       >
-        <span className="lab-project-card-media">
+        <span className="lab-project-card-media" style={mediaStyle}>
           {project.image ? (
             <ImageWithFallback
               src={project.image}

@@ -20,6 +20,8 @@ Visitors see four image-led project cards. Activating a card opens the project d
 - Use `.lab-project-grid`.
 - Cards must render in `order` from `labProjects`.
 - Do not sort alphabetically.
+- Cards should show type, title, status, short description, and action button.
+- Cards should use a controlled media area and balanced spacing.
 
 ## Reusable Components
 
@@ -27,18 +29,21 @@ Visitors see four image-led project cards. Activating a card opens the project d
 
 ## Data Rules
 
-- Cards use `title`, `type`, `status`, `cardDescription`, `image`, and `link`.
-- Button text is `Open project details` when a link exists, otherwise `View details`.
+- Cards use `title`, `type`, `status`, `cardDescription`, `image`, `link`, `mediaFit`, and `mediaPosition`.
+- Button text is `Open project` when a link exists, otherwise `View details`.
 
 ## Image Rules
 
 - Use the project image when available.
+- Apply `mediaFit` and `mediaPosition` to prevent awkward cropping.
 - Use a styled title placeholder when image is empty or unavailable.
+- Missing images must render a polished placeholder, not a blank block.
 
 ## Styling Rules
 
 - Use dark glass cards, purple accents, and readable text hierarchy.
 - Do not reuse AI POC card styling if it makes the section feel generic.
+- Card media should look intentional and project-led.
 
 ## Accessibility Rules
 
@@ -60,3 +65,5 @@ Visitors see four image-led project cards. Activating a card opens the project d
 - Card order is Alphabet Stitch, Batcave Font, Xanadu: The 9 Muses, The Door List.
 - Each card shows title, type, status, short description, and action text.
 - Missing image projects show a styled placeholder.
+- Xanadu placeholder does not look broken.
+- Card media looks intentional on desktop, tablet, and mobile.

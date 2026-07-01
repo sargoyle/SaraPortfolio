@@ -15,6 +15,10 @@ export const labProjects = [
       'Creative tools',
     ],
     image: '/images/lab/alphabet-stitch.png',
+    mediaFit: 'cover',
+    mediaPosition: 'center top',
+    detailMediaFit: 'contain',
+    detailMediaPosition: 'center',
     order: 1,
   },
   {
@@ -34,6 +38,10 @@ export const labProjects = [
       'Visual identity',
     ],
     image: '/images/lab/batcave-font.png',
+    mediaFit: 'contain',
+    mediaPosition: 'center',
+    detailMediaFit: 'contain',
+    detailMediaPosition: 'center',
     order: 2,
   },
   {
@@ -53,6 +61,10 @@ export const labProjects = [
       'Strategic play',
     ],
     image: '',
+    mediaFit: 'contain',
+    mediaPosition: 'center',
+    detailMediaFit: 'contain',
+    detailMediaPosition: 'center',
     order: 3,
   },
   {
@@ -73,6 +85,10 @@ export const labProjects = [
       'Social play',
     ],
     image: '/images/lab/the-door-list.png',
+    mediaFit: 'cover',
+    mediaPosition: 'center top',
+    detailMediaFit: 'contain',
+    detailMediaPosition: 'center',
     order: 4,
   },
 ];

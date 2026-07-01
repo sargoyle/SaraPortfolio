@@ -21,6 +21,8 @@ Modals open over the current page, can be closed, and support previous/next navi
 - Overlay uses `.fullscreen-overlay`.
 - Content uses `.fullscreen-content`.
 - Photography uses `variant="photo"`.
+- Close button belongs visually to the modal panel and should not sit at the far viewport edge.
+- Modal controls should not be hidden behind or visually detached from the panel.
 
 ## Reusable Components
 
@@ -40,12 +42,13 @@ Modals open over the current page, can be closed, and support previous/next navi
 ## Styling Rules
 
 - Preserve dark overlay, glass panel, and purple glow.
-- Modal should sit below fixed nav where applicable.
+- Modal panel should feel connected to the current page via dimmed/blurred background.
 
 ## Accessibility Rules
 
 - Use `role="dialog"` and `aria-modal="true"`.
 - Close button needs accessible label.
+- Close button placement should be consistent across detail views.
 - Escape closes.
 - ArrowLeft/ArrowRight navigate when handlers exist.
 - Focus should restore to previous active element after close.
@@ -60,4 +63,4 @@ Modals open over the current page, can be closed, and support previous/next navi
 
 ## Test Expectations
 
-- Test Escape, click outside, close button, previous/next buttons, arrow keys, and nav click close.
+- Test Escape, click outside, close button, previous/next buttons, arrow keys, nav click close, and close button alignment for Photography, Crafter Dark, AI POCs, and Sara's Lab.

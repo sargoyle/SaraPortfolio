@@ -208,6 +208,11 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Add Sara's Lab project detail view format.
 - `[x]` Add Alphabet Stitch, Batcave Font, Xanadu: The 9 Muses, and The Door List to Sara's Lab data.
 - `[x]` Update Sara's Lab function docs and test expectations.
+- `[x]` Improve Sara's Lab list card layout and media presentation.
+- `[x]` Redesign Sara's Lab project detail view.
+- `[x]` Remove visible Focus section from Sara's Lab detail view.
+- `[x]` Add previous and next navigation to Sara's Lab detail view.
+- `[x]` Fix modal close button alignment for Sara's Lab and shared modal behaviour where applicable.
 - `[ ]` Add final image assets for Sara's Lab project cards.
 - `[ ]` Add screenshots for Alphabet Stitch, Xanadu: The 9 Muses, The Door List, and Batcave Font.
 - `[ ]` Run `npm run build`.

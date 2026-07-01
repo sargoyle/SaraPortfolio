@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Sara's Lab is the portfolio home for creative systems, tools, type experiments, games, and prototypes that sit behind the finished work.
+Sara's Lab is the portfolio home and project showcase for creative systems, tools, type experiments, games, and prototypes that sit behind the finished work.
 
 ## Source Files
 
@@ -22,6 +22,7 @@ Visitors see a four-project gallery and can open each project in a detail modal.
 
 - Page heading is `Sara's Lab`.
 - Page intro explains that the section holds systems, creative tools, type experiments, games, and prototypes.
+- Intro copy should use an intentional readable width and should not wrap awkwardly on desktop.
 - Projects display in manual `order`, not alphabetical order.
 - Current order is:
   1. Alphabet Stitch
@@ -44,6 +45,7 @@ Visitors see a four-project gallery and can open each project in a detail modal.
 ## Image Rules
 
 - Cards and details use `project.image` when present.
+- Project media may specify `mediaFit`, `mediaPosition`, `detailMediaFit`, and `detailMediaPosition`.
 - If no image exists, render a styled placeholder with the project title.
 - Do not show broken image icons or empty media blocks.
 
@@ -51,11 +53,13 @@ Visitors see a four-project gallery and can open each project in a detail modal.
 
 - Preserve the dark gothic portfolio styling with purple accents and glass cards.
 - The section should feel creative and project-led, not corporate.
+- The section should feel like a polished portfolio/product showcase, not a generic AI POC grid.
 
 ## Accessibility Rules
 
 - Project cards must be keyboard-accessible buttons.
 - Detail modal must close by Escape, outside click, close button, and site navigation.
+- Detail modal supports previous/next navigation through buttons and arrow keys.
 - External links must use `target="_blank"` and `rel="noreferrer"`.
 
 ## Known Gaps / Defects
@@ -76,6 +80,7 @@ Visitors see a four-project gallery and can open each project in a detail modal.
 - Alphabet Stitch displays its external link in the detail view.
 - Projects without links do not show broken external-link buttons.
 - Clicking each project opens the detail view.
-- Detail view displays title, type, status, subtitle, blurb, and focus list.
-- Keyboard access works for opening and closing detail views.
+- Detail view displays title, type, status, subtitle, blurb, and image/preview.
+- Detail view does not show a visible Focus section.
+- Keyboard access works for opening, closing, and previous/next navigation in detail views.
 - Mobile layout stacks cleanly.

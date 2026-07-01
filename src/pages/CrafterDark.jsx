@@ -36,7 +36,7 @@ export default function CrafterDark() {
   return (
     <main className="page crafter-page">
       <h1 className="section-title">Crafter Dark</h1>
-      <p className="description">A curated collection of dark cross stitch patterns. Gothic landscapes, haunting portraits, and atmospheric scenes.</p>
+      <p className="description">A curated collection of dark cross stitch patterns. Original designs, pop-culture pieces, science-inspired patterns, and stitched experiments.</p>
       <FilterBar filters={filters} selectedFilter={selectedFilter} onChange={setSelectedFilter} itemCounts={itemCounts} />
       <div className="simple-grid">
         {filteredProjects.map((project) => (
