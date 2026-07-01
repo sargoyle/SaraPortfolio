@@ -35,15 +35,7 @@ export default function ModalShell({
 
   return (
     <div className="fullscreen-overlay" onMouseDown={onClose}>
-      <section
-        ref={dialogRef}
-        className={`fullscreen-content fullscreen-content-${variant}`}
-        role="dialog"
-        aria-modal="true"
-        aria-label={title}
-        tabIndex={-1}
-        onMouseDown={(event) => event.stopPropagation()}
-      >
+      <div className={`fullscreen-frame fullscreen-frame-${variant}`} onMouseDown={(event) => event.stopPropagation()}>
         <button type="button" className="fullscreen-close" onClick={onClose} aria-label="Close fullscreen view">
           <svg className="fullscreen-close-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="m6 6 12 12M18 6 6 18" />
@@ -63,8 +55,17 @@ export default function ModalShell({
             </svg>
           </button>
         )}
-        {children}
-      </section>
+        <section
+          ref={dialogRef}
+          className={`fullscreen-content fullscreen-content-${variant}`}
+          role="dialog"
+          aria-modal="true"
+          aria-label={title}
+          tabIndex={-1}
+        >
+          {children}
+        </section>
+      </div>
     </div>
   );
 }

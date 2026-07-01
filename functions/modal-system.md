@@ -19,10 +19,12 @@ Modals open over the current page, can be closed, and support previous/next navi
 ## Layout Rules
 
 - Overlay uses `.fullscreen-overlay`.
+- Modal positioning uses `.fullscreen-frame` around `.fullscreen-content` so close controls can sit outside the panel without becoming part of the panel scroll area.
 - Content uses `.fullscreen-content`.
 - Photography uses `variant="photo"`.
 - Close button belongs visually to the modal panel and should not sit at the far viewport edge.
 - Sara's Lab positions the close button just outside the modal panel so it does not sit over the project card content.
+- Close controls must not create horizontal or vertical scrollbars inside modal content.
 - Modal controls should not be hidden behind or visually detached from the panel.
 
 ## Reusable Components

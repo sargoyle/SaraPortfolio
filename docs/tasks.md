@@ -216,6 +216,8 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Remove inline Previous and Next buttons from Sara's Lab detail view.
 - `[x]` Move Sara's Lab close button outside the modal project card and centre the shared close icon.
 - `[x]` Make Sara's Lab list media use consistent contained image previews.
+- `[x]` Move shared modal close controls outside the scrollable panel so Lab close buttons do not create scrollbars.
+- `[x]` Constrain Sara's Lab list images with contained frame sizing so The Door List is not cropped or overflowing.
 - `[x]` Fix modal close button alignment for Sara's Lab and shared modal behaviour where applicable.
 - `[ ]` Add final image assets for Sara's Lab project cards.
 - `[ ]` Add screenshots for Alphabet Stitch, Xanadu: The 9 Muses, The Door List, and Batcave Font.

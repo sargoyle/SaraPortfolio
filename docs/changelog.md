@@ -58,6 +58,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Matched uploaded Xeno Photography image to the existing Xeno placeholder record. Files affected: `src/data/photos.js`, `docs/asset-inventory.md`, `docs/tasks.md`.
 
 ### Fixed
+- 2026-07-01: Moved modal close controls outside the scrollable panel and constrained Sara's Lab card images with contained frame sizing to prevent scrollbars and cropped or overflowing Lab previews. Files affected: `src/components/ModalShell.jsx`, `src/styles/global.css`, `functions/modal-system.md`, `functions/saras-lab-list-view.md`, `docs/tasks.md`.
 - 2026-07-01: Centered the shared fullscreen close icon and moved the Sara's Lab close button outside the modal project card. Files affected: `src/components/ModalShell.jsx`, `src/styles/global.css`, `functions/modal-system.md`, `docs/tasks.md`.
 - 2026-07-01: Aligned the shared fullscreen close button to the modal panel so detail views do not place close controls at the far viewport edge. Files affected: `src/styles/global.css`, `functions/modal-system.md`.
 - 2026-07-01: Raised the fullscreen modal stacking layer so close and navigation controls remain clickable above the fixed site navigation. Files affected: `src/styles/global.css`.
