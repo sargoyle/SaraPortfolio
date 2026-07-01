@@ -212,11 +212,12 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Redesign Sara's Lab project detail view.
 - `[x]` Remove visible Focus section from Sara's Lab detail view.
 - `[x]` Add previous and next navigation to Sara's Lab detail view.
+- `[x]` Add shared fullscreen previous and next arrow controls to Sara's Lab detail view.
 - `[x]` Fix modal close button alignment for Sara's Lab and shared modal behaviour where applicable.
 - `[ ]` Add final image assets for Sara's Lab project cards.
 - `[ ]` Add screenshots for Alphabet Stitch, Xanadu: The 9 Muses, The Door List, and Batcave Font.
-- `[ ]` Run `npm run build`.
-- `[ ]` Verify generated `dist` output.
+- `[x]` Run `npm run build`.
+- `[x]` Verify generated `dist` output.
 - `[?]` Choose deployment target:
   - Netlify
   - Vercel

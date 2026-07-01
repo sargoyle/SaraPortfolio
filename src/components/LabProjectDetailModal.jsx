@@ -10,7 +10,6 @@ export default function LabProjectDetailModal({ project, onClose, onPrevious, on
       onClose={onClose}
       onPrevious={onPrevious}
       onNext={onNext}
-      showNavigation={false}
       variant="lab"
     >
       <LabProjectDetail project={project} onPrevious={onPrevious} onNext={onNext} />
