@@ -4,9 +4,23 @@ export default function Home() {
   return (
     <main className="page home-page">
       <div className="home-content">
-        <div className="home-copy">
-          <h1 className="home-title">Sara’s Portfolio</h1>
-          <p className="home-subtitle">Creative Technologist, Artist & Pattern Maker</p>
+        <div className="home-text">
+          <div className="home-copy">
+            <h1 className="home-title">Sara’s Portfolio</h1>
+            <p className="home-subtitle">Creative Technologist, Artist & Pattern Maker</p>
+          </div>
+          <section className="about-section" aria-labelledby="about-sara">
+            <h2 id="about-sara">About Sara</h2>
+            <div className="about-text">
+              <p>I’m a creative technologist, artist and pattern maker working across cross-stitch, photography, games, visual systems, and digital tools.</p>
+              <p>My main creative practice is designing and making cross-stitch patterns, especially darker, gothic, pop-culture, and image-led pieces. Photography often feeds into that process, either as source material, texture, reference, or a way to find patterns hiding in ordinary things.</p>
+              <p>I’m interested in the point where digital work becomes physical. A photo becomes a pattern. A pattern becomes a stitched object. A game idea becomes a set of rules, cards, images, and choices.</p>
+              <p>AI and code are part of the toolkit when they’re useful, but they’re not the point. The point is making things that feel personal, strange, structured, and worth spending time with.</p>
+              <h2>Behind the Work</h2>
+              <p>This site collects the things I make: cross-stitch designs, photography, board game concepts, type experiments, and creative tools.</p>
+              <p>Some pieces are finished. Some are prototypes. Some are part of a longer process. The common thread is making visual systems that can become something real, whether that is a stitched piece, a game, a font, or a tool that helps me make the next thing.</p>
+            </div>
+          </section>
         </div>
         <div className="home-media">
           <div className="profile-image-container">
@@ -36,18 +50,6 @@ export default function Home() {
             <p>Most of my work starts with an idea and an image, then turns into something tactile, visual, or playable.</p>
           </div>
         </div>
-        <section className="about-section" aria-labelledby="about-sara">
-          <h2 id="about-sara">About Sara</h2>
-          <div className="about-text">
-            <p>I’m a creative technologist, artist and pattern maker working across cross-stitch, photography, games, visual systems, and digital tools.</p>
-            <p>My main creative practice is designing and making cross-stitch patterns, especially darker, gothic, pop-culture, and image-led pieces. Photography often feeds into that process, either as source material, texture, reference, or a way to find patterns hiding in ordinary things.</p>
-            <p>I’m interested in the point where digital work becomes physical. A photo becomes a pattern. A pattern becomes a stitched object. A game idea becomes a set of rules, cards, images, and choices.</p>
-            <p>AI and code are part of the toolkit when they’re useful, but they’re not the point. The point is making things that feel personal, strange, structured, and worth spending time with.</p>
-            <h2>Behind the Work</h2>
-            <p>This site collects the things I make: cross-stitch designs, photography, board game concepts, type experiments, and creative tools.</p>
-            <p>Some pieces are finished. Some are prototypes. Some are part of a longer process. The common thread is making visual systems that can become something real, whether that is a stitched piece, a game, a font, or a tool that helps me make the next thing.</p>
-          </div>
-        </section>
       </div>
     </main>
   );

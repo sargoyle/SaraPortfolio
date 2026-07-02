@@ -11,7 +11,9 @@ export default function CrafterDark() {
   const [activeProject, setActiveProject] = useState(null);
 
   const filteredProjects = useMemo(
-    () => crafterProjects.filter((project) => selectedFilter === 'All' || project.category === selectedFilter),
+    () => [...crafterProjects]
+      .filter((project) => selectedFilter === 'All' || project.category === selectedFilter)
+      .sort((first, second) => first.title.localeCompare(second.title, undefined, { sensitivity: 'base' })),
     [selectedFilter]
   );
 

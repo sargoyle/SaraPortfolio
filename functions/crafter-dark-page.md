@@ -23,6 +23,7 @@ Visitors can browse cross-stitch pattern cards, filter by category, and open a f
 - Page uses `.page crafter-page`.
 - Cards render inside `.simple-grid`.
 - Filters appear above the grid.
+- The page intro may use the available desktop width and should not wrap early while there is clear horizontal space.
 
 ## Reusable Components
 
@@ -64,6 +65,7 @@ Gap:
 - Image fields are `image1`, `image2`, or `images`.
 - `size` may remain as compatibility data, but UI should prefer `sizeFor18Count`.
 - Current filters: `All`, `Pop Culture Inspired`, `Science`, `When Stitches Kaleid`.
+- Listing order is alphabetical by the visible project title after filtering.
 
 ## Image Rules
 
@@ -95,6 +97,7 @@ Gap:
 ## Test Expectations
 
 - Test all filters.
+- Confirm filtered and unfiltered lists are sorted alphabetically by visible project title.
 - Confirm the `Science` filter appears and returns Science-category projects.
 - Open several projects.
 - Test Escape, previous/next buttons, arrow keys, and click outside.

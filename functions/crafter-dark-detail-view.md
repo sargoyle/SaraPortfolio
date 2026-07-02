@@ -14,7 +14,7 @@ Displays selected cross-stitch projects in a fullscreen detail modal.
 
 ## User-Facing Behaviour
 
-Visitors see the project title, structured metadata, one or more images, and description. Previous/next controls move through the filtered project set.
+Visitors see the project title, structured metadata, one or more images, description, and a subtle category tag at the bottom. Previous/next controls move through the filtered project set.
 
 ## Layout Rules
 
@@ -32,7 +32,8 @@ Visitors see the project title, structured metadata, one or more images, and des
 
 - Images come from `images` when present, otherwise `image1`, `image2`, and `image`.
 - Detail metadata must be generated from the same source data fields as the list card to prevent mismatched values.
-- Category, size for 18 count, chart size, and number of colours are displayed as structured metadata.
+- Size for 18 count, chart size, and number of colours are displayed as structured metadata.
+- Category displays at the bottom as a small tag, not as a prominent heading or top metadata row.
 - `sizeFor18Count`, `chartSize`, and `numberOfColours` are preferred over the legacy `size` string.
 - Description displays from the project `description` field.
 
@@ -65,7 +66,8 @@ Visitors see the project title, structured metadata, one or more images, and des
 ## Test Expectations
 
 - Open several Crafter Dark projects.
-- Confirm detail view shows category, size for 18 count, chart size, colour count, and updated short description.
+- Confirm detail view shows size for 18 count, chart size, colour count, and updated short description.
+- Confirm category appears at the bottom as a subtle tag.
 - Confirm detail view does not show stale `Pattern size varies` when structured metadata exists.
 - Test Escape, outside click, previous/next buttons, ArrowLeft, and ArrowRight.
 - Confirm images remain contained and square on desktop/mobile.

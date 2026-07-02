@@ -20,6 +20,7 @@ Visitors see Sara's portfolio title, subtitle, profile image, LinkedIn link, sho
 - Desktop uses a balanced two-column layout.
 - Left column contains the profile image, LinkedIn button, and short intro.
 - Right column contains heading, subtitle, About Sara, and Behind the Work.
+- About Sara and Behind the Work should immediately follow the heading/subtitle in the right column on desktop; they should not be pushed down by the left image column.
 - Mobile stacks in this order: heading, subtitle, photo, LinkedIn button, intro, About Sara, Behind the Work.
 
 ## Reusable Components
@@ -61,5 +62,6 @@ Visitors see Sara's portfolio title, subtitle, profile image, LinkedIn link, sho
 ## Test Expectations
 
 - Check desktop and mobile layout.
+- Resize desktop widths and confirm About Sara stays directly below the Home heading/subtitle rather than floating lower on the page.
 - Verify profile fallback still works.
 - Verify LinkedIn link is visible, keyboard focusable, and opens in a new tab.

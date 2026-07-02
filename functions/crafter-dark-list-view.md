@@ -14,7 +14,7 @@ Displays cross-stitch pattern cards in the grouped/listing grid.
 
 ## User-Facing Behaviour
 
-Visitors see one card per project with a square thumbnail, title, structured metadata, and truncated description. Clicking a card opens its detail modal.
+Visitors see one card per project with a square thumbnail, title, non-category structured metadata, and truncated description. Clicking a card opens its detail modal.
 
 ## Layout Rules
 
@@ -83,7 +83,8 @@ The card is a button rather than an article so click and keyboard activation sha
 
 - Card image source is `project.image1 || project.image`.
 - Titles display visually.
-- Category, size for 18 count, chart size, and number of colours display in the card meta.
+- Category is not displayed on list cards because it is already represented by the filter context and is too prominent in the grid.
+- Size for 18 count, chart size, and number of colours display in the card meta when present.
 - Crafter Dark list cards must use structured metadata fields rather than embedding all metadata into one combined text string.
 - Descriptions are line-clamped by shared card styles.
 
@@ -141,7 +142,9 @@ The card is a button rather than an article so click and keyboard activation sha
 - Confirm each has exactly one `.square-image-frame`.
 - Confirm image fits inside the square and has no image border.
 - Confirm there is a visible inset between the image and frame border on the top, right, bottom, and left.
-- Confirm list cards show category, 18 count size, chart size, colour count, and short description when present.
+- Confirm list cards do not show category.
+- Confirm list cards show 18 count size, chart size, colour count, and short description when present.
+- Confirm visible cards are sorted alphabetically by title within the active filter.
 - Confirm no list card shows stale `Pattern size varies` when structured metadata exists.
 - Confirm text below cards remains aligned.
 - For multiple cards, inspect the rendered DOM and confirm the thumbnail structure and computed image/frame styles are identical.

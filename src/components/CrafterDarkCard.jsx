@@ -2,7 +2,6 @@ import SquareImageFrame from './SquareImageFrame.jsx';
 
 function getMetadataRows(project) {
   return [
-    project.category,
     project.sizeFor18Count ? `18 count: ${project.sizeFor18Count}` : null,
     project.chartSize ? `Chart: ${project.chartSize}` : null,
     project.numberOfColours ? `Colours: ${project.numberOfColours}` : null,

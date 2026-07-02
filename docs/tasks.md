@@ -75,6 +75,7 @@ Goal: Populate the expected image library and remove unintended missing-asset er
 - `[x]` Match uploaded When visions kaleid Photography images to existing Alien, Cat, Cat Eyes, Gecko, and Mothman placeholders.
 - `[x]` Match uploaded Abstract Macro images to existing Abstract Macro placeholders and remove duplicate generated entries.
 - `[x]` Match uploaded Xeno Photography image to existing Xeno placeholder.
+- `[x]` Replace Photography data with the current images in `public/images/photography` and remove stale old photo references.
 - `[x]` Match uploaded Crafter Dark images to expected project records with finished images as the second modal image.
 - `[x]` Match uploaded Cells Crafter Dark images with the finished photo as the second modal image.
 - `[x]` Match newly uploaded Crafter Dark Cooper Eyes, Grey, HAL 9000, Mr Handy Fudge, Pip-Boy, Raven Moon, and UFO images.
@@ -217,6 +218,12 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Move Sara's Lab close button outside the modal project card and centre the shared close icon.
 - `[x]` Make Sara's Lab list media use consistent contained image previews.
 - `[x]` Move shared modal close controls outside the scrollable panel so Lab close buttons do not create scrollbars.
+- `[x]` Keep Home About content directly connected to the hero copy during desktop resize.
+- `[x]` Move the global footer directly below page content without forced empty scroll space.
+- `[x]` Sort Crafter Dark listing cards alphabetically by visible title after filtering.
+- `[x]` Hide Crafter Dark category metadata from listing cards.
+- `[x]` Move Crafter Dark detail category display to a subtle bottom tag.
+- `[x]` Widen Crafter Dark and Sara's Lab page intros so they do not wrap early on desktop.
 - `[x]` Constrain Sara's Lab list images with contained frame sizing so The Door List is not cropped or overflowing.
 - `[x]` Fix modal close button alignment for Sara's Lab and shared modal behaviour where applicable.
 - `[ ]` Add final image assets for Sara's Lab project cards.

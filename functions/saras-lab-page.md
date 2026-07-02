@@ -23,6 +23,7 @@ Visitors see a four-project gallery and can open each project in a detail modal.
 - Page heading is `Sara's Lab`.
 - Page intro explains that the section holds systems, creative tools, type experiments, games, and prototypes.
 - Intro copy should use an intentional readable width and should not wrap awkwardly on desktop.
+- Intro copy may use the available desktop width; it should only wrap when the viewport is small enough to require it.
 - Projects display in manual `order`, not alphabetical order.
 - Current order is:
   1. Alphabet Stitch

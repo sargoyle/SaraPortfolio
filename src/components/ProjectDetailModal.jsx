@@ -8,7 +8,6 @@ function getProjectImages(project) {
 
 function getStructuredMetadata(project) {
   return [
-    project.category ? ['Category', project.category] : null,
     project.sizeFor18Count ? ['Size for 18 count', project.sizeFor18Count] : null,
     project.chartSize ? ['Chart size', project.chartSize] : null,
     project.numberOfColours ? ['Colours', project.numberOfColours] : null,
@@ -73,6 +72,11 @@ export default function ProjectDetailModal({
           </div>
         )}
         <p className="project-description">{project.description}</p>
+        {project.category ? (
+          <div className="project-tags" aria-label="Project category">
+            <span className="project-tag">{project.category}</span>
+          </div>
+        ) : null}
       </article>
     </ModalShell>
   );

@@ -17,6 +17,7 @@ Footer appears across the site with `© Sara Gillard 2026`.
 ## Layout Rules
 
 - Footer appears after the active page content.
+- Footer should sit directly below page content; page wrappers must not reserve an unnecessary full viewport height that creates empty scroll space.
 - It should not compete with page content.
 
 ## Reusable Components
@@ -51,4 +52,5 @@ No known gaps currently documented.
 ## Test Expectations
 
 - Confirm footer appears on every section.
+- Confirm short pages do not create a large empty gap before the footer.
 - Confirm it remains readable on mobile.
