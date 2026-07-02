@@ -224,6 +224,9 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Hide Crafter Dark category metadata from listing cards.
 - `[x]` Move Crafter Dark detail category display to a subtle bottom tag.
 - `[x]` Widen Crafter Dark and Sara's Lab page intros so they do not wrap early on desktop.
+- `[x]` Align Crafter Dark list thumbnail image boxes to a consistent top level and size.
+- `[x]` Move Photography detail close button outside the photograph frame.
+- `[x]` Remove AI POCs from active site navigation and page registry without deleting repository content.
 - `[x]` Constrain Sara's Lab list images with contained frame sizing so The Door List is not cropped or overflowing.
 - `[x]` Fix modal close button alignment for Sara's Lab and shared modal behaviour where applicable.
 - `[ ]` Add final image assets for Sara's Lab project cards.

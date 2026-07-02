@@ -70,7 +70,7 @@ Sara's Portfolio/
 
 `ProjectCard.jsx`
 
-- Reusable card for Crafter Dark and AI POC items.
+- Reusable card for project-style items retained in the repository.
 - Uses button semantics for keyboard access.
 - Supports optional image preview and fallback icon.
 
@@ -104,7 +104,7 @@ Sara's Portfolio/
 
 `ProjectDetailModal.jsx`
 
-- Fullscreen detail modal for Crafter Dark and AI POC projects.
+- Fullscreen detail modal for Crafter Dark projects and archived project-style content.
 - Supports one or multiple images.
 - Supports optional external links.
 - Preserves multiline descriptions.
@@ -147,11 +147,9 @@ Sara's Portfolio/
 
 `AiPocs.jsx`
 
-- Loads `aiPocs`.
-- Displays AI proof-of-concepts.
-- Opens project detail modal.
-- Supports previous/next navigation across AI POCs.
-- Supports optional external links and one or multiple images.
+- Retained in the repository as archived content.
+- Not registered in active navigation or the current page registry.
+- Do not delete AI POC files or data unless explicitly requested.
 
 ## Data Models
 
@@ -277,7 +275,6 @@ The app must continue to render gracefully if images are missing.
   - Crafter Dark
   - Photography
   - Games
-  - AI POCs
 - Display active section visually and with `aria-current`.
 - Use horizontal scrolling nav on small screens.
 
@@ -314,11 +311,9 @@ The app must continue to render gracefully if images are missing.
 
 ### AI POCs
 
-- Render all AI POCs from `src/data/aiPocs.js`.
-- Each card opens a detail modal.
-- Modal supports optional links.
-- Modal supports one image or multiple images.
-- Preserve multiline descriptions.
+- Archived repository content only in the current active site.
+- Keep `src/data/aiPocs.js` and `src/pages/AiPocs.jsx` available for possible future reintroduction.
+- Do not render an AI POCs nav item or active page unless explicitly requested.
 
 ### Modal Behavior
 
@@ -370,7 +365,7 @@ Acceptance criteria:
 
 - Browser console has no missing image 404s for expected assets.
 - Profile image loads.
-- All Crafter Dark, Photography, Games, and AI POC images load or intentional placeholders are documented.
+- All active Crafter Dark, Photography, and Sara's Lab images load or intentional placeholders are documented.
 
 ### Phase 3: Content Review
 
@@ -379,7 +374,7 @@ Status: Recommended.
 Deliverables:
 
 - Review all copy for spelling and punctuation.
-- Decide whether AI POC descriptions should be shortened on cards.
+- AI POC descriptions are not launch-blocking while the page is hidden from the active site.
 - Confirm project categories and names.
 - Confirm LinkedIn URL.
 
@@ -426,4 +421,3 @@ Potential deliverables:
 - Do not introduce a database until there is a clear editing or publishing requirement.
 - Do not redesign away from the dark purple creative aesthetic.
 - Preserve existing path conventions unless there is a migration plan.
-

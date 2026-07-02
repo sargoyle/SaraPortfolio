@@ -3,7 +3,6 @@ const navItems = [
   { id: 'crafter', label: 'Crafter Dark' },
   { id: 'photo', label: 'Photography' },
   { id: 'games', label: "Sara's Lab" },
-  { id: 'ai', label: 'AI POCs' },
 ];
 
 export default function Navigation({ currentPage, onNavigate }) {

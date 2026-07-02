@@ -23,6 +23,7 @@ Modals open over the current page, can be closed, and support previous/next navi
 - Content uses `.fullscreen-content`.
 - Photography uses `variant="photo"`.
 - Close button belongs visually to the modal panel and should not sit at the far viewport edge.
+- Photography positions the close button just outside the image frame so it does not cover the photograph.
 - Sara's Lab positions the close button just outside the modal panel so it does not sit over the project card content.
 - Close controls must not create horizontal or vertical scrollbars inside modal content.
 - Modal controls should not be hidden behind or visually detached from the panel.
@@ -63,8 +64,8 @@ Modals open over the current page, can be closed, and support previous/next navi
 
 ## Change Rules
 
-- If `ModalShell` changes, test Photography, Crafter Dark, and AI POCs.
+- If `ModalShell` changes, test Photography, Crafter Dark, and Sara's Lab. AI POC modal content is archived unless reintroduced.
 
 ## Test Expectations
 
-- Test Escape, click outside, close button, previous/next buttons, arrow keys, nav click close, and close button alignment for Photography, Crafter Dark, AI POCs, and Sara's Lab.
+- Test Escape, click outside, close button, previous/next buttons, arrow keys, nav click close, and close button alignment for Photography, Crafter Dark, and Sara's Lab.

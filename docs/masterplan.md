@@ -10,7 +10,7 @@ The portfolio exists to help visitors quickly understand Sara's creative range a
 - Crafter Dark cross-stitch projects
 - Photography and kaleidoscopic visual studies
 - Board game concepts
-- AI proof-of-concept projects
+- Creative tools, prototypes, and experiments
 
 The product's North Star is:
 
@@ -38,7 +38,6 @@ Needs:
 - Understand who Sara is within the first few seconds.
 - Browse work by category without friction.
 - Open items for larger images and richer descriptions.
-- Access relevant external links for AI proof-of-concepts.
 - Use the site comfortably on desktop and mobile.
 
 Success for this user:
@@ -138,7 +137,7 @@ Because this is an early portfolio site, success should be measured with a mix o
 - Crafter Dark includes all existing cross-stitch projects from the prototype.
 - Photography includes all existing photo records from the prototype.
 - Games includes 9 Sisters - Xanadu.
-- AI POCs includes all existing proof-of-concept projects and their external links.
+- AI POC content remains in the repository for possible future use, but is not exposed in the active site navigation or page registry.
 
 ### User Experience Goals
 
@@ -151,7 +150,7 @@ Because this is an early portfolio site, success should be measured with a mix o
 
 - A new Crafter Dark project can be added by editing `src/data/crafterProjects.js`.
 - A new photo can be added by editing `src/data/photos.js`.
-- A new AI POC can be added by editing `src/data/aiPocs.js`.
+- AI POC records can remain in `src/data/aiPocs.js`, but they are archived content unless the page is intentionally reintroduced.
 - A new page should be possible by adding a page component and registering it in `App.jsx` and `Navigation.jsx`.
 
 ## Scope
@@ -164,7 +163,6 @@ Because this is an early portfolio site, success should be measured with a mix o
 - Responsive UI.
 - Animated particle canvas background.
 - Image fallbacks.
-- External links for AI POCs.
 - Accessible nav, buttons, filters, and modal controls.
 
 ### Out of Scope for Current Version
@@ -191,4 +189,3 @@ Potential future enhancements:
 - Add downloadable pattern links for Crafter Dark if desired.
 - Add analytics to understand which sections visitors use most.
 - Add automated accessibility tests and visual regression tests.
-

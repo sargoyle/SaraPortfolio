@@ -19,6 +19,7 @@ Visitors see the selected image fullscreen with close and previous/next controls
 
 - Viewer sits below the fixed nav.
 - Image uses available viewport height without going under the nav.
+- Close button sits outside the photograph/frame, not on top of the image.
 
 ## Reusable Components
 
@@ -56,3 +57,4 @@ No known gaps currently documented.
 ## Test Expectations
 
 - Open a photo, use previous/next buttons, ArrowLeft/ArrowRight, Escape, and nav click close.
+- Confirm the close button is not overlaying the photograph on desktop or mobile.

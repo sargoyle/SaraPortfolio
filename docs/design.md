@@ -276,7 +276,8 @@ Primary content categories:
 - Crafter Dark
 - Photography
 - Games
-- AI POCs
+
+AI POC content is retained in the repository but is not part of the active site navigation.
 
 Crafter Dark category labels:
 
@@ -307,4 +308,3 @@ Do not:
 - Add a marketing-style landing page before the real portfolio.
 - Hide the actual work behind vague hero copy.
 - Use color alone for active or selected states.
-

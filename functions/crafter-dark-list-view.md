@@ -96,12 +96,13 @@ The card is a button rather than an article so click and keyboard activation sha
 - `.square-image-frame` must include a consistent inner inset/padding so images cannot visually touch or hide the frame border.
 - Images use `.square-image-frame-image`.
 - Images must be contained inside an inset content area, leaving a consistent visible frame/border gap on all four sides.
+- Images should occupy the same contained image box and align to the top of the thumbnail area so listing artwork begins at a consistent level across cards.
 - Images must not be stretched.
 - Do not apply borders to the image.
 - Do not apply borders directly to `.square-image-frame`; the pseudo-element owns the visible border.
 - Do not use extra nested thumbnail wrappers.
 - Do not use `object-fit: cover` for Crafter Dark thumbnails.
-- Do not set Crafter Dark thumbnail images to `width: 100%; height: 100%`.
+- Crafter Dark thumbnail images may use `width: 100%; height: 100%` only with `object-fit: contain` so the image box is consistent while artwork remains undistorted.
 - Tall, wide, square, black-background, white-background, transparent, and pixel-art images must use the same frame treatment.
 - `SquareImageFrame` must render a stable DOM structure. It must not allow `ImageWithFallback` or any fallback wrapper to change the layout, border, image sizing, or frame dimensions.
 
@@ -141,6 +142,7 @@ The card is a button rather than an article so click and keyboard activation sha
 - Verify Cooper Eyes, Grey, Xeno, Moth Man, Gecko, Adam Ant Logo, Limbo Graveyard, Predator 2, Twin Peaks Owl, Fallout Pip-Boy Grid, Twin Peaks Socket, X-Files Aliens, HAL 9000, and Mr Handy Fudge.
 - Confirm each has exactly one `.square-image-frame`.
 - Confirm image fits inside the square and has no image border.
+- Confirm image boxes align at the same top level and use the same square frame size across cards.
 - Confirm there is a visible inset between the image and frame border on the top, right, bottom, and left.
 - Confirm list cards do not show category.
 - Confirm list cards show 18 count size, chart size, colour count, and short description when present.

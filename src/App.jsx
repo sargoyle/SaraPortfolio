@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import Footer from './components/Footer.jsx';
 import Navigation from './components/Navigation.jsx';
 import ParticleBackground from './components/ParticleBackground.jsx';
-import AiPocs from './pages/AiPocs.jsx';
 import CrafterDark from './pages/CrafterDark.jsx';
 import Games from './pages/Games.jsx';
 import Home from './pages/Home.jsx';
@@ -13,7 +12,6 @@ const pages = {
   crafter: CrafterDark,
   photo: Photography,
   games: Games,
-  ai: AiPocs,
 };
 
 export default function App() {
@@ -31,7 +29,6 @@ export default function App() {
       crafter: "Crafter Dark | Sara's Portfolio",
       photo: "Photography | Sara's Portfolio",
       games: "Sara's Lab | Sara's Portfolio",
-      ai: "AI POCs | Sara's Portfolio",
     };
     document.title = titles[currentPage] || "Sara's Portfolio";
   }, [currentPage]);

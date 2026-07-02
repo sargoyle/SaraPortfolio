@@ -12,7 +12,7 @@ Primary fixed navigation for moving between portfolio sections.
 
 ## User-Facing Behaviour
 
-Visitors can switch between Home, Crafter Dark, Photography, Sara's Lab, and AI POCs. The active section is visually indicated.
+Visitors can switch between Home, Crafter Dark, Photography, and Sara's Lab. The active section is visually indicated.
 
 ## Layout Rules
 
@@ -29,6 +29,7 @@ Visitors can switch between Home, Crafter Dark, Photography, Sara's Lab, and AI 
 
 - Navigation IDs must match keys in `App.jsx` `pages`.
 - The Games page is labelled `Sara's Lab` in navigation.
+- AI POC source files and data remain in the repository, but `AI POCs` is not an active navigation item or registered page.
 
 ## Image Rules
 

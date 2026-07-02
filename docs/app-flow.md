@@ -2,15 +2,15 @@
 
 ## Product Skeleton
 
-Sara's Portfolio is a single-page application with five primary sections:
+Sara's Portfolio is a single-page application with four primary sections:
 
 1. Home
 2. Crafter Dark
 3. Photography
 4. Games
-5. AI POCs
 
 Navigation is state-based in the current version. Selecting a nav button updates the active page without changing the URL.
+AI POC source content remains in the repository, but the AI POCs page is not part of the active navigation or page flow.
 
 Global persistent elements:
 
@@ -155,27 +155,15 @@ Edge cases:
 - Long description: text preserves paragraph breaks.
 - Future multiple games: each game renders as a separate content block.
 
-### Journey 5: Visitor Explores AI Proofs of Concept
+### Journey 5: AI POC Content
 
-Entry point:
+Current status:
 
-- Visitor selects `AI POCs` from nav.
+- Archived/not exposed in the active site.
+- Existing source and data may remain in the repository.
+- Do not show an AI POCs navigation item unless the section is explicitly reintroduced.
 
-Flow:
-
-1. App renders AI POCs page.
-2. Visitor reads section title and description.
-3. Visitor sees AI POC cards.
-4. Visitor selects a POC card.
-5. Fullscreen project modal opens.
-6. Visitor views title, images, description, and optional external links.
-7. Visitor can select an external link if present.
-8. Visitor uses previous/next controls or arrow keys.
-9. Visitor closes modal via close button, Escape, or outside click.
-
-Expected outcome:
-
-- Visitor understands Sara's AI experimentation and can open linked artifacts where available.
+Previously documented modal behaviour can be reused if the page returns.
 
 State transitions:
 
@@ -255,17 +243,13 @@ Required interactions:
 
 ### AI POCs Screen
 
-Required content:
+Current status:
 
-- H1: `AI POCs`
-- Description text
-- AI POC grid
+- Archived/not exposed in the active site.
+- Existing source and data may remain in the repository.
+- Do not show an AI POCs navigation item unless the section is explicitly reintroduced.
 
-Required interactions:
-
-- POC cards open modal.
-- Modal previous/next cycles through AI POC list.
-- External links open in new tabs.
+Previously documented modal behaviour can be reused if the page returns.
 
 ## Navigation State
 
@@ -302,7 +286,6 @@ Modal states are local to each page:
 
 - Crafter Dark: `activeProject`
 - Photography: `activePhoto`
-- AI POCs: `activePoc`
 
 Modal open:
 
@@ -384,4 +367,3 @@ The app flow is correct when:
 - Previous/next controls wrap through the current item list.
 - Missing images do not break the layout.
 - Mobile viewport remains usable with horizontal nav and single-column content.
-
