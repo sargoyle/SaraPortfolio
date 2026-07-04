@@ -137,7 +137,7 @@ Because this is an early portfolio site, success should be measured with a mix o
 - Crafter Dark includes all existing cross-stitch projects from the prototype.
 - Photography includes all existing photo records from the prototype.
 - Games includes 9 Sisters - Xanadu.
-- AI POC content remains in the repository for possible future use, but is not exposed in the active site navigation or page registry.
+- AI POC content remains archived in the repository for possible future use, but is not exposed in the active site navigation or page registry.
 
 ### User Experience Goals
 
@@ -150,7 +150,7 @@ Because this is an early portfolio site, success should be measured with a mix o
 
 - A new Crafter Dark project can be added by editing `src/data/crafterProjects.js`.
 - A new photo can be added by editing `src/data/photos.js`.
-- AI POC records can remain in `src/data/aiPocs.js`, but they are archived content unless the page is intentionally reintroduced.
+- AI POC records live in `archive/ai-pocs/aiPocs.js` as archived content unless the page is intentionally reintroduced.
 - A new page should be possible by adding a page component and registering it in `App.jsx` and `Navigation.jsx`.
 
 ## Scope

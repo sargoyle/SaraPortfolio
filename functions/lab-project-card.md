@@ -27,6 +27,7 @@ Shows project image or placeholder, type, title, status, short card description,
 ## Data Rules
 
 - Reads `title`, `type`, `status`, `cardDescription`, `image`, `link`, `mediaFit`, and `mediaPosition`.
+- Cards open the detail modal first; downloadable assets are exposed inside the detail view.
 
 ## Image Rules
 
@@ -58,4 +59,5 @@ Shows project image or placeholder, type, title, status, short card description,
 
 - Card is keyboard focusable.
 - Card opens the matching detail view.
+- Batcave Font card shows completed status.
 - Broken or empty images do not show browser broken-image icons.

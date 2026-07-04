@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import ProjectCard from '../components/ProjectCard.jsx';
-import ProjectDetailModal from '../components/ProjectDetailModal.jsx';
-import { aiPocs } from '../data/aiPocs.js';
+import ProjectDetailModal from '../../src/components/ProjectDetailModal.jsx';
+import ProjectCard from './ProjectCard.jsx';
+import { aiPocs } from './aiPocs.js';
 
 export default function AiPocs() {
   const [activePoc, setActivePoc] = useState(null);

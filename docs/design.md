@@ -277,7 +277,7 @@ Primary content categories:
 - Photography
 - Games
 
-AI POC content is retained in the repository but is not part of the active site navigation.
+AI POC content is retained in `archive/ai-pocs` but is not part of the active site navigation.
 
 Crafter Dark category labels:
 

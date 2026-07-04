@@ -2,17 +2,18 @@
 
 ## Purpose
 
-Reusable card patterns for project and photo listings.
+Reusable card patterns for active project, craft, and photo listings.
 
 ## Source Files
 
-- `src/components/ProjectCard.jsx`
 - `src/components/CrafterDarkCard.jsx`
 - `src/components/PhotoCard.jsx`
+- `src/components/LabProjectCard.jsx`
 - `src/pages/CrafterDark.jsx`
-- `src/pages/AiPocs.jsx`
 - `src/pages/Photography.jsx`
+- `src/pages/Games.jsx`
 - `src/styles/global.css`
+- `archive/ai-pocs/ProjectCard.jsx`
 
 ## User-Facing Behaviour
 
@@ -20,21 +21,22 @@ Cards present portfolio items as clickable/focusable tiles that open modals or v
 
 ## Layout Rules
 
-- Project cards use `.project-item.card-button`.
+- Sara's Lab cards use `LabProjectCard`.
 - Photo cards use `.photo-card.card-button`.
 - Crafter Dark cards use `CrafterDarkCard`.
 
 ## Reusable Components
 
-- `ProjectCard` for project-like content.
 - `CrafterDarkCard` for Crafter Dark list items.
 - `PhotoCard` for photography.
+- `LabProjectCard` for Sara's Lab project cards.
 - Preferred future component: `GalleryImageCard`.
+- Archived AI POC content retains its old `ProjectCard` in `archive/ai-pocs`, but that component is not part of the active site.
 
 ## Data Rules
 
-- `ProjectCard` expects `project.title`, image fields, optional `category`, `size`, `summary`, and `description`.
 - `PhotoCard` expects `photo.title`, `photo.src`, and optional `photo.alt`.
+- `LabProjectCard` expects lab project title, type, status, description, and optional media fields.
 
 ## Image Rules
 
@@ -55,14 +57,15 @@ Cards present portfolio items as clickable/focusable tiles that open modals or v
 ## Known Gaps / Defects
 
 - No dedicated `GalleryImageCard` component exists yet.
+- Legacy Sara's Lab game data is archived at `archive/legacy-games/games.js`; active Sara's Lab cards use `src/data/labProjects.js`.
 
 ## Change Rules
 
 - Do not duplicate card templates in page files.
-- If shared `ProjectCard` changes, test AI POCs.
 - If `CrafterDarkCard` changes, test Crafter Dark filters, thumbnails, and detail modal opening.
+- If `LabProjectCard` changes, test Sara's Lab cards and detail opening.
 
 ## Test Expectations
 
-- Test click and keyboard activation for ProjectCard and PhotoCard.
+- Test click and keyboard activation for CrafterDarkCard, LabProjectCard, and PhotoCard.
 - Verify hover/focus styles remain usable.

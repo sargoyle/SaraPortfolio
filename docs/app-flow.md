@@ -7,10 +7,10 @@ Sara's Portfolio is a single-page application with four primary sections:
 1. Home
 2. Crafter Dark
 3. Photography
-4. Games
+4. Sara's Lab
 
 Navigation is state-based in the current version. Selecting a nav button updates the active page without changing the URL.
-AI POC source content remains in the repository, but the AI POCs page is not part of the active navigation or page flow.
+AI POC source content remains archived in the repository, but the AI POCs page is not part of the active navigation or page flow.
 
 Global persistent elements:
 
@@ -126,41 +126,40 @@ Edge cases:
 - Long image loads fail: fallback preserves layout.
 - Mobile screen: grid collapses to one column.
 
-### Journey 4: Visitor Reads Game Concept
+### Journey 4: Visitor Browses Sara's Lab
 
 Entry point:
 
-- Visitor selects `Games` from nav.
+- Visitor selects `Sara's Lab` from nav.
 
 Flow:
 
-1. App renders Games page.
+1. App renders Sara's Lab page.
 2. Visitor reads section title and description.
-3. Visitor sees 9 Sisters - Xanadu card/content section.
-4. Visitor views game images.
-5. Visitor reads long-form game concept description.
+3. Visitor sees project cards for creative tools, type experiments, games, and prototypes.
+4. Visitor opens a project detail view.
+5. Visitor reads the project copy and uses any available external or download action.
 
 Expected outcome:
 
-- Visitor understands the board game concept and Sara's role in its development.
+- Visitor understands Sara's creative systems and prototype work.
 
 State transitions:
 
-- No modal state currently required for Games.
-- Page is static, driven by `games` data.
+- `activeProject` changes from `null` to selected project when a card opens.
+- `activeProject` returns to `null` when the detail view closes.
 
 Edge cases:
 
-- Missing game images: fallback placeholders appear.
-- Long description: text preserves paragraph breaks.
-- Future multiple games: each game renders as a separate content block.
+- Missing project images use polished placeholders or contained fallback media.
+- External and download actions appear only when data provides them.
 
 ### Journey 5: AI POC Content
 
 Current status:
 
-- Archived/not exposed in the active site.
-- Existing source and data may remain in the repository.
+- Archived under `archive/ai-pocs` and not exposed in the active site.
+- Existing source and data remain in the repository archive.
 - Do not show an AI POCs navigation item unless the section is explicitly reintroduced.
 
 Previously documented modal behaviour can be reused if the page returns.
@@ -227,26 +226,26 @@ Required interactions:
 - Photo cards open modal.
 - Modal previous/next cycles through current filtered result set.
 
-### Games Screen
+### Sara's Lab Screen
 
 Required content:
 
-- H1: `Games`
+- H1: `Sara's Lab`
 - Description text
-- Game title
-- Game images
-- Game description
+- Project cards
+- Project detail view
 
 Required interactions:
 
-- Navigation only in current version.
+- Cards open project details.
+- Detail view closes with labelled close control or Escape.
 
 ### AI POCs Screen
 
 Current status:
 
-- Archived/not exposed in the active site.
-- Existing source and data may remain in the repository.
+- Archived under `archive/ai-pocs` and not exposed in the active site.
+- Existing source and data remain in the repository archive.
 - Do not show an AI POCs navigation item unless the section is explicitly reintroduced.
 
 Previously documented modal behaviour can be reused if the page returns.
@@ -260,7 +259,6 @@ home
 crafter
 photo
 games
-ai
 ```
 
 Navigation behavior:

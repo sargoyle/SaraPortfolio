@@ -2,18 +2,18 @@
 
 ## Purpose
 
-Fullscreen detail modal for AI POC projects.
+Archived fullscreen detail modal behaviour for former AI POC projects.
 
 ## Source Files
 
 - `src/components/ProjectDetailModal.jsx`
 - `src/components/ModalShell.jsx`
-- `src/pages/AiPocs.jsx`
-- `src/data/aiPocs.js`
+- `archive/ai-pocs/AiPocs.jsx`
+- `archive/ai-pocs/aiPocs.js`
 
 ## User-Facing Behaviour
 
-Visitors see the project title, optional subtitle/category meta, optional external links, one or more images, and full description.
+AI POC details are not shown in the active site. If restored, visitors should see the project title, optional subtitle/category meta, optional external links, one or more images, and full description.
 
 ## Layout Rules
 
@@ -51,8 +51,9 @@ Visitors see the project title, optional subtitle/category meta, optional extern
 
 ## Change Rules
 
-- If changing shared modal behaviour, check Crafter Dark and AI POCs together.
+- If changing shared modal behaviour, check active Crafter Dark and Photography behaviour first; archived AI POCs only need retesting if restored.
 
 ## Test Expectations
 
-- Test modal close, previous/next, Escape, arrow keys, and external links.
+- Active-site checks should confirm archived AI POC detail code is not imported.
+- If restored, test modal close, previous/next, Escape, arrow keys, and external links.

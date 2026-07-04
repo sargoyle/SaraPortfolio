@@ -8,13 +8,14 @@ Defines how images and image fallbacks are handled across the site.
 
 - `src/components/ImageWithFallback.jsx`
 - `src/components/SquareImageFrame.jsx`
-- `src/components/ProjectCard.jsx`
 - `src/components/PhotoCard.jsx`
 - `src/components/ProjectDetailModal.jsx`
 - `src/components/FullscreenImageModal.jsx`
+- `src/components/LabProjectCard.jsx`
 - `src/pages/Home.jsx`
 - `src/pages/Games.jsx`
 - `src/styles/global.css`
+- `archive/ai-pocs/ProjectCard.jsx`
 
 ## User-Facing Behaviour
 
@@ -29,6 +30,8 @@ Images render where available; missing images show accessible placeholders.
 
 - `ImageWithFallback` is the shared fallback component.
 - `SquareImageFrame` is the shared square contained image frame currently used by Crafter Dark listing cards.
+- Sara's Lab card media is controlled by `LabProjectCard` and project `mediaFit` / `mediaPosition` fields.
+- The archived AI POC `ProjectCard` is not active.
 
 ## Data Rules
 

@@ -68,12 +68,6 @@ Sara's Portfolio/
 - Accepts filters, selected filter, item counts, and change handler.
 - Uses `aria-pressed` for active filter buttons.
 
-`ProjectCard.jsx`
-
-- Reusable card for project-style items retained in the repository.
-- Uses button semantics for keyboard access.
-- Supports optional image preview and fallback icon.
-
 `PhotoCard.jsx`
 
 - Reusable square image card for Photography.
@@ -141,13 +135,12 @@ Sara's Portfolio/
 
 `Games.jsx`
 
-- Loads `games`.
-- Displays board game concepts.
-- Current content includes 9 Sisters - Xanadu.
+- Loads `labProjects`.
+- Displays Sara's Lab projects, including creative tools, type experiments, games, and prototypes.
 
-`AiPocs.jsx`
+Archived AI POCs
 
-- Retained in the repository as archived content.
+- Retained in `archive/ai-pocs` as archived content.
 - Not registered in active navigation or the current page registry.
 - Do not delete AI POC files or data unless explicitly requested.
 
@@ -202,7 +195,7 @@ Requirements:
 
 ### Game
 
-File: `src/data/games.js`
+File: `src/data/labProjects.js`
 
 ```js
 {
@@ -221,9 +214,9 @@ Requirements:
 - `description` may contain newline breaks.
 - Images should point to `/images/games`.
 
-### AI POC
+### Archived AI POC
 
-File: `src/data/aiPocs.js`
+File: `archive/ai-pocs/aiPocs.js`
 
 ```js
 {
@@ -256,8 +249,8 @@ Example:
 
 ```text
 public/images/about/profile.jpg
-public/images/crafter-dark/Own/CooperEyes.png
-public/images/crafter-dark/pop/AdamAntLogo.png
+public/images/crafter-dark/CooperEyes.png
+public/images/crafter-dark/AdamAntLogo.png
 public/images/games/9sisters-1.jpg
 public/images/AIPOC/MealPlanner1.png
 public/images/photography/1994-1.jpg
@@ -305,14 +298,14 @@ The app must continue to render gracefully if images are missing.
 
 ### Games
 
-- Render all games from `src/data/games.js`.
-- Display images and long-form description.
-- Preserve newline formatting.
+- Render Sara's Lab projects from `src/data/labProjects.js`.
+- Display selected creative tools, type experiments, games, and prototypes.
+- Support project detail views and optional external/download links.
 
 ### AI POCs
 
 - Archived repository content only in the current active site.
-- Keep `src/data/aiPocs.js` and `src/pages/AiPocs.jsx` available for possible future reintroduction.
+- Keep `archive/ai-pocs` available for possible future reintroduction.
 - Do not render an AI POCs nav item or active page unless explicitly requested.
 
 ### Modal Behavior

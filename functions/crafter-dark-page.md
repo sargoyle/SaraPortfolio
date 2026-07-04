@@ -31,7 +31,7 @@ Visitors can browse cross-stitch pattern cards, filter by category, and open a f
 - Must use `CrafterDarkCard` for listing cards.
 - `CrafterDarkCard` must use `SquareImageFrame` for every list thumbnail.
 - Must use `ProjectDetailModal` for item detail.
-- `ProjectCard` is shared elsewhere and must not be used for Crafter Dark listing cards unless it can guarantee the Crafter Dark thumbnail contract.
+- The archived `ProjectCard` must not be used for Crafter Dark listing cards; use `CrafterDarkCard`.
 
 ## Implementation Audit
 
@@ -40,7 +40,7 @@ Current implementation:
 - `src/pages/CrafterDark.jsx` renders listing cards through `CrafterDarkCard`.
 - `CrafterDarkCard` exists and renders each project as a keyboard-focusable button.
 - `CrafterDarkCard` uses `SquareImageFrame` for the thumbnail image.
-- `ProjectCard` is still a shared component for other project-style pages, including AI POCs, but is not used by Crafter Dark.
+- `ProjectCard` is archived with AI POCs and is not used by active Crafter Dark pages.
 - Crafter Dark list thumbnail layout is controlled by `.square-image-frame`, `.square-image-frame::after`, and `.square-image-frame-image`.
 - Shared detail modal image layout remains controlled by `.project-image-container`, `.project-image`, and Crafter detail overrides under `.crafter-page`.
 

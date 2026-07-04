@@ -21,7 +21,9 @@ Persistent implementation guidance for Sara's Portfolio. Read the relevant funct
 - `photography-page.md`
 - `photography-list-view.md`
 - `photography-detail-view.md`
-- `ceres-lab-page.md`
+- `saras-lab-page.md`
+- `saras-lab-list-view.md`
+- `saras-lab-detail-view.md`
 - `ai-pocs-page.md`
 - `ai-pocs-detail-view.md`
 - `shared-card-components.md`
@@ -30,3 +32,5 @@ Persistent implementation guidance for Sara's Portfolio. Read the relevant funct
 - `filtering-and-state.md`
 - `responsive-layout.md`
 - `visual-design-system.md`
+
+Archived function files remain for historical context. `ai-pocs-page.md` and `ai-pocs-detail-view.md` describe archived behaviour only unless the section is explicitly restored.

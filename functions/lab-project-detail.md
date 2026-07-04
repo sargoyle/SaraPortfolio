@@ -13,7 +13,7 @@ Reusable detail body for Sara's Lab project modals.
 
 ## User-Facing Behaviour
 
-Shows a richer project note with metadata, visual, blurb, previous/next controls, and optional external link.
+Shows a richer project note with metadata, visual, blurb, previous/next controls, optional external link, and optional downloadable asset.
 
 ## Layout Rules
 
@@ -32,6 +32,7 @@ Shows a richer project note with metadata, visual, blurb, previous/next controls
 - Reads all relevant fields from the selected `labProjects` item.
 - `focus` must be an array.
 - `focus` is data-only for now and is not displayed.
+- Downloadable assets use `download` and `downloadLabel`; render as a normal anchor with the `download` attribute.
 
 ## Image Rules
 
@@ -47,6 +48,7 @@ Shows a richer project note with metadata, visual, blurb, previous/next controls
 
 - Placeholder image has a useful accessible label.
 - External link is omitted when unavailable.
+- Download link is omitted when unavailable.
 
 ## Known Gaps / Defects
 
@@ -61,4 +63,5 @@ Shows a richer project note with metadata, visual, blurb, previous/next controls
 - Detail body renders correctly for all four current projects.
 - Focus tags are not visibly rendered.
 - External link only appears for Alphabet Stitch.
+- Download link appears for Batcave Font.
 - Previous and next buttons move between projects.

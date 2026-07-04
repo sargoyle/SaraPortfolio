@@ -96,7 +96,7 @@ a:focus-visible,
 .nav-container {
   display: flex;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0;
   gap: 1rem;
   align-items: center;
   flex-wrap: nowrap;

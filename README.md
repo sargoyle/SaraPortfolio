@@ -1,6 +1,6 @@
 # Sara's Portfolio
 
-Sara's Portfolio is a static React/Vite personal portfolio site for Sara's creative work across Crafter Dark cross-stitch projects, photography, Sara's Lab concepts, and AI proof-of-concepts.
+Sara's Portfolio is a static React/Vite personal portfolio site for Sara's creative work across Crafter Dark cross-stitch projects, photography, and Sara's Lab concepts.
 
 The site is intentionally simple to maintain: content lives in `src/data`, reusable UI lives in `src/components`, and public images live in `public/images`.
 
@@ -67,8 +67,7 @@ Routine content updates should happen in the data files:
 
 - Crafter Dark projects: `src/data/crafterProjects.js`
 - Photography: `src/data/photos.js`
-- Sara's Lab: `src/data/games.js`
-- AI POCs: `src/data/aiPocs.js`
+- Sara's Lab: `src/data/labProjects.js`
 
 Keep IDs unique within each file. Filter categories must match the visible filter labels exactly.
 
@@ -80,10 +79,12 @@ Examples:
 
 ```js
 '/images/about/profile.jpg'
-'/images/crafter-dark/Own/CooperEyes.PNG'
-'/images/crafter-dark/pop/AdamAntLogo.PNG'
+'/images/crafter-dark/CooperEyes.PNG'
+'/images/crafter-dark/AdamAntLogo.PNG'
 '/images/photography/Abstract Macro 1.JPG'
 ```
+
+Crafter Dark images live directly in `public/images/crafter-dark`; do not split them into category subfolders.
 
 Do not include `public` in the path stored in data files. The app includes graceful image fallbacks, so missing images should show placeholders rather than breaking the layout.
 

@@ -20,6 +20,9 @@ Keep entries concise. One line per decision when possible.
 ## Architecture
 - Use a static React/Vite app with file-based data in `src/data`; no database or CMS for the current release.
 - Photography metadata is maintained in `src/data/photos.js` and can be bootstrapped from uploaded files with `npm run sync:photos`.
+- Archived portfolio sections live under `archive/`; archived code/data must not be imported by the active app unless a section is deliberately restored.
+- Active Sara's Lab content lives in `src/data/labProjects.js`; legacy game-only data is archived under `archive/legacy-games`.
+- Crafter Dark source PDFs/header documents are archived under `archive/crafter-dark-documents` and should not be served from `public`.
 
 ## Collaboration
 - Every assistant response must begin with `Sara's Portfolio`.
@@ -28,11 +31,12 @@ Keep entries concise. One line per decision when possible.
 
 ## Naming Conventions
 - Photography assets live under `public/images/photography` and are referenced as `/images/photography/<filename>`.
+- Crafter Dark images live directly under `public/images/crafter-dark` and are referenced as `/images/crafter-dark/<filename>`; do not use category subfolders.
 
 ## Design Patterns
 - Read the relevant root `functions/*.md` file before changing a page, list/detail view, shared card, image pattern, modal, navigation, footer, or visual system; keep known gaps synced with `docs/tasks.md`.
 - Optional photo metadata fields are `year`, `medium`, `description`, and `alt`; cards show compact metadata and fullscreen modals show fuller metadata.
 - Photography cards and fullscreen image viewer display only the photo name, even when metadata exists in `src/data/photos.js`.
 - AI POC cards may use concise `summary` text for previews while detail modals keep the full `description`.
-- AI POC content remains in the repository but is hidden from active portfolio navigation and page registry unless explicitly reintroduced.
+- AI POC content is archived under `archive/ai-pocs` and must stay out of active navigation/page registry unless explicitly reintroduced.
 - Home page positioning should centre Sara's creative practice on gothic cross-stitch, pattern-making, photography, games, and creative tools; AI/code are supporting tools, not the main identity.

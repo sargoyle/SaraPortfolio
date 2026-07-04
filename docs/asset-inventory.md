@@ -10,69 +10,69 @@ Current status: Home profile, uploaded Photography assets, and several Crafter D
 
 ## Crafter Dark: Own
 
-- `[x]` `public/images/crafter-dark/Own/CooperEyes.PNG`
-- `[x]` `public/images/crafter-dark/Own/CooperEyes-Finished.jpg`
-- `[x]` `public/images/crafter-dark/Own/Grey.png`
-- `[x]` `public/images/crafter-dark/Own/Grey-finished.jpg`
-- `[x]` `public/images/crafter-dark/Own/Xeno.JPG`
-- `[x]` `public/images/crafter-dark/Own/Xeno-Finished.JPG`
-- `[x]` `public/images/crafter-dark/Own/MothMan.png`
-- `[x]` `public/images/crafter-dark/Own/FalloutGecko.png`
-- `[x]` `public/images/crafter-dark/Own/finished-in-progress.svg`
-- `[x]` `public/images/crafter-dark/Own/LilyTeeth.png`
-- `[x]` `public/images/crafter-dark/Own/LilyTeeth-finished.JPG`
+- `[x]` `public/images/crafter-dark/CooperEyes.PNG`
+- `[x]` `public/images/crafter-dark/CooperEyes-Finished.jpg`
+- `[x]` `public/images/crafter-dark/Grey.png`
+- `[x]` `public/images/crafter-dark/Grey-finished.jpg`
+- `[x]` `public/images/crafter-dark/Xeno.JPG`
+- `[x]` `public/images/crafter-dark/Xeno-Finished.JPG`
+- `[x]` `public/images/crafter-dark/MothMan.png`
+- `[x]` `public/images/crafter-dark/FalloutGecko.png`
+- `[x]` `public/images/crafter-dark/finished-in-progress.svg`
+- `[x]` `public/images/crafter-dark/LilyTeeth.png`
+- `[x]` `public/images/crafter-dark/LilyTeeth-finished.JPG`
 
 ## Crafter Dark: Pop Culture
 
-- `[x]` `public/images/crafter-dark/pop/AdamAntLogo.PNG`
-- `[x]` `public/images/crafter-dark/pop/AdamAntLogo-finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/CaligariHallway.png`
-- `[x]` `public/images/crafter-dark/pop/CaligariHallway-finished.JPG`
-- `[x]` `public/images/crafter-dark/pop/CaligariLandscape.PNG`
-- `[x]` `public/images/crafter-dark/pop/CaligariLandscape-finished.JPG`
-- `[x]` `public/images/crafter-dark/pop/CaligariTrees.png`
-- `[x]` `public/images/crafter-dark/pop/CaligariTrees-finished.JPG`
-- `[x]` `public/images/crafter-dark/pop/Cells.PNG`
-- `[x]` `public/images/crafter-dark/pop/Cells-finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/HAL9000.png`
-- `[x]` `public/images/crafter-dark/pop/HAL9000-finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/MrHandyFudge.png`
-- `[x]` `public/images/crafter-dark/pop/Pipboy3000MarkIV.png`
-- `[x]` `public/images/crafter-dark/pop/Pipboy3000MarkIV-finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/RavenMoon.png`
-- `[x]` `public/images/crafter-dark/pop/RavenMoon-finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/SulacoEgg.png`
-- `[x]` `public/images/crafter-dark/pop/SulacoEgg-finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/UFO.png`
-- `[x]` `public/images/crafter-dark/pop/UFO-Finished.jpg`
-- `[ ]` `public/images/crafter-dark/pop/FalloutTimeline.png`
-- `[ ]` `public/images/crafter-dark/pop/FalloutTimeline-Finished.png`
-- `[x]` `public/images/crafter-dark/pop/Bella.png`
-- `[x]` `public/images/crafter-dark/pop/Bella-finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/CropCircleBiscornu.png`
-- `[x]` `public/images/crafter-dark/pop/CropCircleBiscornu-finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/Drac.png`
-- `[x]` `public/images/crafter-dark/pop/Drac-Finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/Frankie.png`
-- `[x]` `public/images/crafter-dark/pop/Frankie-finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/GalaxyQuest.png`
-- `[x]` `public/images/crafter-dark/pop/GalaxyQuest-Finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/Hardware.jpg`
-- `[x]` `public/images/crafter-dark/pop/Hardware-finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/LimboGraveyard.jpg`
-- `[x]` `public/images/crafter-dark/pop/LimboGraveyard-Finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/Predator2.png`
-- `[x]` `public/images/crafter-dark/pop/Predator2-finished.JPG`
-- `[x]` `public/images/crafter-dark/pop/TwinPeaksOwl.png`
-- `[x]` `public/images/crafter-dark/pop/TwinPeaksOwl-finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/FalloutPipBoyGrid.png`
-- `[x]` `public/images/crafter-dark/pop/FalloutPipBoyGrid-finished.JPG`
-- `[x]` `public/images/crafter-dark/pop/TwinPeaksSocket.jpg`
-- `[x]` `public/images/crafter-dark/pop/TwinPeaksSocket-finished.jpg`
-- `[x]` `public/images/crafter-dark/pop/XFilesAliens.png`
-- `[x]` `public/images/crafter-dark/pop/XFilesAliens-Finished.png`
-- `[x]` `public/images/crafter-dark/pop/XFilesHand.png`
-- `[x]` `public/images/crafter-dark/pop/XFilesHandFinished.png`
+- `[x]` `public/images/crafter-dark/AdamAntLogo.PNG`
+- `[x]` `public/images/crafter-dark/AdamAntLogo-finished.jpg`
+- `[x]` `public/images/crafter-dark/CaligariHallway.png`
+- `[x]` `public/images/crafter-dark/CaligariHallway-finished.JPG`
+- `[x]` `public/images/crafter-dark/CaligariLandscape.PNG`
+- `[x]` `public/images/crafter-dark/CaligariLandscape-finished.JPG`
+- `[x]` `public/images/crafter-dark/CaligariTrees.png`
+- `[x]` `public/images/crafter-dark/CaligariTrees-finished.JPG`
+- `[x]` `public/images/crafter-dark/Cells.PNG`
+- `[x]` `public/images/crafter-dark/Cells-finished.jpg`
+- `[x]` `public/images/crafter-dark/HAL9000.png`
+- `[x]` `public/images/crafter-dark/HAL9000-finished.jpg`
+- `[x]` `public/images/crafter-dark/MrHandyFudge.png`
+- `[x]` `public/images/crafter-dark/Pipboy3000MarkIV.png`
+- `[x]` `public/images/crafter-dark/Pipboy3000MarkIV-finished.jpg`
+- `[x]` `public/images/crafter-dark/RavenMoon.png`
+- `[x]` `public/images/crafter-dark/RavenMoon-finished.jpg`
+- `[x]` `public/images/crafter-dark/SulacoEgg.png`
+- `[x]` `public/images/crafter-dark/SulacoEgg-finished.jpg`
+- `[x]` `public/images/crafter-dark/UFO.png`
+- `[x]` `public/images/crafter-dark/UFO-Finished.jpg`
+- `[ ]` `public/images/crafter-dark/FalloutTimeline.png`
+- `[ ]` `public/images/crafter-dark/FalloutTimeline-Finished.png`
+- `[x]` `public/images/crafter-dark/Bella.png`
+- `[x]` `public/images/crafter-dark/Bella-finished.jpg`
+- `[x]` `public/images/crafter-dark/CropCircleBiscornu.png`
+- `[x]` `public/images/crafter-dark/CropCircleBiscornu-finished.jpg`
+- `[x]` `public/images/crafter-dark/Drac.png`
+- `[x]` `public/images/crafter-dark/Drac-Finished.jpg`
+- `[x]` `public/images/crafter-dark/Frankie.png`
+- `[x]` `public/images/crafter-dark/Frankie-finished.jpg`
+- `[x]` `public/images/crafter-dark/GalaxyQuest.png`
+- `[x]` `public/images/crafter-dark/GalaxyQuest-Finished.jpg`
+- `[x]` `public/images/crafter-dark/Hardware.jpg`
+- `[x]` `public/images/crafter-dark/Hardware-finished.jpg`
+- `[x]` `public/images/crafter-dark/LimboGraveyard.jpg`
+- `[x]` `public/images/crafter-dark/LimboGraveyard-Finished.jpg`
+- `[x]` `public/images/crafter-dark/Predator2.png`
+- `[x]` `public/images/crafter-dark/Predator2-finished.JPG`
+- `[x]` `public/images/crafter-dark/TwinPeaksOwl.png`
+- `[x]` `public/images/crafter-dark/TwinPeaksOwl-finished.jpg`
+- `[x]` `public/images/crafter-dark/FalloutPipBoyGrid.png`
+- `[x]` `public/images/crafter-dark/FalloutPipBoyGrid-finished.JPG`
+- `[x]` `public/images/crafter-dark/TwinPeaksSocket.jpg`
+- `[x]` `public/images/crafter-dark/TwinPeaksSocket-finished.jpg`
+- `[x]` `public/images/crafter-dark/XFilesAliens.png`
+- `[x]` `public/images/crafter-dark/XFilesAliens-Finished.png`
+- `[x]` `public/images/crafter-dark/XFilesHand.png`
+- `[x]` `public/images/crafter-dark/XFilesHandFinished.png`
 
 ## Photography
 

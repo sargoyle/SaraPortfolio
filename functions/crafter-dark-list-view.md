@@ -35,9 +35,9 @@ Current implementation:
 
 - `src/pages/CrafterDark.jsx` maps every filtered project to `CrafterDarkCard`.
 - `CrafterDarkCard` exists and is dedicated to Crafter Dark list items.
-- `ProjectCard` is shared with other pages and is not used by Crafter Dark.
+- `ProjectCard` is archived with AI POCs and is not used by Crafter Dark.
 - `CrafterDarkCard` passes `project.image1 || project.image` to `SquareImageFrame`.
-- `.project-card-image-container` and `.project-card-image` still exist for shared `ProjectCard`, but they do not control Crafter Dark thumbnails.
+- `.project-card-image-container` and `.project-card-image` may remain only as legacy/archive styles; they do not control Crafter Dark thumbnails.
 - `ImageWithFallback` is intentionally not used inside `SquareImageFrame` because fallback wrappers can change thumbnail DOM structure.
 
 Target implementation:
@@ -108,7 +108,7 @@ The card is a button rather than an article so click and keyboard activation sha
 
 ## Explicit Anti-Rules
 
-- Do not use shared `ProjectCard` for Crafter Dark if it cannot guarantee this thumbnail behaviour.
+- Do not use archived `ProjectCard` for Crafter Dark.
 - Do not apply borders directly to `<img>`.
 - Do not use `object-fit: cover`.
 - Do not use different thumbnail markup for different projects.

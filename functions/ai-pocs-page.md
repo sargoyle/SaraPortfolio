@@ -2,39 +2,39 @@
 
 ## Purpose
 
-Displays AI proof-of-concept projects as portfolio items, while keeping AI secondary to Sara's broader creative practice.
+Archived documentation for the former AI proof-of-concept page.
 
 ## Source Files
 
-- `src/pages/AiPocs.jsx`
-- `src/data/aiPocs.js`
-- `src/components/ProjectCard.jsx`
+- `archive/ai-pocs/AiPocs.jsx`
+- `archive/ai-pocs/aiPocs.js`
+- `archive/ai-pocs/ProjectCard.jsx`
 - `src/components/ProjectDetailModal.jsx`
 - `src/styles/global.css`
 
 ## User-Facing Behaviour
 
-Visitors see a grid of AI POC cards and can open detail modals with images, full descriptions, and optional external links.
+AI POCs are not shown in the active portfolio. The archived page can be restored later if Sara decides the section belongs in the live site again.
 
 ## Layout Rules
 
-- Uses `.simple-grid`.
-- Cards use shared `ProjectCard`.
+- The archived page previously used `.simple-grid`.
+- The archived page previously used `ProjectCard`.
 
 ## Reusable Components
 
-- Must use `ProjectCard`.
+- Archived only; do not use in active pages.
 - Must use `ProjectDetailModal`.
 
 ## Data Rules
 
-- Data source is `aiPocs`.
+- Archived data source is `aiPocs`.
 - Expected fields include `id`, `title`, `description`, optional `summary`, image fields, and optional `links`.
 - Card may show shorter `summary`; modal keeps full `description`.
 
 ## Image Rules
 
-- AI POC cards currently use shared project card image behaviour.
+- AI POC cards previously used shared project card image behaviour.
 - Detail images use `ProjectDetailModal` image handling.
 
 ## Styling Rules
@@ -49,14 +49,15 @@ Visitors see a grid of AI POC cards and can open detail modals with images, full
 
 ## Known Gaps / Defects
 
-- Missing AI POC screenshots remain blocked.
-- Some external AI POC links need manual confirmation.
+- Missing AI POC screenshots remain blocked if this section is restored.
+- Some external AI POC links need manual confirmation if this section is restored.
 
 ## Change Rules
 
-- Do not create one-off AI POC cards.
-- Update `aiPocs.js` for content changes.
+- Do not re-register AI POCs in navigation or `App.jsx` unless Sara explicitly asks for the section to return.
+- Update `archive/ai-pocs/aiPocs.js` for archived content changes.
 
 ## Test Expectations
 
-- Open each POC, test modal navigation, verify links render when present.
+- Active-site checks should confirm no AI POCs nav item appears and no active page imports archived AI POC files.
+- If restored, open each POC, test modal navigation, and verify links render when present.

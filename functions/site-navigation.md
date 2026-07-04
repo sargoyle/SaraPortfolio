@@ -18,6 +18,7 @@ Visitors can switch between Home, Crafter Dark, Photography, and Sara's Lab. The
 
 - Navigation is fixed at the top.
 - Desktop uses horizontal buttons.
+- Top navigation is left-aligned with the page rather than centered.
 - Mobile keeps horizontal scrolling nav with no wrapping into broken rows.
 
 ## Reusable Components
@@ -29,7 +30,7 @@ Visitors can switch between Home, Crafter Dark, Photography, and Sara's Lab. The
 
 - Navigation IDs must match keys in `App.jsx` `pages`.
 - The Games page is labelled `Sara's Lab` in navigation.
-- AI POC source files and data remain in the repository, but `AI POCs` is not an active navigation item or registered page.
+- AI POC source files and data are archived under `archive/ai-pocs`; `AI POCs` is not an active navigation item or registered page.
 
 ## Image Rules
 
@@ -54,9 +55,11 @@ No known gaps currently documented.
 
 - When adding a page, update `Navigation.jsx`, `App.jsx`, and this file together.
 - Do not create per-page duplicate navigation.
+- Archived sections must not be added back to navigation without a deliberate task and docs update.
 
 ## Test Expectations
 
 - Test keyboard tab order through nav.
 - Confirm active state follows section changes.
+- Confirm the nav button group starts from the left side of the top bar on desktop.
 - Confirm modal closes on navigation via `portfolio:navigate`.

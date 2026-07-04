@@ -33,6 +33,13 @@ export default function LabProjectDetail({ project }) {
               </a>
             </div>
           ) : null}
+          {project.download ? (
+            <div className="lab-project-detail-actions">
+              <a href={project.download} download className="lab-project-link">
+                {project.downloadLabel || 'Download'}
+              </a>
+            </div>
+          ) : null}
         </div>
       </div>
 

@@ -63,13 +63,13 @@ Goal: Populate the expected image library and remove unintended missing-asset er
 - `[x]` Audit local workspace and Downloads for referenced image assets.
 - `[x]` Add profile image at `public/images/about/profile.jpg`.
 - `[x]` Add remaining Crafter Dark Own images.
-  - `/images/crafter-dark/Own/Xeno.JPG`
-  - `/images/crafter-dark/Own/Xeno-Finished.JPG`
-  - `/images/crafter-dark/Own/MothMan.png`
-  - `/images/crafter-dark/Own/FalloutGecko.png`
+  - `/images/crafter-dark/Xeno.JPG`
+  - `/images/crafter-dark/Xeno-Finished.JPG`
+  - `/images/crafter-dark/MothMan.png`
+  - `/images/crafter-dark/FalloutGecko.png`
 - `[-]` Add remaining Crafter Dark Pop Culture images referenced by `src/data/crafterProjects.js`. Blocked: source assets not found locally.
-  - `/images/crafter-dark/pop/FalloutTimeline.png`
-  - `/images/crafter-dark/pop/FalloutTimeline-Finished.png`
+  - `/images/crafter-dark/FalloutTimeline.png`
+  - `/images/crafter-dark/FalloutTimeline-Finished.png`
 - `[-]` Add Photography images referenced by `src/data/photos.js`. Blocked: source assets not found locally.
 - `[x]` Pick up renamed uploaded Photography files as `Abstract Macro 1.JPG` through `Abstract Macro 15.JPG`.
 - `[x]` Match uploaded When visions kaleid Photography images to existing Alien, Cat, Cat Eyes, Gecko, and Mothman placeholders.
@@ -87,7 +87,7 @@ Goal: Populate the expected image library and remove unintended missing-asset er
 - `[-]` Add Games images. Blocked: source assets not found locally.
   - `/images/games/9sisters-1.jpg`
   - `/images/games/9sisters-2.jpg`
-- `[-]` Add AI POC images referenced by `src/data/aiPocs.js`. Blocked: source assets not found locally.
+- `[-]` Add AI POC images referenced by archived `archive/ai-pocs/aiPocs.js`. Blocked: source assets not found locally and AI POCs are archived.
 - `[x]` Create exact missing asset inventory in `docs/asset-inventory.md`.
 - `[-]` Confirm filename casing matches data paths exactly. Blocked until source assets are added.
 - `[-]` Load the site and verify intended portfolio images no longer 404. Blocked until source assets are added.
@@ -176,16 +176,16 @@ Goal: Prepare the project for handoff, version control, and deployment.
   - content-editing instructions
   - image path instructions
 - `[ ]` Remove `public/images/.gitkeep` once the image folder is confirmed tracked with real assets.
-- `[ ]` Decide whether uploaded pattern/header PDFs should remain publicly served or move to project documentation/source storage.
-- `[ ]` If approved, move Crafter Dark pattern/header PDFs out of `public/images/crafter-dark`.
+- `[x]` Decide whether uploaded pattern/header PDFs should remain publicly served or move to project documentation/source storage.
+- `[x]` Move Crafter Dark pattern/header PDFs out of `public/images/crafter-dark`.
 - `[ ]` Add missing Fallout Timeline assets:
-  - `public/images/crafter-dark/pop/FalloutTimeline.png`
-  - `public/images/crafter-dark/pop/FalloutTimeline-Finished.png`
+  - `public/images/crafter-dark/FalloutTimeline.png`
+  - `public/images/crafter-dark/FalloutTimeline-Finished.png`
 - `[ ]` Add missing Games asset folder and images:
   - `public/images/games/9sisters-1.jpg`
   - `public/images/games/9sisters-2.jpg`
 - `[x]` Add initial Sara's Lab image assets for Alphabet Stitch, Batcave Font, and The Door List.
-- `[ ]` Add missing AI POC asset folder and screenshots referenced by `src/data/aiPocs.js`.
+- `[ ]` If AI POCs are restored later, add missing AI POC asset folder and screenshots referenced by `archive/ai-pocs/aiPocs.js`.
 - `[?]` Decide whether to keep uppercase `/images/AIPOC` paths or standardize to lowercase `/images/ai-pocs`.
 - `[?]` Decide whether to standardize uploaded image filenames to slug-style lowercase names.
 - `[ ]` If filename standardization is approved, update image asset filenames and matching data paths in one coordinated pass.
@@ -227,8 +227,22 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Align Crafter Dark list thumbnail image boxes to a consistent top level and size.
 - `[x]` Move Photography detail close button outside the photograph frame.
 - `[x]` Remove AI POCs from active site navigation and page registry without deleting repository content.
+- `[x]` Left-align the fixed top navigation button group.
+- `[x]` Mark Batcave Font as completed and add downloadable font file link.
+- `[x]` Move Crafter Dark images into one flat `public/images/crafter-dark` folder and update data/documentation paths.
+- `[x]` Rotate the Alien photography image 90 degrees to match the intended site orientation.
 - `[x]` Constrain Sara's Lab list images with contained frame sizing so The Door List is not cropped or overflowing.
 - `[x]` Fix modal close button alignment for Sara's Lab and shared modal behaviour where applicable.
+- `[x]` Audit project for duplicate, old, and unused portfolio items.
+- `[x]` Archive AI POC page, data, and old generic project card without deleting them.
+- `[x]` Remove AI POC content from active navigation and page registry.
+- `[x]` Update function documentation after cleanup.
+- `[x]` Add manual security checks documentation.
+- `[x]` Update Vite to a patched version for high/moderate audit advisories.
+- `[ ]` Monitor or resolve remaining low transitive dependency advisories for `esbuild` and `@babel/core` when upstream Vite/plugin-react updates are available.
+- `[x]` Review and archive legacy `src/data/games.js` now that Sara's Lab uses `src/data/labProjects.js`.
+- `[ ]` Review old `.project-card-*` and `.poc-*` CSS selectors after archived AI POCs are no longer active.
+- `[ ]` Add an automated security/static check script for external link rel attributes, archived imports, and unsafe HTML usage.
 - `[ ]` Add final image assets for Sara's Lab project cards.
 - `[ ]` Add screenshots for Alphabet Stitch, Xanadu: The 9 Muses, The Door List, and Batcave Font.
 - `[x]` Run `npm run build`.
