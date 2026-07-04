@@ -228,6 +228,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Move Photography detail close button outside the photograph frame.
 - `[x]` Remove AI POCs from active site navigation and page registry without deleting repository content.
 - `[x]` Left-align the fixed top navigation button group.
+- `[x]` Right-align the fixed top navigation button group.
 - `[x]` Mark Batcave Font as completed and add downloadable font file link.
 - `[x]` Move Crafter Dark images into one flat `public/images/crafter-dark` folder and update data/documentation paths.
 - `[x]` Rotate the Alien photography image 90 degrees to match the intended site orientation.

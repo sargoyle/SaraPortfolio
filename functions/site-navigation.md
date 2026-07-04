@@ -18,7 +18,7 @@ Visitors can switch between Home, Crafter Dark, Photography, and Sara's Lab. The
 
 - Navigation is fixed at the top.
 - Desktop uses horizontal buttons.
-- Top navigation is left-aligned with the page rather than centered.
+- Top navigation is right-aligned with the page rather than centered.
 - Mobile keeps horizontal scrolling nav with no wrapping into broken rows.
 
 ## Reusable Components
@@ -61,5 +61,5 @@ No known gaps currently documented.
 
 - Test keyboard tab order through nav.
 - Confirm active state follows section changes.
-- Confirm the nav button group starts from the left side of the top bar on desktop.
+- Confirm the nav button group sits on the right side of the top bar on desktop.
 - Confirm modal closes on navigation via `portfolio:navigate`.
