@@ -2,7 +2,7 @@
 
 This inventory lists every image path currently referenced by the app data and Home page. All paths are served from `public`, so `/images/about/profile.jpg` should exist on disk at `public/images/about/profile.jpg`.
 
-Current status: Home profile, uploaded Photography assets, and several Crafter Dark assets are present. The app will render graceful placeholders for any paths still unchecked below.
+Current status: Home profile, uploaded Photography assets, and Crafter Dark assets are present except where explicitly unchecked below. The app will render graceful placeholders for any paths still unchecked.
 
 ## Profile
 
@@ -15,7 +15,7 @@ Current status: Home profile, uploaded Photography assets, and several Crafter D
 - `[x]` `public/images/crafter-dark/Grey.png`
 - `[x]` `public/images/crafter-dark/Grey-finished.jpg`
 - `[x]` `public/images/crafter-dark/Xeno.JPG`
-- `[x]` `public/images/crafter-dark/Xeno-Finished.JPG`
+- `[x]` `public/images/crafter-dark/Xeno-Finished.png`
 - `[x]` `public/images/crafter-dark/MothMan.png`
 - `[x]` `public/images/crafter-dark/FalloutGecko.png`
 - `[x]` `public/images/crafter-dark/finished-in-progress.svg`
@@ -37,6 +37,7 @@ Current status: Home profile, uploaded Photography assets, and several Crafter D
 - `[x]` `public/images/crafter-dark/HAL9000.png`
 - `[x]` `public/images/crafter-dark/HAL9000-finished.jpg`
 - `[x]` `public/images/crafter-dark/MrHandyFudge.png`
+- `[x]` `public/images/crafter-dark/MrHandy-Finished.jpg`
 - `[x]` `public/images/crafter-dark/Pipboy3000MarkIV.png`
 - `[x]` `public/images/crafter-dark/Pipboy3000MarkIV-finished.jpg`
 - `[x]` `public/images/crafter-dark/RavenMoon.png`
@@ -45,8 +46,8 @@ Current status: Home profile, uploaded Photography assets, and several Crafter D
 - `[x]` `public/images/crafter-dark/SulacoEgg-finished.jpg`
 - `[x]` `public/images/crafter-dark/UFO.png`
 - `[x]` `public/images/crafter-dark/UFO-Finished.jpg`
-- `[ ]` `public/images/crafter-dark/FalloutTimeline.png`
-- `[ ]` `public/images/crafter-dark/FalloutTimeline-Finished.png`
+- `[x]` `public/images/crafter-dark/FalloutTimeline.png`
+- `[x]` `public/images/crafter-dark/FalloutTimeline-Finished.png`
 - `[x]` `public/images/crafter-dark/Bella.png`
 - `[x]` `public/images/crafter-dark/Bella-finished.jpg`
 - `[x]` `public/images/crafter-dark/CropCircleBiscornu.png`

@@ -33,7 +33,7 @@ export const crafterProjects = [
     numberOfColours: '14',
     description: "A kaleidoscopic pattern based on H.R. Giger's xenomorph from Alien.",
     image1: '/images/crafter-dark/Xeno.JPG',
-    image2: '/images/crafter-dark/Xeno-Finished.JPG',
+    image2: '/images/crafter-dark/Xeno-Finished.png',
   },
   {
     id: 4,
@@ -141,7 +141,7 @@ export const crafterProjects = [
     numberOfColours: '11',
     description: 'A Fallout-inspired design featuring Mr. Handy with the text "There\'s no fudge here".',
     image1: '/images/crafter-dark/MrHandyFudge.png',
-    image2: '/images/crafter-dark/MrHandyFudge.png',
+    image2: '/images/crafter-dark/MrHandy-Finished.jpg',
   },
   {
     id: 13,

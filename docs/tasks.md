@@ -64,10 +64,10 @@ Goal: Populate the expected image library and remove unintended missing-asset er
 - `[x]` Add profile image at `public/images/about/profile.jpg`.
 - `[x]` Add remaining Crafter Dark Own images.
   - `/images/crafter-dark/Xeno.JPG`
-  - `/images/crafter-dark/Xeno-Finished.JPG`
+  - `/images/crafter-dark/Xeno-Finished.png`
   - `/images/crafter-dark/MothMan.png`
   - `/images/crafter-dark/FalloutGecko.png`
-- `[-]` Add remaining Crafter Dark Pop Culture images referenced by `src/data/crafterProjects.js`. Blocked: source assets not found locally.
+- `[x]` Add remaining Crafter Dark Pop Culture images referenced by `src/data/crafterProjects.js`.
   - `/images/crafter-dark/FalloutTimeline.png`
   - `/images/crafter-dark/FalloutTimeline-Finished.png`
 - `[-]` Add Photography images referenced by `src/data/photos.js`. Blocked: source assets not found locally.
@@ -178,7 +178,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[ ]` Remove `public/images/.gitkeep` once the image folder is confirmed tracked with real assets.
 - `[x]` Decide whether uploaded pattern/header PDFs should remain publicly served or move to project documentation/source storage.
 - `[x]` Move Crafter Dark pattern/header PDFs out of `public/images/crafter-dark`.
-- `[ ]` Add missing Fallout Timeline assets:
+- `[x]` Add missing Fallout Timeline assets:
   - `public/images/crafter-dark/FalloutTimeline.png`
   - `public/images/crafter-dark/FalloutTimeline-Finished.png`
 - `[ ]` Add missing Games asset folder and images:
@@ -231,6 +231,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Mark Batcave Font as completed and add downloadable font file link.
 - `[x]` Move Crafter Dark images into one flat `public/images/crafter-dark` folder and update data/documentation paths.
 - `[x]` Rotate the Alien photography image 90 degrees to match the intended site orientation.
+- `[x]` Move newly uploaded root Crafter Dark assets into `public/images/crafter-dark` and attach them to Xeno, Mr Handy Fudge, and Fallout Timeline.
 - `[x]` Constrain Sara's Lab list images with contained frame sizing so The Door List is not cropped or overflowing.
 - `[x]` Fix modal close button alignment for Sara's Lab and shared modal behaviour where applicable.
 - `[x]` Audit project for duplicate, old, and unused portfolio items.
