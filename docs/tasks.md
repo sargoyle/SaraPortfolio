@@ -229,6 +229,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Remove AI POCs from active site navigation and page registry without deleting repository content.
 - `[x]` Left-align the fixed top navigation button group.
 - `[x]` Right-align the fixed top navigation button group.
+- `[x]` Strengthen top navigation right alignment with a full-width flex row.
 - `[x]` Mark Batcave Font as completed and add downloadable font file link.
 - `[x]` Move Crafter Dark images into one flat `public/images/crafter-dark` folder and update data/documentation paths.
 - `[x]` Rotate the Alien photography image 90 degrees to match the intended site orientation.
@@ -241,6 +242,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Update function documentation after cleanup.
 - `[x]` Add manual security checks documentation.
 - `[x]` Update Vite to a patched version for high/moderate audit advisories.
+- `[x]` Re-run dependency audit and manual static security checks.
 - `[ ]` Monitor or resolve remaining low transitive dependency advisories for `esbuild` and `@babel/core` when upstream Vite/plugin-react updates are available.
 - `[x]` Review and archive legacy `src/data/games.js` now that Sara's Lab uses `src/data/labProjects.js`.
 - `[ ]` Review old `.project-card-*` and `.poc-*` CSS selectors after archived AI POCs are no longer active.

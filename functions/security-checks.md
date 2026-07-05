@@ -25,8 +25,8 @@ Manual security checklist for Sara's Portfolio until an automated test or lint s
 
 - No automated security test script exists yet.
 - No deployment security headers are configured in this repo because deployment target is not chosen.
-- Public Crafter Dark PDF/header documents still need a human decision on whether they should remain publicly served.
-- Dependency audit currently has two low transitive dev-tool advisories: `esbuild <0.28.1` via Vite and `@babel/core <=7.29.0` via `@vitejs/plugin-react`. Avoid forcing overrides unless tested, because these are build-tool internals.
+- Crafter Dark PDF/header documents are archived outside `public` and should stay out of the deployed static asset tree unless intentionally made downloadable.
+- Dependency audit currently has two low transitive dev-tool advisories: `esbuild <0.28.1` via Vite and `@babel/core <=7.29.0` via `@vitejs/plugin-react`. A targeted `pnpm update vite @vitejs/plugin-react` found no newer available versions in the current dependency range; avoid forcing overrides unless tested, because these are build-tool internals.
 
 ## Test Expectations
 

@@ -20,6 +20,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-07-04: Strengthened the fixed top navigation right alignment by making the nav row span available width and justify buttons to the end. Files affected: `src/styles/global.css`, `docs/tasks.md`.
 - 2026-07-04: Right-aligned the fixed top navigation button group across all pages. Files affected: `src/styles/global.css`, `functions/site-navigation.md`, `docs/tasks.md`.
 - 2026-07-04: Moved newly uploaded root Crafter Dark images into the flat Crafter Dark asset folder and connected Xeno, Mr Handy Fudge, and Fallout Timeline to the updated image paths. Files affected: `public/images/crafter-dark/*`, `src/data/crafterProjects.js`, `docs/asset-inventory.md`, `docs/tasks.md`.
 - 2026-07-04: Flattened Crafter Dark image assets into one public folder, updated image references, archived legacy Sara's Lab game data, removed Crafter Dark PDFs from public serving, verified Batcave Font remains completed/downloadable, and rotated the Alien photography image. Files affected: `public/images/crafter-dark/*`, `archive/legacy-games/*`, `archive/crafter-dark-documents/*`, `src/data/crafterProjects.js`, `src/data/labProjects.js`, `public/images/photography/Alien.png`, `README.md`, `docs/rules.md`, `docs/tasks.md`.
@@ -68,6 +69,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Matched uploaded Xeno Photography image to the existing Xeno placeholder record. Files affected: `src/data/photos.js`, `docs/asset-inventory.md`, `docs/tasks.md`.
 
 ### Security
+- 2026-07-04: Re-ran manual static security checks and dependency audit; build passed, no active unsafe HTML or secret-like strings were found, and two low transitive dev-tool advisories remain documented. Files affected: `functions/security-checks.md`, `docs/tasks.md`.
 - 2026-07-03: Updated Vite to `7.3.6`, documented remaining low transitive audit advisories, and allowed only `esbuild` build scripts in pnpm workspace config. Files affected: `package.json`, `pnpm-lock.yaml`, `pnpm-workspace.yaml`, `functions/security-checks.md`, `docs/tasks.md`.
 
 ### Fixed
