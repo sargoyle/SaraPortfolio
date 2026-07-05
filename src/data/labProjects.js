@@ -62,7 +62,7 @@ export const labProjects = [
       'Storytelling',
       'Strategic play',
     ],
-    image: '',
+    image: '/images/lab/Xanadu-Muses.png',
     mediaFit: 'contain',
     mediaPosition: 'center',
     detailMediaFit: 'contain',

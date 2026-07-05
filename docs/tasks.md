@@ -248,7 +248,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[ ]` Review old `.project-card-*` and `.poc-*` CSS selectors after archived AI POCs are no longer active.
 - `[ ]` Add an automated security/static check script for external link rel attributes, archived imports, and unsafe HTML usage.
 - `[ ]` Add final image assets for Sara's Lab project cards.
-- `[ ]` Add screenshots for Alphabet Stitch, Xanadu: The 9 Muses, The Door List, and Batcave Font.
+- `[~]` Add screenshots for Alphabet Stitch, Xanadu: The 9 Muses, The Door List, and Batcave Font. Xanadu image added; final review still needed for all Lab assets.
 - `[x]` Run `npm run build`.
 - `[x]` Verify generated `dist` output.
 - `[?]` Choose deployment target:
