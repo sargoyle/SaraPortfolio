@@ -34,7 +34,7 @@ export default function Photography() {
       <h1 className="section-title">Photography</h1>
       <p className="description">Capturing moments and movement through the lens.</p>
       <FilterBar filters={filters} selectedFilter={selectedFilter} onChange={setSelectedFilter} itemCounts={itemCounts} />
-      <div className="simple-grid photo-grid">
+      <div className="simple-grid photo-grid" aria-label="Photography gallery">
         {filteredPhotos.map((photo) => (
           <PhotoCard key={photo.id} photo={photo} onOpen={setActivePhoto} />
         ))}

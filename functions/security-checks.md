@@ -8,7 +8,7 @@ Manual security checklist for Sara's Portfolio until an automated test or lint s
 
 - Static React/Vite portfolio.
 - No backend, authentication, database, payments, user-generated content, or secrets are expected.
-- External links are limited to Sara's LinkedIn, Alphabet Stitch, and archived AI POC links.
+- Active external links are limited to Sara's LinkedIn and Alphabet Stitch. Archived AI POC links may remain in `archive/ai-pocs` but are not active site links.
 
 ## Required Checks
 
@@ -17,6 +17,7 @@ Manual security checklist for Sara's Portfolio until an automated test or lint s
 - Confirm no active source uses `dangerouslySetInnerHTML`.
 - Confirm no hardcoded API keys, passwords, bearer tokens, or private keys exist in active source/docs.
 - Confirm every active `target="_blank"` link includes `rel="noreferrer"` or `rel="noopener noreferrer"`.
+- Confirm LinkedIn remains the only public communication/connect route on the active site.
 - Confirm archived AI POC content is not imported by `src/App.jsx`, `src/components/Navigation.jsx`, or active pages.
 - Confirm public assets do not include intentionally private documents before deployment.
 - Confirm the active nav exposes only Home, Crafter Dark, Photography, and Sara's Lab.

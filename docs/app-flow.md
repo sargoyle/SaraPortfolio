@@ -29,7 +29,7 @@ Entry point:
 Flow:
 
 1. Visitor sees `Sara's Portfolio`.
-2. Visitor reads subtitle: `Creative Technologist & AI Artist`.
+2. Visitor reads subtitle: `Creative Technologist, Artist & Pattern Maker`.
 3. Visitor sees profile image or fallback.
 4. Visitor reads short description.
 5. Visitor can select LinkedIn link.
@@ -44,6 +44,7 @@ Edge cases:
 
 - Profile image missing: show fallback placeholder.
 - LinkedIn opens in a new tab.
+- LinkedIn is the only public connect route; no email, phone, contact form, or extra social link is shown.
 - Mobile screen: nav remains horizontally scrollable.
 
 ### Journey 2: Visitor Browses Crafter Dark
@@ -58,13 +59,14 @@ Flow:
 2. Visitor reads section title and description.
 3. Visitor sees filters:
    - All
-   - When Stitches Kaleid
    - Pop Culture Inspired
+   - Science
+   - When Stitches Kaleid
 4. Visitor selects a filter.
 5. Project grid updates to matching projects.
 6. Visitor selects a project card.
 7. Fullscreen project modal opens.
-8. Visitor inspects project title, category, size, images, and description.
+8. Visitor inspects project title, size/chart/colour metadata, images, description, and subtle category tag.
 9. Visitor uses previous/next controls or arrow keys.
 10. Visitor closes modal via close button, Escape, or outside click.
 11. Visitor returns to the filtered project grid.
@@ -138,7 +140,7 @@ Flow:
 2. Visitor reads section title and description.
 3. Visitor sees project cards for creative tools, type experiments, games, and prototypes.
 4. Visitor opens a project detail view.
-5. Visitor reads the project copy and uses any available external or download action.
+5. Visitor reads the project copy, uses shared previous/next arrow controls if desired, and uses any available external or download action.
 
 Expected outcome:
 
@@ -147,12 +149,14 @@ Expected outcome:
 State transitions:
 
 - `activeProject` changes from `null` to selected project when a card opens.
+- `activeProject` changes to adjacent manual-order project on previous/next.
 - `activeProject` returns to `null` when the detail view closes.
 
 Edge cases:
 
 - Missing project images use polished placeholders or contained fallback media.
 - External and download actions appear only when data provides them.
+- Batcave Font provides a downloadable `.ttf` file and is marked completed.
 
 ### Journey 5: AI POC Content
 
@@ -185,15 +189,16 @@ Edge cases:
 Required content:
 
 - H1: `Sara's Portfolio`
-- Subtitle: `Creative Technologist & AI Artist`
+- Subtitle: `Creative Technologist, Artist & Pattern Maker`
 - Profile image from `/images/about/profile.jpg`
-- LinkedIn link
+- LinkedIn link only
 - Short description
 - About Sara section
 
 Required interactions:
 
 - LinkedIn link opens externally.
+- No contact form, email, phone number, or extra social links are displayed.
 - Navigation buttons change sections.
 
 ### Crafter Dark Screen
@@ -238,7 +243,8 @@ Required content:
 Required interactions:
 
 - Cards open project details.
-- Detail view closes with labelled close control or Escape.
+- Detail view supports shared previous/next arrow controls and ArrowLeft/ArrowRight.
+- Detail view closes with labelled close control, Escape, outside click, or navigation.
 
 ### AI POCs Screen
 
@@ -284,6 +290,7 @@ Modal states are local to each page:
 
 - Crafter Dark: `activeProject`
 - Photography: `activePhoto`
+- Sara's Lab: `activeProject`
 
 Modal open:
 
@@ -356,11 +363,13 @@ Expected behavior:
 The app flow is correct when:
 
 - Visitor can navigate from Home to every primary section.
+- Navigation shows Home, Crafter Dark, Photography, and Sara's Lab only.
 - Active nav state updates on each section.
 - Crafter Dark filters show expected item counts and filtered grids.
 - Photography filters show expected item counts and filtered grids.
 - Project modals open from cards and close by all required methods.
 - Photo modals open from cards and close by all required methods.
+- Sara's Lab detail views open from cards, support previous/next arrows, and expose external/download actions only when available.
 - Arrow keys navigate open modals.
 - Previous/next controls wrap through the current item list.
 - Missing images do not break the layout.

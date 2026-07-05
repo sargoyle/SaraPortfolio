@@ -22,7 +22,7 @@ export default function Games() {
     <main className="page games-page">
       <h1 className="section-title">Sara’s Lab</h1>
       <p className="description lab-page-intro">Sara’s Lab is where the systems live: creative tools, type experiments, games, and prototypes that sit behind the finished work.</p>
-      <div className="lab-project-grid">
+      <div className="lab-project-grid" aria-label="Sara's Lab projects">
         {orderedProjects.map((project) => (
           <LabProjectCard key={project.id} project={project} onOpen={setActiveProject} />
         ))}

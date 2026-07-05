@@ -40,7 +40,7 @@ export default function CrafterDark() {
       <h1 className="section-title">Crafter Dark</h1>
       <p className="description">A curated collection of dark cross stitch patterns. Original designs, pop-culture pieces, science-inspired patterns, and stitched experiments.</p>
       <FilterBar filters={filters} selectedFilter={selectedFilter} onChange={setSelectedFilter} itemCounts={itemCounts} />
-      <div className="simple-grid">
+      <div className="simple-grid" aria-label="Crafter Dark projects">
         {filteredProjects.map((project) => (
           <CrafterDarkCard key={project.id} project={project} onOpen={setActiveProject} />
         ))}

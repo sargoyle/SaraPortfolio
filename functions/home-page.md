@@ -32,6 +32,7 @@ Visitors see Sara's portfolio title, subtitle, profile image, LinkedIn link, sho
 
 - The profile image path is `/images/about/profile.jpg`.
 - LinkedIn URL is currently `https://www.linkedin.com/in/sara-gillard-ppm-consultant/`.
+- LinkedIn is the only public communication/connect link on the active site.
 - Copy should stay grounded, human, and creative. Avoid generic AI marketing phrasing.
 
 ## Image Rules
@@ -48,6 +49,7 @@ Visitors see Sara's portfolio title, subtitle, profile image, LinkedIn link, sho
 
 - Profile image needs useful alt text.
 - LinkedIn link must be keyboard accessible and open safely with `rel="noreferrer"`.
+- Do not add email, phone, contact form, or extra social links unless Sara explicitly changes the project rule.
 - Visible focus states must remain.
 
 ## Known Gaps / Defects

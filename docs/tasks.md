@@ -191,7 +191,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[ ]` If filename standardization is approved, update image asset filenames and matching data paths in one coordinated pass.
 - `[ ]` Resolve remaining `Pattern size varies` Crafter Dark records where pattern documents or dimensions are available.
 - `[ ]` Re-run referenced asset path audit after missing assets and naming decisions are resolved.
-- `[ ]` Add a lightweight smoke test script or documented manual QA checklist.
+- `[x]` Add a lightweight smoke test script or documented manual QA checklist.
 - `[x]` Extract Crafter Dark thumbnail handling into reusable `SquareImageFrame` and `CrafterDarkCard` components and update `functions/crafter-dark-list-view.md`.
 - `[x]` Refactor Crafter Dark listing cards to use `CrafterDarkCard` and `SquareImageFrame`.
 - `[x]` Review and align Crafter Dark function documentation with the implemented list card and square image frame behaviour.
@@ -257,12 +257,16 @@ Goal: Prepare the project for handoff, version control, and deployment.
   - GitHub Pages
   - another static host
 - `[ ]` Configure deployment for selected host.
-- `[ ]` Add production metadata:
+- `[x]` Add production metadata:
   - page description
   - Open Graph title
   - Open Graph description
   - social preview image
   - favicon
+- `[x]` Add favicon files and web app manifest to `public`.
+- `[x]` Add social preview image at `public/images/social/saras-portfolio-og.png`.
+- `[x]` Review active pages and components for accessibility labels, alt text, modal roles, and external link metadata.
+- `[x]` Review and update function documentation and manual QA expectations against the current active site.
 - `[ ]` Verify production URL loads.
 - `[ ]` Verify production console has no unintended errors.
 
@@ -281,11 +285,10 @@ Goal: Track useful improvements without letting them block the first polished la
 - `[ ]` Add downloadable Crafter Dark pattern links if desired.
 - `[x]` Add Sara's Lab card/detail view pattern for games, Batcave Font, creative tools, and prototypes.
 - `[x]` Add Batcave Font project card when content and assets are ready.
-- `[ ]` Add a contact section if LinkedIn is not enough.
+- `[-]` Do not add a contact section for the current site; LinkedIn is the only approved public connect route.
 
 ## Current Open Questions
 
 1. Are all referenced image assets available now, and should I copy them into `public/images` if they exist elsewhere?
-2. Should Games remain a static page, or should game concepts also open in fullscreen detail modals?
-3. Do you want direct URLs for each section or project in this release, or is the current single-page state navigation enough for launch?
-4. Which deployment target should this project optimize for?
+2. Do you want direct URLs for each section or project in this release, or is the current single-page state navigation enough for launch?
+3. Which deployment target should this project optimize for?

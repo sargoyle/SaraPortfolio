@@ -94,7 +94,7 @@ Sara's Portfolio/
 `FullscreenImageModal.jsx`
 
 - Fullscreen modal for Photography images.
-- Displays a single large image and title.
+- Displays a single large image while keeping the photo title available as accessible text rather than visible modal copy.
 
 `ProjectDetailModal.jsx`
 
@@ -137,6 +137,7 @@ Sara's Portfolio/
 
 - Loads `labProjects`.
 - Displays Sara's Lab projects, including creative tools, type experiments, games, and prototypes.
+- The file name remains `Games.jsx` for now, but the user-facing section is Sara's Lab.
 
 Archived AI POCs
 
@@ -154,13 +155,16 @@ File: `src/data/crafterProjects.js`
 
 ```js
 {
-  id: number,
+  id: string,
   title: string,
-  category: 'When Stitches Kaleid' | 'Pop Culture Inspired',
-  size: string,
+  category: 'When Stitches Kaleid' | 'Pop Culture Inspired' | 'Science',
+  sizeFor18Count: string,
+  chartSize: string,
+  numberOfColours: string,
   description: string,
   image1: string,
-  image2: string
+  image2?: string,
+  images?: string[]
 }
 ```
 
@@ -169,9 +173,9 @@ Requirements:
 - `id` must be unique within the file.
 - `title` should be human-readable and used in card/modal headings.
 - `category` must match one of the supported filter labels.
-- `size` is shown on cards and detail modals.
+- `sizeFor18Count`, `chartSize`, and `numberOfColours` are shown on cards and detail modals when present.
 - `description` can be long-form.
-- `image1` and `image2` should use paths under `/images`.
+- Image paths should use the flat `/images/crafter-dark/<filename>` convention.
 
 ### Photo
 
@@ -193,26 +197,39 @@ Requirements:
 - `title` is used as display text and alt text.
 - `src` should point to an image under `/images/photography`.
 
-### Game
+### Sara's Lab Project
 
 File: `src/data/labProjects.js`
 
 ```js
 {
-  id: number,
+  id: string,
   title: string,
+  type: string,
+  status: string,
   subtitle: string,
-  description: string,
-  image1: string,
-  image2: string
+  cardDescription: string,
+  blurb: string,
+  image: string,
+  mediaFit: 'cover' | 'contain',
+  mediaPosition: string,
+  detailMediaFit: 'cover' | 'contain',
+  detailMediaPosition: string,
+  link: string,
+  download?: string,
+  downloadLabel?: string,
+  order: number
 }
 ```
 
 Requirements:
 
 - `id` must be unique.
-- `description` may contain newline breaks.
-- Images should point to `/images/games`.
+- Manual `order` controls display order.
+- `link` is used for external live projects.
+- `download` is used for downloadable assets such as the completed Batcave Font.
+- Empty image values must render polished placeholders.
+- Images should point to `/images/lab`.
 
 ### Archived AI POC
 
@@ -251,8 +268,7 @@ Example:
 public/images/about/profile.jpg
 public/images/crafter-dark/CooperEyes.png
 public/images/crafter-dark/AdamAntLogo.png
-public/images/games/9sisters-1.jpg
-public/images/AIPOC/MealPlanner1.png
+public/images/lab/alphabet-stitch.png
 public/images/photography/1994-1.jpg
 ```
 
@@ -267,24 +283,27 @@ The app must continue to render gracefully if images are missing.
   - Home
   - Crafter Dark
   - Photography
-  - Games
+  - Sara's Lab
 - Display active section visually and with `aria-current`.
 - Use horizontal scrolling nav on small screens.
+- Desktop navigation is right-aligned.
 
 ### Home
 
 - Display the title `Sara's Portfolio`.
-- Display subtitle `Creative Technologist & AI Artist`.
+- Display subtitle `Creative Technologist, Artist & Pattern Maker`.
 - Display profile image with fallback.
-- Display LinkedIn link.
+- Display LinkedIn link as the only public connect/contact route.
 - Display short description and About Sara content.
+- Do not add email, phone, contact forms, or additional social links unless Sara explicitly changes that decision.
 
 ### Crafter Dark
 
 - Render all cross-stitch projects.
 - Filter by required categories.
 - Show item counts in filters.
-- Each card must show image, title, category, size, and description preview.
+- Each card must show image, title, size/chart/colour metadata, and description preview.
+- Category is not shown on list cards; it appears as a subtle tag at the bottom of the detail view.
 - Clicking or keyboard-activating a card opens a fullscreen project modal.
 - Modal must show title, category/size, images, and description.
 
@@ -296,7 +315,7 @@ The app must continue to render gracefully if images are missing.
 - Clicking or keyboard-activating a photo opens fullscreen image viewer.
 - Viewer must support previous/next via buttons and arrow keys.
 
-### Games
+### Sara's Lab
 
 - Render Sara's Lab projects from `src/data/labProjects.js`.
 - Display selected creative tools, type experiments, games, and prototypes.
@@ -385,7 +404,7 @@ Deliverables:
 
 - Add `.gitignore`.
 - Add README with setup instructions.
-- Add basic automated tests or smoke test script.
+- Add basic automated tests, smoke test script, or documented manual QA checklist.
 - Add metadata and social preview image.
 - Deploy to chosen static hosting provider.
 

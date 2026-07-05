@@ -14,7 +14,7 @@ Displays a selected Sara's Lab project in a focused modal.
 
 ## User-Facing Behaviour
 
-Visitors open a project card and see the project title, type, status, subtitle, image or placeholder, blurb, shared fullscreen previous/next arrow controls, and external link when available.
+Visitors open a project card and see the project title, type, status, subtitle, image or placeholder, blurb, shared fullscreen previous/next arrow controls, and external or download action when available.
 
 ## Layout Rules
 
@@ -36,6 +36,7 @@ Visitors open a project card and see the project title, type, status, subtitle, 
 - Detail view uses the same `labProjects` record as the card.
 - Focus areas may remain in data but are not displayed in the detail view.
 - External link appears only when `project.link` is non-empty.
+- Download link appears only when `project.download` is non-empty; Batcave Font uses this for the completed `.ttf` file.
 
 ## Image Rules
 
@@ -73,6 +74,7 @@ Visitors open a project card and see the project title, type, status, subtitle, 
 - Detail view shows title, type, status, subtitle, image/preview, and blurb.
 - No visible Focus header or focus tag list appears.
 - Alphabet Stitch shows the external link.
-- Batcave Font, Xanadu: The 9 Muses, and The Door List do not show empty external links.
+- Batcave Font shows the download action and does not show an empty external link.
+- Xanadu: The 9 Muses and The Door List do not show empty external links.
 - Previous and next fullscreen arrow controls work.
 - Escape and outside click close the modal.

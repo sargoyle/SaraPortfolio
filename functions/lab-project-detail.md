@@ -13,7 +13,7 @@ Reusable detail body for Sara's Lab project modals.
 
 ## User-Facing Behaviour
 
-Shows a richer project note with metadata, visual, blurb, previous/next controls, optional external link, and optional downloadable asset.
+Shows a richer project note with metadata, visual, blurb, shared fullscreen previous/next arrow controls, optional external link, and optional downloadable asset.
 
 ## Layout Rules
 
@@ -64,4 +64,4 @@ Shows a richer project note with metadata, visual, blurb, previous/next controls
 - Focus tags are not visibly rendered.
 - External link only appears for Alphabet Stitch.
 - Download link appears for Batcave Font.
-- Previous and next buttons move between projects.
+- Shared previous/next arrow controls and ArrowLeft/ArrowRight move between projects.

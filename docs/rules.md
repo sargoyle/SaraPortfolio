@@ -40,3 +40,4 @@ Keep entries concise. One line per decision when possible.
 - AI POC cards may use concise `summary` text for previews while detail modals keep the full `description`.
 - AI POC content is archived under `archive/ai-pocs` and must stay out of active navigation/page registry unless explicitly reintroduced.
 - Home page positioning should centre Sara's creative practice on gothic cross-stitch, pattern-making, photography, games, and creative tools; AI/code are supporting tools, not the main identity.
+- LinkedIn is the only public communication/connect link on the active site; do not add email, phone, contact forms, or additional social links unless Sara explicitly changes this decision.

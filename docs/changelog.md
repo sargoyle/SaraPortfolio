@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Initial project setup
+- 2026-07-05: Added a current manual QA checklist covering active navigation, Home, Crafter Dark, Photography, Sara's Lab, metadata, accessibility, and security checks. Files affected: `docs/manual-qa-checklist.md`, `docs/tasks.md`.
+- 2026-07-05: Added production metadata, favicon assets, web manifest, and social preview image. Files affected: `index.html`, `public/favicon.svg`, `public/favicon-32x32.png`, `public/apple-touch-icon.png`, `public/site.webmanifest`, `public/images/social/saras-portfolio-og.png`.
 - 2026-07-04: Added archive notes for legacy games data and private Crafter Dark source documents. Files affected: `archive/legacy-games/README.md`, `archive/crafter-dark-documents/README.md`.
 - 2026-07-03: Added archived AI POC restore notes and a manual security checklist. Files affected: `archive/ai-pocs/README.md`, `functions/security-checks.md`.
 - 2026-07-01: Added structured Sara's Lab project data, reusable Lab card/detail components, Lab function docs, and initial Lab images. Files affected: `src/data/labProjects.js`, `src/components/LabProjectCard.jsx`, `src/components/LabProjectDetail.jsx`, `src/components/LabProjectDetailModal.jsx`, `functions/saras-lab-page.md`, `functions/saras-lab-list-view.md`, `functions/saras-lab-detail-view.md`, `functions/lab-project-card.md`, `functions/lab-project-detail.md`, `public/images/lab/*`, `docs/tasks.md`.
@@ -20,6 +22,8 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-07-05: Updated PRDs, function docs, and project rules to match the active site: Sara's Lab project/download behaviour, hidden AI POCs, right-aligned navigation, current Home subtitle, Crafter Dark filters/metadata, Photography hidden titles, and LinkedIn-only connect details. Files affected: `docs/implementation.md`, `docs/app-flow.md`, `docs/design.md`, `docs/rules.md`, `functions/home-page.md`, `functions/lab-project-card.md`, `functions/lab-project-detail.md`, `functions/saras-lab-detail-view.md`, `functions/security-checks.md`, `docs/tasks.md`.
+- 2026-07-05: Improved active UI accessibility labels for filters, project/gallery grids, Crafter Dark cards, and square image fallbacks. Files affected: `src/components/FilterBar.jsx`, `src/components/SquareImageFrame.jsx`, `src/components/CrafterDarkCard.jsx`, `src/pages/CrafterDark.jsx`, `src/pages/Photography.jsx`, `src/pages/Games.jsx`, `src/components/ModalShell.jsx`, `docs/tasks.md`.
 - 2026-07-04: Strengthened the fixed top navigation right alignment by making the nav row span available width and justify buttons to the end. Files affected: `src/styles/global.css`, `docs/tasks.md`.
 - 2026-07-04: Right-aligned the fixed top navigation button group across all pages. Files affected: `src/styles/global.css`, `functions/site-navigation.md`, `docs/tasks.md`.
 - 2026-07-04: Moved newly uploaded root Crafter Dark images into the flat Crafter Dark asset folder and connected Xeno, Mr Handy Fudge, and Fallout Timeline to the updated image paths. Files affected: `public/images/crafter-dark/*`, `src/data/crafterProjects.js`, `docs/asset-inventory.md`, `docs/tasks.md`.

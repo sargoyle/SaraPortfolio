@@ -13,7 +13,12 @@ export default function CrafterDarkCard({ project, onOpen }) {
   const metadataRows = getMetadataRows(project);
 
   return (
-    <button type="button" className="crafter-dark-card card-button" onClick={() => onOpen(project)}>
+    <button
+      type="button"
+      className="crafter-dark-card card-button"
+      onClick={() => onOpen(project)}
+      aria-label={`View details for ${project.title}`}
+    >
       {imageSrc ? (
         <SquareImageFrame
           src={imageSrc}

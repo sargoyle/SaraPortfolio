@@ -147,14 +147,14 @@ Requirements:
 Pattern:
 
 - Square image tile.
-- Overlay title at bottom with dark gradient.
 - Hover zoom and lift.
 
 Requirements:
 
 - Entire photo tile should be keyboard-activatable.
 - Missing images show fallback placeholder.
-- Title overlay must remain readable.
+- Generic photo titles are not displayed visually on grid cards or in the detail viewer.
+- Photo titles remain available through alt text and button labels.
 
 ### Modals
 
@@ -198,10 +198,10 @@ Target width: 1024px and above.
 
 Expected behavior:
 
-- Fixed nav centered within max width.
+- Fixed nav button group is right-aligned within the top bar.
 - Gallery grids show multiple columns.
 - Project images in detail modals can show two columns.
-- Game images show two columns.
+- Sara's Lab project detail media can sit beside copy when space allows.
 - Home content centered.
 
 ### Tablet
@@ -275,15 +275,17 @@ Primary content categories:
 - Home
 - Crafter Dark
 - Photography
-- Games
+- Sara's Lab
 
 AI POC content is retained in `archive/ai-pocs` but is not part of the active site navigation.
+LinkedIn is the only public communication/connect link on the active site.
 
 Crafter Dark category labels:
 
 - All
-- When Stitches Kaleid
 - Pop Culture Inspired
+- Science
+- When Stitches Kaleid
 
 Photography category labels:
 
