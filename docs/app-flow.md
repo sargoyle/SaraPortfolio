@@ -156,7 +156,7 @@ Edge cases:
 
 - Missing project images use polished placeholders or contained fallback media.
 - External and download actions appear only when data provides them.
-- Batcave Font provides a downloadable `.ttf` file and is marked completed.
+- Batcave Font provides a downloadable `.ttf` file and is marked Live.
 
 ### Journey 5: AI POC Content
 

@@ -16,7 +16,7 @@ Sara's Lab is the portfolio home and project showcase for creative systems, tool
 
 ## User-Facing Behaviour
 
-Visitors see a four-project gallery and can open each project in a detail modal. Alphabet Stitch includes an external project link inside its detail view. Batcave Font includes a downloadable completed font file.
+Visitors see a four-project gallery and can open each project in a detail modal. Alphabet Stitch includes an external project link inside its detail view. Batcave Font is marked Live and includes a downloadable font file.
 
 ## Layout Rules
 
@@ -66,8 +66,7 @@ Visitors see a four-project gallery and can open each project in a detail modal.
 
 ## Known Gaps / Defects
 
-- Xanadu currently uses a styled placeholder until final image assets are available.
-- Final screenshots may still be needed for all Lab projects.
+No known gaps currently documented.
 
 ## Change Rules
 
@@ -80,7 +79,8 @@ Visitors see a four-project gallery and can open each project in a detail modal.
 - The old single Xanadu content is not rendered.
 - Projects render in required manual order.
 - Alphabet Stitch displays its external link in the detail view.
-- Batcave Font displays as completed and offers the font download.
+- Batcave Font displays as Live and offers the font download.
+- Xanadu displays the uploaded Muses image rather than a placeholder.
 - Projects without links do not show broken external-link buttons.
 - Clicking each project opens the detail view.
 - Detail view displays title, type, status, subtitle, blurb, and image/preview.

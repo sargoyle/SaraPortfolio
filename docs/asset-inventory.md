@@ -2,7 +2,7 @@
 
 This inventory lists every image path currently referenced by the app data and Home page. All paths are served from `public`, so `/images/about/profile.jpg` should exist on disk at `public/images/about/profile.jpg`.
 
-Current status: Home profile, uploaded Photography assets, and Crafter Dark assets are present except where explicitly unchecked below. The app will render graceful placeholders for any paths still unchecked.
+Current status: Active Home, Crafter Dark, Photography, and Sara's Lab assets are present. Some Crafter Dark items intentionally use an in-progress placeholder until the finished stitched photo exists.
 
 ## Profile
 
@@ -99,26 +99,22 @@ Current status: Home profile, uploaded Photography assets, and Crafter Dark asse
 - `[x]` `public/images/photography/Abstract Macro 14.JPG`
 - `[x]` `public/images/photography/Abstract Macro 15.JPG`
 
-## Games
+## Archived Legacy Games
 
-- `[ ]` `public/images/games/9sisters-1.jpg`
-- `[ ]` `public/images/games/9sisters-2.jpg`
+- Legacy game-only data is archived under `archive/legacy-games`.
+- The active Sara's Lab page uses `public/images/lab` assets instead of `public/images/games`.
+- If the legacy game-only page is restored, restore:
+  - `public/images/games/9sisters-1.jpg`
+  - `public/images/games/9sisters-2.jpg`
 
-## AI POCs
+## Archived AI POCs
 
-- `[ ]` `public/images/AIPOC/pet-medication-tracker.jpg`
-- `[ ]` `public/images/AIPOC/program-report-generation.jpg`
-- `[ ]` `public/images/AIPOC/BacklogGrooming.png`
-- `[ ]` `public/images/AIPOC/ProjectOverview1.png`
-- `[ ]` `public/images/AIPOC/MealPlanner1.png`
-- `[ ]` `public/images/AIPOC/MealPlanner2.png`
-- `[ ]` `public/images/AIPOC/MealPlanner3.png`
-- `[ ]` `public/images/AIPOC/APMTrailer.png`
-- `[ ]` `public/images/AIPOC/SomertonMan.png`
+- AI POC content is archived under `archive/ai-pocs` and is not part of the active site.
+- Any future AI POC image/link work is tracked in `archive/ai-pocs/README.md`.
 
 ## Verification Steps
 
-After adding assets:
+After changing active assets:
 
 1. Confirm file casing matches the paths above exactly.
 2. Run the app locally.

@@ -27,7 +27,7 @@ Visitors see one card per project with a square thumbnail, title, non-category s
 - Current implementation uses `CrafterDarkCard`.
 - Crafter thumbnails use `SquareImageFrame`.
 - Thumbnail CSS uses `.square-image-frame` and `.square-image-frame-image`.
-- `SquareImageFrame` renders a stable `div.square-image-frame > img.square-image-frame-image` DOM structure.
+- `SquareImageFrame` renders a stable outer `div.square-image-frame` and delegates image/fallback content to `ImageWithFallback`.
 
 ## Implementation Audit
 
@@ -38,7 +38,7 @@ Current implementation:
 - `ProjectCard` is archived with AI POCs and is not used by Crafter Dark.
 - `CrafterDarkCard` passes `project.image1 || project.image` to `SquareImageFrame`.
 - `.project-card-image-container` and `.project-card-image` may remain only as legacy/archive styles; they do not control Crafter Dark thumbnails.
-- `ImageWithFallback` is intentionally not used inside `SquareImageFrame` because fallback wrappers can change thumbnail DOM structure.
+- `ImageWithFallback` is used inside `SquareImageFrame`, but the square frame remains the stable outer layout owner for size, border, padding, and overflow.
 
 Target implementation:
 
@@ -47,6 +47,7 @@ Target implementation:
 - The frame, not the image, controls the square shape and visible border.
 - The image remains fully visible inside the square frame.
 - `.square-image-frame::after` is the single visible thumbnail border overlay.
+- Missing thumbnail images render an accessible `.square-image-frame-placeholder` inside the same stable square frame.
 
 Gap:
 
@@ -104,7 +105,7 @@ The card is a button rather than an article so click and keyboard activation sha
 - Do not use `object-fit: cover` for Crafter Dark thumbnails.
 - Crafter Dark thumbnail images may use `width: 100%; height: 100%` only with `object-fit: contain` so the image box is consistent while artwork remains undistorted.
 - Tall, wide, square, black-background, white-background, transparent, and pixel-art images must use the same frame treatment.
-- `SquareImageFrame` must render a stable DOM structure. It must not allow `ImageWithFallback` or any fallback wrapper to change the layout, border, image sizing, or frame dimensions.
+- `SquareImageFrame` must keep `.square-image-frame` as the stable outer DOM structure. `ImageWithFallback` may swap the inner image for `.square-image-frame-placeholder`, but that fallback must not change the layout, border, image sizing, or frame dimensions.
 
 ## Explicit Anti-Rules
 

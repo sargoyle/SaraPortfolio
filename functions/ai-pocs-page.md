@@ -49,8 +49,8 @@ AI POCs are not shown in the active portfolio. The archived page can be restored
 
 ## Known Gaps / Defects
 
-- Missing AI POC screenshots remain blocked if this section is restored.
-- Some external AI POC links need manual confirmation if this section is restored.
+- Future restore action items are tracked in `archive/ai-pocs/README.md`.
+- Missing AI POC screenshots and external-link checks are not active-site blockers while this section remains archived.
 
 ## Change Rules
 

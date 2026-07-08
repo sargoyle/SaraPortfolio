@@ -59,6 +59,6 @@ Shows project image or placeholder, type, title, status, short card description,
 
 - Card is keyboard focusable.
 - Card opens the matching detail view.
-- Batcave Font card shows completed status.
+- Batcave Font card shows Live status.
 - Batcave Font action still opens the detail view, where the font download is available.
 - Broken or empty images do not show browser broken-image icons.

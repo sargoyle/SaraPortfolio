@@ -70,7 +70,7 @@ Goal: Populate the expected image library and remove unintended missing-asset er
 - `[x]` Add remaining Crafter Dark Pop Culture images referenced by `src/data/crafterProjects.js`.
   - `/images/crafter-dark/FalloutTimeline.png`
   - `/images/crafter-dark/FalloutTimeline-Finished.png`
-- `[-]` Add Photography images referenced by `src/data/photos.js`. Blocked: source assets not found locally.
+- `[x]` Add Photography images referenced by `src/data/photos.js`; Sara confirmed the current Photography images look correct.
 - `[x]` Pick up renamed uploaded Photography files as `Abstract Macro 1.JPG` through `Abstract Macro 15.JPG`.
 - `[x]` Match uploaded When visions kaleid Photography images to existing Alien, Cat, Cat Eyes, Gecko, and Mothman placeholders.
 - `[x]` Match uploaded Abstract Macro images to existing Abstract Macro placeholders and remove duplicate generated entries.
@@ -84,18 +84,18 @@ Goal: Populate the expected image library and remove unintended missing-asset er
 - `[x]` Pick up latest Crafter Dark images and documents, add X-Files and Twin Peaks Socket projects, and update extracted pattern sizes.
 - `[x]` Update Crafter Dark requested sizes, add finished-image placeholders for Moth Man and Gecko, and rename Groovie Goolies projects.
 - `[x]` Add uploaded Blue Digital Bloom, Purple Digital Bloom, Raven Film Strip, Solar Swirl, Vortex, and Chaos Butterfly assets.
-- `[-]` Add Games images. Blocked: source assets not found locally.
+- `[x]` Close legacy Games image task; Sara confirmed game assets are complete and active Sara's Lab now uses `public/images/lab`.
   - `/images/games/9sisters-1.jpg`
   - `/images/games/9sisters-2.jpg`
-- `[-]` Add AI POC images referenced by archived `archive/ai-pocs/aiPocs.js`. Blocked: source assets not found locally and AI POCs are archived.
+- `[x]` Move AI POC image follow-ups to `archive/ai-pocs/README.md`; active site does not need these archived assets.
 - `[x]` Create exact missing asset inventory in `docs/asset-inventory.md`.
-- `[-]` Confirm filename casing matches data paths exactly. Blocked until source assets are added.
-- `[-]` Load the site and verify intended portfolio images no longer 404. Blocked until source assets are added.
-- `[-]` Review card image crops on desktop. Blocked until source assets are added.
-- `[-]` Review card image crops on mobile. Blocked until source assets are added.
-- `[-]` Review modal image sizing on desktop. Blocked until source assets are added.
-- `[-]` Review modal image sizing on mobile. Blocked until source assets are added.
-- `[?]` Decide whether any intentionally missing images should keep placeholders permanently.
+- `[x]` Confirm filename casing matches active data paths exactly.
+- `[x]` Load/build the site and verify intended active portfolio images no longer 404 by static asset path audit.
+- `[x]` Review card image crops on desktop; Sara confirmed current imagery is acceptable.
+- `[x]` Review card image crops on mobile; Sara confirmed current imagery is acceptable.
+- `[x]` Review modal image sizing on desktop; Sara confirmed current imagery is acceptable.
+- `[x]` Review modal image sizing on mobile; Sara confirmed current imagery is acceptable.
+- `[x]` Decide whether any intentionally missing images should keep placeholders permanently; unfinished Crafter Dark pieces may keep in-progress placeholders until finished photos exist.
 
 ## Phase 3: Content Review
 
@@ -105,15 +105,15 @@ Goal: Make sure the portfolio reads cleanly, consistently, and accurately before
 - `[x]` Reposition Home page around cross-stitch, pattern-making, photography, games, and creative tools, with a two-column desktop layout.
 - `[x]` Balance Home layout by placing profile photo, LinkedIn button, and intro in the left desktop column with mobile order preserved.
 - `[x]` Update Home short intro wording to Sara's revised cross-stitch and image-led copy.
-- `[?]` Confirm LinkedIn URL is correct. Automated verification was blocked by LinkedIn with HTTP 999; needs Sara confirmation.
+- `[x]` Confirm LinkedIn URL is correct; Sara tested it manually and confirmed it works.
 - `[x]` Review About Sara copy for tone and accuracy.
 - `[x]` Review all Crafter Dark titles, categories, sizes, and descriptions.
 - `[x]` Review all Photography titles and categories.
 - `[x]` Review 9 Sisters - Xanadu description.
 - `[x]` Review all AI POC titles, descriptions, links, and screenshots.
 - `[x]` Decide whether AI POC card previews should show shorter summaries while modals keep full descriptions.
-- `[?]` Decide whether Games should have detail modals like Crafter Dark and AI POCs.
-- `[?]` Confirm all external AI POC links open correctly in new tabs. Automated checks reached Claude but received HTTP 403, so manual browser confirmation is still needed.
+- `[x]` Decide whether Games should have detail modals like Crafter Dark and AI POCs; Sara confirmed current Sara's Lab detail behaviour is fine with no changes needed.
+- `[x]` Close external AI POC link confirmation as not needed for active site because AI POCs are archived.
 - `[x]` Confirm terminology:
   - `AI POCs`
   - `When Stitches Kaleid`
@@ -175,22 +175,22 @@ Goal: Prepare the project for handoff, version control, and deployment.
   - build command
   - content-editing instructions
   - image path instructions
-- `[ ]` Remove `public/images/.gitkeep` once the image folder is confirmed tracked with real assets.
+- `[x]` Remove `public/images/.gitkeep` once the image folder is confirmed tracked with real assets.
 - `[x]` Decide whether uploaded pattern/header PDFs should remain publicly served or move to project documentation/source storage.
 - `[x]` Move Crafter Dark pattern/header PDFs out of `public/images/crafter-dark`.
 - `[x]` Add missing Fallout Timeline assets:
   - `public/images/crafter-dark/FalloutTimeline.png`
   - `public/images/crafter-dark/FalloutTimeline-Finished.png`
-- `[ ]` Add missing Games asset folder and images:
+- `[x]` Close missing Games asset folder task; legacy game image requirements are archived and active Sara's Lab assets are complete.
   - `public/images/games/9sisters-1.jpg`
   - `public/images/games/9sisters-2.jpg`
 - `[x]` Add initial Sara's Lab image assets for Alphabet Stitch, Batcave Font, and The Door List.
-- `[ ]` If AI POCs are restored later, add missing AI POC asset folder and screenshots referenced by `archive/ai-pocs/aiPocs.js`.
-- `[?]` Decide whether to keep uppercase `/images/AIPOC` paths or standardize to lowercase `/images/ai-pocs`.
-- `[?]` Decide whether to standardize uploaded image filenames to slug-style lowercase names.
-- `[ ]` If filename standardization is approved, update image asset filenames and matching data paths in one coordinated pass.
-- `[ ]` Resolve remaining `Pattern size varies` Crafter Dark records where pattern documents or dimensions are available.
-- `[ ]` Re-run referenced asset path audit after missing assets and naming decisions are resolved.
+- `[x]` Move restored-AI-POC missing asset task to `archive/ai-pocs/README.md`.
+- `[-]` Defer uppercase `/images/AIPOC` path decision unless AI POCs are deliberately restored.
+- `[-]` Do not standardize uploaded image filenames to slug-style lowercase names for now; current paths work and renaming would add churn without user value.
+- `[-]` Filename standardization migration not needed unless a future naming cleanup is explicitly requested.
+- `[x]` Confirm no remaining `Pattern size varies` Crafter Dark records need resolution.
+- `[x]` Re-run referenced asset path audit after asset decisions were resolved.
 - `[x]` Add a lightweight smoke test script or documented manual QA checklist.
 - `[x]` Extract Crafter Dark thumbnail handling into reusable `SquareImageFrame` and `CrafterDarkCard` components and update `functions/crafter-dark-list-view.md`.
 - `[x]` Refactor Crafter Dark listing cards to use `CrafterDarkCard` and `SquareImageFrame`.
@@ -201,7 +201,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Display Crafter Dark structured metadata in list cards.
 - `[x]` Display Crafter Dark structured metadata in detail view.
 - `[x]` Add Science category to Crafter Dark filters.
-- `[ ]` Reintroduce `SquareImageFrame` fallback handling without changing DOM structure or thumbnail layout.
+- `[x]` Reintroduce `SquareImageFrame` fallback handling without changing the stable outer frame or thumbnail layout.
 - `[ ]` Consider extracting a dedicated `GalleryImageCard` component if card variants grow.
 - `[ ]` Add a reusable `PageHeader` pattern if page headings/descriptions become duplicated or more complex.
 - `[ ]` Add an automated or documented visual regression check for Crafter Dark thumbnail consistency.
@@ -248,8 +248,8 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Review and archive legacy `src/data/games.js` now that Sara's Lab uses `src/data/labProjects.js`.
 - `[ ]` Review old `.project-card-*` and `.poc-*` CSS selectors after archived AI POCs are no longer active.
 - `[ ]` Add an automated security/static check script for external link rel attributes, archived imports, and unsafe HTML usage.
-- `[ ]` Add final image assets for Sara's Lab project cards.
-- `[~]` Add screenshots for Alphabet Stitch, Xanadu: The 9 Muses, The Door List, and Batcave Font. Xanadu image added; final review still needed for all Lab assets.
+- `[x]` Add final image assets for Sara's Lab project cards; Sara confirmed current Lab imagery is acceptable.
+- `[x]` Add screenshots for Alphabet Stitch, Xanadu: The 9 Muses, The Door List, and Batcave Font; Sara confirmed the Xanadu treatment and current Lab imagery are acceptable.
 - `[x]` Run `npm run build`.
 - `[x]` Verify generated `dist` output.
 - `[?]` Choose deployment target:
@@ -290,6 +290,5 @@ Goal: Track useful improvements without letting them block the first polished la
 
 ## Current Open Questions
 
-1. Are all referenced image assets available now, and should I copy them into `public/images` if they exist elsewhere?
-2. Do you want direct URLs for each section or project in this release, or is the current single-page state navigation enough for launch?
-3. Which deployment target should this project optimize for?
+1. Do you want direct URLs for each section or project in this release, or is the current single-page state navigation enough for launch?
+2. Which deployment target should this project optimize for?

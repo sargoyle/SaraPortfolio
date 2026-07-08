@@ -112,6 +112,6 @@ Update `docs/tasks.md` and `docs/changelog.md` after completing a task or relate
 
 ## Current Known Gaps
 
-- Some referenced assets are still intentionally missing and documented in `docs/asset-inventory.md`.
+- Active portfolio image assets are present; unfinished Crafter Dark pieces may intentionally use in-progress placeholders.
 - Deployment target is not selected yet.
-- Production metadata and social preview assets are still pending.
+- Production URL verification is pending until a deployment target is chosen.

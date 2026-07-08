@@ -21,3 +21,12 @@ To restore this section, move the files back to their original locations:
 - `ProjectCard.jsx` to `src/components/ProjectCard.jsx`
 
 Then update `src/App.jsx`, `src/components/Navigation.jsx`, and the function docs to re-register the page deliberately.
+
+## Restore Action Items
+
+If AI POCs are restored later:
+
+- Add or restore the missing screenshots referenced by `archive/ai-pocs/aiPocs.js`.
+- Decide whether to keep the legacy uppercase `/images/AIPOC` public path or standardize to lowercase `/images/ai-pocs`.
+- Verify every external AI POC link manually in a browser before making the section public.
+- Re-run modal, keyboard, image fallback, and external-link security checks for the restored page.

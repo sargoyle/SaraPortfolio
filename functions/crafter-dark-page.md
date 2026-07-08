@@ -85,8 +85,6 @@ Gap:
 
 ## Known Gaps / Defects
 
-- Missing Fallout Timeline assets remain blocked.
-- Some pattern sizes still need source confirmation.
 - No automated visual regression check exists for listing thumbnail consistency.
 
 ## Change Rules
