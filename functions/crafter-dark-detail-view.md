@@ -42,6 +42,7 @@ Visitors see the project title, structured metadata, one or more images, descrip
 - Detail images may use a different layout from list thumbnails.
 - Generated/pattern image and stitched/preview image should be consistently sized.
 - Current Crafter detail images use square `.project-image-container` panels with contained images.
+- Finished/detail images are preloaded from the Crafter Dark list view during idle time and on card focus/hover to reduce modal wait time without modifying source image files.
 - List thumbnail rules must not affect detail images unless intentionally shared.
 
 ## Styling Rules

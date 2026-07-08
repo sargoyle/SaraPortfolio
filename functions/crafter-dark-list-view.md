@@ -64,7 +64,7 @@ Crafter Dark listing view must use:
 Page usage:
 
 ```jsx
-<CrafterDarkCard project={project} onOpen={setActiveProject} />
+<CrafterDarkCard project={project} onOpen={setActiveProject} onPreload={preloadProjectDetailImages} />
 ```
 
 Inside `CrafterDarkCard`:
@@ -79,6 +79,7 @@ Inside `CrafterDarkCard`:
 ```
 
 The card is a button rather than an article so click and keyboard activation share the same accessible control.
+Cards may call `onPreload` on focus or pointer hover so the matching detail images can warm in the browser cache before the modal opens.
 
 ## Data Rules
 

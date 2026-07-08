@@ -8,7 +8,7 @@ function getMetadataRows(project) {
   ].filter(Boolean);
 }
 
-export default function CrafterDarkCard({ project, onOpen }) {
+export default function CrafterDarkCard({ project, onOpen, onPreload }) {
   const imageSrc = project.image1 || project.image;
   const metadataRows = getMetadataRows(project);
 
@@ -17,6 +17,8 @@ export default function CrafterDarkCard({ project, onOpen }) {
       type="button"
       className="crafter-dark-card card-button"
       onClick={() => onOpen(project)}
+      onFocus={() => onPreload?.(project)}
+      onPointerEnter={() => onPreload?.(project)}
       aria-label={`View details for ${project.title}`}
     >
       {imageSrc ? (

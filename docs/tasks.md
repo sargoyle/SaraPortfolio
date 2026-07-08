@@ -202,8 +202,8 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Display Crafter Dark structured metadata in detail view.
 - `[x]` Add Science category to Crafter Dark filters.
 - `[x]` Reintroduce `SquareImageFrame` fallback handling without changing the stable outer frame or thumbnail layout.
-- `[ ]` Consider extracting a dedicated `GalleryImageCard` component if card variants grow.
-- `[ ]` Add a reusable `PageHeader` pattern if page headings/descriptions become duplicated or more complex.
+- `[-]` Do not extract a dedicated `GalleryImageCard` component for now; current card variants are not duplicated enough to justify the abstraction.
+- `[-]` Do not add a reusable `PageHeader` pattern for now; current page headers are simple enough.
 - `[ ]` Add an automated or documented visual regression check for Crafter Dark thumbnail consistency.
 - `[x]` Replace Sara's Lab single project content with four structured project cards.
 - `[x]` Add Sara's Lab project detail view format.
@@ -268,6 +268,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Add social preview image at `public/images/social/saras-portfolio-og.png`.
 - `[x]` Review active pages and components for accessibility labels, alt text, modal roles, and external link metadata.
 - `[x]` Review and update function documentation and manual QA expectations against the current active site.
+- `[x]` Preload Crafter Dark finished/detail images in the background and on card focus/hover to reduce modal image wait time without changing source assets.
 - `[ ]` Verify production URL loads.
 - `[ ]` Verify production console has no unintended errors.
 
