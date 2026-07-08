@@ -231,6 +231,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Right-align the fixed top navigation button group.
 - `[x]` Strengthen top navigation right alignment with a full-width flex row.
 - `[x]` Mark Batcave Font as completed and add downloadable font file link.
+- `[x]` Update Sara's Lab status labels for Batcave Font and Xanadu.
 - `[x]` Move Crafter Dark images into one flat `public/images/crafter-dark` folder and update data/documentation paths.
 - `[x]` Rotate the Alien photography image 90 degrees to match the intended site orientation.
 - `[x]` Move newly uploaded root Crafter Dark assets into `public/images/crafter-dark` and attach them to Xeno, Mr Handy Fudge, and Fallout Timeline.
