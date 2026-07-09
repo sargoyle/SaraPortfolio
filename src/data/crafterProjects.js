@@ -33,7 +33,7 @@ export const crafterProjects = [
     numberOfColours: '14',
     description: "A kaleidoscopic pattern based on H.R. Giger's xenomorph from Alien.",
     image1: '/images/crafter-dark/Xeno.JPG',
-    image2: '/images/crafter-dark/Xeno-Finished-display.webp',
+    image2: '/images/crafter-dark/Xeno-Finished-display-landscape.webp',
   },
   {
     id: 4,

@@ -270,6 +270,8 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Review and update function documentation and manual QA expectations against the current active site.
 - `[x]` Preload Crafter Dark finished/detail images in the background and on card focus/hover to reduce modal image wait time without changing source assets.
 - `[x]` Add optimized Crafter Dark finished/detail display images and point detail views at lighter `-display.webp` assets while keeping original uploads untouched.
+- `[x]` Rotate the optimized Xeno finished/detail display image back 90 degrees left so it matches the pattern orientation.
+- `[x]` Update Xeno to a new corrected landscape display image URL so browser caching cannot keep showing the old rotated asset.
 - `[ ]` Verify production URL loads.
 - `[ ]` Verify production console has no unintended errors.
 

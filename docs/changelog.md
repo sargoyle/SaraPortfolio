@@ -84,6 +84,8 @@ All notable changes to this project will be documented in this file.
 - 2026-07-03: Updated Vite to `7.3.6`, documented remaining low transitive audit advisories, and allowed only `esbuild` build scripts in pnpm workspace config. Files affected: `package.json`, `pnpm-lock.yaml`, `pnpm-workspace.yaml`, `functions/security-checks.md`, `docs/tasks.md`.
 
 ### Fixed
+- 2026-07-09: Updated Xeno to use a new corrected landscape display image filename so browser caching cannot keep showing the old rotated asset. Files affected: `src/data/crafterProjects.js`, `public/images/crafter-dark/Xeno-Finished-display-landscape.webp`, `docs/tasks.md`.
+- 2026-07-09: Rotated the optimized Xeno finished/detail display image 90 degrees left so it matches the pattern orientation. Files affected: `public/images/crafter-dark/Xeno-Finished-display.webp`, `docs/tasks.md`.
 - 2026-07-01: Moved modal close controls outside the scrollable panel and constrained Sara's Lab card images with contained frame sizing to prevent scrollbars and cropped or overflowing Lab previews. Files affected: `src/components/ModalShell.jsx`, `src/styles/global.css`, `functions/modal-system.md`, `functions/saras-lab-list-view.md`, `docs/tasks.md`.
 - 2026-07-01: Centered the shared fullscreen close icon and moved the Sara's Lab close button outside the modal project card. Files affected: `src/components/ModalShell.jsx`, `src/styles/global.css`, `functions/modal-system.md`, `docs/tasks.md`.
 - 2026-07-01: Aligned the shared fullscreen close button to the modal panel so detail views do not place close controls at the far viewport edge. Files affected: `src/styles/global.css`, `functions/modal-system.md`.
