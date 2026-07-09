@@ -35,7 +35,9 @@ Use this checklist before release and after changes to shared navigation, filter
 - Confirm listing cards do not show category metadata.
 - Confirm listing cards show 18 count size, chart size, colour count, and description when present.
 - Confirm every listing thumbnail uses one square `SquareImageFrame` and images are not cropped or stretched.
+- Visual regression check: compare Adam Ant Logo, Blue Digital Bloom, Caligari Hallway, Cells, Grey, HAL 9000, Mr Handy Fudge, Twin Peaks Socket, Xeno, and X-Files Hand in the listing grid; confirm every thumbnail frame starts at the same top level, uses the same square size, and shows the same inset/border treatment.
 - Open multiple projects and confirm detail images display correctly.
+- Open projects with finished photos and confirm the second/detail image loads from a lighter `-display.webp` asset where available.
 - Confirm category appears as a subtle bottom tag in the detail view.
 - Confirm Escape, outside click, close button, ArrowLeft, ArrowRight, previous, and next all work.
 

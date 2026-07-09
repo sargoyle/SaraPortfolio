@@ -2,7 +2,7 @@
 
 This inventory lists every image path currently referenced by the app data and Home page. All paths are served from `public`, so `/images/about/profile.jpg` should exist on disk at `public/images/about/profile.jpg`.
 
-Current status: Active Home, Crafter Dark, Photography, and Sara's Lab assets are present. Some Crafter Dark items intentionally use an in-progress placeholder until the finished stitched photo exists.
+Current status: Active Home, Crafter Dark, Photography, and Sara's Lab assets are present. Some Crafter Dark items intentionally use an in-progress placeholder until the finished stitched photo exists. Crafter Dark finished/detail views use lighter `-display.webp` copies where available; original uploaded finished photos remain in the same folder as source/reference assets.
 
 ## Profile
 

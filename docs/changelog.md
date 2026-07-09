@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Initial project setup
+- 2026-07-09: Added optimized Crafter Dark finished/detail display images and documented thumbnail visual regression checks. Files affected: `public/images/crafter-dark/*-display.webp`, `src/data/crafterProjects.js`, `docs/manual-qa-checklist.md`, `functions/crafter-dark-detail-view.md`, `docs/asset-inventory.md`, `docs/tasks.md`.
 - 2026-07-05: Added a current manual QA checklist covering active navigation, Home, Crafter Dark, Photography, Sara's Lab, metadata, accessibility, and security checks. Files affected: `docs/manual-qa-checklist.md`, `docs/tasks.md`.
 - 2026-07-05: Added production metadata, favicon assets, web manifest, and social preview image. Files affected: `index.html`, `public/favicon.svg`, `public/favicon-32x32.png`, `public/apple-touch-icon.png`, `public/site.webmanifest`, `public/images/social/saras-portfolio-og.png`.
 - 2026-07-04: Added archive notes for legacy games data and private Crafter Dark source documents. Files affected: `archive/legacy-games/README.md`, `archive/crafter-dark-documents/README.md`.

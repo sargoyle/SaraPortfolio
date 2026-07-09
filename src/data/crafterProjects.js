@@ -9,7 +9,7 @@ export const crafterProjects = [
     numberOfColours: '34',
     description: "A kaleidoscopic pattern created from Cooper's vivid blue eyes.",
     image1: '/images/crafter-dark/CooperEyes.PNG',
-    image2: '/images/crafter-dark/CooperEyes-Finished.jpg',
+    image2: '/images/crafter-dark/CooperEyes-Finished-display.webp',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const crafterProjects = [
     numberOfColours: '34',
     description: 'A kaleidoscopic transformation of a grey alien visage.',
     image1: '/images/crafter-dark/Grey.png',
-    image2: '/images/crafter-dark/Grey-finished.jpg',
+    image2: '/images/crafter-dark/Grey-finished-display.webp',
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ export const crafterProjects = [
     numberOfColours: '14',
     description: "A kaleidoscopic pattern based on H.R. Giger's xenomorph from Alien.",
     image1: '/images/crafter-dark/Xeno.JPG',
-    image2: '/images/crafter-dark/Xeno-Finished.png',
+    image2: '/images/crafter-dark/Xeno-Finished-display.webp',
   },
   {
     id: 4,
@@ -69,7 +69,7 @@ export const crafterProjects = [
     numberOfColours: '21',
     description: 'A vibrant tribute to the iconic 80s new wave artist Adam Ant.',
     image1: '/images/crafter-dark/AdamAntLogo.PNG',
-    image2: '/images/crafter-dark/AdamAntLogo-finished.jpg',
+    image2: '/images/crafter-dark/AdamAntLogo-finished-display.webp',
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ export const crafterProjects = [
     numberOfColours: '8',
     description: 'A corridor design inspired by "The Cabinet of Dr. Caligari".',
     image1: '/images/crafter-dark/CaligariHallway.png',
-    image2: '/images/crafter-dark/CaligariHallway-finished.JPG',
+    image2: '/images/crafter-dark/CaligariHallway-finished-display.webp',
   },
   {
     id: 8,
@@ -93,7 +93,7 @@ export const crafterProjects = [
     numberOfColours: '9',
     description: 'A landscape design inspired by "The Cabinet of Dr. Caligari".',
     image1: '/images/crafter-dark/CaligariLandscape.PNG',
-    image2: '/images/crafter-dark/CaligariLandscape-finished.JPG',
+    image2: '/images/crafter-dark/CaligariLandscape-finished-display.webp',
   },
   {
     id: 9,
@@ -105,7 +105,7 @@ export const crafterProjects = [
     numberOfColours: '8',
     description: 'A gothic tree design inspired by "The Cabinet of Dr. Caligari".',
     image1: '/images/crafter-dark/CaligariTrees.png',
-    image2: '/images/crafter-dark/CaligariTrees-finished.JPG',
+    image2: '/images/crafter-dark/CaligariTrees-finished-display.webp',
   },
   {
     id: 10,
@@ -117,7 +117,7 @@ export const crafterProjects = [
     numberOfColours: '13',
     description: 'An abstract microscopic pattern featuring circular cellular structures.',
     image1: '/images/crafter-dark/Cells.PNG',
-    image2: '/images/crafter-dark/Cells-finished.jpg',
+    image2: '/images/crafter-dark/Cells-finished-display.webp',
   },
   {
     id: 11,
@@ -129,7 +129,7 @@ export const crafterProjects = [
     numberOfColours: '14',
     description: 'A tribute to the artificial intelligence from "2001: A Space Odyssey".',
     image1: '/images/crafter-dark/HAL9000.png',
-    image2: '/images/crafter-dark/HAL9000-finished.jpg',
+    image2: '/images/crafter-dark/HAL9000-finished-display.webp',
   },
   {
     id: 12,
@@ -141,7 +141,7 @@ export const crafterProjects = [
     numberOfColours: '11',
     description: 'A Fallout-inspired design featuring Mr. Handy with the text "There\'s no fudge here".',
     image1: '/images/crafter-dark/MrHandyFudge.png',
-    image2: '/images/crafter-dark/MrHandy-Finished.jpg',
+    image2: '/images/crafter-dark/MrHandy-Finished-display.webp',
   },
   {
     id: 13,
@@ -153,7 +153,7 @@ export const crafterProjects = [
     numberOfColours: '4',
     description: 'A Fallout Pip-Boy interface rendered in retro computer green.',
     image1: '/images/crafter-dark/Pipboy3000MarkIV.png',
-    image2: '/images/crafter-dark/Pipboy3000MarkIV-finished.jpg',
+    image2: '/images/crafter-dark/Pipboy3000MarkIV-finished-display.webp',
   },
   {
     id: 14,
@@ -165,7 +165,7 @@ export const crafterProjects = [
     numberOfColours: '4',
     description: 'A gothic silhouette of a raven perched on a branch against a full moon.',
     image1: '/images/crafter-dark/RavenMoon.png',
-    image2: '/images/crafter-dark/RavenMoon-finished.jpg',
+    image2: '/images/crafter-dark/RavenMoon-finished-display.webp',
   },
   {
     id: 15,
@@ -177,7 +177,7 @@ export const crafterProjects = [
     numberOfColours: '24',
     description: 'A chilling scene from the Alien franchise featuring a xenomorph egg aboard the USS Sulaco.',
     image1: '/images/crafter-dark/SulacoEgg.png',
-    image2: '/images/crafter-dark/SulacoEgg-finished.jpg',
+    image2: '/images/crafter-dark/SulacoEgg-finished-display.webp',
   },
   {
     id: 16,
@@ -189,7 +189,7 @@ export const crafterProjects = [
     numberOfColours: '7',
     description: 'A classic flying saucer hovering above a silhouetted forest landscape.',
     image1: '/images/crafter-dark/UFO.png',
-    image2: '/images/crafter-dark/UFO-Finished.jpg',
+    image2: '/images/crafter-dark/UFO-Finished-display.webp',
   },
   {
     id: 17,
@@ -201,7 +201,7 @@ export const crafterProjects = [
     numberOfColours: '15',
     description: 'A cross-stitch design celebrating the Fallout franchise timeline.',
     image1: '/images/crafter-dark/FalloutTimeline.png',
-    image2: '/images/crafter-dark/FalloutTimeline-Finished.png',
+    image2: '/images/crafter-dark/FalloutTimeline-Finished-display.webp',
   },
   {
     id: 18,
@@ -213,7 +213,7 @@ export const crafterProjects = [
     numberOfColours: '11',
     description: 'A gothic pop-culture cross-stitch portrait with bright monster-movie styling.',
     image1: '/images/crafter-dark/Bella.png',
-    image2: '/images/crafter-dark/Bella-finished.jpg',
+    image2: '/images/crafter-dark/Bella-finished-display.webp',
   },
   {
     id: 19,
@@ -225,7 +225,7 @@ export const crafterProjects = [
     numberOfColours: '1',
     description: 'A UFO-inspired biscornu design using luminous green crop-circle motifs.',
     image1: '/images/crafter-dark/CropCircleBiscornu.png',
-    image2: '/images/crafter-dark/CropCircleBiscornu-finished.jpg',
+    image2: '/images/crafter-dark/CropCircleBiscornu-finished-display.webp',
   },
   {
     id: 20,
@@ -237,7 +237,7 @@ export const crafterProjects = [
     numberOfColours: '11',
     description: 'A stylised vampire cross-stitch portrait with a playful gothic palette.',
     image1: '/images/crafter-dark/Drac.png',
-    image2: '/images/crafter-dark/Drac-Finished.jpg',
+    image2: '/images/crafter-dark/Drac-Finished-display.webp',
   },
   {
     id: 21,
@@ -249,7 +249,7 @@ export const crafterProjects = [
     numberOfColours: '9',
     description: 'A bright Frankenstein-inspired portrait with bold cartoon shapes.',
     image1: '/images/crafter-dark/Frankie.png',
-    image2: '/images/crafter-dark/Frankie-finished.jpg',
+    image2: '/images/crafter-dark/Frankie-finished-display.webp',
   },
   {
     id: 22,
@@ -261,7 +261,7 @@ export const crafterProjects = [
     numberOfColours: '1',
     description: 'A Galaxy Quest-inspired cross-stitch design celebrating cult sci-fi comedy.',
     image1: '/images/crafter-dark/GalaxyQuest.png',
-    image2: '/images/crafter-dark/GalaxyQuest-Finished.jpg',
+    image2: '/images/crafter-dark/GalaxyQuest-Finished-display.webp',
   },
   {
     id: 23,
@@ -273,7 +273,7 @@ export const crafterProjects = [
     numberOfColours: '22',
     description: 'A Hardware-inspired design built around a cybernetic skull image.',
     image1: '/images/crafter-dark/Hardware.jpg',
-    image2: '/images/crafter-dark/Hardware-finished.jpg',
+    image2: '/images/crafter-dark/Hardware-finished-display.webp',
   },
   {
     id: 24,
@@ -285,7 +285,7 @@ export const crafterProjects = [
     numberOfColours: '24',
     description: "A close-up original design focused on Lily's teeth.",
     image1: '/images/crafter-dark/LilyTeeth.png',
-    image2: '/images/crafter-dark/LilyTeeth-finished.JPG',
+    image2: '/images/crafter-dark/LilyTeeth-finished-display.webp',
   },
   {
     id: 25,
@@ -297,7 +297,7 @@ export const crafterProjects = [
     numberOfColours: '9',
     description: 'A moody Limbo-inspired graveyard scene.',
     image1: '/images/crafter-dark/LimboGraveyard.jpg',
-    image2: '/images/crafter-dark/LimboGraveyard-Finished.jpg',
+    image2: '/images/crafter-dark/LimboGraveyard-Finished-display.webp',
   },
   {
     id: 26,
@@ -309,7 +309,7 @@ export const crafterProjects = [
     numberOfColours: '3',
     description: 'A Predator 2-inspired design with bold lettering.',
     image1: '/images/crafter-dark/Predator2.png',
-    image2: '/images/crafter-dark/Predator2-finished.JPG',
+    image2: '/images/crafter-dark/Predator2-finished-display.webp',
   },
   {
     id: 27,
@@ -321,7 +321,7 @@ export const crafterProjects = [
     numberOfColours: '24',
     description: 'A Twin Peaks-inspired owl design.',
     image1: '/images/crafter-dark/TwinPeaksOwl.png',
-    image2: '/images/crafter-dark/TwinPeaksOwl-finished.jpg',
+    image2: '/images/crafter-dark/TwinPeaksOwl-finished-display.webp',
   },
   {
     id: 28,
@@ -333,7 +333,7 @@ export const crafterProjects = [
     numberOfColours: '1',
     description: 'A Fallout Pip-Boy interface cross-stitch personalised with Sara at level 50.',
     image1: '/images/crafter-dark/FalloutPipBoyGrid.png',
-    image2: '/images/crafter-dark/FalloutPipBoyGrid-finished.JPG',
+    image2: '/images/crafter-dark/FalloutPipBoyGrid-finished-display.webp',
   },
   {
     id: 29,
@@ -345,7 +345,7 @@ export const crafterProjects = [
     numberOfColours: '13',
     description: 'A Twin Peaks Episode 3-inspired socket design.',
     image1: '/images/crafter-dark/TwinPeaksSocket.jpg',
-    image2: '/images/crafter-dark/TwinPeaksSocket-finished.jpg',
+    image2: '/images/crafter-dark/TwinPeaksSocket-finished-display.webp',
   },
   {
     id: 30,
@@ -357,7 +357,7 @@ export const crafterProjects = [
     numberOfColours: '30',
     description: 'An X-Files-inspired alien encounter design.',
     image1: '/images/crafter-dark/XFilesAliens.png',
-    image2: '/images/crafter-dark/XFilesAliens-Finished.png',
+    image2: '/images/crafter-dark/XFilesAliens-Finished-display.webp',
   },
   {
     id: 31,
@@ -369,7 +369,7 @@ export const crafterProjects = [
     numberOfColours: '26',
     description: 'An X-Files-inspired hand design.',
     image1: '/images/crafter-dark/XFilesHand.png',
-    image2: '/images/crafter-dark/XFilesHandFinished.png',
+    image2: '/images/crafter-dark/XFilesHandFinished-display.webp',
   },
   {
     id: 32,
@@ -381,7 +381,7 @@ export const crafterProjects = [
     numberOfColours: '30',
     description: 'A circular flower pattern with sharp blue petals and a warm central core.',
     image1: '/images/crafter-dark/BlueDigitalBloomPattern.png',
-    image2: '/images/crafter-dark/BlueDigitalBloomFinished.jpg',
+    image2: '/images/crafter-dark/BlueDigitalBloomFinished-display.webp',
   },
   {
     id: 33,
@@ -393,7 +393,7 @@ export const crafterProjects = [
     numberOfColours: '27',
     description: 'A layered floral pattern with cool purple tones and repeating petal geometry.',
     image1: '/images/crafter-dark/PurpleDigitalBloomPattern.PNG',
-    image2: '/images/crafter-dark/PurpleDigitalBloomFinished.jpg',
+    image2: '/images/crafter-dark/PurpleDigitalBloomFinished-display.webp',
   },
   {
     id: 34,
@@ -405,7 +405,7 @@ export const crafterProjects = [
     numberOfColours: '9',
     description: 'A monochrome raven pattern arranged like damaged film frames.',
     image1: '/images/crafter-dark/RavenFilmStripPattern.png',
-    image2: '/images/crafter-dark/RavenFilmStripFinished.jpg',
+    image2: '/images/crafter-dark/RavenFilmStripFinished-display.webp',
   },
   {
     id: 35,
@@ -417,7 +417,7 @@ export const crafterProjects = [
     numberOfColours: '28',
     description: 'A glowing spiral pattern with hot yellow and orange movement against a dark ground.',
     image1: '/images/crafter-dark/SolarSwirlPattern.PNG',
-    image2: '/images/crafter-dark/SolarSwirlFinished.jpg',
+    image2: '/images/crafter-dark/SolarSwirlFinished-display.webp',
   },
   {
     id: 36,
@@ -429,7 +429,7 @@ export const crafterProjects = [
     numberOfColours: '19',
     description: 'A bright radial pattern built from flower-like forms and energetic colour contrast.',
     image1: '/images/crafter-dark/VortexPattern.png',
-    image2: '/images/crafter-dark/VortexFinished.jpg',
+    image2: '/images/crafter-dark/VortexFinished-display.webp',
   },
   {
     id: 37,
@@ -441,6 +441,6 @@ export const crafterProjects = [
     numberOfColours: '30',
     description: 'A fiery butterfly pattern built from mirrored light, movement, and distortion.',
     image1: '/images/crafter-dark/ChaosButterflyPattern.PNG',
-    image2: '/images/crafter-dark/ChaosButterflyFinished.jpg',
+    image2: '/images/crafter-dark/ChaosButterflyFinished-display.webp',
   },
 ];

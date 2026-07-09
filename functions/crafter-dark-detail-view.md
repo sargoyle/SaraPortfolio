@@ -43,6 +43,7 @@ Visitors see the project title, structured metadata, one or more images, descrip
 - Generated/pattern image and stitched/preview image should be consistently sized.
 - Current Crafter detail images use square `.project-image-container` panels with contained images.
 - Finished/detail images are preloaded from the Crafter Dark list view during idle time and on card focus/hover to reduce modal wait time without modifying source image files.
+- Finished/detail image records should point to lighter `-display.webp` assets when available; original uploaded finished photos remain in `public/images/crafter-dark` as source/reference assets.
 - List thumbnail rules must not affect detail images unless intentionally shared.
 
 ## Styling Rules
@@ -72,4 +73,5 @@ Visitors see the project title, structured metadata, one or more images, descrip
 - Confirm detail view does not show stale `Pattern size varies` when structured metadata exists.
 - Test Escape, outside click, previous/next buttons, ArrowLeft, and ArrowRight.
 - Confirm images remain contained and square on desktop/mobile.
+- Confirm second/detail images use optimized display copies and load faster than the original uploads.
 - Manual metadata checks should include Adam Ant Logo, Alien 3 Sulaco Egg, Blue Digital Bloom, Caligari Hallway, Fallout Pip-boy 3000, Hardware, Mr Handy Fudge, Purple Digital Bloom, Raven Film Strip, Solar Swirl, and Vortex.
