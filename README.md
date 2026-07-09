@@ -1,6 +1,6 @@
 # Sara's Portfolio
 
-Sara's Portfolio is a static React/Vite personal portfolio site for Sara Gillard's creative work across Crafter Dark cross-stitch projects, photography, and Sara's Lab concepts.
+Sara's Portfolio is a static React/Vite personal portfolio site for Sara Gillard's creative work across Crafter Dark cross-stitch projects, photography, and Sara's Lab experiments.
 
 Production domain: `https://saragillard.com`
 
