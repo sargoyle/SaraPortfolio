@@ -116,4 +116,4 @@ Update `docs/tasks.md` and `docs/changelog.md` after completing a task or relate
 
 - Active portfolio image assets are present; unfinished Crafter Dark pieces may intentionally use in-progress placeholders.
 - Deployment target is Vercel.
-- Production URL verification is pending for `https://saragillard.com`.
+- Production domain is verified and connected through Vercel.
