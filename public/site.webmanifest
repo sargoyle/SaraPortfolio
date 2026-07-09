@@ -1,7 +1,9 @@
 {
-  "name": "Sara's Portfolio",
-  "short_name": "Sara",
-  "description": "Creative portfolio for Sara Gillard, featuring gothic cross-stitch patterns, photography, games, type experiments, and creative tools.",
+  "name": "Sara Gillard Portfolio",
+  "short_name": "Sara Gillard",
+  "description": "Portfolio of Sara Gillard, a Melbourne-based Product Manager and Creative Technologist working across product strategy, AI-enabled tools, Microsoft Power Platform, and creative digital projects.",
+  "start_url": "https://saragillard.com/",
+  "scope": "https://saragillard.com/",
   "icons": [
     {
       "src": "/favicon-32x32.png",

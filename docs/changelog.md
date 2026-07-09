@@ -23,6 +23,8 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-07-09: Recorded final production-domain validation results, including live domain load success and pending redeploy verification for robots.txt and sitemap.xml. Files affected: `docs/tasks.md`.
+- 2026-07-09: Updated production metadata, canonical URL, social sharing URLs, web manifest, robots.txt, sitemap.xml, and README for `https://saragillard.com` on Vercel. Files affected: `index.html`, `public/site.webmanifest`, `public/robots.txt`, `public/sitemap.xml`, `README.md`, `docs/tasks.md`.
 - 2026-07-08: Deferred optional `GalleryImageCard` and `PageHeader` abstractions and added background/focus preloading for Crafter Dark finished detail images. Files affected: `src/pages/CrafterDark.jsx`, `src/components/CrafterDarkCard.jsx`, `functions/crafter-dark-list-view.md`, `functions/crafter-dark-detail-view.md`, `docs/tasks.md`.
 - 2026-07-08: Marked `SquareImageFrame` fallback handling complete and updated Crafter Dark list-view docs to reflect the current stable outer frame with inner `ImageWithFallback` behaviour. Files affected: `docs/tasks.md`, `functions/crafter-dark-list-view.md`.
 - 2026-07-08: Closed the filename-standardization decision as not needed, confirmed there are no remaining `Pattern size varies` Crafter Dark records to resolve, and cleared stale Crafter Dark known-gap notes. Files affected: `docs/tasks.md`, `functions/crafter-dark-page.md`.

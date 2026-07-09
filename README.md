@@ -1,6 +1,8 @@
 # Sara's Portfolio
 
-Sara's Portfolio is a static React/Vite personal portfolio site for Sara's creative work across Crafter Dark cross-stitch projects, photography, and Sara's Lab concepts.
+Sara's Portfolio is a static React/Vite personal portfolio site for Sara Gillard's creative work across Crafter Dark cross-stitch projects, photography, and Sara's Lab concepts.
+
+Production domain: `https://saragillard.com`
 
 The site is intentionally simple to maintain: content lives in `src/data`, reusable UI lives in `src/components`, and public images live in `public/images`.
 
@@ -113,5 +115,5 @@ Update `docs/tasks.md` and `docs/changelog.md` after completing a task or relate
 ## Current Known Gaps
 
 - Active portfolio image assets are present; unfinished Crafter Dark pieces may intentionally use in-progress placeholders.
-- Deployment target is not selected yet.
-- Production URL verification is pending until a deployment target is chosen.
+- Deployment target is Vercel.
+- Production URL verification is pending for `https://saragillard.com`.

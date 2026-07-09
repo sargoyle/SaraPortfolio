@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saragillard.com/sitemap.xml

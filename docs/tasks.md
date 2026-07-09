@@ -252,12 +252,9 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Add screenshots for Alphabet Stitch, Xanadu: The 9 Muses, The Door List, and Batcave Font; Sara confirmed the Xanadu treatment and current Lab imagery are acceptable.
 - `[x]` Run `npm run build`.
 - `[x]` Verify generated `dist` output.
-- `[?]` Choose deployment target:
-  - Netlify
-  - Vercel
-  - GitHub Pages
-  - another static host
-- `[ ]` Configure deployment for selected host.
+- `[x]` Choose deployment target: Vercel with custom domain `https://saragillard.com`.
+- `[x]` Configure production domain metadata, canonical URL, robots.txt, and sitemap.xml for `https://saragillard.com`.
+- `[x]` Confirm deployment host is Vercel and the custom domain is connected externally.
 - `[x]` Add production metadata:
   - page description
   - Open Graph title
@@ -272,8 +269,9 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Add optimized Crafter Dark finished/detail display images and point detail views at lighter `-display.webp` assets while keeping original uploads untouched.
 - `[x]` Rotate the optimized Xeno finished/detail display image back 90 degrees left so it matches the pattern orientation.
 - `[x]` Update Xeno to a new corrected landscape display image URL so browser caching cannot keep showing the old rotated asset.
-- `[ ]` Verify production URL loads.
-- `[ ]` Verify production console has no unintended errors.
+- `[x]` Verify production URL loads at `https://saragillard.com`.
+- `[ ]` Redeploy the latest Vercel build and verify `robots.txt` and `sitemap.xml` return 200 on `https://saragillard.com`.
+- `[-]` Verify production console has no unintended errors. Blocked by live-browser/tool access during final validation.
 
 ## Phase 6: Future Enhancements
 
@@ -295,4 +293,3 @@ Goal: Track useful improvements without letting them block the first polished la
 ## Current Open Questions
 
 1. Do you want direct URLs for each section or project in this release, or is the current single-page state navigation enough for launch?
-2. Which deployment target should this project optimize for?
