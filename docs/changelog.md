@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Initial project setup
+- 2026-07-11: Added lightweight `pnpm run lint` and `pnpm test` static validation scripts for production metadata, sitemap/robots, social preview assets, public asset references, external link safety, contact-link scope, and baseline accessibility checks. Files affected: `package.json`, `scripts/validate-site.mjs`, `README.md`, `docs/tasks.md`, `docs/manual-qa-checklist.md`, `functions/security-checks.md`.
+- 2026-07-11: Added Vercel host redirect configuration for `www.saragillard.com` to redirect to `https://saragillard.com`. Files affected: `vercel.json`, `docs/tasks.md`.
 - 2026-07-09: Added optimized Crafter Dark finished/detail display images and documented thumbnail visual regression checks. Files affected: `public/images/crafter-dark/*-display.webp`, `src/data/crafterProjects.js`, `docs/manual-qa-checklist.md`, `functions/crafter-dark-detail-view.md`, `docs/asset-inventory.md`, `docs/tasks.md`.
 - 2026-07-05: Added a current manual QA checklist covering active navigation, Home, Crafter Dark, Photography, Sara's Lab, metadata, accessibility, and security checks. Files affected: `docs/manual-qa-checklist.md`, `docs/tasks.md`.
 - 2026-07-05: Added production metadata, favicon assets, web manifest, and social preview image. Files affected: `index.html`, `public/favicon.svg`, `public/favicon-32x32.png`, `public/apple-touch-icon.png`, `public/site.webmanifest`, `public/images/social/saras-portfolio-og.png`.
@@ -82,6 +84,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Matched uploaded Xeno Photography image to the existing Xeno placeholder record. Files affected: `src/data/photos.js`, `docs/asset-inventory.md`, `docs/tasks.md`.
 
 ### Security
+- 2026-07-11: Re-ran go-live security checks. Static validation and production build passed; live domain, `www` redirect, old Vercel redirect, robots.txt, sitemap.xml, and social preview image all returned expected responses. Dependency audit still reports two low transitive dev-tool advisories. Files affected: `docs/tasks.md`, `functions/security-checks.md`, `docs/manual-qa-checklist.md`.
 - 2026-07-04: Re-ran manual static security checks and dependency audit; build passed, no active unsafe HTML or secret-like strings were found, and two low transitive dev-tool advisories remain documented. Files affected: `functions/security-checks.md`, `docs/tasks.md`.
 - 2026-07-03: Updated Vite to `7.3.6`, documented remaining low transitive audit advisories, and allowed only `esbuild` build scripts in pnpm workspace config. Files affected: `package.json`, `pnpm-lock.yaml`, `pnpm-workspace.yaml`, `functions/security-checks.md`, `docs/tasks.md`.
 

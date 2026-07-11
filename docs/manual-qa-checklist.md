@@ -4,7 +4,9 @@ Use this checklist before release and after changes to shared navigation, filter
 
 ## Build
 
-- Run `npm run build`.
+- Run `pnpm run lint`.
+- Run `pnpm test`.
+- Run `pnpm run build`.
 - Confirm the build completes without errors.
 - Confirm `dist/index.html` and bundled assets are generated.
 
@@ -80,6 +82,7 @@ Use this checklist before release and after changes to shared navigation, filter
 ## Security
 
 - Run or review `functions/security-checks.md`.
+- Confirm `pnpm run lint` and `pnpm test` pass.
 - Confirm no active source uses `dangerouslySetInnerHTML`.
 - Confirm no hardcoded secrets are present in active source or deployable public files.
 - Confirm archived Crafter Dark PDFs/header documents remain outside `public`.

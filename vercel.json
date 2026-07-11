@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.saragillard.com"
+        }
+      ],
+      "destination": "https://saragillard.com/$1",
+      "permanent": true
+    }
+  ]
+}

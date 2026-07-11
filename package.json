@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "lint": "node scripts/validate-site.mjs",
+    "test": "node scripts/validate-site.mjs",
     "preview": "vite preview",
     "sync:photos": "node scripts/sync-photography.mjs"
   },

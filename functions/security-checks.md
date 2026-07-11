@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Manual security checklist for Sara's Portfolio until an automated test or lint suite is added.
+Security checklist for Sara's Portfolio, backed by the lightweight `pnpm run lint` / `pnpm test` static validation script.
 
 ## Current Scope
 
@@ -12,6 +12,7 @@ Manual security checklist for Sara's Portfolio until an automated test or lint s
 
 ## Required Checks
 
+- Run `pnpm run lint` and `pnpm test` before release.
 - Run the production build before release.
 - Run a dependency audit when package manager/network access is available.
 - Confirm no active source uses `dangerouslySetInnerHTML`.
@@ -24,8 +25,7 @@ Manual security checklist for Sara's Portfolio until an automated test or lint s
 
 ## Known Gaps
 
-- No automated security test script exists yet.
-- No deployment security headers are configured in this repo because deployment target is not chosen.
+- Browser-console verification still requires an available live browser session.
 - Crafter Dark PDF/header documents are archived outside `public` and should stay out of the deployed static asset tree unless intentionally made downloadable.
 - Dependency audit currently has two low transitive dev-tool advisories: `esbuild <0.28.1` via Vite and `@babel/core <=7.29.0` via `@vitejs/plugin-react`. A targeted `pnpm update vite @vitejs/plugin-react` found no newer available versions in the current dependency range; avoid forcing overrides unless tested, because these are build-tool internals.
 

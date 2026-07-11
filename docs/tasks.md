@@ -247,7 +247,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[ ]` Monitor or resolve remaining low transitive dependency advisories for `esbuild` and `@babel/core` when upstream Vite/plugin-react updates are available.
 - `[x]` Review and archive legacy `src/data/games.js` now that Sara's Lab uses `src/data/labProjects.js`.
 - `[ ]` Review old `.project-card-*` and `.poc-*` CSS selectors after archived AI POCs are no longer active.
-- `[ ]` Add an automated security/static check script for external link rel attributes, archived imports, and unsafe HTML usage.
+- `[x]` Add an automated security/static check script for external link rel attributes, asset references, metadata, contact-link scope, and unsafe HTML usage.
 - `[x]` Add final image assets for Sara's Lab project cards; Sara confirmed current Lab imagery is acceptable.
 - `[x]` Add screenshots for Alphabet Stitch, Xanadu: The 9 Muses, The Door List, and Batcave Font; Sara confirmed the Xanadu treatment and current Lab imagery are acceptable.
 - `[x]` Run `npm run build`.
@@ -265,12 +265,15 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Add social preview image at `public/images/social/saras-portfolio-og.png`.
 - `[x]` Review active pages and components for accessibility labels, alt text, modal roles, and external link metadata.
 - `[x]` Review and update function documentation and manual QA expectations against the current active site.
+- `[x]` Add `pnpm run lint` and `pnpm test` scripts for static site validation.
+- `[x]` Add Vercel host redirect config so `www.saragillard.com` redirects to `https://saragillard.com`.
+- `[x]` Keep current single-page navigation for launch; direct section/project URLs are deferred.
 - `[x]` Preload Crafter Dark finished/detail images in the background and on card focus/hover to reduce modal image wait time without changing source assets.
 - `[x]` Add optimized Crafter Dark finished/detail display images and point detail views at lighter `-display.webp` assets while keeping original uploads untouched.
 - `[x]` Rotate the optimized Xeno finished/detail display image back 90 degrees left so it matches the pattern orientation.
 - `[x]` Update Xeno to a new corrected landscape display image URL so browser caching cannot keep showing the old rotated asset.
 - `[x]` Verify production URL loads at `https://saragillard.com`.
-- `[ ]` Redeploy the latest Vercel build and verify `robots.txt` and `sitemap.xml` return 200 on `https://saragillard.com`.
+- `[x]` Verify `robots.txt` and `sitemap.xml` return 200 on `https://saragillard.com`.
 - `[-]` Verify production console has no unintended errors. Blocked by live-browser/tool access during final validation.
 
 ## Phase 6: Future Enhancements
@@ -292,4 +295,4 @@ Goal: Track useful improvements without letting them block the first polished la
 
 ## Current Open Questions
 
-1. Do you want direct URLs for each section or project in this release, or is the current single-page state navigation enough for launch?
+No current launch-blocking decisions. Sara confirmed single-page navigation for now, LinkedIn-only contact, and apex-domain preference with `www` redirecting to `https://saragillard.com`.

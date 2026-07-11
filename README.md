@@ -34,6 +34,13 @@ Build for production:
 pnpm run build
 ```
 
+Run the static site quality checks:
+
+```bash
+pnpm run lint
+pnpm test
+```
+
 Preview the production build:
 
 ```bash
