@@ -254,6 +254,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Verify generated `dist` output.
 - `[x]` Choose deployment target: Vercel with custom domain `https://saragillard.com`.
 - `[x]` Configure production domain metadata, canonical URL, robots.txt, and sitemap.xml for `https://saragillard.com`.
+- `[x]` Replace old role-led metadata with creative portfolio title and description across browser, search, social, manifest, and validation files.
 - `[x]` Confirm deployment host is Vercel and the custom domain is connected externally.
 - `[x]` Add production metadata:
   - page description
@@ -265,6 +266,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Add social preview image at `public/images/social/saras-portfolio-og.png`.
 - `[x]` Review active pages and components for accessibility labels, alt text, modal roles, and external link metadata.
 - `[x]` Review and update function documentation and manual QA expectations against the current active site.
+- `[x]` Update global typography to Playfair Display headings and Source Sans 3 body/interface text.
 - `[x]` Add `pnpm run lint` and `pnpm test` scripts for static site validation.
 - `[x]` Add Vercel host redirect config so `www.saragillard.com` redirects to `https://saragillard.com`.
 - `[x]` Keep current single-page navigation for launch; direct section/project URLs are deferred.

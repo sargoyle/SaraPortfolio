@@ -47,14 +47,17 @@ Glow:
 
 ### Typography
 
-Use the system sans-serif stack:
+Use the selected editorial Google Fonts pairing:
 
 ```css
--apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif
+--font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+--font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
 ```
 
 Typography principles:
 
+- Headings, page titles, card titles, modal titles, and designed placeholder titles use Playfair Display at weights 600 or 700.
+- Body copy, navigation, filters, badges, buttons, metadata, and interface text use Source Sans 3 at weights 400, 500, or 600.
 - Large display type is reserved for page titles and the home title.
 - Card text should be compact, readable, and scannable.
 - Body copy should use generous line height.

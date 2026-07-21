@@ -5,10 +5,17 @@ import { fileURLToPath } from 'node:url'
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const productionUrl = 'https://saragillard.com'
 const oldDomain = 'sara-portfolio-tawny.vercel.app'
-const expectedTitle = 'Sara Gillard | Product Manager & Creative Technologist'
+const expectedTitle = 'Sara’s Portfolio | Artist, Pattern Maker & Creative Technologist'
 const expectedDescription =
-  'Portfolio of Sara Gillard, a Melbourne-based Product Manager and Creative Technologist working across product strategy, AI-enabled tools, Microsoft Power Platform, and creative digital projects.'
+  'Explore Sara Gillard’s cross-stitch designs, photography, games and creative digital projects.'
 const socialImagePath = '/images/social/saras-portfolio-og.png'
+const prohibitedPositioning = [
+  ['Product', 'Manager'].join(' '),
+  ['product', 'management'].join(' '),
+  ['product', 'strategy'].join(' '),
+  ['professional', 'portfolio'].join(' '),
+  ['Microsoft', 'Power', 'Platform'].join(' '),
+]
 
 const failures = []
 let passed = 0
@@ -74,6 +81,7 @@ check(indexHtml.includes(`<title>${expectedTitle}</title>`), 'Homepage title met
 check(indexHtml.includes(`content="${expectedDescription}"`), 'Homepage meta description is missing or incorrect.')
 check(indexHtml.includes(`<link rel="canonical" href="${productionUrl}/" />`), 'Canonical URL must point to the production apex domain.')
 check(indexHtml.includes(`property="og:url" content="${productionUrl}/"`), 'Open Graph URL must point to the production apex domain.')
+check(indexHtml.includes('property="og:site_name" content="Sara’s Portfolio"'), 'Open Graph site name is missing or incorrect.')
 check(indexHtml.includes(`property="og:title" content="${expectedTitle}"`), 'Open Graph title is missing or incorrect.')
 check(indexHtml.includes(`property="og:description"`), 'Open Graph description metadata is missing.')
 check(indexHtml.includes(`property="og:image" content="${productionUrl}${socialImagePath}"`), 'Open Graph image must use the production domain.')
@@ -113,6 +121,9 @@ const projectFiles = [
 
 const combinedProjectText = projectFiles.map((file) => read(file)).join('\n')
 check(!combinedProjectText.includes(oldDomain), `Old Vercel domain reference remains: ${oldDomain}`)
+prohibitedPositioning.forEach((term) => {
+  check(!combinedProjectText.includes(term), `Old professional positioning remains: ${term}`)
+})
 
 const srcFiles = walkFiles('src', ['.js', '.jsx'])
 const combinedSource = srcFiles.map((file) => read(file)).join('\n')

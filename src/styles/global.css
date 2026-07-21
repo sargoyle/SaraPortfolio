@@ -13,6 +13,8 @@
   --glass-border: rgba(255, 255, 255, 0.15);
   --shadow-purple: 0 0 24px rgba(123, 63, 228, 0.45);
   --radius: 0.5rem;
+  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
 }
 
 * {
@@ -30,7 +32,11 @@ body {
   overflow-x: hidden;
   background: linear-gradient(135deg, var(--background-1), var(--background-2), var(--background-3));
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: var(--font-body);
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 button,
@@ -192,7 +198,8 @@ a:focus-visible,
 .home-title {
   margin: 0 0 1rem;
   font-size: clamp(3rem, 7vw, 5.5rem);
-  font-weight: 800;
+  font-family: var(--font-heading);
+  font-weight: 700;
   line-height: 1;
   text-shadow: 0 0 20px rgba(123, 63, 228, 0.6);
 }
@@ -293,7 +300,8 @@ a:focus-visible,
 
 .about-section h2,
 .section-title {
-  font-weight: 800;
+  font-family: var(--font-heading);
+  font-weight: 700;
   text-shadow: 0 0 20px rgba(123, 63, 228, 0.6);
 }
 
@@ -459,8 +467,10 @@ a:focus-visible,
 .project-card-title,
 .crafter-dark-card-title {
   color: #ffffff;
+  font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .project-meta,
@@ -569,7 +579,9 @@ a:focus-visible,
 .game-title {
   margin: 0 0 0.5rem;
   color: #ffffff;
+  font-family: var(--font-heading);
   font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
   text-shadow: 0 0 20px rgba(123, 63, 228, 0.6);
 }
 
@@ -660,7 +672,8 @@ a:focus-visible,
     linear-gradient(135deg, rgba(123, 63, 228, 0.22), rgba(5, 3, 8, 0.86));
   color: var(--accent-light);
   font-size: clamp(1.4rem, 4vw, 2.5rem);
-  font-weight: 800;
+  font-family: var(--font-heading);
+  font-weight: 700;
   text-align: center;
   text-shadow: 0 0 20px rgba(123, 63, 228, 0.5);
 }
@@ -684,8 +697,9 @@ a:focus-visible,
 
 .lab-project-card-title {
   color: #ffffff;
+  font-family: var(--font-heading);
   font-size: 1.45rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.15;
 }
 
@@ -750,7 +764,9 @@ a:focus-visible,
 
 .lab-project-detail h2 {
   margin: 0;
+  font-family: var(--font-heading);
   font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
   text-shadow: 0 0 20px rgba(123, 63, 228, 0.6);
 }
 
@@ -1012,7 +1028,9 @@ a:focus-visible,
 
 .fullscreen-project h2 {
   margin: 0 0 0.5rem;
+  font-family: var(--font-heading);
   font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
   text-shadow: 0 0 20px rgba(123, 63, 228, 0.6);
 }
 

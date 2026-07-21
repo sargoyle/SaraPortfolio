@@ -87,7 +87,7 @@ Sara's Portfolio brings together diverse creative work in one elegant, immersive
 
 Primary value:
 
-- A credible professional portfolio that still feels personal and experimental.
+- A credible creative portfolio that still feels personal and experimental.
 
 Supporting value:
 
