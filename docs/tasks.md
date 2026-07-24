@@ -250,6 +250,8 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Add an automated security/static check script for external link rel attributes, asset references, metadata, contact-link scope, and unsafe HTML usage.
 - `[x]` Add final image assets for Sara's Lab project cards; Sara confirmed current Lab imagery is acceptable.
 - `[x]` Add screenshots for Alphabet Stitch, Xanadu: The 9 Muses, The Door List, and Batcave Font; Sara confirmed the Xanadu treatment and current Lab imagery are acceptable.
+- `[x]` Add Tucked Away to Sara's Lab with supplied image, In Progress status, custom card action label, and detail copy.
+- `[x]` Update Tucked Away card action to `View Details` and refresh the Lab image path to the cropped asset.
 - `[x]` Run `npm run build`.
 - `[x]` Verify generated `dist` output.
 - `[x]` Choose deployment target: Vercel with custom domain `https://saragillard.com`.

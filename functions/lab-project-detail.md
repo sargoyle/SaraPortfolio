@@ -60,7 +60,7 @@ Shows a richer project note with metadata, visual, blurb, shared fullscreen prev
 
 ## Test Expectations
 
-- Detail body renders correctly for all four current projects.
+- Detail body renders correctly for all five current projects.
 - Focus tags are not visibly rendered.
 - External link only appears for Alphabet Stitch.
 - Download link appears for Batcave Font.

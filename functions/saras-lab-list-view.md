@@ -13,7 +13,7 @@ Displays Sara's Lab projects as a structured gallery of creative systems, tools,
 
 ## User-Facing Behaviour
 
-Visitors see four image-led project cards. Activating a card opens the project detail modal.
+Visitors see five image-led project cards. Activating a card opens the project detail modal.
 
 ## Layout Rules
 
@@ -29,8 +29,8 @@ Visitors see four image-led project cards. Activating a card opens the project d
 
 ## Data Rules
 
-- Cards use `title`, `type`, `status`, `cardDescription`, `image`, `link`, `mediaFit`, and `mediaPosition`.
-- Button text is `Open project` when a link exists, otherwise `View details`.
+- Cards use `title`, `type`, `status`, `cardDescription`, `image`, `link`, `actionLabel`, `mediaFit`, and `mediaPosition`.
+- Button text uses `actionLabel` when present, `Open project` when a link exists, otherwise `View details`.
 
 ## Image Rules
 
@@ -63,8 +63,8 @@ Visitors see four image-led project cards. Activating a card opens the project d
 
 ## Test Expectations
 
-- Exactly four cards render.
-- Card order is Alphabet Stitch, Batcave Font, Xanadu: The 9 Muses, The Door List.
+- Exactly five cards render.
+- Card order is Alphabet Stitch, Batcave Font, Xanadu: The 9 Muses, The Door List, Tucked Away.
 - Each card shows title, type, status, short description, and action text.
 - Missing image projects show a styled placeholder.
 - Xanadu placeholder does not look broken.

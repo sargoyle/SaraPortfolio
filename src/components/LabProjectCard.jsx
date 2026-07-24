@@ -44,7 +44,7 @@ export default function LabProjectCard({ project, onOpen }) {
           <span className="lab-project-card-title">{project.title}</span>
           <span className="lab-project-card-status">{project.status}</span>
           <span className="lab-project-card-description">{project.cardDescription}</span>
-          <span className="lab-project-card-action">{project.link ? 'Open project' : 'View details'}</span>
+          <span className="lab-project-card-action">{project.actionLabel || (project.link ? 'Open project' : 'View details')}</span>
         </span>
       </button>
     </article>

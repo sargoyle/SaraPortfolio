@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Initial project setup
+- 2026-07-24: Added Tucked Away to Sara's Lab as an in-progress personal Android app/tool with supplied image, structured card/detail content, and custom card action label. Files affected: `src/data/labProjects.js`, `src/components/LabProjectCard.jsx`, `public/images/lab/tucked-away.png`, `docs/manual-qa-checklist.md`, `functions/saras-lab-page.md`, `functions/saras-lab-list-view.md`, `functions/lab-project-card.md`, `functions/lab-project-detail.md`, `docs/tasks.md`.
 - 2026-07-11: Added lightweight `pnpm run lint` and `pnpm test` static validation scripts for production metadata, sitemap/robots, social preview assets, public asset references, external link safety, contact-link scope, and baseline accessibility checks. Files affected: `package.json`, `scripts/validate-site.mjs`, `README.md`, `docs/tasks.md`, `docs/manual-qa-checklist.md`, `functions/security-checks.md`.
 - 2026-07-11: Added Vercel host redirect configuration for `www.saragillard.com` to redirect to `https://saragillard.com`. Files affected: `vercel.json`, `docs/tasks.md`.
 - 2026-07-09: Added optimized Crafter Dark finished/detail display images and documented thumbnail visual regression checks. Files affected: `public/images/crafter-dark/*-display.webp`, `src/data/crafterProjects.js`, `docs/manual-qa-checklist.md`, `functions/crafter-dark-detail-view.md`, `docs/asset-inventory.md`, `docs/tasks.md`.
@@ -25,6 +26,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-07-24: Updated Tucked Away card action text to `View Details` and refreshed the Lab image path to the cropped asset. Files affected: `src/data/labProjects.js`, `public/images/lab/tucked-away-cropped.png`, `docs/manual-qa-checklist.md`, `functions/lab-project-card.md`, `docs/tasks.md`.
 - 2026-07-21: Replaced old role-led metadata with creative portfolio title, description, Open Graph, Twitter card, manifest, and validation expectations. Files affected: `index.html`, `public/site.webmanifest`, `scripts/validate-site.mjs`, `docs/masterplan.md`, `docs/tasks.md`.
 - 2026-07-21: Updated global typography to the selected editorial pairing with Playfair Display for headings and Source Sans 3 for body/interface text. Files affected: `index.html`, `src/styles/global.css`, `docs/design.md`, `docs/tasks.md`.
 - 2026-07-09: Recorded final production-domain validation results, including live domain load success and pending redeploy verification for robots.txt and sitemap.xml. Files affected: `docs/tasks.md`.

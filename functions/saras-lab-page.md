@@ -16,7 +16,7 @@ Sara's Lab is the portfolio home and project showcase for creative systems, tool
 
 ## User-Facing Behaviour
 
-Visitors see a four-project gallery and can open each project in a detail modal. Alphabet Stitch includes an external project link inside its detail view. Batcave Font is marked Live and includes a downloadable font file.
+Visitors see a five-project gallery and can open each project in a detail modal. Alphabet Stitch includes an external project link inside its detail view. Batcave Font is marked Live and includes a downloadable font file.
 
 ## Layout Rules
 
@@ -30,6 +30,7 @@ Visitors see a four-project gallery and can open each project in a detail modal.
   2. Batcave Font
   3. Xanadu: The 9 Muses
   4. The Door List
+  5. Tucked Away
 
 ## Reusable Components
 
@@ -41,6 +42,7 @@ Visitors see a four-project gallery and can open each project in a detail modal.
 
 - Data source is `labProjects`.
 - Required fields are `id`, `title`, `type`, `status`, `link`, `subtitle`, `cardDescription`, `blurb`, `focus`, `image`, and `order`.
+- Optional custom card action labels use `actionLabel`.
 - Optional downloadable assets use `download` and `downloadLabel`.
 - Do not add weak or unrelated AI POCs to Sara's Lab; this section is for selected creative systems, tools, type experiments, games, and prototypes.
 
@@ -75,7 +77,7 @@ No known gaps currently documented.
 
 ## Test Expectations
 
-- Sara's Lab renders exactly four project cards.
+- Sara's Lab renders exactly five project cards.
 - The old single Xanadu content is not rendered.
 - Projects render in required manual order.
 - Alphabet Stitch displays its external link in the detail view.

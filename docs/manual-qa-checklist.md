@@ -53,13 +53,14 @@ Use this checklist before release and after changes to shared navigation, filter
 
 ## Sara's Lab
 
-- Confirm exactly four projects show in this order: Alphabet Stitch, Batcave Font, Xanadu: The 9 Muses, The Door List.
+- Confirm exactly five projects show in this order: Alphabet Stitch, Batcave Font, Xanadu: The 9 Muses, The Door List, Tucked Away.
 - Confirm cards show type, title, status, description, and action text.
 - Confirm card images use contained media and do not crop important artwork.
 - Confirm Xanadu displays the uploaded Muses image and the contain treatment looks acceptable.
 - Confirm Alphabet Stitch detail shows an external `Open project` link.
 - Confirm Batcave Font status is Live and the detail view shows a downloadable font action.
-- Confirm Xanadu and The Door List do not show empty external/download links.
+- Confirm Xanadu, The Door List, and Tucked Away do not show empty external/download links.
+- Confirm Tucked Away shows status `In Progress`, action text `View Details`, and the cropped app image.
 - Confirm detail views do not show a visible Focus section or focus tag list.
 - Confirm shared previous/next arrow controls and ArrowLeft/ArrowRight move through projects.
 - Confirm Escape, outside click, and close button close the detail view.
