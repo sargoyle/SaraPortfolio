@@ -252,6 +252,12 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Add screenshots for Alphabet Stitch, Xanadu: The 9 Muses, The Door List, and Batcave Font; Sara confirmed the Xanadu treatment and current Lab imagery are acceptable.
 - `[x]` Add Tucked Away to Sara's Lab with supplied image, In Progress status, custom card action label, and detail copy.
 - `[x]` Update Tucked Away card action to `View Details` and refresh the Lab image path to the cropped asset.
+- `[x]` Create standalone public Tucked Away product page at `/tucked-away` with full privacy-policy anchor at `/tucked-away#privacy`.
+- `[x]` Add Tucked Away route metadata, Vercel rewrite support, sitemap entry, placeholders, and validation coverage.
+- `[x]` Refine Tucked Away page typography, spacing, card density, screenshot presentation, and real image mapping without changing approved content.
+- `[x]` Compact Tucked Away page length, consolidate green palette, align screenshot frame heights, and integrate the use-case screenshot into the grid without changing approved content.
+- `[x]` Make a strict Tucked Away layout-compression pass by flattening stacked spacing, reducing oversized screenshot frames, tightening card padding, compacting privacy layout, and adding regression checks.
+- `[x]` Redesign Tucked Away into a five-beat marketing page with hero/catalogue, why/benefits, process/use cases, feature screenshot showcase, privacy/CTA, selector interactions, and updated validation.
 - `[x]` Run `npm run build`.
 - `[x]` Verify generated `dist` output.
 - `[x]` Choose deployment target: Vercel with custom domain `https://saragillard.com`.

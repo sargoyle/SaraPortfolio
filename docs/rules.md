@@ -23,6 +23,7 @@ Keep entries concise. One line per decision when possible.
 - Archived portfolio sections live under `archive/`; archived code/data must not be imported by the active app unless a section is deliberately restored.
 - Active Sara's Lab content lives in `src/data/labProjects.js`; legacy game-only data is archived under `archive/legacy-games`.
 - Crafter Dark source PDFs/header documents are archived under `archive/crafter-dark-documents` and should not be served from `public`.
+- Tucked Away is the only current standalone public product route; `/tucked-away` uses a Vercel rewrite to `tucked-away.html` for direct loads and route-specific metadata.
 
 ## Collaboration
 - Every assistant response must begin with `Sara's Portfolio`.
@@ -41,3 +42,4 @@ Keep entries concise. One line per decision when possible.
 - AI POC content is archived under `archive/ai-pocs` and must stay out of active navigation/page registry unless explicitly reintroduced.
 - Home page positioning should centre Sara's creative practice on gothic cross-stitch, pattern-making, photography, games, and creative tools; AI/code are supporting tools, not the main identity.
 - LinkedIn is the only public communication/connect link on the active site; do not add email, phone, contact forms, or additional social links unless Sara explicitly changes this decision.
+- Tucked Away privacy-policy contact remains a visible placeholder until Sara supplies the dedicated support email.

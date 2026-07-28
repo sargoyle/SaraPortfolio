@@ -28,8 +28,13 @@ export default function LabProjectDetail({ project }) {
           <p>{project.blurb}</p>
           {project.link ? (
             <div className="lab-project-detail-actions">
-              <a href={project.link} target="_blank" rel="noreferrer" className="lab-project-link">
-                Open project
+              <a
+                href={project.link}
+                target={project.link.startsWith('/') ? undefined : '_blank'}
+                rel={project.link.startsWith('/') ? undefined : 'noreferrer'}
+                className="lab-project-link"
+              >
+                {project.linkLabel || 'Open project'}
               </a>
             </div>
           ) : null}

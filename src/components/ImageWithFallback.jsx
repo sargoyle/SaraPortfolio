@@ -6,6 +6,7 @@ export default function ImageWithFallback({
   className = '',
   fallbackClassName = 'image-placeholder',
   fallbackLabel = 'Image unavailable',
+  loading,
   children,
 }) {
   const [hasError, setHasError] = useState(false);
@@ -18,5 +19,5 @@ export default function ImageWithFallback({
     );
   }
 
-  return <img src={src} alt={alt} className={className} onError={() => setHasError(true)} />;
+  return <img src={src} alt={alt} className={className} loading={loading} onError={() => setHasError(true)} />;
 }

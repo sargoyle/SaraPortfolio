@@ -11,5 +11,15 @@
       "destination": "https://saragillard.com/$1",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/tucked-away",
+      "destination": "/tucked-away.html"
+    },
+    {
+      "source": "/tucked-away/",
+      "destination": "/tucked-away.html"
+    }
   ]
 }

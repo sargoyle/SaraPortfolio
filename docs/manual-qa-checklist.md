@@ -61,6 +61,7 @@ Use this checklist before release and after changes to shared navigation, filter
 - Confirm Batcave Font status is Live and the detail view shows a downloadable font action.
 - Confirm Xanadu, The Door List, and Tucked Away do not show empty external/download links.
 - Confirm Tucked Away shows status `In Progress`, action text `View Details`, and the cropped app image.
+- Confirm Tucked Away detail links to `/tucked-away`.
 - Confirm detail views do not show a visible Focus section or focus tag list.
 - Confirm shared previous/next arrow controls and ArrowLeft/ArrowRight move through projects.
 - Confirm Escape, outside click, and close button close the detail view.
@@ -70,6 +71,26 @@ Use this checklist before release and after changes to shared navigation, filter
 - Confirm `index.html` includes title, description, Open Graph, Twitter card, theme colour, favicon, manifest, and social preview metadata.
 - Confirm favicon files exist in `public`.
 - Confirm social preview image exists at `public/images/social/saras-portfolio-og.png`.
+
+## Tucked Away
+
+- Open `/tucked-away` directly and refresh; confirm the page still loads.
+- Open `/tucked-away#privacy` directly; confirm the Privacy policy heading is visible.
+- Confirm section links work for Overview, Why Tucked Away, How it works, Use cases, Features, and Privacy.
+- Confirm `Back to Sara's Lab` returns to Sara's Lab.
+- Confirm the Google Play/release control is visible but not clickable.
+- Confirm missing screenshot assets show deliberate placeholders without broken image icons.
+- Confirm supplied Tucked Away logo and screenshots render from `public/images/tucked-away`.
+- Confirm the hero fits comfortably within one desktop viewport.
+- Confirm the page reads as five desktop beats: hero/catalogue, why/benefits, how/use cases, features/screenshots, and privacy/CTA/footer.
+- Confirm cards, screenshot frames, and privacy policy spacing are balanced on desktop and mobile.
+- Confirm the How it works selector changes the main process screenshot and keeps all three step descriptions visible.
+- Confirm the screenshot selector changes the main screenshot and the old six-image grid is not shown.
+- Confirm use cases sit below How it works in a compact grid without a redundant standalone screenshot panel.
+- Confirm the four introductory privacy paragraphs display exactly.
+- Confirm support email and publication date placeholders are visible.
+- Confirm mobile layout has no horizontal overflow.
+- Confirm page-specific metadata is present in `tucked-away.html`.
 
 ## Accessibility
 

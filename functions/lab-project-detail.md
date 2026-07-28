@@ -13,7 +13,7 @@ Reusable detail body for Sara's Lab project modals.
 
 ## User-Facing Behaviour
 
-Shows a richer project note with metadata, visual, blurb, shared fullscreen previous/next arrow controls, optional external link, and optional downloadable asset.
+Shows a richer project note with metadata, visual, blurb, shared fullscreen previous/next arrow controls, optional internal or external link, and optional downloadable asset.
 
 ## Layout Rules
 
@@ -32,6 +32,8 @@ Shows a richer project note with metadata, visual, blurb, shared fullscreen prev
 - Reads all relevant fields from the selected `labProjects` item.
 - `focus` must be an array.
 - `focus` is data-only for now and is not displayed.
+- Internal project links use same-tab anchors and may specify `linkLabel`.
+- External project links open in a new tab with `rel="noreferrer"`.
 - Downloadable assets use `download` and `downloadLabel`; render as a normal anchor with the `download` attribute.
 
 ## Image Rules
@@ -47,7 +49,7 @@ Shows a richer project note with metadata, visual, blurb, shared fullscreen prev
 ## Accessibility Rules
 
 - Placeholder image has a useful accessible label.
-- External link is omitted when unavailable.
+- Project link is omitted when unavailable.
 - Download link is omitted when unavailable.
 
 ## Known Gaps / Defects
@@ -62,6 +64,7 @@ Shows a richer project note with metadata, visual, blurb, shared fullscreen prev
 
 - Detail body renders correctly for all five current projects.
 - Focus tags are not visibly rendered.
-- External link only appears for Alphabet Stitch.
+- External link appears for Alphabet Stitch.
+- Internal `/tucked-away` link appears for Tucked Away.
 - Download link appears for Batcave Font.
 - Shared previous/next arrow controls and ArrowLeft/ArrowRight move between projects.

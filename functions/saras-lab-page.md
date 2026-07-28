@@ -16,7 +16,7 @@ Sara's Lab is the portfolio home and project showcase for creative systems, tool
 
 ## User-Facing Behaviour
 
-Visitors see a five-project gallery and can open each project in a detail modal. Alphabet Stitch includes an external project link inside its detail view. Batcave Font is marked Live and includes a downloadable font file.
+Visitors see a five-project gallery and can open each project in a detail modal. Alphabet Stitch includes an external project link inside its detail view. Batcave Font is marked Live and includes a downloadable font file. Tucked Away links from its detail view to the public product page at `/tucked-away`.
 
 ## Layout Rules
 
@@ -65,6 +65,7 @@ Visitors see a five-project gallery and can open each project in a detail modal.
 - Detail modal must close by Escape, outside click, close button, and site navigation.
 - Detail modal supports previous/next navigation through buttons and arrow keys.
 - External links must use `target="_blank"` and `rel="noreferrer"`.
+- Internal project links must stay same-tab and must not use `target="_blank"`.
 
 ## Known Gaps / Defects
 
@@ -83,6 +84,7 @@ No known gaps currently documented.
 - Alphabet Stitch displays its external link in the detail view.
 - Batcave Font displays as Live and offers the font download.
 - Xanadu displays the uploaded Muses image rather than a placeholder.
+- Tucked Away displays its cropped app image and links to `/tucked-away` from the detail view.
 - Projects without links do not show broken external-link buttons.
 - Clicking each project opens the detail view.
 - Detail view displays title, type, status, subtitle, blurb, and image/preview.
