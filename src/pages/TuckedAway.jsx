@@ -359,13 +359,9 @@ export default function TuckedAway({ onBackToLab }) {
               ))}
             </section>
           ))}
-          <section aria-labelledby="privacy-contact">
-            <h3 id="privacy-contact">Contact</h3>
-            <p>Support email: [ADD TUCKED AWAY SUPPORT EMAIL]</p>
-          </section>
           <section aria-labelledby="privacy-updated">
             <h3 id="privacy-updated">Last updated</h3>
-            <p>Last updated: [ADD PUBLICATION DATE]</p>
+            <p>Last updated: 28 July 2026</p>
           </section>
         </div>
       </section>

@@ -259,6 +259,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Make a strict Tucked Away layout-compression pass by flattening stacked spacing, reducing oversized screenshot frames, tightening card padding, compacting privacy layout, and adding regression checks.
 - `[x]` Redesign Tucked Away into a five-beat marketing page with hero/catalogue, why/benefits, process/use cases, feature screenshot showcase, privacy/CTA, selector interactions, and updated validation.
 - `[x]` Correct Tucked Away layout grouping: transparent larger logo, phone-focused hero heading, Why/use-case grouping, process step row, feature/screenshot split, aligned Privacy containers, and overlap checks.
+- `[x]` Remove the Tucked Away Privacy Contact placeholder and set the fixed Last updated date to `28 July 2026`.
 - `[x]` Run `npm run build`.
 - `[x]` Verify generated `dist` output.
 - `[x]` Choose deployment target: Vercel with custom domain `https://saragillard.com`.

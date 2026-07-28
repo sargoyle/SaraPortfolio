@@ -96,7 +96,8 @@ Use this checklist before release and after changes to shared navigation, filter
 - Confirm the screenshot selector changes the main screenshot and the old six-image grid is not shown.
 - Confirm the four introductory privacy paragraphs display exactly.
 - Confirm Private by design and Privacy policy align to the same outer width.
-- Confirm support email and publication date placeholders are visible.
+- Confirm the Contact subsection and support email placeholder are not visible.
+- Confirm the Last updated subsection displays `Last updated: 28 July 2026`.
 - Confirm mobile layout has no horizontal overflow.
 - Confirm page-specific metadata is present in `tucked-away.html`.
 

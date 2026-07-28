@@ -26,7 +26,8 @@ Tucked Away is a public product marketing page and privacy-policy page for Sara'
 - The page must explain the product, problem, benefits, how it works, use cases, features, screenshot placeholders, privacy summary, full privacy policy, and release status.
 - Do not claim Google Play availability until a real URL is provided.
 - Do not claim cloud sync, iPhone support, AI metadata generation, video upload, video copying, source video editing, or backup of video files.
-- Keep the support email and publication date placeholders visible until Sara supplies final values.
+- Do not show a Contact subsection until Sara supplies an approved support route.
+- The fixed privacy-policy publication date is `28 July 2026`.
 - Use Australian English.
 
 ## Image Rules
@@ -92,6 +93,8 @@ Tucked Away is a public product marketing page and privacy-policy page for Sara'
 - Section navigation anchors work.
 - `Back to Sara's Lab` returns to the active Sara's Lab section.
 - The exact four introductory privacy paragraphs render.
+- The Contact subsection and support email placeholder do not render.
+- The Last updated subsection displays `Last updated: 28 July 2026`.
 - Google Play controls are non-clicking until a real URL exists.
 - Missing screenshots show placeholders.
 - Sitemap includes `/tucked-away`.
