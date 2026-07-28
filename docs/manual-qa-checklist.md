@@ -81,13 +81,21 @@ Use this checklist before release and after changes to shared navigation, filter
 - Confirm the Google Play/release control is visible but not clickable.
 - Confirm missing screenshot assets show deliberate placeholders without broken image icons.
 - Confirm supplied Tucked Away logo and screenshots render from `public/images/tucked-away`.
+- Confirm the Tucked Away logo is larger and does not show a rectangular background block.
+- Confirm the hero heading is exactly `Turn a phone full of videos into a library you can actually use.`
+- Confirm the hero includes a `Why Tucked Away` pill linked to `#why-tucked-away`.
 - Confirm the hero fits comfortably within one desktop viewport.
-- Confirm the page reads as five desktop beats: hero/catalogue, why/benefits, how/use cases, features/screenshots, and privacy/CTA/footer.
+- Confirm the page reads as five desktop beats: hero/catalogue, why/use cases/benefits, how/features/screenshots, privacy policy, and closing/footer.
 - Confirm cards, screenshot frames, and privacy policy spacing are balanced on desktop and mobile.
-- Confirm the How it works selector changes the main process screenshot and keeps all three step descriptions visible.
+- Confirm the old Before/After filename panel is not visible.
+- Confirm the three benefit tiles sit beside the Why copy on desktop.
+- Confirm Use cases sit directly beneath Why Tucked Away.
+- Confirm How it works shows three compact steps and no large process screenshot.
+- Confirm the feature heading is the smaller `Tucked Away focuses on useful information and clear actions rather than large thumbnails.` text.
+- Confirm the feature list and screenshot showcase sit side by side on desktop.
 - Confirm the screenshot selector changes the main screenshot and the old six-image grid is not shown.
-- Confirm use cases sit below How it works in a compact grid without a redundant standalone screenshot panel.
 - Confirm the four introductory privacy paragraphs display exactly.
+- Confirm Private by design and Privacy policy align to the same outer width.
 - Confirm support email and publication date placeholders are visible.
 - Confirm mobile layout has no horizontal overflow.
 - Confirm page-specific metadata is present in `tucked-away.html`.

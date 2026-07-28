@@ -1273,8 +1273,9 @@ a:focus-visible,
 
 .tucked-logo {
   display: block;
-  width: min(170px, 42vw);
+  width: min(230px, 50vw);
   height: auto;
+  background: transparent;
 }
 
 .tucked-logo-placeholder {
@@ -1361,11 +1362,15 @@ a:focus-visible,
   padding: var(--ta-gap-section) 0;
 }
 
-.tucked-problem {
+.tucked-why-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.82fr);
+  grid-template-columns: minmax(0, 0.56fr) minmax(320px, 0.44fr);
   gap: 36px;
   align-items: start;
+}
+
+.tucked-why-copy .tucked-text-stack {
+  margin-top: 22px;
 }
 
 .tucked-text-stack,
@@ -1379,7 +1384,6 @@ a:focus-visible,
   max-width: 900px;
 }
 
-.tucked-before-after,
 .tucked-card,
 .tucked-privacy-summary,
 .tucked-policy,
@@ -1390,48 +1394,22 @@ a:focus-visible,
   box-shadow: 0 12px 28px rgba(25, 53, 31, 0.07);
 }
 
-.tucked-before-after {
-  display: grid;
-  align-self: start;
-  padding: 22px;
-  gap: var(--ta-gap-md);
-}
-
-.tucked-example-note {
-  color: var(--ta-green-700) !important;
-  font-size: 0.85rem !important;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.tucked-before-after div {
-  display: grid;
-  gap: 8px;
-}
-
-.tucked-before-after span {
-  display: block;
-  padding: 0.42rem 0.62rem;
-  border-radius: 0.65rem;
-  background: var(--ta-green-100);
-  color: var(--ta-green-900);
-  font-weight: 600;
-}
-
 .tucked-benefits,
-.tucked-card-grid,
 .tucked-feature-items {
   display: grid;
   gap: 18px;
 }
 
 .tucked-benefits {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 22px;
+  grid-template-columns: 1fr;
+  gap: 14px;
 }
 
 .tucked-card-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 12px 16px;
 }
 
 .tucked-use-cases {
@@ -1443,6 +1421,7 @@ a:focus-visible,
 }
 
 .tucked-use-case-grid .tucked-card {
+  flex: 0 1 calc((100% - 48px) / 4);
   padding: 16px 18px;
 }
 
@@ -1450,8 +1429,17 @@ a:focus-visible,
   font-size: clamp(1.18rem, 1.35vw, 1.38rem);
 }
 
-.tucked-benefits .tucked-card {
-  padding: 20px 22px;
+.tucked-benefit-card {
+  padding: 16px 18px;
+}
+
+.tucked-benefit-card h2 {
+  font-size: clamp(1.38rem, 1.75vw, 1.62rem);
+}
+
+.tucked-benefit-card p {
+  font-size: 1rem;
+  line-height: 1.48;
 }
 
 .tucked-card {
@@ -1491,35 +1479,23 @@ a:focus-visible,
   font-weight: 800;
 }
 
-.tucked-walkthrough {
-  padding-bottom: var(--ta-gap-xl);
-}
-
-.tucked-walkthrough-grid {
-  display: grid;
-  grid-template-columns: minmax(360px, 0.95fr) minmax(0, 1.05fr);
-  align-items: center;
-  gap: 40px;
-  margin-top: 26px;
-}
-
-.tucked-walkthrough-visual,
 .tucked-gallery-main {
   width: fit-content;
   justify-self: center;
 }
 
-.tucked-walkthrough-visual .tucked-image {
-  width: min(270px, 100%);
-}
-
 .tucked-gallery-main .tucked-image {
-  width: min(285px, 100%);
+  width: min(320px, 100%);
 }
 
 .tucked-step-list {
   display: grid;
-  gap: var(--ta-gap-md);
+  gap: 18px;
+}
+
+.tucked-work-screen > .tucked-step-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 24px;
 }
 
 .tucked-step-option,
@@ -1531,20 +1507,13 @@ a:focus-visible,
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   align-items: start;
-  gap: var(--ta-gap-md);
-  padding: 18px 20px;
+  gap: 14px;
+  padding: 16px 18px;
   border: 1px solid rgba(25, 53, 31, 0.16);
   border-radius: 18px;
   background: rgba(251, 250, 246, 0.64);
   color: var(--ta-text);
   text-align: left;
-  cursor: pointer;
-}
-
-.tucked-step-option.is-selected {
-  border-color: rgba(25, 53, 31, 0.42);
-  background: var(--ta-surface);
-  box-shadow: 0 12px 28px rgba(25, 53, 31, 0.07);
 }
 
 .tucked-step-option-title,
@@ -1555,14 +1524,14 @@ a:focus-visible,
 .tucked-step-option-title {
   margin-bottom: 6px;
   font-family: var(--font-heading);
-  font-size: clamp(1.35rem, 1.6vw, 1.62rem);
+  font-size: clamp(1.32rem, 1.5vw, 1.55rem);
   font-weight: 700;
 }
 
 .tucked-step-option-text {
   color: var(--ta-muted);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.46;
 }
 
 .tucked-privacy-summary {
@@ -1577,21 +1546,16 @@ a:focus-visible,
 
 .tucked-policy {
   display: grid;
-  max-width: 1180px;
-  grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.28fr);
-  column-gap: 30px;
-  row-gap: var(--ta-gap-sm);
-  padding: 24px 28px;
+  width: min(1240px, calc(100% - clamp(40px, 8vw, 104px)));
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 32px 36px;
 }
 
-.tucked-policy > .tucked-kicker,
-.tucked-policy > h2 {
-  grid-column: 1 / -1;
-}
-
-.tucked-policy p,
-.tucked-policy .tucked-text-stack {
-  max-width: 900px;
+.tucked-policy-intro {
+  display: grid;
+  max-width: 980px;
+  gap: 14px;
 }
 
 .tucked-policy-sections section {
@@ -1640,9 +1604,10 @@ a:focus-visible,
 
 .tucked-feature-showcase {
   display: grid;
-  grid-template-columns: minmax(300px, 0.68fr) minmax(0, 1.32fr);
+  grid-template-columns: minmax(0, 0.42fr) minmax(420px, 0.58fr);
   gap: 40px;
   align-items: start;
+  margin-top: 36px;
 }
 
 .tucked-feature-list {
@@ -1655,6 +1620,13 @@ a:focus-visible,
   gap: 0 22px;
 }
 
+.tucked-feature-heading {
+  font-size: clamp(1.5rem, 2.1vw, 2rem) !important;
+  line-height: 1.2 !important;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 .tucked-feature-item {
   display: grid;
   gap: 7px;
@@ -1663,31 +1635,31 @@ a:focus-visible,
 }
 
 .tucked-feature-item h3 {
-  font-size: clamp(1.25rem, 1.5vw, 1.58rem);
+  font-size: clamp(1.25rem, 1.45vw, 1.45rem);
 }
 
 .tucked-feature-item p {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.48;
 }
 
 .tucked-screenshot-showcase {
   display: grid;
   grid-template-areas:
-    "heading heading"
+    "label label"
     "main selector";
-  grid-template-columns: minmax(280px, 1fr) minmax(150px, 180px);
+  grid-template-columns: minmax(300px, 1fr) minmax(140px, 170px);
   align-items: start;
   gap: var(--ta-gap-md);
-  padding: 24px;
+  padding: 20px;
   border: 1px solid var(--ta-border);
   border-radius: 18px;
   background: rgba(251, 250, 246, 0.72);
   box-shadow: 0 12px 28px rgba(25, 53, 31, 0.07);
 }
 
-.tucked-screenshot-showcase .tucked-section-heading {
-  grid-area: heading;
+.tucked-screenshot-showcase > .tucked-kicker {
+  grid-area: label;
 }
 
 .tucked-gallery-main {
@@ -1733,16 +1705,16 @@ a:focus-visible,
   max-height: 100%;
 }
 
-.tucked-policy .tucked-text-stack p,
+.tucked-policy-intro p,
 .tucked-policy-sections p {
   margin-bottom: 10px;
   font-size: 1rem;
-  line-height: 1.42;
+  line-height: 1.58;
 }
 
 .tucked-policy-sections {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px 20px;
+  gap: 16px 28px;
 }
 
 .tucked-policy-sections h3 {
@@ -1948,14 +1920,17 @@ a:focus-visible,
   }
 
   .tucked-hero,
-  .tucked-problem,
+  .tucked-why-layout,
   .tucked-privacy-summary,
   .tucked-benefits,
-  .tucked-card-grid,
-  .tucked-walkthrough-grid,
+  .tucked-work-screen > .tucked-step-list,
   .tucked-feature-showcase,
   .tucked-feature-items {
     grid-template-columns: 1fr;
+  }
+
+  .tucked-use-case-grid .tucked-card {
+    flex-basis: 100%;
   }
 
   .tucked-hero {
@@ -1983,12 +1958,10 @@ a:focus-visible,
     width: min(100% - 2rem, 1180px);
   }
 
-  .tucked-walkthrough-grid,
   .tucked-feature-showcase {
     gap: 1.75rem;
   }
 
-  .tucked-walkthrough-visual .tucked-image,
   .tucked-gallery-main .tucked-image,
   .tucked-hero-media .tucked-image {
     width: min(330px, 100%);
@@ -1996,7 +1969,7 @@ a:focus-visible,
 
   .tucked-screenshot-showcase {
     grid-template-areas:
-      "heading"
+      "label"
       "main"
       "selector";
     grid-template-columns: 1fr;
@@ -2022,11 +1995,6 @@ a:focus-visible,
     padding: 1.25rem;
   }
 
-  .tucked-policy > .tucked-kicker,
-  .tucked-policy > h2 {
-    grid-column: auto;
-  }
-
   .tucked-policy-sections {
     grid-template-columns: 1fr;
   }
@@ -2043,7 +2011,7 @@ a:focus-visible,
   }
 
   .tucked-logo {
-    width: min(180px, 54vw);
+    width: min(220px, 62vw);
   }
 }
 
@@ -2053,32 +2021,25 @@ a:focus-visible,
   }
 
   .tucked-hero,
-  .tucked-walkthrough-grid,
   .tucked-feature-showcase {
     grid-template-columns: minmax(0, 1fr);
   }
 
   .tucked-benefits,
-  .tucked-card-grid,
   .tucked-feature-items {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tucked-use-case-grid .tucked-card {
+    flex-basis: calc((100% - 16px) / 2);
   }
 
   .tucked-screenshot-selector {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .tucked-problem,
+  .tucked-why-layout,
   .tucked-privacy-summary {
     grid-template-columns: 1fr;
-  }
-
-  .tucked-policy {
-    grid-template-columns: 1fr;
-  }
-
-  .tucked-policy > .tucked-kicker,
-  .tucked-policy > h2 {
-    grid-column: auto;
   }
 }

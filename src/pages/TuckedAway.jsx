@@ -7,7 +7,7 @@ const pageDescription =
 const socialDescription = 'Turn a folder full of videos into a private, searchable library organised your way.';
 
 const tuckedAwayImages = {
-  logo: '/images/tucked-away/tucked-away-logo.png',
+  logo: '/images/tucked-away/tucked-away-logo-transparent.png',
   catalogue: '/images/tucked-away/tucked-away-catalogue.jpg',
   history: '/images/tucked-away/tucked-away-history.jpg',
   metadata: '/images/tucked-away/tucked-away-metadata.jpg',
@@ -150,9 +150,7 @@ function BackToLabLink({ onBackToLab, className = '' }) {
 }
 
 export default function TuckedAway({ onBackToLab }) {
-  const [selectedStepIndex, setSelectedStepIndex] = useState(0);
   const [selectedScreenshotIndex, setSelectedScreenshotIndex] = useState(0);
-  const selectedStep = steps[selectedStepIndex];
   const selectedScreenshot = screenshots[selectedScreenshotIndex];
 
   useEffect(() => {
@@ -211,7 +209,7 @@ export default function TuckedAway({ onBackToLab }) {
               <span>Tucked Away</span>
             </ImageWithFallback>
           </div>
-          <h1 id="tucked-title">Turn a folder full of videos into a library you can actually use.</h1>
+          <h1 id="tucked-title">Turn a phone full of videos into a library you can actually use.</h1>
           <p className="tucked-lede">
             Tucked Away is a private Android app that helps you organise, search and revisit videos stored on your phone or SD card.
           </p>
@@ -221,6 +219,7 @@ export default function TuckedAway({ onBackToLab }) {
           <div className="tucked-actions" aria-label="Tucked Away actions">
             {/* Future release link: TUCKED_AWAY_GOOGLE_PLAY_URL */}
             <span className="tucked-status-button" aria-disabled="true">Coming to Android</span>
+            <a href="#why-tucked-away">Why Tucked Away</a>
             <a href="#how-it-works">See how it works</a>
             <a href="#privacy">Privacy and your data</a>
           </div>
@@ -234,8 +233,8 @@ export default function TuckedAway({ onBackToLab }) {
       </section>
 
       <section id="why-tucked-away" className="tucked-section tucked-why-screen section-anchor" aria-labelledby="why-title">
-        <div className="tucked-problem">
-          <div>
+        <div className="tucked-why-layout">
+          <div className="tucked-why-copy">
             <p className="tucked-kicker">Why Tucked Away</p>
             <h2 id="why-title">A folder full of videos is not a library.</h2>
             <div className="tucked-text-stack">
@@ -245,63 +244,12 @@ export default function TuckedAway({ onBackToLab }) {
               <p>Tucked Away adds structure around the videos without moving or changing the original files. You can give them meaningful titles, add ratings and notes, organise them with your own fields, and quickly find the ones worth returning to.</p>
             </div>
           </div>
-          <aside className="tucked-before-after" aria-label="Illustrative before and after video list example">
-            <p className="tucked-example-note">Illustrative example</p>
-            <div>
-              <h3>Before</h3>
-              {['VID_20260104_132112.mp4', 'VID_20260105_094533.mp4', 'video-final-2.mp4', 'downloaded-video.mp4'].map((item) => (
-                <span key={item}>{item}</span>
-              ))}
-            </div>
-            <div>
-              <h3>After</h3>
-              {['Upper Body Band Strength', '30-Minute Pasta Bake', 'Mum’s Birthday, 2024', 'Beginner Guitar Chords'].map((item) => (
-                <span key={item}>{item}</span>
-              ))}
-            </div>
-          </aside>
-        </div>
-
-        <div className="tucked-benefits" aria-label="Three main Tucked Away benefits">
-          {benefits.map((benefit) => (
-            <article key={benefit.title} className="tucked-card">
-              <h2>{benefit.title}</h2>
-              <p>{benefit.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section id="how-it-works" className="tucked-section tucked-walkthrough section-anchor" aria-labelledby="how-title">
-        <div className="tucked-section-heading">
-          <p className="tucked-kicker">Process</p>
-          <h2 id="how-title">How it works</h2>
-        </div>
-        <div className="tucked-walkthrough-grid">
-          <TuckedAwayImageSlot
-            src={selectedStep.src}
-            label={selectedStep.label}
-            className="tucked-walkthrough-visual"
-            id="tucked-process-image"
-            lazy={false}
-          />
-          <div className="tucked-step-list" role="tablist" aria-label="Tucked Away process steps">
-            {steps.map((step, index) => (
-              <button
-                key={step.title}
-                type="button"
-                className={`tucked-step-option${selectedStepIndex === index ? ' is-selected' : ''}`}
-                role="tab"
-                aria-selected={selectedStepIndex === index}
-                aria-controls="tucked-process-image"
-                onClick={() => setSelectedStepIndex(index)}
-              >
-                <span className="tucked-step-number" aria-hidden="true">{index + 1}</span>
-                <span>
-                  <span className="tucked-step-option-title">{step.title}</span>
-                  <span className="tucked-step-option-text">{step.text}</span>
-                </span>
-              </button>
+          <div className="tucked-benefits" aria-label="Three main Tucked Away benefits">
+            {benefits.map((benefit) => (
+              <article key={benefit.title} className="tucked-card tucked-benefit-card">
+                <h2>{benefit.title}</h2>
+                <p>{benefit.text}</p>
+              </article>
             ))}
           </div>
         </div>
@@ -323,11 +271,28 @@ export default function TuckedAway({ onBackToLab }) {
         </section>
       </section>
 
-      <section id="features" className="tucked-section tucked-feature-showcase section-anchor" aria-labelledby="features-title">
+      <section id="how-it-works" className="tucked-section tucked-work-screen section-anchor" aria-labelledby="how-title">
+        <div className="tucked-section-heading">
+          <p className="tucked-kicker">Process</p>
+          <h2 id="how-title">How it works</h2>
+        </div>
+        <div className="tucked-step-list" aria-label="Tucked Away process steps">
+          {steps.map((step, index) => (
+            <article key={step.title} className="tucked-step-option">
+              <span className="tucked-step-number" aria-hidden="true">{index + 1}</span>
+              <span>
+                <span className="tucked-step-option-title">{step.title}</span>
+                <span className="tucked-step-option-text">{step.text}</span>
+              </span>
+            </article>
+          ))}
+        </div>
+
+        <section id="features" className="tucked-feature-showcase section-anchor" aria-labelledby="features-title">
         <div className="tucked-feature-list">
           <div className="tucked-section-heading">
             <p className="tucked-kicker">Features</p>
-            <h2 id="features-title">Built around the way you use your videos</h2>
+            <h2 id="features-title" className="tucked-feature-heading">Tucked Away focuses on useful information and clear actions rather than large thumbnails.</h2>
           </div>
           <div className="tucked-feature-items">
             {features.map(([title, text]) => (
@@ -339,11 +304,7 @@ export default function TuckedAway({ onBackToLab }) {
           </div>
         </div>
         <div className="tucked-screenshot-showcase" aria-labelledby="screens-title">
-          <div className="tucked-section-heading">
-            <p className="tucked-kicker">Screenshots</p>
-            <h2 id="screens-title">A compact library without wasted space</h2>
-            <p>Tucked Away focuses on useful information and clear actions rather than large thumbnails.</p>
-          </div>
+          <p className="tucked-kicker" id="screens-title">Screenshots</p>
           <TuckedAwayImageSlot
             src={selectedScreenshot[1]}
             label={`Tucked Away ${selectedScreenshot[0]} screenshot`}
@@ -368,6 +329,7 @@ export default function TuckedAway({ onBackToLab }) {
             ))}
           </div>
         </div>
+        </section>
       </section>
 
       <section className="tucked-privacy-summary" aria-labelledby="privacy-summary-title">
@@ -381,9 +343,9 @@ export default function TuckedAway({ onBackToLab }) {
       </section>
 
       <section id="privacy" className="tucked-section tucked-policy section-anchor" aria-labelledby="privacy-title">
-        <p className="tucked-kicker">Tucked Away</p>
-        <h2 id="privacy-title">Privacy policy</h2>
-        <div className="tucked-text-stack">
+        <div className="tucked-policy-intro">
+          <p className="tucked-kicker">Tucked Away</p>
+          <h2 id="privacy-title">Privacy policy</h2>
           {privacyIntro.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}

@@ -158,25 +158,31 @@ check(combinedSource.includes('Coming to Android'), 'Tucked Away release status 
 check(!combinedSource.includes('play.google.com'), 'Tucked Away should not include a fake Google Play link before release.')
 check(combinedSource.includes('tucked-image-placeholder'), 'Missing Tucked Away images should render intentional placeholders.')
 check(combinedSource.includes('tuckedAwayImages'), 'Tucked Away image paths should be managed through a central image mapping.')
-check(combinedSource.includes('/images/tucked-away/tucked-away-logo.png'), 'Tucked Away should use the supplied logo asset.')
+check(combinedSource.includes('/images/tucked-away/tucked-away-logo-transparent.png'), 'Tucked Away should use the transparent logo asset.')
 check(combinedSource.includes('/images/tucked-away/tucked-away-catalogue.jpg'), 'Tucked Away should use the supplied catalogue screenshot.')
 check(combinedSource.includes('/images/tucked-away/tucked-away-active-filter.jpg'), 'Tucked Away should use the supplied active-filter screenshot.')
 check(combinedSource.includes('/images/tucked-away/tucked-away-history.jpg'), 'Tucked Away should use the supplied history screenshot.')
 check(!combinedSource.includes('<br'), 'Tucked Away hero heading should not be manually split with hard-coded line breaks.')
-check(combinedSource.includes('selectedStepIndex'), 'Tucked Away should use a keyboard-accessible process selector state.')
 check(combinedSource.includes('selectedScreenshotIndex'), 'Tucked Away should use a keyboard-accessible screenshot selector state.')
 check(combinedSource.includes('role="tablist"'), 'Tucked Away process and screenshot selectors should expose tablist semantics.')
 check(combinedSource.includes('aria-selected'), 'Tucked Away selectors should expose selected state.')
-check(combinedSource.includes('tucked-walkthrough-grid'), 'Tucked Away How it works should use the walkthrough layout.')
+check(combinedSource.includes('href="#why-tucked-away"'), 'Tucked Away hero should include a Why Tucked Away action.')
+check(combinedSource.includes('Turn a phone full of videos into a library you can actually use.'), 'Tucked Away hero should use the approved phone-focused heading.')
+check(!combinedSource.includes('Turn a folder full of videos into a library you can actually use.'), 'Tucked Away old folder-focused hero heading should be absent.')
+check(!combinedSource.includes('Built around the way you use your videos'), 'Tucked Away old oversized feature heading should be absent.')
+check(!combinedSource.includes('tucked-before-after'), 'Tucked Away should not render the old Before and After panel.')
+check(!combinedSource.includes('tucked-walkthrough-visual'), 'Tucked Away should not render the old large How it works screenshot.')
+check(combinedSource.includes('tucked-work-screen'), 'Tucked Away How it works and feature content should share the work-screen layout.')
 check(combinedSource.includes('tucked-feature-showcase'), 'Tucked Away Features and Screenshots should share one showcase layout.')
 check(!combinedSource.includes('tucked-use-case-visual'), 'Tucked Away should not retain the redundant full-width use-case screenshot panel.')
 check(styleText.includes('--ta-green-900'), 'Tucked Away CSS should use a central green palette.')
 check(styleText.includes('--ta-gap-section: 50px'), 'Tucked Away CSS should use the restored deliberate spacing scale.')
-check(styleText.includes('grid-template-columns: minmax(360px, 0.95fr) minmax(0, 1.05fr)'), 'Tucked Away process section should use the requested screenshot-plus-step layout.')
-check(styleText.includes('grid-template-columns: minmax(300px, 0.68fr) minmax(0, 1.32fr)'), 'Tucked Away feature section should use the requested feature-list-plus-gallery layout.')
+check(styleText.includes('grid-template-columns: repeat(3, minmax(0, 1fr))'), 'Tucked Away process steps should use a three-column desktop row.')
+check(styleText.includes('grid-template-columns: minmax(0, 0.42fr) minmax(420px, 0.58fr)'), 'Tucked Away feature section should use the requested feature-list-plus-gallery layout.')
 check(!styleText.includes('tucked-screenshot-grid'), 'Tucked Away should not use the old six-image screenshot grid.')
 check(!styleText.includes('tucked-feature-grid'), 'Tucked Away should not use the old feature card grid.')
 check(!styleText.includes('tucked-steps'), 'Tucked Away should not use the old three screenshot-card process grid.')
+check(!/\.tucked-[^{]+position:\s*absolute/s.test(styleText), 'Tucked Away core layout should not use absolute positioning.')
 check(!styleText.includes('grid-template-rows: auto auto auto 360px'), 'Tucked Away process cards should not use the old oversized fixed row height.')
 check(!styleText.includes('grid-template-rows: auto 440px'), 'Tucked Away screenshot cards should not use the old oversized gallery row height.')
 check(!/\.tucked-section\s*\{[^}]*100vh/s.test(styleText), 'Tucked Away sections should not use viewport-height layout.')
@@ -199,7 +205,7 @@ function privacyIntroChecks() {
 
 function tuckedAwayContentChecks() {
   const requiredText = [
-    'Turn a folder full of videos into a library you can actually use.',
+    'Turn a phone full of videos into a library you can actually use.',
     'A folder full of videos is not a library.',
     'Know what each video is',
     'Find the right video quickly',

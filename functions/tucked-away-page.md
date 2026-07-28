@@ -54,14 +54,16 @@ Tucked Away is a public product marketing page and privacy-policy page for Sara'
 
 ## Layout Rules
 
-- The page is organised as five desktop content beats: hero/catalogue, why/before-after/benefits, how/use cases, features/screenshots, and privacy/closing.
+- The page is organised as five desktop content beats: hero/catalogue, why/use-cases/benefits, how/features/screenshots, privacy policy, and closing/footer.
 - Use the shared page width: `max-width` around `1240px`, centred with responsive inline padding.
 - Keep a compact header. Do not let it consume a full hero-like row.
 - Hero layout is two columns on desktop: logo, heading, copy and buttons on the left; catalogue screenshot on the right.
-- Why Tucked Away uses a two-column explanation plus before/after panel, with benefits directly beneath.
-- How it works uses one selected screenshot and three visible selectable step descriptions. Use cases sit below it in a compact grid.
-- Features and Screenshots share one editorial split: feature list left, main screenshot showcase and selectors right.
-- Privacy remains fully visible and readable, followed by the closing CTA and footer.
+- Why Tucked Away uses a two-column layout with explanation copy on the left and the three benefits on the right. The old before/after filename panel must not render.
+- Use cases sit directly beneath Why Tucked Away in a compact wrapping card row.
+- How it works uses three compact process steps in a horizontal row on desktop. Do not render a large process screenshot beside the steps.
+- Features and Screenshots share one editorial split below the process steps: the feature list sits left and the main screenshot showcase with selectors sits right.
+- The visible feature heading is `Tucked Away focuses on useful information and clear actions rather than large thumbnails.` Do not restore `Built around the way you use your videos`.
+- Privacy remains fully visible and readable. The summary and full policy use the same outer width; the four introductory privacy paragraphs stay together before the subsection grid.
 - Cards must size to their content and should not use large fixed `min-height` values.
 - Tucked Away sections must not use `100vh` or other viewport-height layouts.
 - Preserve approved copy exactly unless Sara supplies replacement wording.
@@ -99,10 +101,14 @@ Tucked Away is a public product marketing page and privacy-policy page for Sara'
 - Hero heading is not manually split with hard-coded line breaks.
 - Tucked Away styles use the central green palette tokens.
 - Tucked Away uses a deliberate shared spacing scale without returning to oversized slide sections.
-- How it works step selectors update the process screenshot.
+- The hero heading is `Turn a phone full of videos into a library you can actually use.`
+- The hero includes the `Why Tucked Away` action linked to `#why-tucked-away`.
+- The transparent logo asset is used and should not show a visible rectangular background.
+- How it works shows three process steps without a large process screenshot.
 - Screenshot selectors update the main screenshot.
-- Use cases remain visible below How it works without a redundant standalone screenshot panel.
+- Use cases remain visible below Why Tucked Away without a redundant standalone screenshot panel.
 - Features and screenshots render as one showcase, not separate grids.
+- Privacy summary and policy containers align to the same width.
 - No Tucked Away section uses viewport-height layout.
 - No Tucked Away card uses a large fixed minimum height.
 - No old oversized `360px` process row or `440px` gallery row returns.
