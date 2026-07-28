@@ -67,6 +67,7 @@ Tucked Away is a public product marketing page and privacy-policy page for Sara'
 - Privacy remains fully visible and readable. The summary and full policy use the same outer width; the four introductory privacy paragraphs stay together before the subsection grid.
 - Cards must size to their content and should not use large fixed `min-height` values.
 - Tucked Away sections must not use `100vh` or other viewport-height layouts.
+- Tucked Away h1 and h2 sizes are page-scoped and intentionally smaller than the broader portfolio hero typography; h3 and card heading sizes should not be changed during this typography refinement.
 - Preserve approved copy exactly unless Sara supplies replacement wording.
 
 ## Metadata Rules
@@ -115,3 +116,5 @@ Tucked Away is a public product marketing page and privacy-policy page for Sara'
 - No Tucked Away section uses viewport-height layout.
 - No Tucked Away card uses a large fixed minimum height.
 - No old oversized `360px` process row or `440px` gallery row returns.
+- H1 uses `clamp(2.75rem, 4vw, 4.25rem)` on desktop and stays prominent without dominating the hero.
+- H2 uses `clamp(2rem, 3vw, 3.1rem)` for section headings, while h3 and card heading overrides remain unchanged.

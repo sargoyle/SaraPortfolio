@@ -1127,14 +1127,14 @@ a:focus-visible,
 
 .tucked-page h1 {
   max-width: 760px;
-  font-size: clamp(3rem, 4.5vw, 4.75rem);
+  font-size: clamp(2.75rem, 4vw, 4.25rem);
   line-height: 0.98;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.03em;
 }
 
 .tucked-page h2 {
-  font-size: clamp(2.65rem, 3.8vw, 3.5rem);
-  line-height: 1;
+  font-size: clamp(2rem, 3vw, 3.1rem);
+  line-height: 1.02;
   letter-spacing: -0.025em;
 }
 
@@ -1576,7 +1576,7 @@ a:focus-visible,
 
 .tucked-closing h2 {
   max-width: 780px;
-  font-size: clamp(2.4rem, 3.5vw, 3.35rem);
+  font-size: clamp(2rem, 3vw, 3.1rem);
   line-height: 1;
 }
 
@@ -1940,11 +1940,11 @@ a:focus-visible,
 
   .tucked-page h1 {
     max-width: none;
-    font-size: clamp(2.65rem, 12vw, 3.4rem);
+    font-size: clamp(2.625rem, 11vw, 3rem);
   }
 
   .tucked-page h2 {
-    font-size: clamp(2rem, 9vw, 2.75rem);
+    font-size: clamp(2rem, 8vw, 2.375rem);
   }
 
   .tucked-section {

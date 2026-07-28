@@ -94,6 +94,7 @@ Use this checklist before release and after changes to shared navigation, filter
 - Confirm the feature heading is the smaller `Tucked Away focuses on useful information and clear actions rather than large thumbnails.` text.
 - Confirm the feature list and screenshot showcase sit side by side on desktop.
 - Confirm the screenshot selector changes the main screenshot and the old six-image grid is not shown.
+- Confirm Tucked Away h1 and h2 headings are reduced while h3/card headings retain their existing sizing.
 - Confirm the four introductory privacy paragraphs display exactly.
 - Confirm Private by design and Privacy policy align to the same outer width.
 - Confirm the Contact subsection and support email placeholder are not visible.
