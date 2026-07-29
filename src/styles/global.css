@@ -1127,15 +1127,15 @@ a:focus-visible,
 
 .tucked-page h1 {
   max-width: 760px;
-  font-size: clamp(2.75rem, 4vw, 4.25rem);
-  line-height: 0.98;
-  letter-spacing: -0.03em;
+  font-size: 52px;
+  line-height: 1;
+  letter-spacing: -0.025em;
 }
 
 .tucked-page h2 {
-  font-size: clamp(2rem, 3vw, 3.1rem);
-  line-height: 1.02;
-  letter-spacing: -0.025em;
+  font-size: 38px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
 .tucked-page h3 {
@@ -1576,8 +1576,16 @@ a:focus-visible,
 
 .tucked-closing h2 {
   max-width: 780px;
-  font-size: clamp(2rem, 3vw, 3.1rem);
-  line-height: 1;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .tucked-page h1 {
+    font-size: 46px;
+  }
+
+  .tucked-page h2 {
+    font-size: 34px;
+  }
 }
 
 .tucked-hero-media .tucked-image-slot,
@@ -1940,11 +1948,13 @@ a:focus-visible,
 
   .tucked-page h1 {
     max-width: none;
-    font-size: clamp(2.625rem, 11vw, 3rem);
+    font-size: 38px;
+    line-height: 1.04;
   }
 
   .tucked-page h2 {
-    font-size: clamp(2rem, 8vw, 2.375rem);
+    font-size: 30px;
+    line-height: 1.08;
   }
 
   .tucked-section {

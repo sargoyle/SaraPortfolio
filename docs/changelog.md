@@ -30,6 +30,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-07-29: Replaced Tucked Away h1 and h2 clamp typography with exact fixed responsive heading sizes while preserving h3 and content/layout. Files affected: `src/styles/global.css`, `scripts/validate-site.mjs`, `functions/tucked-away-page.md`, `docs/tasks.md`.
 - 2026-07-28: Reduced Tucked Away page-scoped h1 and h2 heading sizes while preserving h3 and card heading sizing. Files affected: `src/styles/global.css`, `scripts/validate-site.mjs`, `functions/tucked-away-page.md`, `docs/manual-qa-checklist.md`, `docs/tasks.md`.
 - 2026-07-28: Removed the Tucked Away Privacy Contact placeholder and set the fixed Last updated date to `28 July 2026`. Files affected: `src/pages/TuckedAway.jsx`, `scripts/validate-site.mjs`, `functions/tucked-away-page.md`, `docs/manual-qa-checklist.md`, `docs/tasks.md`.
 - 2026-07-28: Corrected the Tucked Away page layout with the approved phone-focused hero heading, larger transparent logo, Why/use-case grouping, benefit tiles beside the Why copy, horizontal process steps, feature/screenshot split, aligned Privacy containers, updated validation, and refreshed function docs. Files affected: `src/pages/TuckedAway.jsx`, `src/styles/global.css`, `scripts/validate-site.mjs`, `functions/tucked-away-page.md`, `docs/tasks.md`.
