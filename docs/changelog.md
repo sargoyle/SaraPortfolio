@@ -30,6 +30,9 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-07-30: Corrected the Tucked Away Use cases Setup screenshot sizing so the phone screenshot keeps its natural portrait ratio instead of stretching into a wide pale panel. Files affected: `src/styles/global.css`, `scripts/validate-site.mjs`, `functions/tucked-away-page.md`, `docs/tasks.md`.
+- 2026-07-30: Matched the Tucked Away Use cases Setup screenshot to the Overview rounded screenshot treatment and kept wrapper-like padding, border, and background removed. Files affected: `src/styles/global.css`, `scripts/validate-site.mjs`, `docs/tasks.md`.
+- 2026-07-30: Applied the shared Tucked Away screenshot shadow treatment to the Use cases Setup screenshot without changing its size or placement. Files affected: `src/styles/global.css`, `scripts/validate-site.mjs`, `docs/tasks.md`.
 - 2026-07-30: Increased the Tucked Away Use cases Setup screenshot display size while keeping it unframed and in the left intro column. Files affected: `src/styles/global.css`, `scripts/validate-site.mjs`, `docs/tasks.md`.
 - 2026-07-30: Moved the Tucked Away Setup screenshot out of the Features selector gallery and placed it beneath the Use cases intro as a direct unframed image. Files affected: `src/pages/TuckedAway.jsx`, `src/styles/global.css`, `scripts/validate-site.mjs`, `functions/tucked-away-page.md`, `docs/manual-qa-checklist.md`, `docs/tasks.md`.
 - 2026-07-30: Refined the Tucked Away Privacy panel by removing the dark-green intro panel and oversized subsection cards, replacing them with compact intro text and divider-based policy sections. Files affected: `src/pages/TuckedAway.jsx`, `src/styles/global.css`, `scripts/validate-site.mjs`, `functions/tucked-away-page.md`, `docs/manual-qa-checklist.md`, `docs/tasks.md`.

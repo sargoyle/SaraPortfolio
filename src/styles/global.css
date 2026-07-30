@@ -1102,6 +1102,7 @@ a:focus-visible,
   --ta-border: #d8ddd3;
   --ta-text: #142418;
   --ta-muted: #526158;
+  --ta-screenshot-shadow: 0 16px 34px rgba(25, 53, 31, 0.16);
   min-height: 100vh;
   overflow-x: hidden;
   background:
@@ -1488,7 +1489,7 @@ a:focus-visible,
 .tucked-image-slot-hero .tucked-image,
 .tucked-image-slot-wide .tucked-image {
   border-radius: 18px;
-  box-shadow: 0 16px 34px rgba(25, 53, 31, 0.16);
+  box-shadow: var(--ta-screenshot-shadow);
 }
 
 .tucked-panel-privacy .tucked-image-slot {
@@ -1666,15 +1667,17 @@ a:focus-visible,
 
 .tucked-use-case-screenshot {
   display: block;
-  width: min(100%, 380px);
-  height: auto;
-  max-height: min(58vh, 520px);
+  width: auto;
+  max-width: min(100%, 380px);
+  height: min(58vh, 520px);
   justify-self: center;
   object-fit: contain;
   object-position: center top;
   border: 0;
+  border-radius: 18px;
+  padding: 0;
   background: transparent;
-  box-shadow: none;
+  box-shadow: var(--ta-screenshot-shadow);
 }
 
 .tucked-use-case-screenshot-placeholder {
@@ -2120,7 +2123,7 @@ a:focus-visible,
 
   .tucked-use-case-screenshot,
   .tucked-use-case-screenshot-placeholder {
-    width: min(100%, 320px);
+    max-width: min(100%, 320px);
   }
 
   .tucked-policy-sections {
@@ -2213,7 +2216,7 @@ a:focus-visible,
 
   .tucked-use-case-screenshot,
   .tucked-use-case-screenshot-placeholder {
-    width: min(100%, 340px);
+    max-width: min(100%, 340px);
   }
 
   .tucked-policy-sections {

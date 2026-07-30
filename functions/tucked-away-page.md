@@ -61,6 +61,7 @@ Tucked Away is a public product marketing page and privacy-policy page for Sara'
 - Features must keep one large selected screenshot and compact thumbnail selectors for: Catalogue, History, Filters, Video details, and Sorting.
 - The Setup screenshot belongs beneath the Use cases intro copy as a direct image, not inside the Features selector gallery.
 - The Use cases Setup screenshot must not be wrapped in a card, panel, frame, border, caption, or added heading.
+- The Use cases Setup screenshot must preserve its natural phone-screenshot aspect ratio; do not force a fixed width and capped height that stretches it into a wide panel.
 - The Features screenshot gallery should be visually integrated into the section, without a heavy outer panel or boxed heading.
 - Missing images must keep deliberate placeholders with accessible labels.
 
@@ -140,6 +141,7 @@ Tucked Away is a public product marketing page and privacy-policy page for Sara'
 - The Features panel uses the approved eight features and five screenshot selector labels: Catalogue, History, Filters, Video details, and Sorting.
 - The Features panel does not show Setup as a screenshot selector.
 - The Use cases panel shows the Setup screenshot beneath the intro copy without a frame, caption, or extra heading.
+- The Use cases Setup screenshot uses the same direct rounded screenshot glow as the Overview screenshot and must not be distorted into a wide rectangular panel.
 - The Features heading should not be trapped in the left column, and the screenshot gallery should start with the feature-card row rather than at the top of the panel.
 - The transparent logo asset is used and should not show a visible rectangular background.
 - The five tabs are visible and programmatically identify the selected panel.

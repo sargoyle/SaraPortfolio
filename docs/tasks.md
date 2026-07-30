@@ -276,6 +276,9 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Remove the narrow paragraph width constraint from the Tucked Away Overview `Private by design` section.
 - `[x]` Move the Tucked Away Setup screenshot from the Features selector gallery to the Use cases intro area.
 - `[x]` Increase the Tucked Away Use cases Setup screenshot size while keeping it unframed and in the left intro column.
+- `[x]` Apply the shared Tucked Away screenshot shadow treatment to the Use cases Setup screenshot.
+- `[x]` Remove visible wrapper-like styling from the Tucked Away Use cases Setup screenshot by matching the Overview rounded screenshot treatment.
+- `[x]` Preserve the Tucked Away Use cases Setup screenshot's natural phone aspect ratio so it no longer renders as a wide pale panel.
 - `[x]` Run `npm run build`.
 - `[x]` Verify generated `dist` output.
 - `[x]` Choose deployment target: Vercel with custom domain `https://saragillard.com`.
