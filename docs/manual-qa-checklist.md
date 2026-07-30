@@ -76,30 +76,43 @@ Use this checklist before release and after changes to shared navigation, filter
 
 - Open `/tucked-away` directly and refresh; confirm the page still loads.
 - Open `/tucked-away#privacy` directly; confirm the Privacy policy heading is visible.
-- Confirm section links work for Overview, Why Tucked Away, How it works, Use cases, Features, and Privacy.
+- Confirm section links work for Overview, Why Tucked Away, Use cases, Features, and Privacy.
 - Confirm `Back to Sara's Lab` returns to Sara's Lab.
-- Confirm the Google Play/release control is visible but not clickable.
+- Confirm `Coming to Android` is visible once as a non-clicking status at the bottom of the Tucked Away navigation panel.
 - Confirm missing screenshot assets show deliberate placeholders without broken image icons.
 - Confirm supplied Tucked Away logo and screenshots render from `public/images/tucked-away`.
-- Confirm the Tucked Away logo is larger and does not show a rectangular background block.
-- Confirm the hero heading is exactly `Turn a phone full of videos into a library you can actually use.`
-- Confirm the hero includes a `Why Tucked Away` pill linked to `#why-tucked-away`.
-- Confirm the hero fits comfortably within one desktop viewport.
-- Confirm the page reads as five desktop beats: hero/catalogue, why/use cases/benefits, how/features/screenshots, privacy policy, and closing/footer.
-- Confirm cards, screenshot frames, and privacy policy spacing are balanced on desktop and mobile.
-- Confirm the old Before/After filename panel is not visible.
-- Confirm the three benefit tiles sit beside the Why copy on desktop.
-- Confirm Use cases sit directly beneath Why Tucked Away.
-- Confirm How it works shows three compact steps and no large process screenshot.
-- Confirm the feature heading is the smaller `Tucked Away focuses on useful information and clear actions rather than large thumbnails.` text.
-- Confirm the feature list and screenshot showcase sit side by side on desktop.
-- Confirm the screenshot selector changes the main screenshot and the old six-image grid is not shown.
-- Confirm Tucked Away h1 and h2 headings are reduced while h3/card headings retain their existing sizing.
+- Confirm the page presents one active cabinet panel rather than a long stacked marketing page.
+- Confirm Overview, Why Tucked Away, Use cases, Features, and Privacy tabs are available.
+- Confirm desktop uses a compact left navigation rail and active panel.
+- Confirm tablet and mobile use horizontal tabs above the active panel.
+- Confirm selecting each tab changes the active panel and updates the URL hash.
+- Confirm direct links to `#overview`, `#why`, `#use-cases`, `#features`, and `#privacy` select the correct panel.
+- Confirm Browser Back and Forward move between selected panels.
+- Confirm the Overview heading is exactly `Turn a phone full of videos into a library you can actually use.`
+- Confirm the Overview content area does not show a `Coming to Android` pill.
+- Confirm the Overview `Private by design` row includes `Read the full privacy policy` and selecting it opens the Privacy panel.
+- Confirm the page does not describe Tucked Away as an exercise-only app.
+- Confirm Why Tucked Away contains the approved problem story on the left and three stacked benefit cards on the right.
+- Confirm the Why Tucked Away eyebrow and heading span the full panel width above the body/card columns on desktop.
+- Confirm How it works appears directly underneath Why Tucked Away with the approved three steps.
+- Confirm How it works cards use dark green filled cards with light text, no separate number badges, and headings `1. Choose a folder`, `2. Organise your library`, and `3. Find and revisit`.
+- Confirm there is only one visible How it works section on the full page.
+- Confirm Use cases appears as the third Tucked Away nav item, shows the Setup screenshot directly beneath the intro copy, and contains the approved seven use-case cards.
+- Confirm the Use cases Setup screenshot is not wrapped in a card, panel, frame, border, caption, or extra heading.
+- Confirm Features contains the approved eight features and screenshot selectors for Catalogue, History, Filters, Video details, and Sorting.
+- Confirm Setup is not shown as a Features screenshot selector.
+- Confirm Features uses a light integrated screenshot gallery with one main screenshot and thumbnail selectors beside it on desktop.
+- Confirm the Features heading spans above both columns, with feature cards and the screenshot gallery aligned beneath it.
+- Confirm the old Before/After filename panel, long feature grid, and six-image screenshot selector are not visible.
+- Confirm Tucked Away h1 and h2 headings are compact while h3/card headings retain their existing sizing.
 - Confirm the four introductory privacy paragraphs display exactly.
-- Confirm Private by design and Privacy policy align to the same outer width.
+- Confirm the Privacy introduction is normal dark text with a subtle accent, not a dark-green panel.
+- Confirm Privacy policy subsections use compact dividers rather than large rounded cards, and `Last updated` sizes only to its content.
+- Confirm Privacy contains no duplicate marketing blocks.
+- Confirm `Privacy basics`, sample statistics, and unapproved exercise-only positioning are absent.
 - Confirm the Contact subsection and support email placeholder are not visible.
 - Confirm the Last updated subsection displays `Last updated: 28 July 2026`.
-- Confirm mobile layout has no horizontal overflow.
+- Confirm mobile and tablet layouts have no horizontal overflow or nested scrollbars.
 - Confirm page-specific metadata is present in `tucked-away.html`.
 
 ## Accessibility

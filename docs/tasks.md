@@ -262,6 +262,20 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Remove the Tucked Away Privacy Contact placeholder and set the fixed Last updated date to `28 July 2026`.
 - `[x]` Reduce Tucked Away page-scoped h1 and h2 typography while preserving h3 and card heading sizes.
 - `[x]` Replace Tucked Away h1 and h2 clamp typography with exact fixed responsive sizes.
+- `[x]` Rebuild Tucked Away as a compact five-panel interactive app showcase with hash-aware tabs.
+- `[x]` Restore approved Tucked Away product copy, remove exercise-only positioning, and add content-lock validation.
+- `[x]` Clean up the Tucked Away Overview hero with in-hero logo, single Coming to Android action, direct screenshot treatment, and one Private by design summary.
+- `[x]` Correct the Tucked Away Overview Private by design row with a working Read the full privacy policy action.
+- `[x]` Combine Tucked Away page two into a Why Tucked Away panel with inline How it works steps and remove the separate How panel.
+- `[x]` Restore Tucked Away Use cases as the third nav panel and polish the Features screenshot gallery into a lighter integrated layout.
+- `[x]` Move the Tucked Away `Coming to Android` status from the Overview content area to the bottom of the cabinet navigation.
+- `[x]` Refine the Tucked Away Why panel with a full-width heading row and dark green How it works step cards.
+- `[x]` Move Tucked Away How it works step numbers into the card headings and remove separate number badges.
+- `[x]` Refine the Tucked Away Features panel so the heading spans above both columns and the screenshot gallery aligns with the feature cards.
+- `[x]` Refine the Tucked Away Privacy panel by removing the dark intro panel and oversized subsection cards in favour of compact divider-based policy content.
+- `[x]` Remove the narrow paragraph width constraint from the Tucked Away Overview `Private by design` section.
+- `[x]` Move the Tucked Away Setup screenshot from the Features selector gallery to the Use cases intro area.
+- `[x]` Increase the Tucked Away Use cases Setup screenshot size while keeping it unframed and in the left intro column.
 - `[x]` Run `npm run build`.
 - `[x]` Verify generated `dist` output.
 - `[x]` Choose deployment target: Vercel with custom domain `https://saragillard.com`.

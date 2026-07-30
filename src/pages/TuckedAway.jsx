@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import ImageWithFallback from '../components/ImageWithFallback.jsx';
 
 const pageTitle = 'Tucked Away | Organise videos stored on your Android device';
@@ -17,113 +17,187 @@ const tuckedAwayImages = {
   setupStep2: '/images/tucked-away/tucked-away-setup-step-2.jpg',
 };
 
-const navItems = [
-  ['overview', 'Overview'],
-  ['why-tucked-away', 'Why Tucked Away'],
-  ['how-it-works', 'How it works'],
-  ['use-cases', 'Use cases'],
-  ['features', 'Features'],
-  ['privacy', 'Privacy'],
-];
-
-const benefits = [
-  {
-    title: 'Know what each video is',
-    text: 'Add meaningful titles, ratings, notes, tags and details that matter to your collection.',
-  },
-  {
-    title: 'Find the right video quickly',
-    text: 'Search, filter and sort without opening every file to work out what it contains.',
-  },
-  {
-    title: 'Remember what is worth revisiting',
-    text: 'Use ratings, including Don’t rewatch, and keep a record of videos you have watched, completed, made or practised.',
-  },
-];
-
-const steps = [
-  {
-    title: 'Choose a folder',
-    text: 'Select the folder containing the videos you want Tucked Away to catalogue.',
-    src: tuckedAwayImages.setupStep1,
-    label: 'Tucked Away folder setup screenshot',
-  },
-  {
-    title: 'Organise your library',
-    text: 'Choose a starter template or begin with a blank library, then add the fields and details that matter to you.',
-    src: tuckedAwayImages.setupStep2,
-    label: 'Tucked Away library setup screenshot',
-  },
-  {
-    title: 'Find and revisit',
-    text: 'Use Search, Filters and Sort to find the right video, then record when you watch or use it.',
-    src: tuckedAwayImages.activeFilter,
-    label: 'Tucked Away Search and Filters screenshot',
-  },
-];
-
-const useCases = [
-  ['Personal and family videos', 'Organise videos by people, event, location, year or occasion, and make favourite memories easier to find again.'],
-  ['Exercise videos', 'Organise workouts by body area, equipment, exercise type or effort, then record them as Completed.'],
-  ['Craft and creative tutorials', 'Organise tutorials by project type, materials, technique or difficulty, and remember which ones you want to try again.'],
-  ['Learning videos', 'Group lessons by subject, topic or level, add notes, and quickly find the right lesson.'],
-  ['Cooking videos', 'Organise recipes by meal type, cuisine, ingredients or difficulty, then record them as Made.'],
-  ['Music practice', 'Catalogue lessons and demonstrations by instrument, technique or skill level, then record them as Practised.'],
-  ['Blank library', 'Start with no predefined structure and create the fields, filters and wording that suit your own collection.'],
-];
-
-const features = [
-  ['Custom fields', 'Create text, number, date, select and multi-select fields to describe the videos in your library.'],
-  ['Search, Filters and Sort', 'Search video titles and details, combine filters, and sort the current view using useful library fields.'],
-  ['Ratings', 'Rate videos from Don’t rewatch through to 5 stars, so worthwhile content does not get lost among everything else.'],
-  ['Watched history', 'Record when you watch or use a video and review your activity by week.'],
-  ['Custom wording', 'Choose wording that fits your library, such as Watched, Completed, Made or Practised.'],
-  ['Card layout', 'Choose which details appear on Catalogue cards and place them in the order that works for you.'],
-  ['Themes', 'Choose from several colour themes while keeping the same compact, readable layout.'],
-  ['Backup and restore', 'Export your library settings, metadata and history as a backup file. Your videos are not included.'],
-];
-
-const screenshots = [
-  ['Catalogue', tuckedAwayImages.catalogue],
-  ['History', tuckedAwayImages.history],
-  ['Filters', tuckedAwayImages.activeFilter],
-  ['Video details', tuckedAwayImages.metadata],
-  ['Sorting', tuckedAwayImages.sort],
-  ['Setup', tuckedAwayImages.setupStep1],
-];
-
-const privacyIntro = [
-  'Tucked Away helps you organise videos stored on your phone or SD card. It does not upload, copy or change the original video files. When you tap Play, the video opens in a video player installed on your phone.',
-  'The details you add, such as titles, ratings, notes, tags and watched history, are saved on your device for Tucked Away to access. If you uninstall the app or clear its data, this information may be removed, but your videos are not touched.',
-  'You can create a backup of your library details and history and save it anywhere you choose. The backup does not include the videos themselves.',
-  'You do not need an account to use Tucked Away, and your library information stays on your device.',
-];
-
-const privacySections = [
-  ['Information Tucked Away accesses', 'Tucked Away accesses the video folder you choose and the app information needed to organise that library.'],
-  ['Information stored by the app', 'Tucked Away may store library settings, custom fields and options, titles, ratings, notes, tags, watched history, filter settings, card-layout settings and appearance settings.'],
-  ['Information not collected', 'Tucked Away does not require an account and does not upload your video files or library information to the developer.'],
-  [
-    'Backups',
-    'Backups contain your Tucked Away settings, metadata and history. They do not contain copies of your videos.\n\nYou choose where an exported backup is saved. If you restore a backup later, you may need to select the video folder again.',
+const tuckedAwayContent = {
+  nav: [
+    { id: 'overview', label: 'Overview' },
+    { id: 'why', label: 'Why Tucked Away' },
+    { id: 'use-cases', label: 'Use cases' },
+    { id: 'features', label: 'Features' },
+    { id: 'privacy', label: 'Privacy' },
   ],
-  ['External video players', 'When you tap Play, Android opens the video using a compatible player installed on your device. That player may have its own privacy policy and playback settings.'],
-  [
-    'Data removal',
-    'You can remove Tucked Away’s locally stored information by clearing the app’s data or uninstalling the app. This does not delete the original videos from your selected folder.\n\nAny backup files you exported must be deleted separately from the location where you saved them.',
-  ],
-  ['Changes to this policy', 'This privacy policy may be updated if Tucked Away’s features or data-handling practices change. The latest version will remain available on this page.'],
-];
+  overview: {
+    label: 'OVERVIEW',
+    title: 'Turn a phone full of videos into a library you can actually use.',
+    paragraphs: [
+      'Tucked Away is a private Android app that helps you organise, search and revisit videos stored on your phone or SD card.',
+      'Add the information that matters to you, find useful videos without opening every file, and remember which ones are worth coming back to.',
+    ],
+    status: 'Coming to Android',
+    privacyTitle: 'Private by design',
+    privacyParagraphs: [
+      'Your videos stay where they are. Tucked Away does not upload, copy or change them, and you do not need an account.',
+      'Your library details are stored on your device, and backups are only created when you choose to export one.',
+    ],
+    image: tuckedAwayImages.catalogue,
+    imageLabel: 'Tucked Away catalogue screenshot',
+  },
+  why: {
+    label: 'WHY TUCKED AWAY',
+    title: 'A folder full of videos is not a library.',
+    paragraphs: [
+      'Over time, personal videos, tutorials, workouts and saved clips can build up into one large folder.',
+      'The files may have similar names, little useful information and no clear way to tell them apart. Even when you remember that a useful video is in there somewhere, finding it can mean opening files one by one.',
+      'When hundreds of videos build up in one folder, the problem is no longer storing them. It is knowing what they contain and which ones are worth watching again.',
+      'Tucked Away adds structure around the videos without moving or changing the original files. You can give them meaningful titles, add ratings and notes, organise them with your own fields, and quickly find the ones worth returning to.',
+    ],
+    benefits: [
+      {
+        title: 'Know what each video is',
+        text: 'Add meaningful titles, ratings, notes, tags and details that matter to your collection.',
+      },
+      {
+        title: 'Find the right video quickly',
+        text: 'Search, filter and sort without opening every file to work out what it contains.',
+      },
+      {
+        title: 'Remember what is worth revisiting',
+        text: 'Use ratings, including Don’t rewatch, and keep a record of videos you have watched, completed, made or practised.',
+      },
+    ],
+    howTitle: 'How it works',
+    steps: [
+      ['Choose a folder', 'Select the folder containing the videos you want Tucked Away to catalogue.'],
+      [
+        'Organise your library',
+        'Choose a starter template or begin with a blank library, then add the fields and details that matter to you.',
+      ],
+      [
+        'Find and revisit',
+        'Use Search, Filters and Sort to find the right video, then record when you watch or use it.',
+      ],
+    ],
+  },
+  'use-cases': {
+    label: 'USE CASES',
+    title: 'One app, different kinds of video libraries',
+    paragraphs: [
+      'Tucked Away includes starter templates to help you begin, but every library can be customised.',
+    ],
+    setupImage: tuckedAwayImages.setupStep2,
+    setupImageLabel: 'Tucked Away Setup screenshot',
+    useCases: [
+      ['Personal and family videos', 'Organise videos by people, event, location, year or occasion, and make favourite memories easier to find again.'],
+      ['Exercise videos', 'Organise workouts by body area, equipment, exercise type or effort, then record them as Completed.'],
+      ['Craft and creative tutorials', 'Organise tutorials by project type, materials, technique or difficulty, and remember which ones you want to try again.'],
+      ['Learning videos', 'Group lessons by subject, topic or level, add notes, and quickly find the right lesson.'],
+      ['Cooking videos', 'Organise recipes by meal type, cuisine, ingredients or difficulty, then record them as Made.'],
+      ['Music practice', 'Catalogue lessons and demonstrations by instrument, technique or skill level, then record them as Practised.'],
+      ['Blank library', 'Start with no predefined structure and create the fields, filters and wording that suit your own collection.'],
+    ],
+  },
+  features: {
+    label: 'FEATURES',
+    title: 'Tucked Away focuses on useful information and clear actions rather than large thumbnails.',
+    features: [
+      [
+        'Custom fields',
+        'Create text, number, date, select and multi-select fields to describe the videos in your library.',
+      ],
+      [
+        'Search, Filters and Sort',
+        'Search video titles and details, combine filters, and sort the current view using useful library fields.',
+      ],
+      [
+        'Ratings',
+        'Rate videos from Don’t rewatch through to 5 stars, so worthwhile content does not get lost among everything else.',
+      ],
+      ['Watched history', 'Record when you watch or use a video and review your activity by week.'],
+      [
+        'Custom wording',
+        'Choose wording that fits your library, such as Watched, Completed, Made or Practised.',
+      ],
+      [
+        'Card layout',
+        'Choose which details appear on Catalogue cards and place them in the order that works for you.',
+      ],
+      ['Themes', 'Choose from several colour themes while keeping the same compact, readable layout.'],
+      [
+        'Backup and restore',
+        'Export your library settings, metadata and history as a backup file. Your videos are not included.',
+      ],
+    ],
+    screenshots: [
+      { label: 'Catalogue', image: tuckedAwayImages.catalogue, alt: 'Tucked Away catalogue screenshot' },
+      { label: 'History', image: tuckedAwayImages.history, alt: 'Tucked Away history screenshot' },
+      { label: 'Filters', image: tuckedAwayImages.activeFilter, alt: 'Tucked Away filters screenshot' },
+      { label: 'Video details', image: tuckedAwayImages.metadata, alt: 'Tucked Away video details screenshot' },
+      { label: 'Sorting', image: tuckedAwayImages.sort, alt: 'Tucked Away sorting screenshot' },
+    ],
+  },
+  privacy: {
+    label: 'PRIVACY',
+    policyTitle: 'Privacy policy',
+    policyIntro: [
+      'Tucked Away helps you organise videos stored on your phone or SD card. It does not upload, copy or change the original video files. When you tap Play, the video opens in a video player installed on your phone.',
+      'The details you add, such as titles, ratings, notes, tags and watched history, are saved on your device for Tucked Away to access. If you uninstall the app or clear its data, this information may be removed, but your videos are not touched.',
+      'You can create a backup of your library details and history and save it anywhere you choose. The backup does not include the videos themselves.',
+      'You do not need an account to use Tucked Away, and your library information stays on your device.',
+    ],
+    policySections: [
+      [
+        'Information Tucked Away accesses',
+        'Tucked Away accesses the video folder you choose and the app information needed to organise that library.',
+      ],
+      [
+        'Information stored by the app',
+        'Tucked Away may store library settings, custom fields and options, titles, ratings, notes, tags, watched history, filter settings, card-layout settings and appearance settings.',
+      ],
+      [
+        'Information not collected',
+        'Tucked Away does not require an account and does not upload your video files or library information to the developer.',
+      ],
+      [
+        'Backups',
+        'Backups contain your Tucked Away settings, metadata and history. They do not contain copies of your videos.\n\nYou choose where an exported backup is saved. If you restore a backup later, you may need to select the video folder again.',
+      ],
+      [
+        'External video players',
+        'When you tap Play, Android opens the video using a compatible player installed on your device. That player may have its own privacy policy and playback settings.',
+      ],
+      [
+        'Data removal',
+        'You can remove Tucked Away’s locally stored information by clearing the app’s data or uninstalling the app. This does not delete the original videos from your selected folder.\n\nAny backup files you exported must be deleted separately from the location where you saved them.',
+      ],
+      [
+        'Changes to this policy',
+        'This privacy policy may be updated if Tucked Away’s features or data-handling practices change. The latest version will remain available on this page.',
+      ],
+      ['Last updated', 'Last updated: 28 July 2026'],
+    ],
+  },
+};
+
+const tuckedAwaySections = tuckedAwayContent.nav.map((item) => ({
+  ...item,
+  ...tuckedAwayContent[item.id],
+  navLabel: item.label,
+}));
+
+const validSectionIds = tuckedAwaySections.map((section) => section.id);
 
 function setMeta(selector, attribute, value) {
   const element = document.head.querySelector(selector);
   if (element) element.setAttribute(attribute, value);
 }
 
+function getSectionFromHash() {
+  const section = window.location.hash.replace('#', '');
+  return validSectionIds.includes(section) ? section : 'overview';
+}
+
 function TuckedAwayImageSlot({ src, label, className = '', lazy = true, variant = 'phone', id }) {
   return (
     <figure id={id} className={`tucked-image-slot tucked-image-slot-${variant} ${className}`}>
-      {/* Replace this path with the final Tucked Away screenshot when the production asset is ready. */}
       <ImageWithFallback
         src={src}
         alt={label}
@@ -149,9 +223,273 @@ function BackToLabLink({ onBackToLab, className = '' }) {
   );
 }
 
+function TuckedAwayNavigation({ activeSection, onSelect, tabRefs }) {
+  const handleKeyDown = (event, currentIndex) => {
+    if (!['ArrowDown', 'ArrowUp', 'ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(event.key)) return;
+
+    event.preventDefault();
+    const lastIndex = tuckedAwaySections.length - 1;
+    const nextIndex = {
+      ArrowDown: currentIndex === lastIndex ? 0 : currentIndex + 1,
+      ArrowRight: currentIndex === lastIndex ? 0 : currentIndex + 1,
+      ArrowUp: currentIndex === 0 ? lastIndex : currentIndex - 1,
+      ArrowLeft: currentIndex === 0 ? lastIndex : currentIndex - 1,
+      Home: 0,
+      End: lastIndex,
+    }[event.key];
+
+    const nextSection = tuckedAwaySections[nextIndex];
+    onSelect(nextSection.id, false);
+    tabRefs.current[nextSection.id]?.focus();
+  };
+
+  return (
+    <nav className="tucked-cabinet-nav" aria-label="Tucked Away sections">
+      <div className="tucked-tab-list" role="tablist">
+        {tuckedAwaySections.map((section, index) => {
+          const isActive = section.id === activeSection;
+          return (
+            <button
+              key={section.id}
+              ref={(node) => {
+                tabRefs.current[section.id] = node;
+              }}
+              type="button"
+              id={`tucked-tab-${section.id}`}
+              className={`tucked-tab${isActive ? ' is-active' : ''}`}
+              role="tab"
+              aria-selected={isActive}
+              aria-controls={`tucked-panel-${section.id}`}
+              tabIndex={isActive ? 0 : -1}
+              onClick={() => onSelect(section.id)}
+              onKeyDown={(event) => handleKeyDown(event, index)}
+            >
+              <span className="tucked-tab-index">{String(index + 1).padStart(2, '0')}</span>
+              <span>{section.navLabel}</span>
+            </button>
+          );
+        })}
+      </div>
+      <div className="tucked-nav-status" aria-label="Tucked Away release status">
+        <span>{tuckedAwayContent.overview.status}</span>
+      </div>
+    </nav>
+  );
+}
+
+function TuckedAwayList({ items, className = '', numberedHeadings = false }) {
+  return (
+    <div className={`tucked-content-grid ${className}`}>
+      {items.map(([title, text], index) => (
+        <article key={title}>
+          <h3>{numberedHeadings ? `${index + 1}. ${title}` : title}</h3>
+          {text.split('\n\n').map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </article>
+      ))}
+    </div>
+  );
+}
+
+function FeatureShowcase({ section }) {
+  const [selectedScreenshot, setSelectedScreenshot] = useState(section.screenshots[0]);
+  const activeScreenshot = section.screenshots.some((screenshot) => screenshot.label === selectedScreenshot?.label)
+    ? selectedScreenshot
+    : section.screenshots[0];
+
+  useEffect(() => {
+    setSelectedScreenshot(section.screenshots[0]);
+  }, [section.screenshots]);
+
+  return (
+    <>
+      <div className="tucked-feature-list">
+        <TuckedAwayList items={section.features} className="tucked-feature-items" />
+      </div>
+      <div className="tucked-selected-screenshot-panel" aria-label="Tucked Away screenshot gallery">
+        <TuckedAwayImageSlot
+          src={activeScreenshot.image}
+          label={activeScreenshot.alt}
+          lazy={false}
+          variant="wide"
+        />
+        <div className="tucked-screenshot-selectors" role="tablist" aria-label="Tucked Away screenshot views">
+          {section.screenshots.map((screenshot) => {
+            const isSelected = screenshot.label === activeScreenshot.label;
+            return (
+              <button
+                key={screenshot.label}
+                type="button"
+                className={isSelected ? 'is-active' : ''}
+                aria-selected={isSelected}
+                role="tab"
+                onClick={() => setSelectedScreenshot(screenshot)}
+              >
+                <TuckedAwayImageSlot src={screenshot.image} label={screenshot.alt} variant="thumb" />
+                {screenshot.label}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </>
+  );
+}
+
+function PrivacyPolicy({ section }) {
+  return (
+    <div className="tucked-privacy-details">
+      <h2>{section.policyTitle}</h2>
+      <div className="tucked-policy-intro">
+        {section.policyIntro.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </div>
+      <div className="tucked-policy-sections">
+        {section.policySections.map(([title, text]) => (
+          <section key={title} aria-labelledby={`privacy-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
+            <h3 id={`privacy-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>{title}</h3>
+            {text.split('\n\n').map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </section>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function TuckedAwayPanel({ section, panelRef, onSelect }) {
+  const isOverview = section.id === 'overview';
+  const isPrivacy = section.id === 'privacy';
+  const isUseCases = section.id === 'use-cases';
+  const isWhy = section.id === 'why';
+  const showStandardImage = ['overview'].includes(section.id);
+
+  return (
+    <section
+      key={section.id}
+      id={section.id}
+      ref={panelRef}
+      className={`tucked-panel tucked-panel-${section.id}`}
+      role="tabpanel"
+      tabIndex={-1}
+      aria-labelledby={`tucked-tab-${section.id}`}
+    >
+      {isWhy ? (
+        <div className="tucked-why-heading">
+          <p className="tucked-kicker">{section.label}</p>
+          <h2>{section.title}</h2>
+        </div>
+      ) : null}
+
+      {isWhy ? (
+        <div className="tucked-why-copy">
+          {section.paragraphs?.map((paragraph) => (
+            <p key={paragraph} className="tucked-panel-summary">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      ) : null}
+
+      {!isPrivacy && !isWhy ? (
+        <div className="tucked-panel-copy">
+        {isOverview ? (
+          <ImageWithFallback
+            src={tuckedAwayImages.logo}
+            alt="Tucked Away logo"
+            className="tucked-hero-logo"
+            fallbackClassName="tucked-logo-placeholder"
+            fallbackLabel="Tucked Away"
+            loading={undefined}
+          >
+            <span>Tucked Away</span>
+          </ImageWithFallback>
+        ) : null}
+        <p className="tucked-kicker">{section.label}</p>
+        {isOverview ? <h1>{section.title}</h1> : <h2>{section.title}</h2>}
+        {section.paragraphs?.map((paragraph) => (
+          <p key={paragraph} className="tucked-panel-summary">
+            {paragraph}
+          </p>
+        ))}
+        {isUseCases ? (
+          <ImageWithFallback
+            src={section.setupImage}
+            alt={section.setupImageLabel}
+            className="tucked-use-case-screenshot"
+            fallbackClassName="tucked-use-case-screenshot-placeholder"
+            fallbackLabel={section.setupImageLabel}
+          >
+            <span>{section.setupImageLabel}</span>
+          </ImageWithFallback>
+        ) : null}
+        {section.id === 'privacy' ? (
+          <button type="button" className="tucked-inline-action" onClick={() => panelRef.current?.querySelector('.tucked-privacy-details')?.scrollIntoView({ block: 'start' })}>
+            Read the full privacy policy
+          </button>
+        ) : null}
+        </div>
+      ) : null}
+
+      {showStandardImage ? (
+        <div className="tucked-panel-media">
+          <TuckedAwayImageSlot
+            src={section.image}
+            label={section.imageLabel}
+            lazy={!isOverview}
+            variant={isOverview ? 'hero' : 'phone'}
+          />
+        </div>
+      ) : null}
+
+      {isOverview ? (
+        <div className="tucked-overview-privacy">
+          <h2>{section.privacyTitle}</h2>
+          {section.privacyParagraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          <button type="button" className="tucked-inline-action" onClick={() => onSelect('privacy')}>
+            Read the full privacy policy
+          </button>
+        </div>
+      ) : null}
+
+      {isWhy ? (
+        <div className="tucked-panel-details tucked-why-details">
+          <TuckedAwayList items={section.benefits.map(({ title, text }) => [title, text])} className="tucked-benefits tucked-benefits-stacked" />
+        </div>
+      ) : null}
+
+      {isWhy ? (
+        <div className="tucked-how-inline">
+          <h2>{section.howTitle}</h2>
+          <TuckedAwayList items={section.steps} className="tucked-process-row" numberedHeadings />
+        </div>
+      ) : null}
+
+      {isUseCases ? (
+        <div className="tucked-panel-details tucked-use-case-details">
+          <TuckedAwayList items={section.useCases} className="tucked-use-case-grid" />
+        </div>
+      ) : null}
+
+      {section.id === 'features' ? <FeatureShowcase section={section} /> : null}
+      {section.id === 'privacy' ? <PrivacyPolicy section={section} /> : null}
+    </section>
+  );
+}
+
 export default function TuckedAway({ onBackToLab }) {
-  const [selectedScreenshotIndex, setSelectedScreenshotIndex] = useState(0);
-  const selectedScreenshot = screenshots[selectedScreenshotIndex];
+  const [activeSection, setActiveSection] = useState('overview');
+  const panelRef = useRef(null);
+  const tabRefs = useRef({});
+  const section = useMemo(
+    () => tuckedAwaySections.find((item) => item.id === activeSection) || tuckedAwaySections[0],
+    [activeSection],
+  );
 
   useEffect(() => {
     const originalTitle = document.title;
@@ -173,209 +511,72 @@ export default function TuckedAway({ onBackToLab }) {
   }, []);
 
   useEffect(() => {
-    if (!window.location.hash) return;
-    const target = document.querySelector(window.location.hash);
-    if (!target) return;
+    const syncFromHash = () => {
+      const rawSection = window.location.hash.replace('#', '');
+      const nextSection = getSectionFromHash();
+      setActiveSection(nextSection);
+      if (rawSection !== nextSection) {
+        window.history.replaceState({ tuckedAwaySection: nextSection }, '', `#${nextSection}`);
+      }
+    };
 
-    window.requestAnimationFrame(() => {
-      target.scrollIntoView({ block: 'start' });
-    });
+    const initialSection = getSectionFromHash();
+    setActiveSection(initialSection);
+    if (window.location.hash.replace('#', '') !== initialSection) {
+      window.history.replaceState({ tuckedAwaySection: initialSection }, '', `#${initialSection}`);
+    }
+
+    window.addEventListener('hashchange', syncFromHash);
+    window.addEventListener('popstate', syncFromHash);
+    return () => {
+      window.removeEventListener('hashchange', syncFromHash);
+      window.removeEventListener('popstate', syncFromHash);
+    };
   }, []);
 
+  const selectSection = (sectionId, focusPanel = true) => {
+    if (!validSectionIds.includes(sectionId)) return;
+    setActiveSection(sectionId);
+    if (window.location.hash !== `#${sectionId}`) {
+      window.history.pushState({ tuckedAwaySection: sectionId }, '', `#${sectionId}`);
+    }
+    if (focusPanel) {
+      window.requestAnimationFrame(() => {
+        panelRef.current?.focus({ preventScroll: true });
+      });
+    }
+  };
+
   return (
-    <main className="tucked-page" id="overview">
+    <main className="tucked-page">
       <header className="tucked-header">
+        <div className="tucked-header-brand">
+          <ImageWithFallback
+            src={tuckedAwayImages.logo}
+            alt="Tucked Away logo"
+            className="tucked-logo"
+            fallbackClassName="tucked-logo-placeholder"
+            fallbackLabel="Tucked Away"
+            loading={undefined}
+          >
+            <span>Tucked Away</span>
+          </ImageWithFallback>
+        </div>
         <BackToLabLink onBackToLab={onBackToLab} className="tucked-back-link" />
-        <nav className="tucked-section-nav" aria-label="Tucked Away page sections">
-          {navItems.map(([id, label]) => (
-            <a key={id} href={`#${id}`}>
-              {label}
-            </a>
-          ))}
-        </nav>
       </header>
 
-      <section className="tucked-hero section-anchor" aria-labelledby="tucked-title">
-        <div className="tucked-hero-copy">
-          <div className="tucked-brand-row">
-            <ImageWithFallback
-              src={tuckedAwayImages.logo}
-              alt="Tucked Away logo"
-              className="tucked-logo"
-              fallbackClassName="tucked-logo-placeholder"
-              fallbackLabel="Tucked Away"
-              loading={undefined}
-            >
-              <span>Tucked Away</span>
-            </ImageWithFallback>
-          </div>
-          <h1 id="tucked-title">Turn a phone full of videos into a library you can actually use.</h1>
-          <p className="tucked-lede">
-            Tucked Away is a private Android app that helps you organise, search and revisit videos stored on your phone or SD card.
-          </p>
-          <p>
-            Add the information that matters to you, find useful videos without opening every file, and remember which ones are worth coming back to.
-          </p>
-          <div className="tucked-actions" aria-label="Tucked Away actions">
-            {/* Future release link: TUCKED_AWAY_GOOGLE_PLAY_URL */}
-            <span className="tucked-status-button" aria-disabled="true">Coming to Android</span>
-            <a href="#why-tucked-away">Why Tucked Away</a>
-            <a href="#how-it-works">See how it works</a>
-            <a href="#privacy">Privacy and your data</a>
-          </div>
+      <div className="tucked-cabinet" aria-label="Tucked Away app showcase">
+        <TuckedAwayNavigation activeSection={activeSection} onSelect={selectSection} tabRefs={tabRefs} />
+        <div className="tucked-panel-shell">
+          <TuckedAwayPanel section={section} panelRef={panelRef} onSelect={selectSection} />
         </div>
-        <TuckedAwayImageSlot
-          src={tuckedAwayImages.catalogue}
-          label="Tucked Away Catalogue screenshot"
-          className="tucked-hero-media"
-          lazy={false}
-        />
-      </section>
-
-      <section id="why-tucked-away" className="tucked-section tucked-why-screen section-anchor" aria-labelledby="why-title">
-        <div className="tucked-why-layout">
-          <div className="tucked-why-copy">
-            <p className="tucked-kicker">Why Tucked Away</p>
-            <h2 id="why-title">A folder full of videos is not a library.</h2>
-            <div className="tucked-text-stack">
-              <p>Over time, personal videos, tutorials, workouts and saved clips can build up into one large folder.</p>
-              <p>The files may have similar names, little useful information and no clear way to tell them apart. Even when you remember that a useful video is in there somewhere, finding it can mean opening files one by one.</p>
-              <p>When hundreds of videos build up in one folder, the problem is no longer storing them. It is knowing what they contain and which ones are worth watching again.</p>
-              <p>Tucked Away adds structure around the videos without moving or changing the original files. You can give them meaningful titles, add ratings and notes, organise them with your own fields, and quickly find the ones worth returning to.</p>
-            </div>
-          </div>
-          <div className="tucked-benefits" aria-label="Three main Tucked Away benefits">
-            {benefits.map((benefit) => (
-              <article key={benefit.title} className="tucked-card tucked-benefit-card">
-                <h2>{benefit.title}</h2>
-                <p>{benefit.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        <section id="use-cases" className="tucked-use-cases section-anchor" aria-labelledby="use-title">
-          <div className="tucked-section-heading">
-            <p className="tucked-kicker">Use cases</p>
-            <h2 id="use-title">One app, different kinds of video libraries</h2>
-            <p>Tucked Away includes starter templates to help you begin, but every library can be customised.</p>
-          </div>
-          <div className="tucked-card-grid tucked-use-case-grid">
-            {useCases.map(([title, text]) => (
-              <article key={title} className="tucked-card">
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-      </section>
-
-      <section id="how-it-works" className="tucked-section tucked-work-screen section-anchor" aria-labelledby="how-title">
-        <div className="tucked-section-heading">
-          <p className="tucked-kicker">Process</p>
-          <h2 id="how-title">How it works</h2>
-        </div>
-        <div className="tucked-step-list" aria-label="Tucked Away process steps">
-          {steps.map((step, index) => (
-            <article key={step.title} className="tucked-step-option">
-              <span className="tucked-step-number" aria-hidden="true">{index + 1}</span>
-              <span>
-                <span className="tucked-step-option-title">{step.title}</span>
-                <span className="tucked-step-option-text">{step.text}</span>
-              </span>
-            </article>
-          ))}
-        </div>
-
-        <section id="features" className="tucked-feature-showcase section-anchor" aria-labelledby="features-title">
-        <div className="tucked-feature-list">
-          <div className="tucked-section-heading">
-            <p className="tucked-kicker">Features</p>
-            <h2 id="features-title" className="tucked-feature-heading">Tucked Away focuses on useful information and clear actions rather than large thumbnails.</h2>
-          </div>
-          <div className="tucked-feature-items">
-            {features.map(([title, text]) => (
-              <article key={title} className="tucked-feature-item">
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-        <div className="tucked-screenshot-showcase" aria-labelledby="screens-title">
-          <p className="tucked-kicker" id="screens-title">Screenshots</p>
-          <TuckedAwayImageSlot
-            src={selectedScreenshot[1]}
-            label={`Tucked Away ${selectedScreenshot[0]} screenshot`}
-            className="tucked-gallery-main"
-            id="tucked-gallery-image"
-            lazy={false}
-          />
-          <div className="tucked-screenshot-selector" role="tablist" aria-label="Tucked Away screenshot views">
-            {screenshots.map(([label, src], index) => (
-              <button
-                key={label}
-                type="button"
-                className={`tucked-screenshot-option${selectedScreenshotIndex === index ? ' is-selected' : ''}`}
-                role="tab"
-                aria-selected={selectedScreenshotIndex === index}
-                aria-controls="tucked-gallery-image"
-                onClick={() => setSelectedScreenshotIndex(index)}
-              >
-                <TuckedAwayImageSlot src={src} label={`Tucked Away ${label} screenshot`} variant="thumb" />
-                <span>{label}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-        </section>
-      </section>
-
-      <section className="tucked-privacy-summary" aria-labelledby="privacy-summary-title">
-        <div>
-          <p className="tucked-kicker">Privacy</p>
-          <h2 id="privacy-summary-title">Private by design</h2>
-          <p>Your videos stay where they are. Tucked Away does not upload, copy or change them, and you do not need an account.</p>
-          <p>Your library details are stored on your device, and backups are only created when you choose to export one.</p>
-        </div>
-        <a href="#privacy">Read the full privacy policy</a>
-      </section>
-
-      <section id="privacy" className="tucked-section tucked-policy section-anchor" aria-labelledby="privacy-title">
-        <div className="tucked-policy-intro">
-          <p className="tucked-kicker">Tucked Away</p>
-          <h2 id="privacy-title">Privacy policy</h2>
-          {privacyIntro.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-        <div className="tucked-policy-sections">
-          {privacySections.map(([title, text]) => (
-            <section key={title} aria-labelledby={`privacy-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
-              <h3 id={`privacy-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>{title}</h3>
-              {text.split('\n\n').map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </section>
-          ))}
-          <section aria-labelledby="privacy-updated">
-            <h3 id="privacy-updated">Last updated</h3>
-            <p>Last updated: 28 July 2026</p>
-          </section>
-        </div>
-      </section>
-
-      <section className="tucked-closing" aria-labelledby="closing-title">
-        <h2 id="closing-title">Find the videos worth coming back to.</h2>
-        <p>Tucked Away turns a crowded folder into a useful, searchable library while leaving every original video exactly where it is.</p>
-        {/* Future badge path: /public/images/tucked-away/google-play-badge.png */}
-        <span className="tucked-status-button" aria-disabled="true">Coming to Android</span>
-      </section>
+      </div>
 
       <footer className="tucked-footer">
         <span>Tucked Away</span>
-        <a href="/tucked-away#privacy">Privacy policy</a>
+        <button type="button" onClick={() => selectSection('privacy')}>
+          Privacy policy
+        </button>
         <BackToLabLink onBackToLab={onBackToLab} />
         <span>© Sara Gillard 2026</span>
       </footer>
