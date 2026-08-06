@@ -26,7 +26,7 @@ Shows project image or placeholder, type, title, status, short card description,
 
 ## Data Rules
 
-- Reads `title`, `type`, `status`, `cardDescription`, `image`, `link`, `actionLabel`, `download`, `downloadLabel`, `mediaFit`, and `mediaPosition`.
+- Reads `title`, `type`, `status`, `cardDescription`, `image`, `imageAlt`, `link`, `actionLabel`, `download`, `downloadLabel`, `mediaFit`, and `mediaPosition`.
 - Uses `actionLabel` when present; otherwise uses `Open project` for linked projects and `View details` for modal-only projects.
 - Cards open the detail modal first; downloadable assets are exposed inside the detail view.
 
@@ -63,4 +63,6 @@ Shows project image or placeholder, type, title, status, short card description,
 - Batcave Font card shows Live status.
 - Batcave Font action still opens the detail view, where the font download is available.
 - Tucked Away card shows In Progress status and View Details action text.
+- Meeting Bingo card shows Work in Progress status and Play Meeting Bingo action text.
+- Commonwealth After Dark card shows Passion Project status and Passion Project action text.
 - Broken or empty images do not show browser broken-image icons.

@@ -13,7 +13,7 @@ Displays Sara's Lab projects as a structured gallery of creative systems, tools,
 
 ## User-Facing Behaviour
 
-Visitors see five image-led project cards. Activating a card opens the project detail modal.
+Visitors see seven image-led project cards. Activating a card opens the project detail modal.
 
 ## Layout Rules
 
@@ -29,7 +29,7 @@ Visitors see five image-led project cards. Activating a card opens the project d
 
 ## Data Rules
 
-- Cards use `title`, `type`, `status`, `cardDescription`, `image`, `link`, `actionLabel`, `mediaFit`, and `mediaPosition`.
+- Cards use `title`, `type`, `status`, `cardDescription`, `image`, `imageAlt`, `link`, `actionLabel`, `mediaFit`, and `mediaPosition`.
 - Button text uses `actionLabel` when present, `Open project` when a link exists, otherwise `View details`.
 
 ## Image Rules
@@ -63,9 +63,11 @@ Visitors see five image-led project cards. Activating a card opens the project d
 
 ## Test Expectations
 
-- Exactly five cards render.
-- Card order is Alphabet Stitch, Batcave Font, Xanadu: The 9 Muses, The Door List, Tucked Away.
+- Exactly seven cards render.
+- Card order is Alphabet Stitch, Batcave Font, Xanadu: The 9 Muses, The Door List, Tucked Away, Meeting Bingo, Commonwealth After Dark.
 - Each card shows title, type, status, short description, and action text.
+- Meeting Bingo shows Work in Progress status, the supplied interface image, and `Play Meeting Bingo` action text.
+- Commonwealth After Dark shows Passion Project status, the first Fallout screenshot, and `Passion Project` action text without adding a card-level external link.
 - Missing image projects show a styled placeholder.
 - Xanadu placeholder does not look broken.
 - Card media looks intentional on desktop, tablet, and mobile.

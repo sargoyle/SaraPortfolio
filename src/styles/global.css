@@ -750,6 +750,11 @@ a:focus-visible,
   cursor: pointer;
 }
 
+.lab-project-link-static {
+  cursor: default;
+  pointer-events: none;
+}
+
 .lab-project-detail {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
@@ -800,9 +805,93 @@ a:focus-visible,
   height: 100%;
   max-height: min(56vh, 520px);
   padding: 1rem;
+  transition: opacity 160ms ease;
   object-fit: var(--lab-detail-media-fit, contain);
   object-position: var(--lab-detail-media-position, center);
   background: rgba(0, 0, 0, 0.24);
+}
+
+.lab-project-detail-media-gallery {
+  align-content: start;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.lab-project-detail-media-gallery .lab-project-detail-image {
+  height: auto;
+  max-height: min(42vh, 430px);
+  padding: 0;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.lab-project-gallery-caption {
+  display: grid;
+  width: 100%;
+  gap: 0.35rem;
+}
+
+.lab-project-gallery-caption-title,
+.lab-project-gallery-caption-text {
+  margin: 0;
+}
+
+.lab-project-gallery-caption-title {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.lab-project-gallery-caption-text {
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+.lab-project-gallery-thumbnails {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.lab-project-gallery-thumb {
+  display: grid;
+  aspect-ratio: 16 / 9;
+  place-items: center;
+  overflow: hidden;
+  padding: 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.lab-project-gallery-thumb[aria-pressed='true'] {
+  border-color: var(--accent-light);
+  box-shadow: 0 0 0 2px rgba(123, 63, 228, 0.24);
+}
+
+.lab-project-gallery-thumb:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 3px;
+}
+
+.lab-project-gallery-thumb-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: calc(var(--radius) - 4px);
+  object-fit: cover;
+  object-position: center;
+}
+
+.lab-project-gallery-thumb-fallback {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  border-radius: calc(var(--radius) - 4px);
+  background: rgba(0, 0, 0, 0.28);
+  color: var(--accent-light);
+  font-weight: 700;
 }
 
 .lab-project-detail-body {

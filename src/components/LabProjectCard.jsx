@@ -26,7 +26,7 @@ export default function LabProjectCard({ project, onOpen }) {
           {project.image ? (
             <ImageWithFallback
               src={project.image}
-              alt={`${project.title} preview`}
+              alt={project.imageAlt || `${project.title} preview`}
               className="lab-project-card-image"
               fallbackClassName="lab-project-card-placeholder"
               fallbackLabel={`${project.title} preview unavailable`}

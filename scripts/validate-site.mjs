@@ -146,10 +146,70 @@ prohibitedPositioning.forEach((term) => {
 const srcFiles = walkFiles('src', ['.js', '.jsx'])
 const combinedSource = srcFiles.map((file) => read(file)).join('\n')
 const tuckedAwaySource = read('src/pages/TuckedAway.jsx')
+const labProjectsSource = read('src/data/labProjects.js')
 
 check(!combinedSource.includes('dangerouslySetInnerHTML'), 'Active source should not use dangerouslySetInnerHTML.')
 check(!/mailto:|tel:|instagram\.com|facebook\.com|twitter\.com|x\.com/i.test(combinedSource), 'LinkedIn should remain the only public contact/social route.')
 check(combinedSource.includes("window.location.pathname === '/tucked-away'"), 'Client routing should support direct /tucked-away visits.')
+check(labProjectsSource.includes("id: 'meeting-bingo'"), 'Meeting Bingo project should be registered in Sara\'s Lab data.')
+check(labProjectsSource.includes("title: 'Meeting Bingo'"), 'Meeting Bingo title should be present in Sara\'s Lab data.')
+check(labProjectsSource.includes("type: 'WEB APP'"), 'Meeting Bingo category should be WEB APP.')
+check(labProjectsSource.includes("status: 'Work in Progress'"), 'Meeting Bingo status should be Work in Progress.')
+check(labProjectsSource.includes("link: 'https://meeting-bingo-rg4n.vercel.app/'"), 'Meeting Bingo project URL should be present.')
+check(labProjectsSource.includes("linkLabel: 'Play Meeting Bingo'"), 'Meeting Bingo detail action should use Play Meeting Bingo.')
+check(labProjectsSource.includes("actionLabel: 'Play Meeting Bingo'"), 'Meeting Bingo card action should use Play Meeting Bingo.')
+check(labProjectsSource.includes("image: '/images/lab/meeting-bingo.png'"), 'Meeting Bingo should use the supplied Lab image asset.')
+check(labProjectsSource.includes("imageAlt: 'Meeting Bingo web app interface'"), 'Meeting Bingo should use the supplied image alt text.')
+check(labProjectsSource.includes("order: 6"), 'Meeting Bingo should keep its manual Sara\'s Lab order.')
+check(
+  labProjectsSource.indexOf("id: 'tucked-away'") < labProjectsSource.indexOf("id: 'meeting-bingo'"),
+  'Meeting Bingo should appear after Tucked Away in Sara\'s Lab order.',
+)
+check(labProjectsSource.includes("id: 'commonwealth-after-dark'"), 'Commonwealth After Dark project should be registered in Sara\'s Lab data.')
+check(labProjectsSource.includes("title: 'Commonwealth After Dark'"), 'Commonwealth After Dark title should be present in Sara\'s Lab data.')
+check(labProjectsSource.includes("type: 'FALLOUT 4 MODDING'"), 'Commonwealth After Dark category should be FALLOUT 4 MODDING.')
+check(labProjectsSource.includes("status: 'Passion Project'"), 'Commonwealth After Dark status should be Passion Project.')
+check(labProjectsSource.includes("actionLabel: 'Passion Project'"), 'Commonwealth After Dark should use a non-navigating Passion Project action label.')
+check(labProjectsSource.includes("image: '/images/lab/commonwealth-after-dark-1.jpg'"), 'Commonwealth After Dark should use the first supplied image as the card image.')
+check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark-1.jpg'"), 'Commonwealth After Dark gallery should include the first supplied image.')
+check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark-2.jpg'"), 'Commonwealth After Dark gallery should include the second supplied image.')
+check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark-3.jpg'"), 'Commonwealth After Dark gallery should include the third supplied image.')
+check(labProjectsSource.includes("title: 'The club taking shape'"), 'Commonwealth After Dark first gallery caption title should be present.')
+check(labProjectsSource.includes("title: 'Building the atmosphere'"), 'Commonwealth After Dark second gallery caption title should be present.')
+check(labProjectsSource.includes("title: 'Custom assets in progress'"), 'Commonwealth After Dark third gallery caption title should be present.')
+check(labProjectsSource.includes("order: 7"), 'Commonwealth After Dark should be the final Sara\'s Lab project.')
+check(
+  labProjectsSource.indexOf("id: 'meeting-bingo'") < labProjectsSource.indexOf("id: 'commonwealth-after-dark'"),
+  'Commonwealth After Dark should appear after Meeting Bingo in Sara\'s Lab order.',
+)
+check(
+  combinedSource.includes('galleryImages') && combinedSource.includes('lab-project-gallery-thumbnails'),
+  'Lab project detail view should support optional multi-image galleries.',
+)
+check(
+  combinedSource.includes('aria-pressed={index === activeImageIndex}'),
+  'Lab gallery thumbnails should expose selected state with aria-pressed.',
+)
+check(
+  combinedSource.includes('lab-project-link-static') && combinedSource.includes('aria-disabled="true"'),
+  'Lab project detail view should support non-interactive action labels.',
+)
+check(
+  labProjectsSource.includes('Tick off clichés, awkward moments and predictable workplace habits as they happen'),
+  'Meeting Bingo detail description should use the approved wording.',
+)
+check(
+  !labProjectsSource.includes('The meeting was scheduled for an hour. You knew what was coming. At least now there’s bingo.'),
+  'Meeting Bingo should not include removed draft copy.',
+)
+check(
+  combinedSource.includes("rel={project.link.startsWith('/') ? undefined : 'noopener noreferrer'}"),
+  'External Lab project links should use noopener noreferrer.',
+)
+check(
+  combinedSource.includes('project.imageAlt || `${project.title} preview`'),
+  'Lab project media should support custom image alt text.',
+)
 check(combinedSource.includes('tuckedAwaySections'), 'Tucked Away sections should be managed from one source of truth.')
 check(combinedSource.includes("id: 'privacy'"), 'Tucked Away page should expose a privacy section.')
 check(combinedSource.includes('Privacy policy'), 'Tucked Away privacy policy heading should render.')

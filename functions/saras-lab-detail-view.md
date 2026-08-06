@@ -14,7 +14,7 @@ Displays a selected Sara's Lab project in a focused modal.
 
 ## User-Facing Behaviour
 
-Visitors open a project card and see the project title, type, status, subtitle, image or placeholder, blurb, shared fullscreen previous/next arrow controls, and external or download action when available.
+Visitors open a project card and see the project title, type, status, subtitle, image or placeholder, blurb, shared fullscreen previous/next arrow controls, and external, download, or non-interactive status action when available.
 
 ## Layout Rules
 
@@ -37,10 +37,13 @@ Visitors open a project card and see the project title, type, status, subtitle, 
 - Focus areas may remain in data but are not displayed in the detail view.
 - External link appears only when `project.link` is non-empty.
 - Download link appears only when `project.download` is non-empty; Batcave Font uses this for the completed `.ttf` file.
+- Non-interactive status actions may appear when `actionLabel` is present and there is no `link` or `download`.
 
 ## Image Rules
 
 - Use `project.image` when present.
+- If `project.gallery` contains more than one image, render one active image, image title/caption, and keyboard-accessible thumbnail selectors.
+- Single-image projects must not render thumbnails, image navigation, or empty caption space.
 - Apply `detailMediaFit` and `detailMediaPosition` when present.
 - Use a styled placeholder when absent or unavailable.
 - Detail media should support screenshots added later.
@@ -57,7 +60,7 @@ Visitors open a project card and see the project title, type, status, subtitle, 
 - Close button must align to the modal panel, not the far edge of the viewport.
 - Shared fullscreen arrow controls must move through manual project order.
 - ArrowLeft and ArrowRight should navigate when handlers are available.
-- External links open in a new tab with `rel="noreferrer"`.
+- External links open in a new tab with `rel="noopener noreferrer"`.
 
 ## Known Gaps / Defects
 
@@ -76,5 +79,7 @@ Visitors open a project card and see the project title, type, status, subtitle, 
 - Alphabet Stitch shows the external link.
 - Batcave Font shows the download action and does not show an empty external link.
 - Xanadu: The 9 Muses and The Door List do not show empty external links.
+- Meeting Bingo shows the supplied interface image, Work in Progress status, approved two-paragraph blurb, and `Play Meeting Bingo` external link.
+- Commonwealth After Dark shows Passion Project status, approved three-paragraph blurb, three gallery images in the supplied order, matching captions, and a non-interactive `Passion Project` action.
 - Previous and next fullscreen arrow controls work.
 - Escape and outside click close the modal.

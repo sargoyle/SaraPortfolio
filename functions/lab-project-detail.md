@@ -13,7 +13,7 @@ Reusable detail body for Sara's Lab project modals.
 
 ## User-Facing Behaviour
 
-Shows a richer project note with metadata, visual, blurb, shared fullscreen previous/next arrow controls, optional internal or external link, and optional downloadable asset.
+Shows a richer project note with metadata, visual, blurb, shared fullscreen previous/next arrow controls, optional internal or external link, optional downloadable asset, and optional non-interactive status action.
 
 ## Layout Rules
 
@@ -33,12 +33,17 @@ Shows a richer project note with metadata, visual, blurb, shared fullscreen prev
 - `focus` must be an array.
 - `focus` is data-only for now and is not displayed.
 - Internal project links use same-tab anchors and may specify `linkLabel`.
-- External project links open in a new tab with `rel="noreferrer"`.
+- External project links open in a new tab with `rel="noopener noreferrer"`.
 - Downloadable assets use `download` and `downloadLabel`; render as a normal anchor with the `download` attribute.
+- Projects without links or downloads may show `actionLabel` as a static, non-clicking status-style control.
 
 ## Image Rules
 
-- Supports one main image now and can support screenshots later if extended.
+- Supports one main image by default.
+- Supports optional `gallery` arrays for multi-image project detail views.
+- Gallery items require `src` and `alt`, and may include `title` and `caption`.
+- Multi-image projects show one active image, captions for the selected image, and compact thumbnail selectors.
+- Single-image projects must not show thumbnails or empty caption areas.
 - Empty image uses a styled title placeholder.
 - Uses `detailMediaFit` and `detailMediaPosition` for controlled media display.
 
@@ -54,17 +59,19 @@ Shows a richer project note with metadata, visual, blurb, shared fullscreen prev
 
 ## Known Gaps / Defects
 
-- Multiple screenshots are not yet modeled.
+No known gaps currently documented.
 
 ## Change Rules
 
-- If multiple screenshots are added, update this doc and the data model.
+- Keep gallery behaviour data-driven; do not hard-code a gallery for one project.
 
 ## Test Expectations
 
-- Detail body renders correctly for all five current projects.
+- Detail body renders correctly for all seven current projects.
 - Focus tags are not visibly rendered.
 - External link appears for Alphabet Stitch.
 - Internal `/tucked-away` link appears for Tucked Away.
 - Download link appears for Batcave Font.
+- External link appears for Meeting Bingo as `Play Meeting Bingo`.
+- Commonwealth After Dark renders three gallery images, thumbnail selection, image titles/captions, and a static `Passion Project` action.
 - Shared previous/next arrow controls and ArrowLeft/ArrowRight move between projects.

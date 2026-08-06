@@ -252,6 +252,8 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Add screenshots for Alphabet Stitch, Xanadu: The 9 Muses, The Door List, and Batcave Font; Sara confirmed the Xanadu treatment and current Lab imagery are acceptable.
 - `[x]` Add Tucked Away to Sara's Lab with supplied image, In Progress status, custom card action label, and detail copy.
 - `[x]` Update Tucked Away card action to `View Details` and refresh the Lab image path to the cropped asset.
+- `[x]` Add Meeting Bingo to Sara's Lab as the final project with supplied image, Work in Progress status, Play Meeting Bingo action, and secure external link.
+- `[x]` Add Commonwealth After Dark to Sara's Lab as the final project with supplied three-image gallery, Passion Project status, and non-interactive detail action.
 - `[x]` Create standalone public Tucked Away product page at `/tucked-away` with full privacy-policy anchor at `/tucked-away#privacy`.
 - `[x]` Add Tucked Away route metadata, Vercel rewrite support, sitemap entry, placeholders, and validation coverage.
 - `[x]` Refine Tucked Away page typography, spacing, card density, screenshot presentation, and real image mapping without changing approved content.
