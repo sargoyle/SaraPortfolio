@@ -254,6 +254,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Update Tucked Away card action to `View Details` and refresh the Lab image path to the cropped asset.
 - `[x]` Add Meeting Bingo to Sara's Lab as the final project with supplied image, Work in Progress status, Play Meeting Bingo action, and secure external link.
 - `[x]` Add Commonwealth After Dark to Sara's Lab as the final project with supplied three-image gallery, Passion Project status, and non-interactive detail action.
+- `[x]` Update Meeting Bingo and Commonwealth After Dark Sara's Lab card buttons to `View Details` while preserving their detail-view actions.
 - `[x]` Create standalone public Tucked Away product page at `/tucked-away` with full privacy-policy anchor at `/tucked-away#privacy`.
 - `[x]` Add Tucked Away route metadata, Vercel rewrite support, sitemap entry, placeholders, and validation coverage.
 - `[x]` Refine Tucked Away page typography, spacing, card density, screenshot presentation, and real image mapping without changing approved content.

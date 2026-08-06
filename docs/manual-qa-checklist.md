@@ -62,8 +62,8 @@ Use this checklist before release and after changes to shared navigation, filter
 - Confirm Xanadu and The Door List do not show empty external/download links.
 - Confirm Tucked Away shows status `In Progress`, action text `View Details`, and the cropped app image.
 - Confirm Tucked Away detail links to `/tucked-away`.
-- Confirm Meeting Bingo shows status `Work in Progress`, action text `Play Meeting Bingo`, the supplied app interface image, and a detail link to `https://meeting-bingo-rg4n.vercel.app/` that opens in a new tab.
-- Confirm Commonwealth After Dark appears last, shows status `Passion Project`, action text `Passion Project`, and uses `/images/lab/commonwealth-after-dark-1.jpg` as the card image.
+- Confirm Meeting Bingo shows status `Work in Progress`, card action text `View Details`, the supplied app interface image, and a detail link to `https://meeting-bingo-rg4n.vercel.app/` that opens in a new tab.
+- Confirm Commonwealth After Dark appears last, shows status `Passion Project`, card action text `View Details`, and uses `/images/lab/commonwealth-after-dark-1.jpg` as the card image.
 - Confirm Commonwealth After Dark detail shows all three gallery images in order, with matching titles and captions, and that thumbnail selection works by mouse and keyboard.
 - Confirm Commonwealth After Dark does not show an external link, empty link, or dead navigation action.
 - Confirm detail views do not show a visible Focus section or focus tag list.

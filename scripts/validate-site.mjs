@@ -157,7 +157,8 @@ check(labProjectsSource.includes("type: 'WEB APP'"), 'Meeting Bingo category sho
 check(labProjectsSource.includes("status: 'Work in Progress'"), 'Meeting Bingo status should be Work in Progress.')
 check(labProjectsSource.includes("link: 'https://meeting-bingo-rg4n.vercel.app/'"), 'Meeting Bingo project URL should be present.')
 check(labProjectsSource.includes("linkLabel: 'Play Meeting Bingo'"), 'Meeting Bingo detail action should use Play Meeting Bingo.')
-check(labProjectsSource.includes("actionLabel: 'Play Meeting Bingo'"), 'Meeting Bingo card action should use Play Meeting Bingo.')
+check(labProjectsSource.includes("actionLabel: 'Play Meeting Bingo'"), 'Meeting Bingo detail action fallback should remain Play Meeting Bingo.')
+check(labProjectsSource.includes("cardActionLabel: 'View Details'"), 'Meeting Bingo and Commonwealth After Dark cards should use View Details on the Lab grid.')
 check(labProjectsSource.includes("image: '/images/lab/meeting-bingo.png'"), 'Meeting Bingo should use the supplied Lab image asset.')
 check(labProjectsSource.includes("imageAlt: 'Meeting Bingo web app interface'"), 'Meeting Bingo should use the supplied image alt text.')
 check(labProjectsSource.includes("order: 6"), 'Meeting Bingo should keep its manual Sara\'s Lab order.')
@@ -170,6 +171,10 @@ check(labProjectsSource.includes("title: 'Commonwealth After Dark'"), 'Commonwea
 check(labProjectsSource.includes("type: 'FALLOUT 4 MODDING'"), 'Commonwealth After Dark category should be FALLOUT 4 MODDING.')
 check(labProjectsSource.includes("status: 'Passion Project'"), 'Commonwealth After Dark status should be Passion Project.')
 check(labProjectsSource.includes("actionLabel: 'Passion Project'"), 'Commonwealth After Dark should use a non-navigating Passion Project action label.')
+check(
+  combinedSource.includes('project.cardActionLabel || project.actionLabel'),
+  'Lab project cards should support card-only action labels without changing detail actions.',
+)
 check(labProjectsSource.includes("image: '/images/lab/commonwealth-after-dark-1.jpg'"), 'Commonwealth After Dark should use the first supplied image as the card image.')
 check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark-1.jpg'"), 'Commonwealth After Dark gallery should include the first supplied image.')
 check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark-2.jpg'"), 'Commonwealth After Dark gallery should include the second supplied image.')

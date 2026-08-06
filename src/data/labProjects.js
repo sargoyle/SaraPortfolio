@@ -129,6 +129,7 @@ export const labProjects = [
     cardDescription: 'Turn another painfully predictable meeting into a game of bingo.',
     blurb: 'Meeting Bingo turns those familiar moments into a simple web game. Tick off clichés, awkward moments and predictable workplace habits as they happen, then see who gets bingo first, quietly of course.\n\nIt’s a small project built for fun, because sometimes the only way to survive another meeting is to make a game out of it.',
     actionLabel: 'Play Meeting Bingo',
+    cardActionLabel: 'View Details',
     focus: [
       'Web app',
       'Workplace games',
@@ -153,6 +154,7 @@ export const labProjects = [
     cardDescription: 'Reimagining Fallout 4 with custom assets, darker textures and a distinctly gothic atmosphere.',
     blurb: 'Commonwealth After Dark started because I wanted to build my own goth club in Fallout 4, and then I got completely hooked on the process.\n\nI’ve been creating darker textures, reworking furniture and bar assets, experimenting with lighting, and slowly turning a very Fallout-looking space into somewhere that feels much more like a proper dark club. I’m loving the mix of creative and technical work, especially when something that looked completely wrong suddenly works in-game.\n\nIt’s still very much a work in progress, but every new asset teaches me something. I’m enjoying bringing together so many of the things I love into one project, and seeing those ideas come to life inside a game world.',
     actionLabel: 'Passion Project',
+    cardActionLabel: 'View Details',
     focus: [
       'Fallout 4 modding',
       'Custom assets',

@@ -32,6 +32,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-08-06: Changed the Meeting Bingo and Commonwealth After Dark Sara's Lab grid card actions to `View Details` via card-only labels while preserving the detail-view `Play Meeting Bingo` link and static `Passion Project` action. Files affected: `src/data/labProjects.js`, `src/components/LabProjectCard.jsx`, `scripts/validate-site.mjs`, `functions/lab-project-card.md`, `functions/saras-lab-list-view.md`, `docs/manual-qa-checklist.md`, `docs/tasks.md`.
 - 2026-07-30: Corrected the Tucked Away Use cases Setup screenshot sizing so the phone screenshot keeps its natural portrait ratio instead of stretching into a wide pale panel. Files affected: `src/styles/global.css`, `scripts/validate-site.mjs`, `functions/tucked-away-page.md`, `docs/tasks.md`.
 - 2026-07-30: Matched the Tucked Away Use cases Setup screenshot to the Overview rounded screenshot treatment and kept wrapper-like padding, border, and background removed. Files affected: `src/styles/global.css`, `scripts/validate-site.mjs`, `docs/tasks.md`.
 - 2026-07-30: Applied the shared Tucked Away screenshot shadow treatment to the Use cases Setup screenshot without changing its size or placement. Files affected: `src/styles/global.css`, `scripts/validate-site.mjs`, `docs/tasks.md`.
