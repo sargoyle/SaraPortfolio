@@ -151,6 +151,13 @@ const labProjectsSource = read('src/data/labProjects.js')
 check(!combinedSource.includes('dangerouslySetInnerHTML'), 'Active source should not use dangerouslySetInnerHTML.')
 check(!/mailto:|tel:|instagram\.com|facebook\.com|twitter\.com|x\.com/i.test(combinedSource), 'LinkedIn should remain the only public contact/social route.')
 check(combinedSource.includes("window.location.pathname === '/tucked-away'"), 'Client routing should support direct /tucked-away visits.')
+check(labProjectsSource.includes("link: 'https://www.crossstitchtext.com/'"), 'Alphabet Stitch should link to the production Cross Stitch Text site.')
+check(labProjectsSource.includes("linkLabel: 'Open Site'"), 'Alphabet Stitch detail action should use Open Site.')
+check(labProjectsSource.includes("subtitle: 'Create beautiful cross stitch text patterns in minutes.'"), 'Alphabet Stitch should use the confirmed short summary.')
+check(
+  labProjectsSource.includes('Design custom cross stitch text and lettering patterns without counting squares. Browse a growing library of stitch alphabets, preview your words instantly, and generate clean, centred patterns ready to print and stitch.'),
+  'Alphabet Stitch should use the confirmed detail description.',
+)
 check(labProjectsSource.includes("id: 'meeting-bingo'"), 'Meeting Bingo project should be registered in Sara\'s Lab data.')
 check(labProjectsSource.includes("title: 'Meeting Bingo'"), 'Meeting Bingo title should be present in Sara\'s Lab data.')
 check(labProjectsSource.includes("type: 'WEB APP'"), 'Meeting Bingo category should be WEB APP.')

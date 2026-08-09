@@ -76,7 +76,7 @@ Visitors open a project card and see the project title, type, status, subtitle, 
 - Each project opens a detail view.
 - Detail view shows title, type, status, subtitle, image/preview, and blurb.
 - No visible Focus header or focus tag list appears.
-- Alphabet Stitch shows the external link.
+- Alphabet Stitch shows the external `Open Site` link to `https://www.crossstitchtext.com/`.
 - Batcave Font shows the download action and does not show an empty external link.
 - Xanadu: The 9 Muses and The Door List do not show empty external links.
 - Meeting Bingo shows the supplied interface image, Work in Progress status, approved two-paragraph blurb, and `Play Meeting Bingo` external link.
