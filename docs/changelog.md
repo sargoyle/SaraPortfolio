@@ -43,6 +43,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-08-11: Made the Crafts card grid fluid so it fills wide desktop rows and wraps naturally down to tablet and mobile widths. Files affected: `src/styles/global.css`, `docs/tasks.md`.
 - 2026-08-11: Reordered the main portfolio navigation tabs to Sara's Lab, Cross-Stitch, Crafts, and Photography while preserving the Home button and section destinations. Files affected: `src/components/Navigation.jsx`, `docs/tasks.md`.
 - 2026-08-11: Relaxed shared portfolio section intro width so Cross-Stitch, Crafts, Photography, and Sara's Lab subtitles wrap naturally across the available page width. Files affected: `src/styles/global.css`, `docs/tasks.md`.
 - 2026-08-11: Renamed the visible Crafter Dark navigation label and page heading to Cross-Stitch, and added Cross-Stitch/Crafts intro cross-references. Files affected: `src/components/Navigation.jsx`, `src/pages/CrafterDark.jsx`, `src/pages/Crafts.jsx`, `src/App.jsx`, `functions/site-navigation.md`, `functions/crafter-dark-page.md`, `docs/tasks.md`.

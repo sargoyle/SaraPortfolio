@@ -272,6 +272,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Rename the visible Crafter Dark section label and heading to Cross-Stitch and add cross-references between Cross-Stitch and Crafts intros.
 - `[x]` Relax shared portfolio section intro width so Cross-Stitch, Crafts, Photography, and Sara's Lab subtitles wrap naturally across the available page width.
 - `[x]` Reorder the main portfolio navigation tabs to Sara's Lab, Cross-Stitch, Crafts, and Photography while preserving the Home button.
+- `[x]` Make the Crafts card grid fluid so it fills wide desktop rows and wraps naturally down to tablet and mobile widths.
 - `[x]` Create standalone public Tucked Away product page at `/tucked-away` with full privacy-policy anchor at `/tucked-away#privacy`.
 - `[x]` Add Tucked Away route metadata, Vercel rewrite support, sitemap entry, placeholders, and validation coverage.
 - `[x]` Refine Tucked Away page typography, spacing, card density, screenshot presentation, and real image mapping without changing approved content.
