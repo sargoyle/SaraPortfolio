@@ -1,8 +1,16 @@
 
 > saras-portfolio@1.0.0 dev
-> vite --host 127.0.0.1 --port 5174
+> vite --host 127.0.0.1 --port 5175
 
 
-  [32m[1mVITE[22m v7.3.6[39m  [2mready in [0m[1m3798[22m[2m[0m ms[22m
+  [32m[1mVITE[22m v7.3.6[39m  [2mready in [0m[1m710[22m[2m[0m ms[22m
 
-  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5174[22m/[39m
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5175[22m/[39m
+[2m3:41:57 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Crafts.jsx[22m
+[2m3:41:57 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Crafts.jsx[22m
+[2m3:47:47 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Navigation.jsx[22m
+[2m3:47:53 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/CrafterDark.jsx[22m
+[2m3:47:58 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Crafts.jsx[22m
+[2m3:48:04 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m3:54:42 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/global.css[22m
+[2m3:59:03 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Navigation.jsx[22m

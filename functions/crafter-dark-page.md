@@ -1,8 +1,8 @@
-# Crafter Dark Page
+# Cross-Stitch Page
 
 ## Purpose
 
-Main page for Sara's cross-stitch pattern work.
+Main page for Sara's cross-stitch pattern work. The internal page/component name remains `CrafterDark`, but the user-facing section label is `Cross-Stitch`.
 
 ## Source Files
 

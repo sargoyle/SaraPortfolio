@@ -3,6 +3,7 @@ import Footer from './components/Footer.jsx';
 import Navigation from './components/Navigation.jsx';
 import ParticleBackground from './components/ParticleBackground.jsx';
 import CrafterDark from './pages/CrafterDark.jsx';
+import Crafts from './pages/Crafts.jsx';
 import Games from './pages/Games.jsx';
 import Home from './pages/Home.jsx';
 import Photography from './pages/Photography.jsx';
@@ -13,6 +14,7 @@ const pages = {
   crafter: CrafterDark,
   photo: Photography,
   games: Games,
+  crafts: Crafts,
   tuckedAway: TuckedAway,
 };
 
@@ -28,6 +30,7 @@ export default function App() {
   const getInitialPage = () => {
     if (window.location.pathname === '/tucked-away') return 'tuckedAway';
     if (window.location.hash === '#saras-lab') return 'games';
+    if (window.location.hash === '#crafts') return 'crafts';
     return 'home';
   };
 
@@ -36,8 +39,14 @@ export default function App() {
 
   const handleNavigate = (page) => {
     window.dispatchEvent(new CustomEvent('portfolio:navigate', { detail: { page } }));
-    if (window.location.pathname !== '/' || window.location.hash) {
-      window.history.pushState({}, '', page === 'games' ? '/#saras-lab' : '/');
+    const hashPages = {
+      games: '/#saras-lab',
+      crafts: '/#crafts',
+    };
+    const targetPath = hashPages[page] || '/';
+
+    if (`${window.location.pathname}${window.location.hash}` !== targetPath) {
+      window.history.pushState({}, '', targetPath);
     }
     setCurrentPage(page);
   };
@@ -45,9 +54,10 @@ export default function App() {
   useEffect(() => {
     const titles = {
       home: "Sara's Portfolio",
-      crafter: "Crafter Dark | Sara's Portfolio",
+      crafter: "Cross-Stitch | Sara's Portfolio",
       photo: "Photography | Sara's Portfolio",
       games: "Sara's Lab | Sara's Portfolio",
+      crafts: "Crafts | Sara's Portfolio",
       tuckedAway: 'Tucked Away | Organise videos stored on your Android device',
     };
     document.title = titles[currentPage] || "Sara's Portfolio";

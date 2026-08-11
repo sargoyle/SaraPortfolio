@@ -9,9 +9,11 @@ Reusable card patterns for active project, craft, and photo listings.
 - `src/components/CrafterDarkCard.jsx`
 - `src/components/PhotoCard.jsx`
 - `src/components/LabProjectCard.jsx`
+- `src/components/CraftCard.jsx`
 - `src/pages/CrafterDark.jsx`
 - `src/pages/Photography.jsx`
 - `src/pages/Games.jsx`
+- `src/pages/Crafts.jsx`
 - `src/styles/global.css`
 - `archive/ai-pocs/ProjectCard.jsx`
 
@@ -22,6 +24,7 @@ Cards present portfolio items as clickable/focusable tiles that open modals or v
 ## Layout Rules
 
 - Sara's Lab cards use `LabProjectCard`.
+- Crafts cards use `CraftCard`.
 - Photo cards use `.photo-card.card-button`.
 - Crafter Dark cards use `CrafterDarkCard`.
 
@@ -30,6 +33,7 @@ Cards present portfolio items as clickable/focusable tiles that open modals or v
 - `CrafterDarkCard` for Crafter Dark list items.
 - `PhotoCard` for photography.
 - `LabProjectCard` for Sara's Lab project cards.
+- `CraftCard` for craft entries without titles.
 - Preferred future component: `GalleryImageCard`.
 - Archived AI POC content retains its old `ProjectCard` in `archive/ai-pocs`, but that component is not part of the active site.
 
@@ -37,6 +41,7 @@ Cards present portfolio items as clickable/focusable tiles that open modals or v
 
 - `PhotoCard` expects `photo.title`, `photo.src`, and optional `photo.alt`.
 - `LabProjectCard` expects lab project title, type, status, description, and optional media fields.
+- `CraftCard` expects craft type, description, images, and hero image selection. It must not require a title or name.
 
 ## Image Rules
 

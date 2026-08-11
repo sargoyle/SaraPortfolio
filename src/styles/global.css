@@ -275,7 +275,8 @@ a:focus-visible,
 }
 
 .description {
-  max-width: 58rem;
+  width: 100%;
+  max-width: none;
   margin: 0 0 2rem;
   color: var(--text-muted);
   font-size: 1.125rem;
@@ -284,8 +285,7 @@ a:focus-visible,
 
 .crafter-page > .description,
 .games-page > .description {
-  width: min(100%, 90rem);
-  max-width: none;
+  width: 100%;
 }
 
 .home-intro {
@@ -910,6 +910,198 @@ a:focus-visible,
   padding: 0;
   gap: 0.75rem;
   flex-wrap: wrap;
+}
+
+.craft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 360px));
+  gap: 1.5rem;
+}
+
+.craft-card {
+  min-height: 100%;
+}
+
+.craft-card-button {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.075);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  backdrop-filter: blur(16px);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.craft-card-button:hover {
+  border-color: var(--accent);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28), 0 0 24px rgba(123, 63, 228, 0.2);
+  transform: translateY(-4px);
+}
+
+.craft-card-media {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  place-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    radial-gradient(circle at 50% 10%, rgba(167, 139, 250, 0.14), transparent 42%),
+    rgba(255, 255, 255, 0.04);
+}
+
+.craft-card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.craft-card-placeholder,
+.craft-detail-placeholder,
+.craft-detail-thumbnail-placeholder {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  place-items: center;
+  padding: 1.5rem;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(167, 139, 250, 0.28), transparent 34%),
+    linear-gradient(135deg, rgba(123, 63, 228, 0.22), rgba(5, 3, 8, 0.86));
+  color: var(--accent-light);
+  font-weight: 700;
+  text-align: center;
+}
+
+.craft-card-content {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 1.35rem;
+  gap: 0.9rem;
+}
+
+.craft-card-type,
+.craft-detail-type {
+  margin: 0;
+  color: var(--accent-light);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.craft-card-description,
+.craft-detail-description {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.65;
+}
+
+.craft-card-action {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  margin-top: 0.35rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid rgba(167, 139, 250, 0.38);
+  border-radius: var(--radius);
+  background: rgba(123, 63, 228, 0.28);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.fullscreen-frame-craft {
+  width: min(1120px, calc(100% - 4rem));
+}
+
+.fullscreen-frame-craft .fullscreen-close {
+  top: -1rem;
+  right: -1rem;
+}
+
+.craft-detail {
+  display: grid;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  gap: 1rem;
+}
+
+.craft-detail-copy {
+  display: grid;
+  max-width: 58rem;
+  gap: 0.65rem;
+}
+
+.craft-detail-gallery {
+  display: grid;
+  width: min(100%, 920px);
+  justify-self: center;
+  gap: 0.7rem;
+}
+
+.craft-detail-figure {
+  display: grid;
+  margin: 0;
+  place-items: center;
+}
+
+.craft-detail-image {
+  display: block;
+  width: 100%;
+  max-height: min(56vh, 540px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.04);
+  object-fit: contain;
+  object-position: center;
+}
+
+.craft-detail-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(86px, 120px));
+  justify-content: center;
+  gap: 0.55rem;
+}
+
+.craft-detail-thumbnail {
+  display: grid;
+  aspect-ratio: 1 / 1;
+  place-items: center;
+  overflow: hidden;
+  padding: 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.craft-detail-thumbnail[aria-pressed='true'] {
+  border-color: var(--accent-light);
+  box-shadow: 0 0 0 2px rgba(123, 63, 228, 0.24);
+}
+
+.craft-detail-thumbnail:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 3px;
+}
+
+.craft-detail-thumbnail-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: calc(var(--radius) - 4px);
+  object-fit: cover;
+  object-position: center;
 }
 
 .project-images {
@@ -2026,7 +2218,8 @@ a:focus-visible,
 
   .simple-grid,
   .photo-grid,
-  .lab-project-grid {
+  .lab-project-grid,
+  .craft-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2036,7 +2229,8 @@ a:focus-visible,
 
   .game-content,
   .fullscreen-project,
-  .lab-project-detail {
+  .lab-project-detail,
+  .craft-detail {
     padding: 1.5rem;
   }
 
@@ -2044,12 +2238,17 @@ a:focus-visible,
     max-width: 100%;
   }
 
-  .lab-project-detail {
+  .lab-project-detail,
+  .craft-detail {
     grid-template-columns: 1fr;
   }
 
   .lab-project-detail-media {
     min-height: 260px;
+  }
+
+  .craft-detail-image {
+    max-height: min(58vh, 520px);
   }
 
   .fullscreen-overlay {
@@ -2070,6 +2269,15 @@ a:focus-visible,
   }
 
   .fullscreen-frame-lab .fullscreen-close {
+    top: -0.5rem;
+    right: -0.5rem;
+  }
+
+  .fullscreen-frame-craft {
+    width: min(100%, calc(100vw - 2rem));
+  }
+
+  .fullscreen-frame-craft .fullscreen-close {
     top: -0.5rem;
     right: -0.5rem;
   }
@@ -2227,6 +2435,10 @@ a:focus-visible,
 @media (min-width: 769px) and (max-width: 1199px) {
   .lab-project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .craft-detail-gallery {
+    width: min(100%, 820px);
   }
 
   .tucked-page h1 {

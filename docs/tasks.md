@@ -256,6 +256,22 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Add Commonwealth After Dark to Sara's Lab as the final project with supplied three-image gallery, Passion Project status, and non-interactive detail action.
 - `[x]` Update Meeting Bingo and Commonwealth After Dark Sara's Lab card buttons to `View Details` while preserving their detail-view actions.
 - `[x]` Update Alphabet Stitch to the production Cross Stitch Text URL, `Open Site` detail action, and confirmed copy.
+- `[x]` Add Crafts as an active portfolio section after Sara's Lab with reusable data, card, and detail modal structure.
+- `[x]` Add the first Crafts entry as a KNITTING collection with Monster, Cuttlefish, and Bat images in the approved gallery order.
+- `[x]` Add the JEWELLERY craft entry with the supplied cuttlefish-cast sterling silver ring image and single-image detail view.
+- `[x]` Refine the Crafts detail view into a compact image-led gallery layout and remove visible per-image captions.
+- `[x]` Add the KNITTING lampshades craft entry with three supplied images in the approved gallery order.
+- `[x]` Add the MACRAMÉ hanging cat bed craft entry with the supplied single image.
+- `[x]` Add the LEGO Alien craft entry with the supplied single image.
+- `[x]` Add the short introductory line beneath the Crafts page heading.
+- `[x]` Add the CROCHET / LATCH HOOK shrug craft entry with the supplied single image.
+- `[x]` Add the SEWING insect-inspired corset craft entry with the supplied single image.
+- `[x]` Add the RUG TUFTING blue geometric rug craft entry with the supplied single image.
+- `[x]` Add the CROCHET / LATCH HOOK leg warmers craft entry with the supplied single image.
+- `[x]` Add the KNITTING project selection craft entry with blanket, glove, scarf, and shrug images.
+- `[x]` Rename the visible Crafter Dark section label and heading to Cross-Stitch and add cross-references between Cross-Stitch and Crafts intros.
+- `[x]` Relax shared portfolio section intro width so Cross-Stitch, Crafts, Photography, and Sara's Lab subtitles wrap naturally across the available page width.
+- `[x]` Reorder the main portfolio navigation tabs to Sara's Lab, Cross-Stitch, Crafts, and Photography while preserving the Home button.
 - `[x]` Create standalone public Tucked Away product page at `/tucked-away` with full privacy-policy anchor at `/tucked-away#privacy`.
 - `[x]` Add Tucked Away route metadata, Vercel rewrite support, sitemap entry, placeholders, and validation coverage.
 - `[x]` Refine Tucked Away page typography, spacing, card density, screenshot presentation, and real image mapping without changing approved content.

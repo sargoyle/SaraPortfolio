@@ -22,6 +22,7 @@ Modals open over the current page, can be closed, and support previous/next navi
 - Modal positioning uses `.fullscreen-frame` around `.fullscreen-content` so close controls can sit outside the panel without becoming part of the panel scroll area.
 - Content uses `.fullscreen-content`.
 - Photography uses `variant="photo"`.
+- Crafts uses `variant="craft"`.
 - Close button belongs visually to the modal panel and should not sit at the far viewport edge.
 - Photography positions the close button just outside the image frame so it does not cover the photograph.
 - Sara's Lab positions the close button just outside the modal panel so it does not sit over the project card content.
@@ -31,7 +32,7 @@ Modals open over the current page, can be closed, and support previous/next navi
 ## Reusable Components
 
 - `ModalShell` is the shared modal shell.
-- `ProjectDetailModal` and `FullscreenImageModal` provide content-specific bodies.
+- `ProjectDetailModal`, `FullscreenImageModal`, `LabProjectDetailModal`, and `CraftDetailModal` provide content-specific bodies.
 
 ## Data Rules
 
@@ -64,7 +65,7 @@ Modals open over the current page, can be closed, and support previous/next navi
 
 ## Change Rules
 
-- If `ModalShell` changes, test Photography, Crafter Dark, and Sara's Lab. AI POC modal content is archived unless reintroduced.
+- If `ModalShell` changes, test Photography, Crafter Dark, Sara's Lab, and Crafts. AI POC modal content is archived unless reintroduced.
 
 ## Test Expectations
 

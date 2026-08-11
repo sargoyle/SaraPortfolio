@@ -147,6 +147,7 @@ const srcFiles = walkFiles('src', ['.js', '.jsx'])
 const combinedSource = srcFiles.map((file) => read(file)).join('\n')
 const tuckedAwaySource = read('src/pages/TuckedAway.jsx')
 const labProjectsSource = read('src/data/labProjects.js')
+const craftsSource = read('src/data/crafts.js')
 
 check(!combinedSource.includes('dangerouslySetInnerHTML'), 'Active source should not use dangerouslySetInnerHTML.')
 check(!/mailto:|tel:|instagram\.com|facebook\.com|twitter\.com|x\.com/i.test(combinedSource), 'LinkedIn should remain the only public contact/social route.')
@@ -221,6 +222,37 @@ check(
 check(
   combinedSource.includes('project.imageAlt || `${project.title} preview`'),
   'Lab project media should support custom image alt text.',
+)
+check(combinedSource.includes("id: 'crafts'"), 'Crafts should be registered as an active portfolio page.')
+check(combinedSource.includes("label: 'Crafts'"), 'Crafts should be present in primary navigation.')
+check(combinedSource.includes('CraftCard'), 'Crafts collection should use the reusable CraftCard component.')
+check(combinedSource.includes('CraftDetailModal'), 'Crafts collection should use the reusable CraftDetailModal component.')
+check(craftsSource.includes("type: 'KNITTING'"), 'First craft entry should use KNITTING type.')
+check(!craftsSource.includes('title:'), 'Craft entries should not require or define titles.')
+check(!craftsSource.includes('name:'), 'Craft entries should not require or define names.')
+check(
+  craftsSource.includes('A small collection of knitted creatures I’ve made over the years, from monsters to sea creatures and bats.'),
+  'First craft entry should use the approved card/detail description.',
+)
+check(
+  craftsSource.indexOf("id: 'monster'") < craftsSource.indexOf("id: 'cuttlefish'") &&
+    craftsSource.indexOf("id: 'cuttlefish'") < craftsSource.indexOf("id: 'bat'"),
+  'First craft gallery order should be Monster, Cuttlefish, Bat.',
+)
+check(craftsSource.includes("heroImageId: 'monster'"), 'Monster should be the first craft card hero image.')
+check(craftsSource.includes("src: '/images/crafts/knitting/monster.png'"), 'Monster craft image path should be present.')
+check(craftsSource.includes("src: '/images/crafts/knitting/cuttlefish.png'"), 'Cuttlefish craft image path should be present.')
+check(craftsSource.includes("src: '/images/crafts/knitting/bat.jpg'"), 'Bat craft image path should be present.')
+check(craftsSource.includes("type: 'JEWELLERY'"), 'Jewellery craft entry should use JEWELLERY type.')
+check(
+  craftsSource.includes('Sterling silver ring made using cuttlefish casting, with the natural cuttlefish texture left visible in the finished piece.'),
+  'Jewellery craft entry should use the approved description.',
+)
+check(craftsSource.includes("heroImageId: 'ring'"), 'Jewellery craft entry should use the ring image as its hero.')
+check(craftsSource.includes("src: '/images/crafts/jewellery/cuttlefish-cast-ring.png'"), 'Jewellery craft image path should be present.')
+check(
+  craftsSource.includes('Four views of a handmade sterling silver ring created using cuttlefish casting'),
+  'Jewellery craft image should use approved alt text.',
 )
 check(combinedSource.includes('tuckedAwaySections'), 'Tucked Away sections should be managed from one source of truth.')
 check(combinedSource.includes("id: 'privacy'"), 'Tucked Away page should expose a privacy section.')

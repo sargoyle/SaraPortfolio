@@ -1,8 +1,9 @@
 const navItems = [
   { id: 'home', label: 'Home', shortLabel: 'Home' },
-  { id: 'crafter', label: 'Crafter Dark' },
-  { id: 'photo', label: 'Photography' },
   { id: 'games', label: "Sara's Lab" },
+  { id: 'crafter', label: 'Cross-Stitch' },
+  { id: 'crafts', label: 'Crafts' },
+  { id: 'photo', label: 'Photography' },
 ];
 
 export default function Navigation({ currentPage, onNavigate }) {
