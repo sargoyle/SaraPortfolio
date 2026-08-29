@@ -50,9 +50,9 @@ Tucked Away is a public product marketing page and privacy-policy page for Sara'
   - `tucked-away-sort.jpg`
   - `tucked-away-setup-step-1.jpg`
   - `tucked-away-setup-step-2.jpg`
-  - `tucked-away-social-card.png`
   - `google-play-badge.png`
 - Current image paths are centralised in `tuckedAwayImages` inside `src/pages/TuckedAway.jsx`.
+- Until a dedicated 1200 x 630 Tucked Away social card exists, metadata should use the real catalogue screenshot asset rather than a missing placeholder.
 - Use the shared `TuckedAwayImageSlot` for logo, hero, process, gallery, thumbnail and placeholder image states.
 - The hero catalogue screenshot should keep a natural phone/app screenshot ratio and should not be forced into a square frame.
 - The hero catalogue screenshot should use a cleaner direct image treatment instead of an oversized padded frame.
@@ -97,6 +97,8 @@ Tucked Away is a public product marketing page and privacy-policy page for Sara'
 - Page description: `Tucked Away is a private Android app for organising, searching, rating and revisiting videos stored on your phone or SD card.`
 - Social title: `Tucked Away`.
 - Social description: `Turn a folder full of videos into a private, searchable library organised your way.`
+- Social image: `https://saragillard.com/images/tucked-away/tucked-away-catalogue.jpg`.
+- Include SoftwareApplication JSON-LD for the public Tucked Away page.
 
 ## Accessibility Rules
 

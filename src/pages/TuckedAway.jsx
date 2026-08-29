@@ -5,6 +5,8 @@ const pageTitle = 'Tucked Away | Organise videos stored on your Android device';
 const pageDescription =
   'Tucked Away is a private Android app for organising, searching, rating and revisiting videos stored on your phone or SD card.';
 const socialDescription = 'Turn a folder full of videos into a private, searchable library organised your way.';
+const socialImageUrl = 'https://saragillard.com/images/tucked-away/tucked-away-catalogue.jpg';
+const socialImageAlt = 'Tucked Away catalogue screenshot showing a private video library interface.';
 
 const tuckedAwayImages = {
   logo: '/images/tucked-away/tucked-away-logo-transparent.png',
@@ -500,10 +502,13 @@ export default function TuckedAway({ onBackToLab }) {
     setMeta('meta[property="og:url"]', 'content', 'https://saragillard.com/tucked-away');
     setMeta('meta[property="og:title"]', 'content', 'Tucked Away');
     setMeta('meta[property="og:description"]', 'content', socialDescription);
-    setMeta('meta[property="og:image"]', 'content', 'https://saragillard.com/images/tucked-away/tucked-away-social-card.png');
+    setMeta('meta[property="og:image"]', 'content', socialImageUrl);
+    setMeta('meta[property="og:image:secure_url"]', 'content', socialImageUrl);
+    setMeta('meta[property="og:image:alt"]', 'content', socialImageAlt);
     setMeta('meta[name="twitter:title"]', 'content', 'Tucked Away');
     setMeta('meta[name="twitter:description"]', 'content', socialDescription);
-    setMeta('meta[name="twitter:image"]', 'content', 'https://saragillard.com/images/tucked-away/tucked-away-social-card.png');
+    setMeta('meta[name="twitter:image"]', 'content', socialImageUrl);
+    setMeta('meta[name="twitter:image:alt"]', 'content', socialImageAlt);
 
     return () => {
       document.title = originalTitle;

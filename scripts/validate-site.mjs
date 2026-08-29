@@ -12,7 +12,7 @@ const tuckedAwayTitle = 'Tucked Away | Organise videos stored on your Android de
 const tuckedAwayDescription =
   'Tucked Away is a private Android app for organising, searching, rating and revisiting videos stored on your phone or SD card.'
 const socialImagePath = '/images/social/saras-portfolio-og.png'
-const tuckedAwaySocialImagePath = '/images/tucked-away/tucked-away-social-card.png'
+const tuckedAwaySocialImagePath = '/images/tucked-away/tucked-away-catalogue.jpg'
 const prohibitedPositioning = [
   ['Product', 'Manager'].join(' '),
   ['product', 'management'].join(' '),
@@ -93,15 +93,22 @@ check(indexHtml.includes(`property="og:image" content="${productionUrl}${socialI
 check(indexHtml.includes(`name="twitter:card" content="summary_large_image"`), 'Twitter card metadata must use summary_large_image.')
 check(indexHtml.includes(`name="twitter:title" content="${expectedTitle}"`), 'Twitter title is missing or incorrect.')
 check(indexHtml.includes(`name="twitter:image" content="${productionUrl}${socialImagePath}"`), 'Twitter image must use the production domain.')
+check(indexHtml.includes('<html lang="en-AU">'), 'Homepage should declare Australian English language metadata.')
+check(indexHtml.includes('application/ld+json'), 'Homepage should include JSON-LD structured data.')
+check(indexHtml.includes('"@type": "Person"'), 'Homepage structured data should identify Sara Gillard as a Person.')
+check(indexHtml.includes('"@type": "WebSite"'), 'Homepage structured data should identify the portfolio as a WebSite.')
 
 check(tuckedAwayHtml.includes(`<title>${tuckedAwayTitle}</title>`), 'Tucked Away page title metadata is missing or incorrect.')
 check(tuckedAwayHtml.includes(`content="${tuckedAwayDescription}"`), 'Tucked Away meta description is missing or incorrect.')
 check(tuckedAwayHtml.includes(`<link rel="canonical" href="${productionUrl}/tucked-away" />`), 'Tucked Away canonical URL must point to the production route.')
 check(tuckedAwayHtml.includes(`property="og:url" content="${productionUrl}/tucked-away"`), 'Tucked Away Open Graph URL must point to the production route.')
 check(tuckedAwayHtml.includes('property="og:title" content="Tucked Away"'), 'Tucked Away Open Graph title is missing or incorrect.')
-check(tuckedAwayHtml.includes(`property="og:image" content="${productionUrl}${tuckedAwaySocialImagePath}"`), 'Tucked Away Open Graph image placeholder path is missing or incorrect.')
+check(tuckedAwayHtml.includes(`property="og:image" content="${productionUrl}${tuckedAwaySocialImagePath}"`), 'Tucked Away Open Graph image must use an existing production asset.')
 check(tuckedAwayHtml.includes(`name="twitter:title" content="Tucked Away"`), 'Tucked Away Twitter title is missing or incorrect.')
-check(!tuckedAwayHtml.includes('Product Manager'), 'Tucked Away metadata must not include old Product Manager positioning.')
+check(!tuckedAwayHtml.includes(['Product', 'Manager'].join(' ')), 'Tucked Away metadata must not include old role-led positioning.')
+check(tuckedAwayHtml.includes('<html lang="en-AU">'), 'Tucked Away should declare Australian English language metadata.')
+check(tuckedAwayHtml.includes('application/ld+json'), 'Tucked Away should include JSON-LD structured data.')
+check(tuckedAwayHtml.includes('"@type": "SoftwareApplication"'), 'Tucked Away structured data should identify the project as software.')
 
 check(robotsTxt.includes('User-agent: *'), 'robots.txt must declare a user agent.')
 check(robotsTxt.includes('Allow: /'), 'robots.txt must allow crawling.')
@@ -123,6 +130,7 @@ check(
   socialPreview?.width === 1200 && socialPreview?.height === 630,
   'Social preview image should be 1200 x 630 px.',
 )
+check(exists(`public${tuckedAwaySocialImagePath}`), 'Tucked Away social preview image should point to an existing public asset.')
 
 const projectFiles = [
   'index.html',

@@ -305,6 +305,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Choose deployment target: Vercel with custom domain `https://saragillard.com`.
 - `[x]` Configure production domain metadata, canonical URL, robots.txt, and sitemap.xml for `https://saragillard.com`.
 - `[x]` Replace old role-led metadata with creative portfolio title and description across browser, search, social, manifest, and validation files.
+- `[x]` Complete a conservative SEO/discoverability pass with Australian English language metadata, homepage and Tucked Away structured data, sitemap lastmod entries, and an existing Tucked Away social image path.
 - `[x]` Confirm deployment host is Vercel and the custom domain is connected externally.
 - `[x]` Add production metadata:
   - page description

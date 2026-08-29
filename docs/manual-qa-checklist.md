@@ -12,7 +12,7 @@ Use this checklist before release and after changes to shared navigation, filter
 
 ## Navigation
 
-- Confirm the active navigation items are Home, Crafter Dark, Photography, and Sara's Lab.
+- Confirm the active navigation items are Home, Sara's Lab, Cross-Stitch, Crafts, and Photography.
 - Confirm AI POCs is not shown in active navigation.
 - Confirm the top navigation button group is right-aligned on desktop.
 - Confirm navigation scrolls horizontally on small screens.
@@ -29,7 +29,7 @@ Use this checklist before release and after changes to shared navigation, filter
 - Confirm About Sara and Behind the Work follow the hero content without floating down the page on desktop resize.
 - Confirm the footer sits directly below page content without creating unnecessary empty scroll space.
 
-## Crafter Dark
+## Cross-Stitch
 
 - Confirm filters are All, Pop Culture Inspired, Science, and When Stitches Kaleid.
 - Confirm filter counts update and `aria-pressed` reflects the active filter.
@@ -72,9 +72,11 @@ Use this checklist before release and after changes to shared navigation, filter
 
 ## Metadata And Assets
 
-- Confirm `index.html` includes title, description, Open Graph, Twitter card, theme colour, favicon, manifest, and social preview metadata.
+- Confirm `index.html` includes title, description, canonical URL, Open Graph, Twitter card, JSON-LD, theme colour, favicon, manifest, and social preview metadata.
+- Confirm `tucked-away.html` includes its own title, description, canonical URL, Open Graph/Twitter metadata, and SoftwareApplication JSON-LD.
 - Confirm favicon files exist in `public`.
 - Confirm social preview image exists at `public/images/social/saras-portfolio-og.png`.
+- Confirm the Tucked Away social image path points to an existing public image asset.
 
 ## Tucked Away
 

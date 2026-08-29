@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-AU">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#050308" />
     <meta name="color-scheme" content="dark" />
-    <meta name="application-name" content="Sara Gillard Portfolio" />
+    <meta name="application-name" content="Sara’s Portfolio" />
     <meta
       name="description"
       content="Explore Sara Gillard’s cross-stitch designs, photography, games and creative digital projects."
@@ -20,6 +20,7 @@
     />
     <link rel="canonical" href="https://saragillard.com/" />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_AU" />
     <meta property="og:site_name" content="Sara’s Portfolio" />
     <meta property="og:url" content="https://saragillard.com/" />
     <meta property="og:title" content="Sara’s Portfolio | Artist, Pattern Maker & Creative Technologist" />
@@ -45,6 +46,38 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <title>Sara’s Portfolio | Artist, Pattern Maker & Creative Technologist</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://saragillard.com/#person",
+            "name": "Sara Gillard",
+            "url": "https://saragillard.com/",
+            "sameAs": ["https://www.linkedin.com/in/sara-gillard-ppm-consultant/"],
+            "knowsAbout": [
+              "Cross-stitch pattern design",
+              "Photography",
+              "Games",
+              "Creative digital tools",
+              "Creative technology"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://saragillard.com/#website",
+            "url": "https://saragillard.com/",
+            "name": "Sara’s Portfolio",
+            "description": "Explore Sara Gillard’s cross-stitch designs, photography, games and creative digital projects.",
+            "inLanguage": "en-AU",
+            "author": {
+              "@id": "https://saragillard.com/#person"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

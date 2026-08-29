@@ -43,6 +43,7 @@ All notable changes to this project will be documented in this file.
 - 2026-05-05: Added collaboration rules requiring documentation review, source-of-truth docs, and final task reporting format. Files affected: `docs/rules.md`.
 
 ### Changed
+- 2026-08-29: Completed a focused SEO and discoverability pass by adding Australian English language metadata, homepage Person/WebSite JSON-LD, Tucked Away SoftwareApplication JSON-LD, sitemap lastmod entries, an existing Tucked Away social image path, and updated validation/docs. Files affected: `index.html`, `tucked-away.html`, `src/pages/TuckedAway.jsx`, `src/pages/Home.jsx`, `public/site.webmanifest`, `public/sitemap.xml`, `scripts/validate-site.mjs`, `functions/tucked-away-page.md`, `docs/manual-qa-checklist.md`, `docs/tasks.md`.
 - 2026-08-11: Made the Crafts card grid fluid so it fills wide desktop rows and wraps naturally down to tablet and mobile widths. Files affected: `src/styles/global.css`, `docs/tasks.md`.
 - 2026-08-11: Reordered the main portfolio navigation tabs to Sara's Lab, Cross-Stitch, Crafts, and Photography while preserving the Home button and section destinations. Files affected: `src/components/Navigation.jsx`, `docs/tasks.md`.
 - 2026-08-11: Relaxed shared portfolio section intro width so Cross-Stitch, Crafts, Photography, and Sara's Lab subtitles wrap naturally across the available page width. Files affected: `src/styles/global.css`, `docs/tasks.md`.

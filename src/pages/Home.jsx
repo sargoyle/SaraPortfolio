@@ -26,7 +26,7 @@ export default function Home() {
           <div className="profile-image-container">
             <ImageWithFallback
               src="/images/about/profile.jpg"
-              alt="Sara"
+              alt="Sara Gillard portrait"
               className="profile-image"
               fallbackClassName="profile-image-placeholder"
               fallbackLabel="Sara profile image unavailable"
