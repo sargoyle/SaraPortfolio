@@ -43,6 +43,10 @@ Visitors open a project card and see the project title, type, status, subtitle, 
 
 - Use `project.image` when present.
 - If `project.gallery` contains more than one image, render one active image, image title/caption, and keyboard-accessible thumbnail selectors.
+- If `project.gallerySections` contains sectioned galleries, render each section with its own heading, active image, optional title/caption, and keyboard-accessible thumbnail selectors.
+- Commonwealth After Dark uses an image-led sectioned detail layout so Custom Assets and Inside Vaultage appear as large stacked galleries rather than cramped side content.
+- If `project.videos` contains entries, render a `Videos` section after the image gallery sections.
+- YouTube embeds should use the privacy-conscious `youtube-nocookie.com` embed URL, lazy loading, descriptive iframe titles, and responsive 16:9 frames.
 - Single-image projects must not render thumbnails, image navigation, or empty caption space.
 - Apply `detailMediaFit` and `detailMediaPosition` when present.
 - Use a styled placeholder when absent or unavailable.
@@ -80,6 +84,6 @@ Visitors open a project card and see the project title, type, status, subtitle, 
 - Batcave Font shows the download action and does not show an empty external link.
 - Xanadu: The 9 Muses and The Door List do not show empty external links.
 - Meeting Bingo shows the supplied interface image, Work in Progress status, approved two-paragraph blurb, and `Play Meeting Bingo` external link.
-- Commonwealth After Dark shows Passion Project status, approved three-paragraph blurb, three gallery images in the supplied order, matching captions, and a non-interactive `Passion Project` action.
+- Commonwealth After Dark shows Passion Project status, approved three-paragraph blurb, an 18-image Custom Assets gallery, a six-image updated Inside Vaultage gallery, a Videos section, matching titles/captions where provided, and a non-interactive `Passion Project` action.
 - Previous and next fullscreen arrow controls work.
 - Escape and outside click close the modal.

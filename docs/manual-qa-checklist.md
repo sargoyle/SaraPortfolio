@@ -53,7 +53,7 @@ Use this checklist before release and after changes to shared navigation, filter
 
 ## Sara's Lab
 
-- Confirm exactly seven projects show in this order: Alphabet Stitch, Batcave Font, Xanadu: The 9 Muses, The Door List, Tucked Away, Meeting Bingo, Commonwealth After Dark.
+- Confirm exactly seven projects show in this order: Alphabet Stitch, Batcave Font, Commonwealth After Dark, The Door List, Tucked Away, Meeting Bingo, Xanadu: The 9 Muses.
 - Confirm cards show type, title, status, description, and action text.
 - Confirm card images use contained media and do not crop important artwork.
 - Confirm Xanadu displays the uploaded Muses image and the contain treatment looks acceptable.
@@ -63,8 +63,8 @@ Use this checklist before release and after changes to shared navigation, filter
 - Confirm Tucked Away shows status `In Progress`, action text `View Details`, and the cropped app image.
 - Confirm Tucked Away detail links to `/tucked-away`.
 - Confirm Meeting Bingo shows status `Work in Progress`, card action text `View Details`, the supplied app interface image, and a detail link to `https://meeting-bingo-rg4n.vercel.app/` that opens in a new tab.
-- Confirm Commonwealth After Dark appears last, shows status `Passion Project`, card action text `View Details`, and uses `/images/lab/commonwealth-after-dark-1.jpg` as the card image.
-- Confirm Commonwealth After Dark detail shows all three gallery images in order, with matching titles and captions, and that thumbnail selection works by mouse and keyboard.
+- Confirm Commonwealth After Dark appears third, shows status `Passion Project`, card action text `View Details`, and uses `/images/lab/commonwealth-after-dark/inside-vaultage-01-vaultage.png` as the card image.
+- Confirm Commonwealth After Dark detail shows the `Custom Assets` section with 18 standalone images, then the `Inside Vaultage` section with five updated club images, and that thumbnail selection works by mouse and keyboard.
 - Confirm Commonwealth After Dark does not show an external link, empty link, or dead navigation action.
 - Confirm detail views do not show a visible Focus section or focus tag list.
 - Confirm shared previous/next arrow controls and ArrowLeft/ArrowRight move through projects.

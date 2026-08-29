@@ -64,7 +64,7 @@ Visitors see seven image-led project cards. Activating a card opens the project 
 ## Test Expectations
 
 - Exactly seven cards render.
-- Card order is Alphabet Stitch, Batcave Font, Xanadu: The 9 Muses, The Door List, Tucked Away, Meeting Bingo, Commonwealth After Dark.
+- Card order is Alphabet Stitch, Batcave Font, Commonwealth After Dark, The Door List, Tucked Away, Meeting Bingo, Xanadu: The 9 Muses.
 - Each card shows title, type, status, short description, and action text.
 - Meeting Bingo shows Work in Progress status, the supplied interface image, and `View Details` action text.
 - Commonwealth After Dark shows Passion Project status, the first Fallout screenshot, and `View Details` action text without adding a card-level external link.

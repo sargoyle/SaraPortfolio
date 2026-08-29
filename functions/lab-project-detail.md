@@ -40,8 +40,12 @@ Shows a richer project note with metadata, visual, blurb, shared fullscreen prev
 ## Image Rules
 
 - Supports one main image by default.
-- Supports optional `gallery` arrays for multi-image project detail views.
-- Gallery items require `src` and `alt`, and may include `title` and `caption`.
+- Supports optional `gallery` arrays for flat multi-image project detail views.
+- Supports optional `gallerySections` arrays for sectioned multi-image project detail views.
+- Supports optional `videos` arrays for responsive embedded videos after sectioned galleries.
+- Commonwealth After Dark uses the image-led detail variant for larger stacked gallery sections.
+- Gallery and gallery-section image items require `src` and `alt`, and may include `title` and `caption`.
+- Video items require an `embedUrl` and should include a visible title plus an accessible iframe title.
 - Multi-image projects show one active image, captions for the selected image, and compact thumbnail selectors.
 - Single-image projects must not show thumbnails or empty caption areas.
 - Empty image uses a styled title placeholder.
@@ -73,5 +77,5 @@ No known gaps currently documented.
 - Internal `/tucked-away` link appears for Tucked Away.
 - Download link appears for Batcave Font.
 - External link appears for Meeting Bingo as `Play Meeting Bingo`.
-- Commonwealth After Dark renders three gallery images, thumbnail selection, image titles/captions, and a static `Passion Project` action.
+- Commonwealth After Dark renders sectioned Custom Assets and six-image Inside Vaultage galleries in the image-led variant, thumbnail selection, image titles/captions where provided, a Videos section, and a static `Passion Project` action.
 - Shared previous/next arrow controls and ArrowLeft/ArrowRight move between projects.

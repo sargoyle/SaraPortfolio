@@ -12,7 +12,7 @@ const tuckedAwayTitle = 'Tucked Away | Organise videos stored on your Android de
 const tuckedAwayDescription =
   'Tucked Away is a private Android app for organising, searching, rating and revisiting videos stored on your phone or SD card.'
 const socialImagePath = '/images/social/saras-portfolio-og.png'
-const tuckedAwaySocialImagePath = '/images/tucked-away/tucked-away-catalogue.jpg'
+const tuckedAwaySocialImagePath = '/images/social/tucked-away-og.png'
 const prohibitedPositioning = [
   ['Product', 'Manager'].join(' '),
   ['product', 'management'].join(' '),
@@ -104,7 +104,10 @@ check(tuckedAwayHtml.includes(`<link rel="canonical" href="${productionUrl}/tuck
 check(tuckedAwayHtml.includes(`property="og:url" content="${productionUrl}/tucked-away"`), 'Tucked Away Open Graph URL must point to the production route.')
 check(tuckedAwayHtml.includes('property="og:title" content="Tucked Away"'), 'Tucked Away Open Graph title is missing or incorrect.')
 check(tuckedAwayHtml.includes(`property="og:image" content="${productionUrl}${tuckedAwaySocialImagePath}"`), 'Tucked Away Open Graph image must use an existing production asset.')
+check(tuckedAwayHtml.includes('property="og:image:width" content="1200"'), 'Tucked Away Open Graph image width should match the dedicated social preview asset.')
+check(tuckedAwayHtml.includes('property="og:image:height" content="630"'), 'Tucked Away Open Graph image height should match the dedicated social preview asset.')
 check(tuckedAwayHtml.includes(`name="twitter:title" content="Tucked Away"`), 'Tucked Away Twitter title is missing or incorrect.')
+check(tuckedAwayHtml.includes(`name="twitter:image" content="${productionUrl}${tuckedAwaySocialImagePath}"`), 'Tucked Away Twitter image must use the dedicated social preview asset.')
 check(!tuckedAwayHtml.includes(['Product', 'Manager'].join(' ')), 'Tucked Away metadata must not include old role-led positioning.')
 check(tuckedAwayHtml.includes('<html lang="en-AU">'), 'Tucked Away should declare Australian English language metadata.')
 check(tuckedAwayHtml.includes('application/ld+json'), 'Tucked Away should include JSON-LD structured data.')
@@ -131,6 +134,12 @@ check(
   'Social preview image should be 1200 x 630 px.',
 )
 check(exists(`public${tuckedAwaySocialImagePath}`), 'Tucked Away social preview image should point to an existing public asset.')
+const tuckedAwaySocialPreview = getPngSize(`public${tuckedAwaySocialImagePath}`)
+check(Boolean(tuckedAwaySocialPreview), 'Tucked Away social preview image must exist and be a PNG.')
+check(
+  tuckedAwaySocialPreview?.width === 1200 && tuckedAwaySocialPreview?.height === 630,
+  'Tucked Away social preview image should be 1200 x 630 px.',
+)
 
 const projectFiles = [
   'index.html',
@@ -187,24 +196,49 @@ check(labProjectsSource.includes("title: 'Commonwealth After Dark'"), 'Commonwea
 check(labProjectsSource.includes("type: 'FALLOUT 4 MODDING'"), 'Commonwealth After Dark category should be FALLOUT 4 MODDING.')
 check(labProjectsSource.includes("status: 'Passion Project'"), 'Commonwealth After Dark status should be Passion Project.')
 check(labProjectsSource.includes("actionLabel: 'Passion Project'"), 'Commonwealth After Dark should use a non-navigating Passion Project action label.')
+check(labProjectsSource.includes("cardActionLabel: 'View Details'"), 'Commonwealth After Dark card action should be View Details.')
 check(
   combinedSource.includes('project.cardActionLabel || project.actionLabel'),
   'Lab project cards should support card-only action labels without changing detail actions.',
 )
-check(labProjectsSource.includes("image: '/images/lab/commonwealth-after-dark-1.jpg'"), 'Commonwealth After Dark should use the first supplied image as the card image.')
-check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark-1.jpg'"), 'Commonwealth After Dark gallery should include the first supplied image.')
-check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark-2.jpg'"), 'Commonwealth After Dark gallery should include the second supplied image.')
-check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark-3.jpg'"), 'Commonwealth After Dark gallery should include the third supplied image.')
-check(labProjectsSource.includes("title: 'The club taking shape'"), 'Commonwealth After Dark first gallery caption title should be present.')
-check(labProjectsSource.includes("title: 'Building the atmosphere'"), 'Commonwealth After Dark second gallery caption title should be present.')
-check(labProjectsSource.includes("title: 'Custom assets in progress'"), 'Commonwealth After Dark third gallery caption title should be present.')
-check(labProjectsSource.includes("order: 7"), 'Commonwealth After Dark should be the final Sara\'s Lab project.')
+check(labProjectsSource.includes("image: '/images/lab/commonwealth-after-dark/inside-vaultage-01-vaultage.png'"), 'Commonwealth After Dark should use the first updated Inside Vaultage image as the card image.')
+check(labProjectsSource.includes("title: 'Custom Assets'"), 'Commonwealth After Dark should include a Custom Assets gallery section.')
+check(labProjectsSource.includes("title: 'Inside Vaultage'"), 'Commonwealth After Dark should include an Inside Vaultage gallery section.')
+check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark/01-vaultage-club.png'"), 'Commonwealth After Dark Custom Assets gallery should include the first standalone item shot.')
+check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark/18-purple-light-globe.png'"), 'Commonwealth After Dark Custom Assets gallery should include the eighteenth standalone item shot.')
+check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark/inside-vaultage-01-vaultage.png'"), 'Commonwealth After Dark Inside Vaultage gallery should include the updated Vaultage exterior image.')
+check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark/inside-vaultage-02-entry.png'"), 'Commonwealth After Dark Inside Vaultage gallery should include the updated Entry image.')
+check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark/inside-vaultage-03-bar.png'"), 'Commonwealth After Dark Inside Vaultage gallery should include the updated Bar image.')
+check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark/inside-vaultage-04-dancefloor.png'"), 'Commonwealth After Dark Inside Vaultage gallery should include the updated Dancefloor image.')
+check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark/inside-vaultage-05-seated-area.png'"), 'Commonwealth After Dark Inside Vaultage gallery should include the updated Seated Area image.')
+check(labProjectsSource.includes("src: '/images/lab/commonwealth-after-dark/inside-vaultage-06-seated-area-2.png'"), 'Commonwealth After Dark Inside Vaultage gallery should include the updated Seated Area 2 image.')
+check(labProjectsSource.includes("title: 'Vaultage Exterior'"), 'Commonwealth After Dark first Inside Vaultage caption title should be present.')
+check(labProjectsSource.includes("title: 'Bar'"), 'Commonwealth After Dark third Inside Vaultage caption title should be present.')
+check(labProjectsSource.includes("title: 'Seated Area 2'"), 'Commonwealth After Dark sixth Inside Vaultage caption title should be present.')
+check(labProjectsSource.includes('videos: ['), 'Commonwealth After Dark should support a project-level Videos section.')
+check(labProjectsSource.includes("title: 'Nightingale'"), 'Commonwealth After Dark first video should be titled Nightingale.')
+check(labProjectsSource.includes("description: 'Original music created for Commonwealth After Dark.'"), 'Commonwealth After Dark first video should describe the original music.')
+check(labProjectsSource.includes("embedUrl: 'https://www.youtube-nocookie.com/embed/TTY5rp9_1TM?rel=0'"), 'Commonwealth After Dark should use a privacy-conscious YouTube embed URL with rel=0.')
+check(labProjectsSource.includes("title: 'Commonwealth After Dark Walkthrough'"), 'Commonwealth After Dark should include the future walkthrough video item.')
+check(labProjectsSource.includes("status: 'Coming soon'"), 'Commonwealth After Dark walkthrough video should render as coming soon until a URL is available.')
 check(
-  labProjectsSource.indexOf("id: 'meeting-bingo'") < labProjectsSource.indexOf("id: 'commonwealth-after-dark'"),
-  'Commonwealth After Dark should appear after Meeting Bingo in Sara\'s Lab order.',
+  combinedSource.includes('lab-project-detail-image-led'),
+  'Commonwealth After Dark detail view should support the image-led sectioned gallery layout.',
+)
+check(combinedSource.includes('LabProjectVideos'), 'Lab project detail view should render optional project videos.')
+check(combinedSource.includes('loading="lazy"'), 'Lab project video embeds should lazy load.')
+check(combinedSource.includes('allowFullScreen'), 'Lab project video embeds should preserve fullscreen support.')
+check(styleText.includes('aspect-ratio: 16 / 9'), 'Lab project videos should keep a responsive 16:9 aspect ratio.')
+check(styleText.includes('lab-project-video-placeholder'), 'Lab project videos should support restrained coming-soon placeholders.')
+check(labProjectsSource.includes("order: 3"), 'Commonwealth After Dark should be the third Sara\'s Lab project.')
+check(
+  labProjectsSource.indexOf("id: 'batcave-font'") < labProjectsSource.indexOf("id: 'commonwealth-after-dark'") &&
+    labProjectsSource.indexOf("id: 'commonwealth-after-dark'") < labProjectsSource.indexOf("id: 'the-door-list'") &&
+    labProjectsSource.indexOf("id: 'meeting-bingo'") < labProjectsSource.indexOf("id: 'xanadu-9-muses'"),
+  'Sara\'s Lab order should place Commonwealth After Dark third and Xanadu last.',
 )
 check(
-  combinedSource.includes('galleryImages') && combinedSource.includes('lab-project-gallery-thumbnails'),
+  combinedSource.includes('galleryImages') && combinedSource.includes('LabProjectGallery') && combinedSource.includes('lab-project-gallery-thumbnails'),
   'Lab project detail view should support optional multi-image galleries.',
 )
 check(

@@ -253,7 +253,11 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Add Tucked Away to Sara's Lab with supplied image, In Progress status, custom card action label, and detail copy.
 - `[x]` Update Tucked Away card action to `View Details` and refresh the Lab image path to the cropped asset.
 - `[x]` Add Meeting Bingo to Sara's Lab as the final project with supplied image, Work in Progress status, Play Meeting Bingo action, and secure external link.
-- `[x]` Add Commonwealth After Dark to Sara's Lab as the final project with supplied three-image gallery, Passion Project status, and non-interactive detail action.
+- `[x]` Add Commonwealth After Dark to Sara's Lab with supplied three-image gallery, Passion Project status, and non-interactive detail action.
+- `[x]` Update Commonwealth After Dark with completed wording, third-position Sara's Lab ordering, an 18-image Custom Assets gallery, and the retained Inside Vaultage gallery.
+- `[x]` Rename Commonwealth After Dark image 7 from Black Bar Counter to Black Bar.
+- `[x]` Replace Commonwealth After Dark Inside Vaultage with five updated club shots and make its detail galleries larger and image-led.
+- `[x]` Add Commonwealth After Dark Videos section with a privacy-conscious YouTube embed and the Bar image in the Inside Vaultage gallery.
 - `[x]` Update Meeting Bingo and Commonwealth After Dark Sara's Lab card buttons to `View Details` while preserving their detail-view actions.
 - `[x]` Update Alphabet Stitch to the production Cross Stitch Text URL, `Open Site` detail action, and confirmed copy.
 - `[x]` Add Crafts as an active portfolio section after Sara's Lab with reusable data, card, and detail modal structure.
@@ -306,6 +310,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Configure production domain metadata, canonical URL, robots.txt, and sitemap.xml for `https://saragillard.com`.
 - `[x]` Replace old role-led metadata with creative portfolio title and description across browser, search, social, manifest, and validation files.
 - `[x]` Complete a conservative SEO/discoverability pass with Australian English language metadata, homepage and Tucked Away structured data, sitemap lastmod entries, and an existing Tucked Away social image path.
+- `[x]` Replace the Tucked Away social preview metadata with a dedicated `1200 x 630` Open Graph/Twitter image at `/images/social/tucked-away-og.png`.
 - `[x]` Confirm deployment host is Vercel and the custom domain is connected externally.
 - `[x]` Add production metadata:
   - page description
@@ -327,6 +332,8 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Update Xeno to a new corrected landscape display image URL so browser caching cannot keep showing the old rotated asset.
 - `[x]` Verify production URL loads at `https://saragillard.com`.
 - `[x]` Verify `robots.txt` and `sitemap.xml` return 200 on `https://saragillard.com`.
+- `[x]` Restart local preview site at `http://127.0.0.1:5175/` after the preview server stopped responding.
+- `[x]` Update the Commonwealth After Dark Videos section with Nightingale wording, a `rel=0` YouTube embed, and a coming-soon walkthrough placeholder.
 - `[-]` Verify production console has no unintended errors. Blocked by live-browser/tool access during final validation.
 
 ## Phase 6: Future Enhancements
