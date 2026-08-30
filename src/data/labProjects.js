@@ -1,7 +1,7 @@
 export const labProjects = [
   {
     id: 'alphabet-stitch',
-    title: 'Alphabet Stitch',
+    title: 'Cross Stitch Text',
     type: 'Creative tool / web app',
     status: 'Live',
     link: 'https://www.crossstitchtext.com/',
@@ -215,7 +215,9 @@ export const labProjects = [
       {
         title: 'Commonwealth After Dark Walkthrough',
         description: 'A walkthrough of the completed Vaultage nightclub, custom assets, textures, lighting and final build.',
-        status: 'Coming soon',
+        url: 'https://youtu.be/N2xHVznGDhI',
+        embedUrl: 'https://www.youtube-nocookie.com/embed/N2xHVznGDhI?rel=0',
+        iframeTitle: 'Commonwealth After Dark Walkthrough video',
       },
     ],
     mediaFit: 'contain',

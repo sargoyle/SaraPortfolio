@@ -53,11 +53,11 @@ Use this checklist before release and after changes to shared navigation, filter
 
 ## Sara's Lab
 
-- Confirm exactly seven projects show in this order: Alphabet Stitch, Batcave Font, Commonwealth After Dark, The Door List, Tucked Away, Meeting Bingo, Xanadu: The 9 Muses.
+- Confirm exactly seven projects show in this order: Cross Stitch Text, Batcave Font, Commonwealth After Dark, The Door List, Tucked Away, Meeting Bingo, Xanadu: The 9 Muses.
 - Confirm cards show type, title, status, description, and action text.
 - Confirm card images use contained media and do not crop important artwork.
 - Confirm Xanadu displays the uploaded Muses image and the contain treatment looks acceptable.
-- Confirm Alphabet Stitch shows `Create beautiful cross stitch text patterns in minutes.` and its detail view has an external `Open Site` link to `https://www.crossstitchtext.com/`.
+- Confirm Cross Stitch Text shows `Create beautiful cross stitch text patterns in minutes.` and its detail view has an external `Open Site` link to `https://www.crossstitchtext.com/`.
 - Confirm Batcave Font status is Live and the detail view shows a downloadable font action.
 - Confirm Xanadu and The Door List do not show empty external/download links.
 - Confirm Tucked Away shows status `In Progress`, action text `View Details`, and the cropped app image.

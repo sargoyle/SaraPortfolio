@@ -8,7 +8,7 @@ Security checklist for Sara's Portfolio, backed by the lightweight `pnpm run lin
 
 - Static React/Vite portfolio.
 - No backend, authentication, database, payments, user-generated content, or secrets are expected.
-- Active external links are limited to Sara's LinkedIn, Alphabet Stitch, and Meeting Bingo. Archived AI POC links may remain in `archive/ai-pocs` but are not active site links.
+- Active external links are limited to Sara's LinkedIn, Cross Stitch Text, and Meeting Bingo. Archived AI POC links may remain in `archive/ai-pocs` but are not active site links.
 
 ## Required Checks
 

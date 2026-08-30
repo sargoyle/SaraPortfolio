@@ -73,7 +73,7 @@ No known gaps currently documented.
 
 - Detail body renders correctly for all seven current projects.
 - Focus tags are not visibly rendered.
-- External link appears for Alphabet Stitch as `Open Site` and points to `https://www.crossstitchtext.com/`.
+- External link appears for Cross Stitch Text as `Open Site` and points to `https://www.crossstitchtext.com/`.
 - Internal `/tucked-away` link appears for Tucked Away.
 - Download link appears for Batcave Font.
 - External link appears for Meeting Bingo as `Play Meeting Bingo`.

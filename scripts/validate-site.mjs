@@ -169,12 +169,13 @@ const craftsSource = read('src/data/crafts.js')
 check(!combinedSource.includes('dangerouslySetInnerHTML'), 'Active source should not use dangerouslySetInnerHTML.')
 check(!/mailto:|tel:|instagram\.com|facebook\.com|twitter\.com|x\.com/i.test(combinedSource), 'LinkedIn should remain the only public contact/social route.')
 check(combinedSource.includes("window.location.pathname === '/tucked-away'"), 'Client routing should support direct /tucked-away visits.')
-check(labProjectsSource.includes("link: 'https://www.crossstitchtext.com/'"), 'Alphabet Stitch should link to the production Cross Stitch Text site.')
-check(labProjectsSource.includes("linkLabel: 'Open Site'"), 'Alphabet Stitch detail action should use Open Site.')
-check(labProjectsSource.includes("subtitle: 'Create beautiful cross stitch text patterns in minutes.'"), 'Alphabet Stitch should use the confirmed short summary.')
+check(labProjectsSource.includes("title: 'Cross Stitch Text'"), "Cross Stitch Text should be the active Sara's Lab project name.")
+check(labProjectsSource.includes("link: 'https://www.crossstitchtext.com/'"), 'Cross Stitch Text should link to the production Cross Stitch Text site.')
+check(labProjectsSource.includes("linkLabel: 'Open Site'"), 'Cross Stitch Text detail action should use Open Site.')
+check(labProjectsSource.includes("subtitle: 'Create beautiful cross stitch text patterns in minutes.'"), 'Cross Stitch Text should use the confirmed short summary.')
 check(
   labProjectsSource.includes('Design custom cross stitch text and lettering patterns without counting squares. Browse a growing library of stitch alphabets, preview your words instantly, and generate clean, centred patterns ready to print and stitch.'),
-  'Alphabet Stitch should use the confirmed detail description.',
+  'Cross Stitch Text should use the confirmed detail description.',
 )
 check(labProjectsSource.includes("id: 'meeting-bingo'"), 'Meeting Bingo project should be registered in Sara\'s Lab data.')
 check(labProjectsSource.includes("title: 'Meeting Bingo'"), 'Meeting Bingo title should be present in Sara\'s Lab data.')
@@ -220,7 +221,7 @@ check(labProjectsSource.includes("title: 'Nightingale'"), 'Commonwealth After Da
 check(labProjectsSource.includes("description: 'Original music created for Commonwealth After Dark.'"), 'Commonwealth After Dark first video should describe the original music.')
 check(labProjectsSource.includes("embedUrl: 'https://www.youtube-nocookie.com/embed/TTY5rp9_1TM?rel=0'"), 'Commonwealth After Dark should use a privacy-conscious YouTube embed URL with rel=0.')
 check(labProjectsSource.includes("title: 'Commonwealth After Dark Walkthrough'"), 'Commonwealth After Dark should include the future walkthrough video item.')
-check(labProjectsSource.includes("status: 'Coming soon'"), 'Commonwealth After Dark walkthrough video should render as coming soon until a URL is available.')
+check(labProjectsSource.includes("embedUrl: 'https://www.youtube-nocookie.com/embed/N2xHVznGDhI?rel=0'"), 'Commonwealth After Dark walkthrough video should use the confirmed YouTube embed URL.')
 check(
   combinedSource.includes('lab-project-detail-image-led'),
   'Commonwealth After Dark detail view should support the image-led sectioned gallery layout.',
@@ -249,6 +250,10 @@ check(
   combinedSource.includes('lab-project-link-static') && combinedSource.includes('aria-disabled="true"'),
   'Lab project detail view should support non-interactive action labels.',
 )
+check(exists('public/images/social/pinterest-logo.svg'), 'Pinterest Save controls should use a public Pinterest logo asset.')
+check(combinedSource.includes("label = 'Save'"), 'Pinterest Save controls should use the compact visible Save label.')
+check(combinedSource.includes('pinterest-save-button__icon'), 'Pinterest Save controls should render a dedicated icon element.')
+check(combinedSource.includes('Save to Pinterest'), 'Pinterest Save controls should keep a clear accessible Save to Pinterest label.')
 check(
   labProjectsSource.includes('Tick off clichés, awkward moments and predictable workplace habits as they happen'),
   'Meeting Bingo detail description should use the approved wording.',

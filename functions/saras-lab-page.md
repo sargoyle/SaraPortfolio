@@ -16,7 +16,7 @@ Sara's Lab is the portfolio home and project showcase for creative systems, tool
 
 ## User-Facing Behaviour
 
-Visitors see a seven-project gallery and can open each project in a detail modal. Alphabet Stitch includes an external project link inside its detail view. Batcave Font is marked Live and includes a downloadable font file. Commonwealth After Dark appears third, is marked Passion Project, and uses sectioned detail galleries for Custom Assets and the updated Inside Vaultage club shots. Tucked Away links from its detail view to the public product page at `/tucked-away`. Meeting Bingo links to its public web app from the detail view.
+Visitors see a seven-project gallery and can open each project in a detail modal. Cross Stitch Text includes an external project link inside its detail view. Batcave Font is marked Live and includes a downloadable font file. Commonwealth After Dark appears third, is marked Passion Project, and uses sectioned detail galleries for Custom Assets and the updated Inside Vaultage club shots. Tucked Away links from its detail view to the public product page at `/tucked-away`. Meeting Bingo links to its public web app from the detail view.
 
 ## Layout Rules
 
@@ -26,7 +26,7 @@ Visitors see a seven-project gallery and can open each project in a detail modal
 - Intro copy may use the available desktop width; it should only wrap when the viewport is small enough to require it.
 - Projects display in manual `order`, not alphabetical order.
 - Current order is:
-  1. Alphabet Stitch
+  1. Cross Stitch Text
   2. Batcave Font
   3. Commonwealth After Dark
   4. The Door List
@@ -86,7 +86,7 @@ No known gaps currently documented.
 - Sara's Lab renders exactly seven project cards.
 - The old single Xanadu content is not rendered.
 - Projects render in required manual order.
-- Alphabet Stitch displays its external link in the detail view.
+- Cross Stitch Text displays its external link in the detail view.
 - Batcave Font displays as Live and offers the font download.
 - Xanadu displays the uploaded Muses image rather than a placeholder.
 - Tucked Away displays its cropped app image and links to `/tucked-away` from the detail view.

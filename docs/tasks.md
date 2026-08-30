@@ -325,6 +325,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Update global typography to Playfair Display headings and Source Sans 3 body/interface text.
 - `[x]` Add `pnpm run lint` and `pnpm test` scripts for static site validation.
 - `[x]` Add Vercel host redirect config so `www.saragillard.com` redirects to `https://saragillard.com`.
+- `[x]` Add Pinterest domain verification metadata tag to the production homepage head.
 - `[x]` Keep current single-page navigation for launch; direct section/project URLs are deferred.
 - `[x]` Preload Crafter Dark finished/detail images in the background and on card focus/hover to reduce modal image wait time without changing source assets.
 - `[x]` Add optimized Crafter Dark finished/detail display images and point detail views at lighter `-display.webp` assets while keeping original uploads untouched.
@@ -334,6 +335,10 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Verify `robots.txt` and `sitemap.xml` return 200 on `https://saragillard.com`.
 - `[x]` Restart local preview site at `http://127.0.0.1:5175/` after the preview server stopped responding.
 - `[x]` Update the Commonwealth After Dark Videos section with Nightingale wording, a `rel=0` YouTube embed, and a coming-soon walkthrough placeholder.
+- `[x]` Rename the active Sara's Lab project display name from Alphabet Stitch to Cross Stitch Text while preserving its URL, image asset, status, and ordering.
+- `[x]` Add lightweight Pinterest Save actions to suitable Cross-Stitch, Photography, Crafts, and Commonwealth After Dark selected large images without adding the Pinterest SDK or profile links.
+- `[x]` Update Pinterest Save controls to use a compact Pinterest logo icon, visible `Save` label, and clear accessible `Save to Pinterest` labelling.
+- `[x]` Replace the second Commonwealth After Dark Videos slot with the confirmed YouTube walkthrough embed.
 - `[-]` Verify production console has no unintended errors. Blocked by live-browser/tool access during final validation.
 
 ## Phase 6: Future Enhancements

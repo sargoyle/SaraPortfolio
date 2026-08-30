@@ -1,9 +1,17 @@
 import { useEffect, useState } from 'react';
 import ImageWithFallback from './ImageWithFallback.jsx';
+import PinterestSaveButton from './PinterestSaveButton.jsx';
+
+const CRAFTS_URL = 'https://saragillard.com/#crafts';
 
 function getInitialImageIndex(craft) {
   const heroIndex = craft.images.findIndex((image) => image.id === craft.heroImageId);
   return heroIndex >= 0 ? heroIndex : 0;
+}
+
+function getPinterestDescription(craft, image) {
+  if (image?.caption) return `${image.caption} Craft by Sara Gillard.`;
+  return `${craft.type} craft by Sara Gillard. ${craft.description}`;
 }
 
 export default function CraftDetail({ craft }) {
@@ -32,6 +40,14 @@ export default function CraftDetail({ craft }) {
             fallbackLabel={`${craft.type} image unavailable`}
           />
         </figure>
+
+        <PinterestSaveButton
+          imageUrl={activeImage?.src}
+          destinationUrl={CRAFTS_URL}
+          description={getPinterestDescription(craft, activeImage)}
+          className="craft-pinterest-save"
+          ariaLabel={`Save ${craft.type.toLowerCase()} craft image ${activeImageIndex + 1} to Pinterest`}
+        />
 
         {hasGallery ? (
           <div className="craft-detail-thumbnails" role="list" aria-label={`${craft.type} craft image gallery`}>

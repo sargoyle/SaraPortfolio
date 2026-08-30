@@ -1,5 +1,8 @@
 import ImageWithFallback from './ImageWithFallback.jsx';
 import ModalShell from './ModalShell.jsx';
+import PinterestSaveButton from './PinterestSaveButton.jsx';
+
+const CROSS_STITCH_URL = 'https://saragillard.com/#crafter';
 
 function getProjectImages(project) {
   if (Array.isArray(project.images) && project.images.length > 0) return project.images;
@@ -12,6 +15,11 @@ function getStructuredMetadata(project) {
     project.chartSize ? ['Chart size', project.chartSize] : null,
     project.numberOfColours ? ['Colours', project.numberOfColours] : null,
   ].filter(Boolean);
+}
+
+function getPinterestDescription(project, imageIndex) {
+  const imageType = imageIndex === 1 ? 'finished cross-stitch artwork' : 'cross-stitch pattern';
+  return `${project.title} ${imageType} by Sara Gillard.`;
 }
 
 export default function ProjectDetailModal({
@@ -56,17 +64,26 @@ export default function ProjectDetailModal({
         {images.length > 0 && (
           <div className={images.length > 1 ? 'project-images' : 'poc-image-container'}>
             {images.map((image, index) => (
-              <div key={`${image}-${index}`} className="project-image-container">
-                <ImageWithFallback
-                  src={image}
-                  alt={`${project.title} image ${index + 1}`}
-                  className={images.length > 1 ? 'project-image' : 'poc-image'}
-                  fallbackClassName="project-image-placeholder"
-                  fallbackLabel={`${project.title} image ${index + 1} unavailable`}
-                >
-                  <span className="project-image-placeholder-icon" aria-hidden="true">{fallbackIcon}</span>
-                  <span className="project-image-placeholder-text">Image {index + 1}</span>
-                </ImageWithFallback>
+              <div key={`${image}-${index}`} className="project-image-with-action">
+                <div className="project-image-container">
+                  <ImageWithFallback
+                    src={image}
+                    alt={`${project.title} image ${index + 1}`}
+                    className={images.length > 1 ? 'project-image' : 'poc-image'}
+                    fallbackClassName="project-image-placeholder"
+                    fallbackLabel={`${project.title} image ${index + 1} unavailable`}
+                  >
+                    <span className="project-image-placeholder-icon" aria-hidden="true">{fallbackIcon}</span>
+                    <span className="project-image-placeholder-text">Image {index + 1}</span>
+                  </ImageWithFallback>
+                </div>
+                <PinterestSaveButton
+                  imageUrl={image}
+                  destinationUrl={CROSS_STITCH_URL}
+                  description={getPinterestDescription(project, index)}
+                  className="project-pinterest-save"
+                  ariaLabel={`Save ${project.title} image ${index + 1} to Pinterest`}
+                />
               </div>
             ))}
           </div>
