@@ -61,7 +61,9 @@ export default function App() {
     if (labProjectSlug) return { page: 'games', labProjectSlug };
     if (window.location.pathname === '/tucked-away') return { page: 'tuckedAway', labProjectSlug: null };
     if (window.location.hash === '#saras-lab') return { page: 'games', labProjectSlug: null };
+    if (window.location.hash === '#crafter') return { page: 'crafter', labProjectSlug: null };
     if (window.location.hash === '#crafts') return { page: 'crafts', labProjectSlug: null };
+    if (window.location.hash === '#photography') return { page: 'photo', labProjectSlug: null };
     return { page: 'home', labProjectSlug: null };
   };
 
@@ -80,7 +82,9 @@ export default function App() {
     window.dispatchEvent(new CustomEvent('portfolio:navigate', { detail: { page } }));
     const hashPages = {
       games: '/#saras-lab',
+      crafter: '/#crafter',
       crafts: '/#crafts',
+      photo: '/#photography',
     };
     const targetPath = hashPages[page] || '/';
 
