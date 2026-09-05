@@ -58,6 +58,12 @@ export const labProjects = [
     blurb: 'Commonwealth After Dark started because I wanted to build my own goth club in Fallout 4, and then I got completely hooked on the process.\n\nI created darker textures, reworked furniture and bar assets, experimented with lighting, and turned a very Fallout-looking space into somewhere that feels much more like a proper dark club. I’m loving the mix of creative and technical work, especially when something that looked completely wrong suddenly works in-game.\n\nThe nightclub build and custom assets are now substantially complete, bringing together so many of the things I love into one project and letting those ideas come to life inside a game world.',
     actionLabel: 'Passion Project',
     cardActionLabel: 'View Details',
+    detailLinks: [
+      {
+        label: 'Download mod from Nexus',
+        href: 'https://www.nexusmods.com/fallout4/mods/108729',
+      },
+    ],
     focus: [
       'Fallout 4 modding',
       'Custom assets',

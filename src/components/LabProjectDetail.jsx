@@ -147,6 +147,7 @@ export default function LabProjectDetail({ project }) {
   const hasGallery = galleryImages.length > 1;
   const hasGallerySections = project.gallerySections?.some((section) => section.images?.length);
   const isImageLedDetail = project.id === 'commonwealth-after-dark';
+  const detailLinks = Array.isArray(project.detailLinks) ? project.detailLinks : [];
 
   useEffect(() => {
     setActiveImageIndex(0);
@@ -185,11 +186,24 @@ export default function LabProjectDetail({ project }) {
               </a>
             </div>
           ) : null}
-          {!project.link && !project.download && project.actionLabel ? (
+          {!project.link && !project.download && (project.actionLabel || detailLinks.length > 0) ? (
             <div className="lab-project-detail-actions">
-              <span className="lab-project-link lab-project-link-static" aria-disabled="true">
-                {project.actionLabel}
-              </span>
+              {project.actionLabel ? (
+                <span className="lab-project-link lab-project-link-static" aria-disabled="true">
+                  {project.actionLabel}
+                </span>
+              ) : null}
+              {detailLinks.map((detailLink) => (
+                <a
+                  key={detailLink.href}
+                  href={detailLink.href}
+                  target={detailLink.href.startsWith('/') ? undefined : '_blank'}
+                  rel={detailLink.href.startsWith('/') ? undefined : 'noopener noreferrer'}
+                  className="lab-project-link"
+                >
+                  {detailLink.label}
+                </a>
+              ))}
             </div>
           ) : null}
         </div>

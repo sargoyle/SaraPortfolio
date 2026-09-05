@@ -339,6 +339,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Add lightweight Pinterest Save actions to suitable Cross-Stitch, Photography, Crafts, and Commonwealth After Dark selected large images without adding the Pinterest SDK or profile links.
 - `[x]` Update Pinterest Save controls to use a compact Pinterest logo icon, visible `Save` label, and clear accessible `Save to Pinterest` labelling.
 - `[x]` Replace the second Commonwealth After Dark Videos slot with the confirmed YouTube walkthrough embed.
+- `[x]` Add a matching Nexus Mods download chip to the Commonwealth After Dark detail view while keeping the `Passion Project` chip.
 - `[-]` Verify production console has no unintended errors. Blocked by live-browser/tool access during final validation.
 
 ## Phase 6: Future Enhancements

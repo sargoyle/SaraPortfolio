@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Initial project setup
+- 2026-09-05: Added a matching Nexus Mods download chip to the Commonwealth After Dark detail view while keeping the existing `Passion Project` chip. Files affected: `src/data/labProjects.js`, `src/components/LabProjectDetail.jsx`, `docs/tasks.md`, `docs/changelog.md`.
 - 2026-08-30: Replaced the Commonwealth After Dark walkthrough placeholder with the confirmed YouTube video embed. Files affected: `src/data/labProjects.js`, `docs/tasks.md`, `docs/changelog.md`.
 - 2026-08-30: Added Pinterest domain verification meta tag to the homepage HTML head. Files affected: `index.html`, `docs/tasks.md`, `docs/changelog.md`.
 - 2026-08-30: Added lightweight Pinterest Save actions for suitable Cross-Stitch, Photography, Crafts, and Commonwealth After Dark selected large images using direct Pinterest create links and production `saragillard.com` URLs. Files affected: `src/components/PinterestSaveButton.jsx`, `src/components/ProjectDetailModal.jsx`, `src/components/FullscreenImageModal.jsx`, `src/components/CraftDetail.jsx`, `src/components/LabProjectDetail.jsx`, `src/styles/global.css`, `docs/tasks.md`.
