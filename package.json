@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "generate:lab-routes": "node scripts/generate-lab-route-html.mjs",
+    "prebuild": "node scripts/generate-lab-route-html.mjs",
     "build": "vite build",
     "lint": "node scripts/validate-site.mjs",
     "test": "node scripts/validate-site.mjs",

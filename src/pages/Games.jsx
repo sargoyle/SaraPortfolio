@@ -1,21 +1,20 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import LabProjectCard from '../components/LabProjectCard.jsx';
 import LabProjectDetailModal from '../components/LabProjectDetailModal.jsx';
-import { labProjects } from '../data/labProjects.js';
+import { getLabProjectSlug, getOrderedLabProjects } from '../utils/labRoutes.js';
 
-export default function Games() {
-  const [activeProject, setActiveProject] = useState(null);
-  const orderedProjects = useMemo(
-    () => [...labProjects].sort((first, second) => first.order - second.order),
-    []
-  );
+export default function Games({ activeProjectSlug, onOpenProject, onCloseProject, onNavigateProject }) {
+  const orderedProjects = useMemo(() => getOrderedLabProjects(), []);
+  const activeProject = activeProjectSlug
+    ? orderedProjects.find((project) => getLabProjectSlug(project) === activeProjectSlug) || null
+    : null;
 
   const navigateProject = (direction) => {
     if (!activeProject || orderedProjects.length === 0) return;
     const currentIndex = orderedProjects.findIndex((project) => project.id === activeProject.id);
     const offset = direction === 'next' ? 1 : -1;
     const nextIndex = (currentIndex + offset + orderedProjects.length) % orderedProjects.length;
-    setActiveProject(orderedProjects[nextIndex]);
+    onNavigateProject(orderedProjects[nextIndex]);
   };
 
   return (
@@ -24,12 +23,12 @@ export default function Games() {
       <p className="description lab-page-intro">Sara’s Lab is where the systems live: creative tools, type experiments, games, and prototypes that sit behind the finished work.</p>
       <div className="lab-project-grid" aria-label="Sara's Lab projects">
         {orderedProjects.map((project) => (
-          <LabProjectCard key={project.id} project={project} onOpen={setActiveProject} />
+          <LabProjectCard key={project.id} project={project} onOpen={onOpenProject} />
         ))}
       </div>
       <LabProjectDetailModal
         project={activeProject}
-        onClose={() => setActiveProject(null)}
+        onClose={onCloseProject}
         onPrevious={() => navigateProject('prev')}
         onNext={() => navigateProject('next')}
       />

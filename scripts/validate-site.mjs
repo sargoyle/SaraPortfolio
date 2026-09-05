@@ -1,6 +1,13 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import {
+  getLabProjectDescription,
+  getLabProjectPath,
+  getLabProjectTitle,
+  getLabProjectUrl,
+  getOrderedLabProjects,
+} from '../src/utils/labRoutes.js'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const productionUrl = 'https://saragillard.com'
@@ -13,6 +20,7 @@ const tuckedAwayDescription =
   'Tucked Away is a private Android app for organising, searching, rating and revisiting videos stored on your phone or SD card.'
 const socialImagePath = '/images/social/saras-portfolio-og.png'
 const tuckedAwaySocialImagePath = '/images/social/tucked-away-og.png'
+const labRouteProjects = getOrderedLabProjects()
 const prohibitedPositioning = [
   ['Product', 'Manager'].join(' '),
   ['product', 'management'].join(' '),
@@ -81,6 +89,7 @@ const tuckedAwayHtml = read('tucked-away.html')
 const robotsTxt = read('public/robots.txt')
 const sitemapXml = read('public/sitemap.xml')
 const manifest = read('public/site.webmanifest')
+const vercelJson = read('vercel.json')
 
 check(indexHtml.includes(`<title>${expectedTitle}</title>`), 'Homepage title metadata is missing or incorrect.')
 check(indexHtml.includes(`content="${expectedDescription}"`), 'Homepage meta description is missing or incorrect.')
@@ -118,9 +127,33 @@ check(robotsTxt.includes('Allow: /'), 'robots.txt must allow crawling.')
 check(robotsTxt.includes(`Sitemap: ${productionUrl}/sitemap.xml`), 'robots.txt must point to the production sitemap.')
 
 const sitemapUrls = [...sitemapXml.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1])
-check(sitemapUrls.length === 2, 'Sitemap should include the portfolio root and Tucked Away routes.')
+check(sitemapUrls.length === 2 + labRouteProjects.length, 'Sitemap should include the portfolio root, Tucked Away, and every Sara\'s Lab project route.')
 check(sitemapUrls.includes(`${productionUrl}/`), 'Sitemap root route must use the production apex domain.')
 check(sitemapUrls.includes(`${productionUrl}/tucked-away`), 'Sitemap must include the Tucked Away route.')
+
+labRouteProjects.forEach((project) => {
+  const routePath = getLabProjectPath(project)
+  const routeUrl = getLabProjectUrl(project)
+  const routeHtmlPath = `${routePath.slice(1)}/index.html`
+  const routeHtml = exists(routeHtmlPath) ? read(routeHtmlPath) : ''
+  const imageUrl = project.image ? `${productionUrl}${project.image}` : `${productionUrl}${socialImagePath}`
+  const imageAlt = project.imageAlt || `${project.title} preview by Sara Gillard.`
+
+  check(Boolean(project.slug), `${project.title} should define an explicit stable Sara's Lab slug.`)
+  check(sitemapUrls.includes(routeUrl), `Sitemap must include ${routeUrl}.`)
+  check(exists(routeHtmlPath), `Generated static Lab route HTML is missing for ${routePath}.`)
+  check(routeHtml.includes(`<title>${getLabProjectTitle(project)}</title>`), `${routePath} title metadata is missing or incorrect.`)
+  check(routeHtml.includes(`name="description" content="${getLabProjectDescription(project)}"`), `${routePath} meta description is missing or incorrect.`)
+  check(routeHtml.includes(`<link rel="canonical" href="${routeUrl}" />`), `${routePath} canonical URL is missing or incorrect.`)
+  check(routeHtml.includes(`property="og:url" content="${routeUrl}"`), `${routePath} Open Graph URL is missing or incorrect.`)
+  check(routeHtml.includes(`property="og:title" content="${getLabProjectTitle(project)}"`), `${routePath} Open Graph title is missing or incorrect.`)
+  check(routeHtml.includes(`property="og:image" content="${imageUrl}"`), `${routePath} Open Graph image should use the project primary image.`)
+  check(routeHtml.includes(`name="twitter:title" content="${getLabProjectTitle(project)}"`), `${routePath} Twitter title is missing or incorrect.`)
+  check(routeHtml.includes(`name="twitter:image" content="${imageUrl}"`), `${routePath} Twitter image should use the project primary image.`)
+  check(routeHtml.includes(`name="twitter:image:alt" content="${imageAlt}"`), `${routePath} Twitter image alt text is missing or incorrect.`)
+})
+
+check(vercelJson.includes('"/lab/:projectSlug"'), 'Vercel rewrites should support direct Sara\'s Lab project routes.')
 
 check(manifest.includes(productionUrl), 'Web app manifest should reference the production domain.')
 check(exists('public/favicon.svg'), 'SVG favicon is missing from public.')
@@ -144,6 +177,7 @@ check(
 const projectFiles = [
   'index.html',
   'tucked-away.html',
+  ...walkFiles('lab', ['.html']),
   'public/robots.txt',
   'public/sitemap.xml',
   'public/site.webmanifest',
@@ -169,6 +203,9 @@ const craftsSource = read('src/data/crafts.js')
 check(!combinedSource.includes('dangerouslySetInnerHTML'), 'Active source should not use dangerouslySetInnerHTML.')
 check(!/mailto:|tel:|instagram\.com|facebook\.com|twitter\.com|x\.com/i.test(combinedSource), 'LinkedIn should remain the only public contact/social route.')
 check(combinedSource.includes("window.location.pathname === '/tucked-away'"), 'Client routing should support direct /tucked-away visits.')
+check(combinedSource.includes('getLabProjectSlugFromPath'), 'Client routing should support direct Sara\'s Lab project URL visits.')
+check(combinedSource.includes('getLabProjectPath(project)'), 'Opening a Sara\'s Lab card should update the browser URL to the project route.')
+check(combinedSource.includes('activeProjectSlug'), 'Sara\'s Lab detail state should be driven by the active project route slug.')
 check(labProjectsSource.includes("title: 'Cross Stitch Text'"), "Cross Stitch Text should be the active Sara's Lab project name.")
 check(labProjectsSource.includes("link: 'https://www.crossstitchtext.com/'"), 'Cross Stitch Text should link to the production Cross Stitch Text site.')
 check(labProjectsSource.includes("linkLabel: 'Open Site'"), 'Cross Stitch Text detail action should use Open Site.')

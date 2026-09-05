@@ -188,7 +188,24 @@ const tuckedAwaySections = tuckedAwayContent.nav.map((item) => ({
 const validSectionIds = tuckedAwaySections.map((section) => section.id);
 
 function setMeta(selector, attribute, value) {
-  const element = document.head.querySelector(selector);
+  let element = document.head.querySelector(selector);
+
+  if (!element) {
+    const metaName = selector.match(/^meta\[name="([^"]+)"\]$/)?.[1];
+    const metaProperty = selector.match(/^meta\[property="([^"]+)"\]$/)?.[1];
+    const linkRel = selector.match(/^link\[rel="([^"]+)"\]$/)?.[1];
+
+    if (metaName || metaProperty) {
+      element = document.createElement('meta');
+      element.setAttribute(metaName ? 'name' : 'property', metaName || metaProperty);
+    } else if (linkRel) {
+      element = document.createElement('link');
+      element.setAttribute('rel', linkRel);
+    }
+
+    if (element) document.head.appendChild(element);
+  }
+
   if (element) element.setAttribute(attribute, value);
 }
 
@@ -504,6 +521,8 @@ export default function TuckedAway({ onBackToLab }) {
     setMeta('meta[property="og:description"]', 'content', socialDescription);
     setMeta('meta[property="og:image"]', 'content', socialImageUrl);
     setMeta('meta[property="og:image:secure_url"]', 'content', socialImageUrl);
+    setMeta('meta[property="og:image:width"]', 'content', '1200');
+    setMeta('meta[property="og:image:height"]', 'content', '630');
     setMeta('meta[property="og:image:alt"]', 'content', socialImageAlt);
     setMeta('meta[name="twitter:title"]', 'content', 'Tucked Away');
     setMeta('meta[name="twitter:description"]', 'content', socialDescription);

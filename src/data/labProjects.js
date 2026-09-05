@@ -1,6 +1,7 @@
 export const labProjects = [
   {
     id: 'alphabet-stitch',
+    slug: 'cross-stitch-text',
     title: 'Cross Stitch Text',
     type: 'Creative tool / web app',
     status: 'Live',
@@ -24,6 +25,7 @@ export const labProjects = [
   },
   {
     id: 'batcave-font',
+    slug: 'batcave-font',
     title: 'Batcave Font',
     type: 'Typeface / design asset',
     status: 'Live',
@@ -49,6 +51,7 @@ export const labProjects = [
   },
   {
     id: 'commonwealth-after-dark',
+    slug: 'commonwealth-after-dark',
     title: 'Commonwealth After Dark',
     type: 'FALLOUT 4 MODDING',
     status: 'Passion Project',
@@ -234,6 +237,7 @@ export const labProjects = [
   },
   {
     id: 'the-door-list',
+    slug: 'the-door-list',
     title: 'The Door List',
     type: 'Card game',
     status: 'Prototyping',
@@ -258,6 +262,7 @@ export const labProjects = [
   },
   {
     id: 'tucked-away',
+    slug: 'tucked-away',
     title: 'Tucked Away',
     type: 'Personal tool / Android app',
     status: 'In Progress',
@@ -283,6 +288,7 @@ export const labProjects = [
   },
   {
     id: 'meeting-bingo',
+    slug: 'meeting-bingo',
     title: 'Meeting Bingo',
     type: 'WEB APP',
     status: 'Work in Progress',
@@ -309,6 +315,7 @@ export const labProjects = [
   },
   {
     id: 'xanadu-9-muses',
+    slug: 'xanadu-the-9-muses',
     title: 'Xanadu: The 9 Muses',
     type: 'Board game / creative system',
     status: 'Prototyping',

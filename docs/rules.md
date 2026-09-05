@@ -22,8 +22,9 @@ Keep entries concise. One line per decision when possible.
 - Photography metadata is maintained in `src/data/photos.js` and can be bootstrapped from uploaded files with `npm run sync:photos`.
 - Archived portfolio sections live under `archive/`; archived code/data must not be imported by the active app unless a section is deliberately restored.
 - Active Sara's Lab content lives in `src/data/labProjects.js`; legacy game-only data is archived under `archive/legacy-games`.
+- Sara's Lab project routes use `/lab/<project-slug>` and static route HTML is generated from Lab project data for direct loads and route-specific metadata.
 - Crafter Dark source PDFs/header documents are archived under `archive/crafter-dark-documents` and should not be served from `public`.
-- Tucked Away is the only current standalone public product route; `/tucked-away` uses a Vercel rewrite to `tucked-away.html` for direct loads and route-specific metadata.
+- Tucked Away is the standalone public product route; `/tucked-away` uses a Vercel rewrite to `tucked-away.html` for direct loads and route-specific metadata.
 
 ## Collaboration
 - Every assistant response must begin with `Sara's Portfolio`.

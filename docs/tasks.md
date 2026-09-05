@@ -340,6 +340,7 @@ Goal: Prepare the project for handoff, version control, and deployment.
 - `[x]` Update Pinterest Save controls to use a compact Pinterest logo icon, visible `Save` label, and clear accessible `Save to Pinterest` labelling.
 - `[x]` Replace the second Commonwealth After Dark Videos slot with the confirmed YouTube walkthrough embed.
 - `[x]` Add a matching Nexus Mods download chip to the Commonwealth After Dark detail view while keeping the `Passion Project` chip.
+- `[x]` Add real `/lab/<project-slug>` routes, static route metadata, sitemap entries, and route-aware Lab modal navigation.
 - `[-]` Verify production console has no unintended errors. Blocked by live-browser/tool access during final validation.
 
 ## Phase 6: Future Enhancements

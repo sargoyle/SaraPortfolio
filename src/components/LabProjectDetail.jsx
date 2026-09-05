@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import ImageWithFallback from './ImageWithFallback.jsx';
 import PinterestSaveButton from './PinterestSaveButton.jsx';
-
-const SARAS_LAB_URL = 'https://saragillard.com/#saras-lab';
+import { getLabProjectUrl } from '../utils/labRoutes.js';
 
 function LabDetailPlaceholder({ title }) {
   return (
@@ -52,7 +51,7 @@ function LabProjectGallery({ projectTitle, section }) {
 
       <PinterestSaveButton
         imageUrl={activeImage.src}
-        destinationUrl={SARAS_LAB_URL}
+        destinationUrl={getLabProjectUrl(project)}
         description={getGalleryPinterestDescription(projectTitle, activeImage)}
         className="lab-project-pinterest-save"
         ariaLabel={`Save ${activeImage.title || `${projectTitle} ${section.title} image`} to Pinterest`}

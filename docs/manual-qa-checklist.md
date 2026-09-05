@@ -65,7 +65,7 @@ Use this checklist before release and after changes to shared navigation, filter
 - Confirm Meeting Bingo shows status `Work in Progress`, card action text `View Details`, the supplied app interface image, and a detail link to `https://meeting-bingo-rg4n.vercel.app/` that opens in a new tab.
 - Confirm Commonwealth After Dark appears third, shows status `Passion Project`, card action text `View Details`, and uses `/images/lab/commonwealth-after-dark/inside-vaultage-01-vaultage.png` as the card image.
 - Confirm Commonwealth After Dark detail shows the `Custom Assets` section with 18 standalone images, then the `Inside Vaultage` section with five updated club images, and that thumbnail selection works by mouse and keyboard.
-- Confirm Commonwealth After Dark does not show an external link, empty link, or dead navigation action.
+- Confirm Commonwealth After Dark shows a matching `Download mod from Nexus` chip next to `Passion Project`.
 - Confirm detail views do not show a visible Focus section or focus tag list.
 - Confirm shared previous/next arrow controls and ArrowLeft/ArrowRight move through projects.
 - Confirm Escape, outside click, and close button close the detail view.
@@ -74,6 +74,8 @@ Use this checklist before release and after changes to shared navigation, filter
 
 - Confirm `index.html` includes title, description, canonical URL, Open Graph, Twitter card, JSON-LD, theme colour, favicon, manifest, and social preview metadata.
 - Confirm `tucked-away.html` includes its own title, description, canonical URL, Open Graph/Twitter metadata, and SoftwareApplication JSON-LD.
+- Confirm each generated `lab/<project-slug>/index.html` includes a unique title, description, canonical URL, Open Graph URL/image, and Twitter/X image.
+- Confirm `public/sitemap.xml` includes every current `/lab/<project-slug>` route.
 - Confirm favicon files exist in `public`.
 - Confirm social preview image exists at `public/images/social/saras-portfolio-og.png`.
 - Confirm the Tucked Away social image path points to an existing public image asset.
@@ -85,6 +87,15 @@ Use this checklist before release and after changes to shared navigation, filter
 - Confirm section links work for Overview, Why Tucked Away, Use cases, Features, and Privacy.
 - Confirm `Back to Sara's Lab` returns to Sara's Lab.
 - Confirm `Coming to Android` is visible once as a non-clicking status at the bottom of the Tucked Away navigation panel.
+
+## Sara's Lab Routes
+
+- Open `/lab/cross-stitch-text`, `/lab/batcave-font`, `/lab/commonwealth-after-dark`, `/lab/the-door-list`, `/lab/tucked-away`, `/lab/meeting-bingo`, and `/lab/xanadu-the-9-muses` directly; confirm each loads Sara's Lab with the matching detail open.
+- Refresh each valid Lab route and confirm no 404 occurs.
+- Click Lab cards from `/#saras-lab`; confirm the URL changes to the matching Lab project route.
+- Use previous/next controls; confirm the URL changes to the newly selected project.
+- Close a Lab detail route; confirm the page returns to `/#saras-lab`.
+- Use browser Back and Forward through Lab project routes; confirm the selected modal follows the URL.
 - Confirm missing screenshot assets show deliberate placeholders without broken image icons.
 - Confirm supplied Tucked Away logo and screenshots render from `public/images/tucked-away`.
 - Confirm the page presents one active cabinet panel rather than a long stacked marketing page.

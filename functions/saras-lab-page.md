@@ -12,11 +12,14 @@ Sara's Lab is the portfolio home and project showcase for creative systems, tool
 - `src/components/LabProjectDetailModal.jsx`
 - `src/components/LabProjectDetail.jsx`
 - `src/components/ModalShell.jsx`
+- `src/utils/labRoutes.js`
+- `scripts/generate-lab-route-html.mjs`
+- `lab/<project-slug>/index.html`
 - `src/styles/global.css`
 
 ## User-Facing Behaviour
 
-Visitors see a seven-project gallery and can open each project in a detail modal. Cross Stitch Text includes an external project link inside its detail view. Batcave Font is marked Live and includes a downloadable font file. Commonwealth After Dark appears third, is marked Passion Project, and uses sectioned detail galleries for Custom Assets and the updated Inside Vaultage club shots. Tucked Away links from its detail view to the public product page at `/tucked-away`. Meeting Bingo links to its public web app from the detail view.
+Visitors see a seven-project gallery and can open each project in a detail modal. Each Lab project also has a shareable `/lab/<project-slug>` route that opens the same detail modal directly and provides route-specific static metadata. Cross Stitch Text includes an external project link inside its detail view. Batcave Font is marked Live and includes a downloadable font file. Commonwealth After Dark appears third, is marked Passion Project, and uses sectioned detail galleries for Custom Assets and the updated Inside Vaultage club shots. Tucked Away links from its detail view to the public product page at `/tucked-away`. Meeting Bingo links to its public web app from the detail view.
 
 ## Layout Rules
 
@@ -44,6 +47,7 @@ Visitors see a seven-project gallery and can open each project in a detail modal
 
 - Data source is `labProjects`.
 - Required fields are `id`, `title`, `type`, `status`, `link`, `subtitle`, `cardDescription`, `blurb`, `focus`, `image`, and `order`.
+- Lab route slugs use the optional `slug` field. Keep them stable once published.
 - Optional custom card action labels use `cardActionLabel`; detail actions use `actionLabel`, `linkLabel`, or `downloadLabel`.
 - Optional image alt overrides use `imageAlt`.
 - Optional flat multi-image detail galleries use `gallery` with `src`, `alt`, `title`, and `caption`.
@@ -69,6 +73,8 @@ Visitors see a seven-project gallery and can open each project in a detail modal
 - Project cards must be keyboard-accessible buttons.
 - Detail modal must close by Escape, outside click, close button, and site navigation.
 - Detail modal supports previous/next navigation through buttons and arrow keys.
+- Project card clicks and previous/next detail navigation update the browser URL to the selected `/lab/<project-slug>` route.
+- Closing a Lab detail route returns to `/#saras-lab`.
 - External links must use `target="_blank"` and `rel="noopener noreferrer"`.
 - Internal project links must stay same-tab and must not use `target="_blank"`.
 
@@ -94,6 +100,9 @@ No known gaps currently documented.
 - Commonwealth After Dark displays third after Batcave Font, uses the first updated Inside Vaultage screenshot on its card, opens Custom Assets and Inside Vaultage gallery sections in an image-led detail view, and exposes a non-interactive `Passion Project` action.
 - Projects without links do not show broken external-link buttons.
 - Clicking each project opens the detail view.
+- Opening each `/lab/<project-slug>` route directly loads Sara's Lab with the matching detail view open.
+- Refreshing a valid `/lab/<project-slug>` route does not 404.
+- The sitemap includes every current Sara's Lab project route.
 - Detail view displays title, type, status, subtitle, blurb, and image/preview.
 - Detail view does not show a visible Focus section.
 - Keyboard access works for opening, closing, and previous/next navigation in detail views.

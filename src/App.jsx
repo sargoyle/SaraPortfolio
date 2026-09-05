@@ -8,6 +8,14 @@ import Games from './pages/Games.jsx';
 import Home from './pages/Home.jsx';
 import Photography from './pages/Photography.jsx';
 import TuckedAway from './pages/TuckedAway.jsx';
+import {
+  getLabProjectBySlug,
+  getLabProjectDescription,
+  getLabProjectPath,
+  getLabProjectSlugFromPath,
+  getLabProjectTitle,
+  getLabProjectUrl,
+} from './utils/labRoutes.js';
 
 const pages = {
   home: Home,
@@ -22,20 +30,51 @@ const portfolioTitle = 'Sara’s Portfolio | Artist, Pattern Maker & Creative Te
 const portfolioDescription = 'Explore Sara Gillard’s cross-stitch designs, photography, games and creative digital projects.';
 
 function setMeta(selector, attribute, value) {
-  const element = document.head.querySelector(selector);
+  let element = document.head.querySelector(selector);
+
+  if (!element) {
+    const metaName = selector.match(/^meta\[name="([^"]+)"\]$/)?.[1];
+    const metaProperty = selector.match(/^meta\[property="([^"]+)"\]$/)?.[1];
+    const linkRel = selector.match(/^link\[rel="([^"]+)"\]$/)?.[1];
+
+    if (metaName || metaProperty) {
+      element = document.createElement('meta');
+      element.setAttribute(metaName ? 'name' : 'property', metaName || metaProperty);
+    } else if (linkRel) {
+      element = document.createElement('link');
+      element.setAttribute('rel', linkRel);
+    }
+
+    if (element) document.head.appendChild(element);
+  }
+
   if (element) element.setAttribute(attribute, value);
 }
 
+function removeMeta(selector) {
+  document.head.querySelector(selector)?.remove();
+}
+
 export default function App() {
-  const getInitialPage = () => {
-    if (window.location.pathname === '/tucked-away') return 'tuckedAway';
-    if (window.location.hash === '#saras-lab') return 'games';
-    if (window.location.hash === '#crafts') return 'crafts';
-    return 'home';
+  const getRouteState = () => {
+    const labProjectSlug = getLabProjectSlugFromPath(window.location.pathname);
+    if (labProjectSlug) return { page: 'games', labProjectSlug };
+    if (window.location.pathname === '/tucked-away') return { page: 'tuckedAway', labProjectSlug: null };
+    if (window.location.hash === '#saras-lab') return { page: 'games', labProjectSlug: null };
+    if (window.location.hash === '#crafts') return { page: 'crafts', labProjectSlug: null };
+    return { page: 'home', labProjectSlug: null };
   };
 
-  const [currentPage, setCurrentPage] = useState(getInitialPage);
+  const [routeState, setRouteState] = useState(getRouteState);
+  const { page: currentPage, labProjectSlug } = routeState;
   const CurrentPage = pages[currentPage] || Home;
+
+  const updateRoute = (targetPath) => {
+    if (`${window.location.pathname}${window.location.hash}` !== targetPath) {
+      window.history.pushState({}, '', targetPath);
+    }
+    setRouteState(getRouteState());
+  };
 
   const handleNavigate = (page) => {
     window.dispatchEvent(new CustomEvent('portfolio:navigate', { detail: { page } }));
@@ -45,13 +84,47 @@ export default function App() {
     };
     const targetPath = hashPages[page] || '/';
 
-    if (`${window.location.pathname}${window.location.hash}` !== targetPath) {
-      window.history.pushState({}, '', targetPath);
-    }
-    setCurrentPage(page);
+    updateRoute(targetPath);
+  };
+
+  const handleOpenLabProject = (project) => {
+    updateRoute(getLabProjectPath(project));
+  };
+
+  const handleCloseLabProject = () => {
+    updateRoute('/#saras-lab');
   };
 
   useEffect(() => {
+    const activeLabProject = labProjectSlug ? getLabProjectBySlug(labProjectSlug) : null;
+
+    if (activeLabProject) {
+      const labTitle = getLabProjectTitle(activeLabProject);
+      const labDescription = getLabProjectDescription(activeLabProject);
+      const labUrl = getLabProjectUrl(activeLabProject);
+      const labImage = activeLabProject.image
+        ? `https://saragillard.com${activeLabProject.image}`
+        : 'https://saragillard.com/images/social/saras-portfolio-og.png';
+      const labImageAlt = activeLabProject.imageAlt || `${activeLabProject.title} preview by Sara Gillard.`;
+
+      document.title = labTitle;
+      setMeta('meta[name="description"]', 'content', labDescription);
+      setMeta('link[rel="canonical"]', 'href', labUrl);
+      setMeta('meta[property="og:url"]', 'content', labUrl);
+      setMeta('meta[property="og:title"]', 'content', labTitle);
+      setMeta('meta[property="og:description"]', 'content', labDescription);
+      setMeta('meta[property="og:image"]', 'content', labImage);
+      setMeta('meta[property="og:image:secure_url"]', 'content', labImage);
+      setMeta('meta[property="og:image:alt"]', 'content', labImageAlt);
+      removeMeta('meta[property="og:image:width"]');
+      removeMeta('meta[property="og:image:height"]');
+      setMeta('meta[name="twitter:title"]', 'content', labTitle);
+      setMeta('meta[name="twitter:description"]', 'content', labDescription);
+      setMeta('meta[name="twitter:image"]', 'content', labImage);
+      setMeta('meta[name="twitter:image:alt"]', 'content', labImageAlt);
+      return;
+    }
+
     const titles = {
       home: "Sara's Portfolio",
       crafter: "Cross-Stitch | Sara's Portfolio",
@@ -69,15 +142,20 @@ export default function App() {
       setMeta('meta[property="og:title"]', 'content', portfolioTitle);
       setMeta('meta[property="og:description"]', 'content', portfolioDescription);
       setMeta('meta[property="og:image"]', 'content', 'https://saragillard.com/images/social/saras-portfolio-og.png');
+      setMeta('meta[property="og:image:secure_url"]', 'content', 'https://saragillard.com/images/social/saras-portfolio-og.png');
+      setMeta('meta[property="og:image:width"]', 'content', '1200');
+      setMeta('meta[property="og:image:height"]', 'content', '630');
+      setMeta('meta[property="og:image:alt"]', 'content', 'Sara Gillard portfolio preview with gothic purple styling and selected creative work.');
       setMeta('meta[name="twitter:title"]', 'content', portfolioTitle);
       setMeta('meta[name="twitter:description"]', 'content', portfolioDescription);
       setMeta('meta[name="twitter:image"]', 'content', 'https://saragillard.com/images/social/saras-portfolio-og.png');
+      setMeta('meta[name="twitter:image:alt"]', 'content', 'Sara Gillard portfolio preview with gothic purple styling and selected creative work.');
     }
-  }, [currentPage]);
+  }, [currentPage, labProjectSlug]);
 
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentPage(getInitialPage());
+      setRouteState(getRouteState());
     };
 
     window.addEventListener('popstate', handlePopState);
@@ -89,6 +167,22 @@ export default function App() {
       if (event) event.preventDefault();
       handleNavigate('games');
     }} />;
+  }
+
+  if (currentPage === 'games') {
+    return (
+      <div className="app">
+        <ParticleBackground />
+        <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
+        <Games
+          activeProjectSlug={labProjectSlug}
+          onOpenProject={handleOpenLabProject}
+          onCloseProject={handleCloseLabProject}
+          onNavigateProject={handleOpenLabProject}
+        />
+        <Footer />
+      </div>
+    );
   }
 
   return (
