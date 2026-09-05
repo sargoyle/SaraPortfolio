@@ -17,7 +17,7 @@ function getGalleryPinterestDescription(projectTitle, image) {
   return `${projectTitle} project image by Sara Gillard.`;
 }
 
-function LabProjectGallery({ projectTitle, section }) {
+function LabProjectGallery({ project, projectTitle, section }) {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const galleryImages = section.images || [];
   const activeImage = galleryImages[activeImageIndex];
@@ -212,7 +212,7 @@ export default function LabProjectDetail({ project }) {
         {hasGallerySections ? (
           <>
             {project.gallerySections.map((section) => (
-              <LabProjectGallery key={section.title} projectTitle={project.title} section={section} />
+              <LabProjectGallery key={section.title} project={project} projectTitle={project.title} section={section} />
             ))}
             <LabProjectVideos projectTitle={project.title} videos={project.videos} />
           </>
