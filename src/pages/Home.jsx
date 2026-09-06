@@ -35,7 +35,7 @@ export default function Home() {
             </ImageWithFallback>
           </div>
           <a
-            href="https://www.linkedin.com/in/sara-gillard-ppm-consultant/"
+            href="https://www.linkedin.com/in/sara-gillard/"
             target="_blank"
             rel="noreferrer"
             className="linkedin-link"
